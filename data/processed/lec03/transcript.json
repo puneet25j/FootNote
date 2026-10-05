@@ -1,0 +1,7779 @@
+{
+  "doc_id": "3f01c1206fbf",
+  "lecture": "lec03",
+  "source_type": "video",
+  "source_file": "data/raw/lec03/video.mp4",
+  "source_sha256": "3f01c1206fbfb35c923f30695c85de8234fa63b68e778fbecc7d5c81f538f91f",
+  "model": "small",
+  "duration": 3079.296,
+  "created_at": "2026-10-05T03:20:43+00:00",
+  "segments": [
+    {
+      "id": "3f01c1206fbf-00000",
+      "kind": "text",
+      "start": 0.0,
+      "end": 2.44,
+      "page": null,
+      "section": null,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "id": "3f01c1206fbf-00001",
+      "kind": "text",
+      "start": 2.44,
+      "end": 3.88,
+      "page": null,
+      "section": null,
+      "text": "Commons license."
+    },
+    {
+      "id": "3f01c1206fbf-00002",
+      "kind": "text",
+      "start": 3.88,
+      "end": 6.92,
+      "page": null,
+      "section": null,
+      "text": "Your support will help MIT OpenCourseWare continue to"
+    },
+    {
+      "id": "3f01c1206fbf-00003",
+      "kind": "text",
+      "start": 6.92,
+      "end": 10.56,
+      "page": null,
+      "section": null,
+      "text": "offer high quality educational resources for free."
+    },
+    {
+      "id": "3f01c1206fbf-00004",
+      "kind": "text",
+      "start": 10.56,
+      "end": 13.44,
+      "page": null,
+      "section": null,
+      "text": "To make a donation or view additional materials from"
+    },
+    {
+      "id": "3f01c1206fbf-00005",
+      "kind": "text",
+      "start": 13.44,
+      "end": 17.4,
+      "page": null,
+      "section": null,
+      "text": "hundreds of MIT courses, visit MIT OpenCourseWare at"
+    },
+    {
+      "id": "3f01c1206fbf-00006",
+      "kind": "text",
+      "start": 17.4,
+      "end": 23.19,
+      "page": null,
+      "section": null,
+      "text": "ocw.mit.edu."
+    },
+    {
+      "id": "3f01c1206fbf-00007",
+      "kind": "text",
+      "start": 23.19,
+      "end": 26.95,
+      "page": null,
+      "section": null,
+      "text": "So today's lecture is on sorting."
+    },
+    {
+      "id": "3f01c1206fbf-00008",
+      "kind": "text",
+      "start": 26.95,
+      "end": 28.75,
+      "page": null,
+      "section": null,
+      "text": "We'll be talking about specific"
+    },
+    {
+      "id": "3f01c1206fbf-00009",
+      "kind": "text",
+      "start": 28.75,
+      "end": 31.27,
+      "page": null,
+      "section": null,
+      "text": "sorting algorithms today."
+    },
+    {
+      "id": "3f01c1206fbf-00010",
+      "kind": "text",
+      "start": 31.27,
+      "end": 35.03,
+      "page": null,
+      "section": null,
+      "text": "I want to start by motivating why we're interested in"
+    },
+    {
+      "id": "3f01c1206fbf-00011",
+      "kind": "text",
+      "start": 35.03,
+      "end": 39.19,
+      "page": null,
+      "section": null,
+      "text": "sorting, which should be fairly easy."
+    },
+    {
+      "id": "3f01c1206fbf-00012",
+      "kind": "text",
+      "start": 39.19,
+      "end": 43.51,
+      "page": null,
+      "section": null,
+      "text": "And then I want to discuss a particular sorting algorithm"
+    },
+    {
+      "id": "3f01c1206fbf-00013",
+      "kind": "text",
+      "start": 43.51,
+      "end": 45.43,
+      "page": null,
+      "section": null,
+      "text": "that's called insertion sort."
+    },
+    {
+      "id": "3f01c1206fbf-00014",
+      "kind": "text",
+      "start": 45.43,
+      "end": 48.27,
+      "page": null,
+      "section": null,
+      "text": "That's probably the simplest sorting algorithm you can"
+    },
+    {
+      "id": "3f01c1206fbf-00015",
+      "kind": "text",
+      "start": 48.27,
+      "end": 48.95,
+      "page": null,
+      "section": null,
+      "text": "write."
+    },
+    {
+      "id": "3f01c1206fbf-00016",
+      "kind": "text",
+      "start": 48.95,
+      "end": 51.91,
+      "page": null,
+      "section": null,
+      "text": "It's five lines of code."
+    },
+    {
+      "id": "3f01c1206fbf-00017",
+      "kind": "text",
+      "start": 51.91,
+      "end": 54.47,
+      "page": null,
+      "section": null,
+      "text": "It's not the best sorting algorithm that's out there."
+    },
+    {
+      "id": "3f01c1206fbf-00018",
+      "kind": "text",
+      "start": 54.47,
+      "end": 56.43,
+      "page": null,
+      "section": null,
+      "text": "And so we'll try and improve it."
+    },
+    {
+      "id": "3f01c1206fbf-00019",
+      "kind": "text",
+      "start": 56.43,
+      "end": 60.11,
+      "page": null,
+      "section": null,
+      "text": "And we'll also talk about merge sort, which is a"
+    },
+    {
+      "id": "3f01c1206fbf-00020",
+      "kind": "text",
+      "start": 60.11,
+      "end": 62.71,
+      "page": null,
+      "section": null,
+      "text": "divide and conquer algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00021",
+      "kind": "text",
+      "start": 62.71,
+      "end": 67.79,
+      "page": null,
+      "section": null,
+      "text": "And that's going to motivate the last thing that I want to"
+    },
+    {
+      "id": "3f01c1206fbf-00022",
+      "kind": "text",
+      "start": 67.79,
+      "end": 70.55,
+      "page": null,
+      "section": null,
+      "text": "spend time on, which is recurrences and how you"
+    },
+    {
+      "id": "3f01c1206fbf-00023",
+      "kind": "text",
+      "start": 70.55,
+      "end": 72.07,
+      "page": null,
+      "section": null,
+      "text": "solve recurrences."
+    },
+    {
+      "id": "3f01c1206fbf-00024",
+      "kind": "text",
+      "start": 72.07,
+      "end": 74.35,
+      "page": null,
+      "section": null,
+      "text": "And typically, the recurrences that we'll be"
+    },
+    {
+      "id": "3f01c1206fbf-00025",
+      "kind": "text",
+      "start": 74.35,
+      "end": 78.19,
+      "page": null,
+      "section": null,
+      "text": "looking at in 006 are going to come from divide and"
+    },
+    {
+      "id": "3f01c1206fbf-00026",
+      "kind": "text",
+      "start": 78.19,
+      "end": 80.75,
+      "page": null,
+      "section": null,
+      "text": "conquer problems, like merge sort."
+    },
+    {
+      "id": "3f01c1206fbf-00027",
+      "kind": "text",
+      "start": 80.75,
+      "end": 84.15,
+      "page": null,
+      "section": null,
+      "text": "But you'll see this over and over."
+    },
+    {
+      "id": "3f01c1206fbf-00028",
+      "kind": "text",
+      "start": 84.15,
+      "end": 89.9,
+      "page": null,
+      "section": null,
+      "text": "So let's talk about why we're interested in sorting."
+    },
+    {
+      "id": "3f01c1206fbf-00029",
+      "kind": "text",
+      "start": 89.9,
+      "end": 95.81,
+      "page": null,
+      "section": null,
+      "text": "Now there's some fairly obvious applications, like if you"
+    },
+    {
+      "id": "3f01c1206fbf-00030",
+      "kind": "text",
+      "start": 95.81,
+      "end": 100.86,
+      "page": null,
+      "section": null,
+      "text": "want to maintain a phone book, you've got a bunch of names"
+    },
+    {
+      "id": "3f01c1206fbf-00031",
+      "kind": "text",
+      "start": 100.86,
+      "end": 104.7,
+      "page": null,
+      "section": null,
+      "text": "and numbers corresponding to a telephone directory, and you"
+    },
+    {
+      "id": "3f01c1206fbf-00032",
+      "kind": "text",
+      "start": 104.7,
+      "end": 106.7,
+      "page": null,
+      "section": null,
+      "text": "want to keep them in sorted order, so it's easy to"
+    },
+    {
+      "id": "3f01c1206fbf-00033",
+      "kind": "text",
+      "start": 106.7,
+      "end": 111.46,
+      "page": null,
+      "section": null,
+      "text": "search, MP3 organizers, spreadsheets, et cetera."
+    },
+    {
+      "id": "3f01c1206fbf-00034",
+      "kind": "text",
+      "start": 111.46,
+      "end": 114.54,
+      "page": null,
+      "section": null,
+      "text": "So there's lots of obvious applications."
+    },
+    {
+      "id": "3f01c1206fbf-00035",
+      "kind": "text",
+      "start": 114.54,
+      "end": 119.78,
+      "page": null,
+      "section": null,
+      "text": "There's also some interesting problems that"
+    },
+    {
+      "id": "3f01c1206fbf-00036",
+      "kind": "text",
+      "start": 119.82,
+      "end": 133.14,
+      "page": null,
+      "section": null,
+      "text": "become easy once items are sorted."
+    },
+    {
+      "id": "3f01c1206fbf-00037",
+      "kind": "text",
+      "start": 133.14,
+      "end": 143.74,
+      "page": null,
+      "section": null,
+      "text": "And one example of that is finding a median, for example."
+    },
+    {
+      "id": "3f01c1206fbf-00038",
+      "kind": "text",
+      "start": 143.74,
+      "end": 150.48,
+      "page": null,
+      "section": null,
+      "text": "So let's say that you have a bunch of items in an array"
+    },
+    {
+      "id": "3f01c1206fbf-00039",
+      "kind": "text",
+      "start": 150.48,
+      "end": 157.92,
+      "page": null,
+      "section": null,
+      "text": "a0 through n, and a0 through n contains n numbers, and"
+    },
+    {
+      "id": "3f01c1206fbf-00040",
+      "kind": "text",
+      "start": 157.92,
+      "end": 164.84,
+      "page": null,
+      "section": null,
+      "text": "they're not sorted."
+    },
+    {
+      "id": "3f01c1206fbf-00041",
+      "kind": "text",
+      "start": 164.84,
+      "end": 171.32,
+      "page": null,
+      "section": null,
+      "text": "When you sort, you turn this into b0 through n, where if"
+    },
+    {
+      "id": "3f01c1206fbf-00042",
+      "kind": "text",
+      "start": 171.36,
+      "end": 174.44,
+      "page": null,
+      "section": null,
+      "text": "it's just numbers, then you may sort them in increasing order"
+    },
+    {
+      "id": "3f01c1206fbf-00043",
+      "kind": "text",
+      "start": 174.44,
+      "end": 175.64,
+      "page": null,
+      "section": null,
+      "text": "or decreasing order."
+    },
+    {
+      "id": "3f01c1206fbf-00044",
+      "kind": "text",
+      "start": 175.64,
+      "end": 178.96,
+      "page": null,
+      "section": null,
+      "text": "Let's just call it increasing order for now."
+    },
+    {
+      "id": "3f01c1206fbf-00045",
+      "kind": "text",
+      "start": 178.96,
+      "end": 181.92,
+      "page": null,
+      "section": null,
+      "text": "Or if they're records, and they're not numbers, then you"
+    },
+    {
+      "id": "3f01c1206fbf-00046",
+      "kind": "text",
+      "start": 181.92,
+      "end": 185.6,
+      "page": null,
+      "section": null,
+      "text": "have to provide a comparison function to determine which"
+    },
+    {
+      "id": "3f01c1206fbf-00047",
+      "kind": "text",
+      "start": 185.6,
+      "end": 188.96,
+      "page": null,
+      "section": null,
+      "text": "record is smaller than another record, and that's another"
+    },
+    {
+      "id": "3f01c1206fbf-00048",
+      "kind": "text",
+      "start": 188.96,
+      "end": 192.96,
+      "page": null,
+      "section": null,
+      "text": "input that you have to have in order to do the sorting."
+    },
+    {
+      "id": "3f01c1206fbf-00049",
+      "kind": "text",
+      "start": 192.96,
+      "end": 195.28,
+      "page": null,
+      "section": null,
+      "text": "So it doesn't really matter what the items are."
+    },
+    {
+      "id": "3f01c1206fbf-00050",
+      "kind": "text",
+      "start": 195.28,
+      "end": 197.68,
+      "page": null,
+      "section": null,
+      "text": "As long as you have the comparison function, think of"
+    },
+    {
+      "id": "3f01c1206fbf-00051",
+      "kind": "text",
+      "start": 197.68,
+      "end": 199.92,
+      "page": null,
+      "section": null,
+      "text": "it as less than or equal to."
+    },
+    {
+      "id": "3f01c1206fbf-00052",
+      "kind": "text",
+      "start": 199.92,
+      "end": 204.12,
+      "page": null,
+      "section": null,
+      "text": "And if you have that, and it's straightforward, obviously to"
+    },
+    {
+      "id": "3f01c1206fbf-00053",
+      "kind": "text",
+      "start": 204.12,
+      "end": 207.04,
+      "page": null,
+      "section": null,
+      "text": "check that 3 is less than 4, et cetera."
+    },
+    {
+      "id": "3f01c1206fbf-00054",
+      "kind": "text",
+      "start": 207.04,
+      "end": 210.64,
+      "page": null,
+      "section": null,
+      "text": "But it may be a little more complicated for more"
+    },
+    {
+      "id": "3f01c1206fbf-00055",
+      "kind": "text",
+      "start": 210.64,
+      "end": 212.96,
+      "page": null,
+      "section": null,
+      "text": "sophisticated sorting applications."
+    },
+    {
+      "id": "3f01c1206fbf-00056",
+      "kind": "text",
+      "start": 212.96,
+      "end": 216.52,
+      "page": null,
+      "section": null,
+      "text": "But the bottom line is that if you have your algorithm that"
+    },
+    {
+      "id": "3f01c1206fbf-00057",
+      "kind": "text",
+      "start": 216.52,
+      "end": 219.52,
+      "page": null,
+      "section": null,
+      "text": "takes the comparison function as an input, you're going to be"
+    },
+    {
+      "id": "3f01c1206fbf-00058",
+      "kind": "text",
+      "start": 219.52,
+      "end": 225.08,
+      "page": null,
+      "section": null,
+      "text": "able to go after a certain amount of time, get b0n."
+    },
+    {
+      "id": "3f01c1206fbf-00059",
+      "kind": "text",
+      "start": 225.08,
+      "end": 228.2,
+      "page": null,
+      "section": null,
+      "text": "Now, if you wanted to find the median of the set of"
+    },
+    {
+      "id": "3f01c1206fbf-00060",
+      "kind": "text",
+      "start": 228.2,
+      "end": 232.48,
+      "page": null,
+      "section": null,
+      "text": "numbers that were originally in the array a, what would you do"
+    },
+    {
+      "id": "3f01c1206fbf-00061",
+      "kind": "text",
+      "start": 232.48,
+      "end": 234.84,
+      "page": null,
+      "section": null,
+      "text": "once you have the sorted array b?"
+    },
+    {
+      "id": "3f01c1206fbf-00062",
+      "kind": "text",
+      "start": 234.84,
+      "end": 238.62,
+      "page": null,
+      "section": null,
+      "text": "Yep?"
+    },
+    {
+      "id": "3f01c1206fbf-00063",
+      "kind": "text",
+      "start": 238.62,
+      "end": 239.98,
+      "page": null,
+      "section": null,
+      "text": "Oh, absolutely."
+    },
+    {
+      "id": "3f01c1206fbf-00064",
+      "kind": "text",
+      "start": 239.98,
+      "end": 248.26,
+      "page": null,
+      "section": null,
+      "text": "But this is sort of a side effect of having a sorted list."
+    },
+    {
+      "id": "3f01c1206fbf-00065",
+      "kind": "text",
+      "start": 248.26,
+      "end": 250.86,
+      "page": null,
+      "section": null,
+      "text": "If you happen to have a sorted list, there's many"
+    },
+    {
+      "id": "3f01c1206fbf-00066",
+      "kind": "text",
+      "start": 250.86,
+      "end": 256.3,
+      "page": null,
+      "section": null,
+      "text": "ways that you could imagine building up a sorted list."
+    },
+    {
+      "id": "3f01c1206fbf-00067",
+      "kind": "text",
+      "start": 256.3,
+      "end": 259.1,
+      "page": null,
+      "section": null,
+      "text": "One way is you have something that's completely"
+    },
+    {
+      "id": "3f01c1206fbf-00068",
+      "kind": "text",
+      "start": 259.1,
+      "end": 262.58,
+      "page": null,
+      "section": null,
+      "text": "unsorted, and you run insertion sort or merge sort."
+    },
+    {
+      "id": "3f01c1206fbf-00069",
+      "kind": "text",
+      "start": 262.58,
+      "end": 265.14,
+      "page": null,
+      "section": null,
+      "text": "Another way would be to maintain a sorted list as you're"
+    },
+    {
+      "id": "3f01c1206fbf-00070",
+      "kind": "text",
+      "start": 265.14,
+      "end": 267.82,
+      "page": null,
+      "section": null,
+      "text": "getting items put into the list."
+    },
+    {
+      "id": "3f01c1206fbf-00071",
+      "kind": "text",
+      "start": 267.82,
+      "end": 270.3,
+      "page": null,
+      "section": null,
+      "text": "So if you happen to have a sorted list, and you need to"
+    },
+    {
+      "id": "3f01c1206fbf-00072",
+      "kind": "text",
+      "start": 270.3,
+      "end": 273.82,
+      "page": null,
+      "section": null,
+      "text": "have the sorted list for some reason, the point I'm"
+    },
+    {
+      "id": "3f01c1206fbf-00073",
+      "kind": "text",
+      "start": 273.82,
+      "end": 277.06,
+      "page": null,
+      "section": null,
+      "text": "making here is that finding the median is easy."
+    },
+    {
+      "id": "3f01c1206fbf-00074",
+      "kind": "text",
+      "start": 277.06,
+      "end": 281.38,
+      "page": null,
+      "section": null,
+      "text": "And it's easy because all you have to do is to go look"
+    },
+    {
+      "id": "3f01c1206fbf-00075",
+      "kind": "text",
+      "start": 281.38,
+      "end": 285.98,
+      "page": null,
+      "section": null,
+      "text": "at, depending on whether n is odd or even, look at b of n"
+    },
+    {
+      "id": "3f01c1206fbf-00076",
+      "kind": "text",
+      "start": 285.98,
+      "end": 287.62,
+      "page": null,
+      "section": null,
+      "text": "over 2."
+    },
+    {
+      "id": "3f01c1206fbf-00077",
+      "kind": "text",
+      "start": 287.62,
+      "end": 290.26,
+      "page": null,
+      "section": null,
+      "text": "That would give you the median because you'd have a bunch of"
+    },
+    {
+      "id": "3f01c1206fbf-00078",
+      "kind": "text",
+      "start": 290.26,
+      "end": 295.44,
+      "page": null,
+      "section": null,
+      "text": "numbers that are less than that, and the equal set of"
+    },
+    {
+      "id": "3f01c1206fbf-00079",
+      "kind": "text",
+      "start": 295.44,
+      "end": 297.18,
+      "page": null,
+      "section": null,
+      "text": "numbers that are greater than that, which is the"
+    },
+    {
+      "id": "3f01c1206fbf-00080",
+      "kind": "text",
+      "start": 297.18,
+      "end": 299.74,
+      "page": null,
+      "section": null,
+      "text": "definition of median."
+    },
+    {
+      "id": "3f01c1206fbf-00081",
+      "kind": "text",
+      "start": 299.74,
+      "end": 305.02,
+      "page": null,
+      "section": null,
+      "text": "So this is not necessarily the best way, as you pointed out,"
+    },
+    {
+      "id": "3f01c1206fbf-00082",
+      "kind": "text",
+      "start": 305.02,
+      "end": 309.54,
+      "page": null,
+      "section": null,
+      "text": "of finding the median, but it's constant time if you"
+    },
+    {
+      "id": "3f01c1206fbf-00083",
+      "kind": "text",
+      "start": 309.54,
+      "end": 311.3,
+      "page": null,
+      "section": null,
+      "text": "have a sorted list."
+    },
+    {
+      "id": "3f01c1206fbf-00084",
+      "kind": "text",
+      "start": 311.3,
+      "end": 314.62,
+      "page": null,
+      "section": null,
+      "text": "That's the point I wanted to make."
+    },
+    {
+      "id": "3f01c1206fbf-00085",
+      "kind": "text",
+      "start": 314.62,
+      "end": 316.7,
+      "page": null,
+      "section": null,
+      "text": "There are other things that you could do."
+    },
+    {
+      "id": "3f01c1206fbf-00086",
+      "kind": "text",
+      "start": 316.7,
+      "end": 321.66,
+      "page": null,
+      "section": null,
+      "text": "And this came up in Eric's lecture, which is the notion"
+    },
+    {
+      "id": "3f01c1206fbf-00087",
+      "kind": "text",
+      "start": 321.66,
+      "end": 324.66,
+      "page": null,
+      "section": null,
+      "text": "of binary search."
+    },
+    {
+      "id": "3f01c1206fbf-00088",
+      "kind": "text",
+      "start": 324.66,
+      "end": 328.78,
+      "page": null,
+      "section": null,
+      "text": "Finding an element in an array, a specific element, you"
+    },
+    {
+      "id": "3f01c1206fbf-00089",
+      "kind": "text",
+      "start": 328.78,
+      "end": 334.38,
+      "page": null,
+      "section": null,
+      "text": "have a list of items, again a0 through n, and you're"
+    },
+    {
+      "id": "3f01c1206fbf-00090",
+      "kind": "text",
+      "start": 334.38,
+      "end": 343.58,
+      "page": null,
+      "section": null,
+      "text": "looking for a specific number or item."
+    },
+    {
+      "id": "3f01c1206fbf-00091",
+      "kind": "text",
+      "start": 343.58,
+      "end": 347.14,
+      "page": null,
+      "section": null,
+      "text": "You could obviously scan the array, and that would take"
+    },
+    {
+      "id": "3f01c1206fbf-00092",
+      "kind": "text",
+      "start": 347.14,
+      "end": 350.26,
+      "page": null,
+      "section": null,
+      "text": "you linear time to find this item."
+    },
+    {
+      "id": "3f01c1206fbf-00093",
+      "kind": "text",
+      "start": 350.26,
+      "end": 356.38,
+      "page": null,
+      "section": null,
+      "text": "If the array happened to be sorted, then you can find"
+    },
+    {
+      "id": "3f01c1206fbf-00094",
+      "kind": "text",
+      "start": 356.38,
+      "end": 361.86,
+      "page": null,
+      "section": null,
+      "text": "this in logarithmic time using what's called binary search."
+    },
+    {
+      "id": "3f01c1206fbf-00095",
+      "kind": "text",
+      "start": 361.86,
+      "end": 364.7,
+      "page": null,
+      "section": null,
+      "text": "And binary search, let's say you're looking for a specific"
+    },
+    {
+      "id": "3f01c1206fbf-00096",
+      "kind": "text",
+      "start": 364.7,
+      "end": 368.26,
+      "page": null,
+      "section": null,
+      "text": "item, let's call it k."
+    },
+    {
+      "id": "3f01c1206fbf-00097",
+      "kind": "text",
+      "start": 368.26,
+      "end": 372.86,
+      "page": null,
+      "section": null,
+      "text": "Binary search, roughly speaking, would work like you"
+    },
+    {
+      "id": "3f01c1206fbf-00098",
+      "kind": "text",
+      "start": 372.86,
+      "end": 382.06,
+      "page": null,
+      "section": null,
+      "text": "go compare k to, again, b of n over 2, and decide, given"
+    },
+    {
+      "id": "3f01c1206fbf-00099",
+      "kind": "text",
+      "start": 382.06,
+      "end": 388.38,
+      "page": null,
+      "section": null,
+      "text": "that b is sorted, you get to look at one half of the array."
+    },
+    {
+      "id": "3f01c1206fbf-00100",
+      "kind": "text",
+      "start": 388.38,
+      "end": 393.3,
+      "page": null,
+      "section": null,
+      "text": "If b of n over 2 is not exactly k, then, well, if it's"
+    },
+    {
+      "id": "3f01c1206fbf-00101",
+      "kind": "text",
+      "start": 393.3,
+      "end": 394.42,
+      "page": null,
+      "section": null,
+      "text": "exactly k, you're done."
+    },
+    {
+      "id": "3f01c1206fbf-00102",
+      "kind": "text",
+      "start": 394.42,
+      "end": 396.78,
+      "page": null,
+      "section": null,
+      "text": "Otherwise, you look at the left half."
+    },
+    {
+      "id": "3f01c1206fbf-00103",
+      "kind": "text",
+      "start": 396.78,
+      "end": 400.38,
+      "page": null,
+      "section": null,
+      "text": "You do your divide and conquer paradigm, and you can do"
+    },
+    {
+      "id": "3f01c1206fbf-00104",
+      "kind": "text",
+      "start": 400.38,
+      "end": 402.82,
+      "page": null,
+      "section": null,
+      "text": "this in logarithmic time."
+    },
+    {
+      "id": "3f01c1206fbf-00105",
+      "kind": "text",
+      "start": 402.82,
+      "end": 406.18,
+      "page": null,
+      "section": null,
+      "text": "So keep this in mind because binary search is going to come"
+    },
+    {
+      "id": "3f01c1206fbf-00106",
+      "kind": "text",
+      "start": 406.18,
+      "end": 410.66,
+      "page": null,
+      "section": null,
+      "text": "up in today's lecture and, again, in other lectures."
+    },
+    {
+      "id": "3f01c1206fbf-00107",
+      "kind": "text",
+      "start": 410.66,
+      "end": 414.78,
+      "page": null,
+      "section": null,
+      "text": "It's really a great paradigm of divide and conquer, probably"
+    },
+    {
+      "id": "3f01c1206fbf-00108",
+      "kind": "text",
+      "start": 414.78,
+      "end": 417.7,
+      "page": null,
+      "section": null,
+      "text": "the simplest, and it essentially takes something"
+    },
+    {
+      "id": "3f01c1206fbf-00109",
+      "kind": "text",
+      "start": 417.7,
+      "end": 421.66,
+      "page": null,
+      "section": null,
+      "text": "that's linear, a linear search, and turns it into"
+    },
+    {
+      "id": "3f01c1206fbf-00110",
+      "kind": "text",
+      "start": 421.66,
+      "end": 423.78,
+      "page": null,
+      "section": null,
+      "text": "logarithmic search."
+    },
+    {
+      "id": "3f01c1206fbf-00111",
+      "kind": "text",
+      "start": 423.78,
+      "end": 428.26,
+      "page": null,
+      "section": null,
+      "text": "So those are a couple of problems that become easy"
+    },
+    {
+      "id": "3f01c1206fbf-00112",
+      "kind": "text",
+      "start": 428.26,
+      "end": 430.98,
+      "page": null,
+      "section": null,
+      "text": "if you have a sorted list."
+    },
+    {
+      "id": "3f01c1206fbf-00113",
+      "kind": "text",
+      "start": 430.98,
+      "end": 442.6,
+      "page": null,
+      "section": null,
+      "text": "And there's some not so obvious applications of sorting."
+    },
+    {
+      "id": "3f01c1206fbf-00114",
+      "kind": "text",
+      "start": 442.6,
+      "end": 445.16,
+      "page": null,
+      "section": null,
+      "text": "For example, data compression."
+    },
+    {
+      "id": "3f01c1206fbf-00115",
+      "kind": "text",
+      "start": 445.16,
+      "end": 448.56,
+      "page": null,
+      "section": null,
+      "text": "If you wanted to compress a file, one of the things that you"
+    },
+    {
+      "id": "3f01c1206fbf-00116",
+      "kind": "text",
+      "start": 448.56,
+      "end": 454.2,
+      "page": null,
+      "section": null,
+      "text": "could do is to, and it's just a set of items, you could"
+    },
+    {
+      "id": "3f01c1206fbf-00117",
+      "kind": "text",
+      "start": 454.2,
+      "end": 457.88,
+      "page": null,
+      "section": null,
+      "text": "sort the items, and that automatically finds duplicates."
+    },
+    {
+      "id": "3f01c1206fbf-00118",
+      "kind": "text",
+      "start": 457.88,
+      "end": 461.6,
+      "page": null,
+      "section": null,
+      "text": "And you could say, if I have 100 items that are all"
+    },
+    {
+      "id": "3f01c1206fbf-00119",
+      "kind": "text",
+      "start": 461.6,
+      "end": 465.2,
+      "page": null,
+      "section": null,
+      "text": "identical, I'm going to compress the file by"
+    },
+    {
+      "id": "3f01c1206fbf-00120",
+      "kind": "text",
+      "start": 465.2,
+      "end": 469.32,
+      "page": null,
+      "section": null,
+      "text": "representing the item once, and then having a number associated"
+    },
+    {
+      "id": "3f01c1206fbf-00121",
+      "kind": "text",
+      "start": 469.32,
+      "end": 472.72,
+      "page": null,
+      "section": null,
+      "text": "with the frequency of that item, similar to what"
+    },
+    {
+      "id": "3f01c1206fbf-00122",
+      "kind": "text",
+      "start": 472.72,
+      "end": 474.4,
+      "page": null,
+      "section": null,
+      "text": "document distance does."
+    },
+    {
+      "id": "3f01c1206fbf-00123",
+      "kind": "text",
+      "start": 474.4,
+      "end": 478.52,
+      "page": null,
+      "section": null,
+      "text": "Document distance can be viewed as a way of compressing"
+    },
+    {
+      "id": "3f01c1206fbf-00124",
+      "kind": "text",
+      "start": 478.52,
+      "end": 479.76,
+      "page": null,
+      "section": null,
+      "text": "your initial input."
+    },
+    {
+      "id": "3f01c1206fbf-00125",
+      "kind": "text",
+      "start": 479.76,
+      "end": 482.92,
+      "page": null,
+      "section": null,
+      "text": "Obviously, you lose the works of Shakespeare or whatever it"
+    },
+    {
+      "id": "3f01c1206fbf-00126",
+      "kind": "text",
+      "start": 482.92,
+      "end": 486.6,
+      "page": null,
+      "section": null,
+      "text": "was, and it becomes a bunch of words and frequencies."
+    },
+    {
+      "id": "3f01c1206fbf-00127",
+      "kind": "text",
+      "start": 486.6,
+      "end": 493.88,
+      "page": null,
+      "section": null,
+      "text": "But it is something that compresses the input and gives"
+    },
+    {
+      "id": "3f01c1206fbf-00128",
+      "kind": "text",
+      "start": 493.88,
+      "end": 495.48,
+      "page": null,
+      "section": null,
+      "text": "you a different representation."
+    },
+    {
+      "id": "3f01c1206fbf-00129",
+      "kind": "text",
+      "start": 495.48,
+      "end": 503.12,
+      "page": null,
+      "section": null,
+      "text": "And so people use sorting as a subroutine in data compression."
+    },
+    {
+      "id": "3f01c1206fbf-00130",
+      "kind": "text",
+      "start": 503.12,
+      "end": 507.37,
+      "page": null,
+      "section": null,
+      "text": "Computer graphics uses sorting."
+    },
+    {
+      "id": "3f01c1206fbf-00131",
+      "kind": "text",
+      "start": 507.37,
+      "end": 511.53,
+      "page": null,
+      "section": null,
+      "text": "Most of the time when you render scenes in computer"
+    },
+    {
+      "id": "3f01c1206fbf-00132",
+      "kind": "text",
+      "start": 511.53,
+      "end": 514.53,
+      "page": null,
+      "section": null,
+      "text": "graphics, you have many layers corresponding to the scenes."
+    },
+    {
+      "id": "3f01c1206fbf-00133",
+      "kind": "text",
+      "start": 514.53,
+      "end": 519.29,
+      "page": null,
+      "section": null,
+      "text": "It turns out that in computer graphics, most of the time"
+    },
+    {
+      "id": "3f01c1206fbf-00134",
+      "kind": "text",
+      "start": 519.29,
+      "end": 523.57,
+      "page": null,
+      "section": null,
+      "text": "you're actually rendering front to back because when you have"
+    },
+    {
+      "id": "3f01c1206fbf-00135",
+      "kind": "text",
+      "start": 523.57,
+      "end": 529.09,
+      "page": null,
+      "section": null,
+      "text": "a big opaque object in front, you want to render that first."
+    },
+    {
+      "id": "3f01c1206fbf-00136",
+      "kind": "text",
+      "start": 529.09,
+      "end": 531.97,
+      "page": null,
+      "section": null,
+      "text": "So you don't have to worry about everything that's occluded"
+    },
+    {
+      "id": "3f01c1206fbf-00137",
+      "kind": "text",
+      "start": 531.97,
+      "end": 534.09,
+      "page": null,
+      "section": null,
+      "text": "by this big opaque object."
+    },
+    {
+      "id": "3f01c1206fbf-00138",
+      "kind": "text",
+      "start": 534.09,
+      "end": 536.61,
+      "page": null,
+      "section": null,
+      "text": "And that makes things more efficient."
+    },
+    {
+      "id": "3f01c1206fbf-00139",
+      "kind": "text",
+      "start": 536.61,
+      "end": 539.09,
+      "page": null,
+      "section": null,
+      "text": "And so you keep things sorted front to back most of the"
+    },
+    {
+      "id": "3f01c1206fbf-00140",
+      "kind": "text",
+      "start": 539.09,
+      "end": 541.13,
+      "page": null,
+      "section": null,
+      "text": "time in computer graphics rendering."
+    },
+    {
+      "id": "3f01c1206fbf-00141",
+      "kind": "text",
+      "start": 541.13,
+      "end": 542.69,
+      "page": null,
+      "section": null,
+      "text": "But some of the time, if you're worried about"
+    },
+    {
+      "id": "3f01c1206fbf-00142",
+      "kind": "text",
+      "start": 542.69,
+      "end": 544.97,
+      "page": null,
+      "section": null,
+      "text": "transparency, you have to render things back to"
+    },
+    {
+      "id": "3f01c1206fbf-00143",
+      "kind": "text",
+      "start": 544.97,
+      "end": 545.65,
+      "page": null,
+      "section": null,
+      "text": "front."
+    },
+    {
+      "id": "3f01c1206fbf-00144",
+      "kind": "text",
+      "start": 545.65,
+      "end": 549.81,
+      "page": null,
+      "section": null,
+      "text": "So typically, you have sorted lists corresponding to the"
+    },
+    {
+      "id": "3f01c1206fbf-00145",
+      "kind": "text",
+      "start": 549.81,
+      "end": 552.69,
+      "page": null,
+      "section": null,
+      "text": "different objects in both orders, both increasing order and"
+    },
+    {
+      "id": "3f01c1206fbf-00146",
+      "kind": "text",
+      "start": 552.69,
+      "end": 555.21,
+      "page": null,
+      "section": null,
+      "text": "decreasing order, and you're maintaining that."
+    },
+    {
+      "id": "3f01c1206fbf-00147",
+      "kind": "text",
+      "start": 555.21,
+      "end": 561.05,
+      "page": null,
+      "section": null,
+      "text": "So sorting is a real important subroutine in pretty much any"
+    },
+    {
+      "id": "3f01c1206fbf-00148",
+      "kind": "text",
+      "start": 561.05,
+      "end": 563.05,
+      "page": null,
+      "section": null,
+      "text": "sophisticated application you look at."
+    },
+    {
+      "id": "3f01c1206fbf-00149",
+      "kind": "text",
+      "start": 563.05,
+      "end": 566.77,
+      "page": null,
+      "section": null,
+      "text": "So it's worthwhile to look at the variety of sorting"
+    },
+    {
+      "id": "3f01c1206fbf-00150",
+      "kind": "text",
+      "start": 566.77,
+      "end": 568.33,
+      "page": null,
+      "section": null,
+      "text": "algorithms that are out there."
+    },
+    {
+      "id": "3f01c1206fbf-00151",
+      "kind": "text",
+      "start": 568.33,
+      "end": 570.41,
+      "page": null,
+      "section": null,
+      "text": "And we're going to do some simple ones today."
+    },
+    {
+      "id": "3f01c1206fbf-00152",
+      "kind": "text",
+      "start": 570.41,
+      "end": 573.41,
+      "page": null,
+      "section": null,
+      "text": "But if you go and look at Wikipedia and do a Google"
+    },
+    {
+      "id": "3f01c1206fbf-00153",
+      "kind": "text",
+      "start": 573.45,
+      "end": 576.89,
+      "page": null,
+      "section": null,
+      "text": "search, there's all sorts of sorts like cocktail"
+    },
+    {
+      "id": "3f01c1206fbf-00154",
+      "kind": "text",
+      "start": 576.89,
+      "end": 581.93,
+      "page": null,
+      "section": null,
+      "text": "sort and bitonic sort and what have you."
+    },
+    {
+      "id": "3f01c1206fbf-00155",
+      "kind": "text",
+      "start": 581.93,
+      "end": 585.17,
+      "page": null,
+      "section": null,
+      "text": "And there's reasons why each of these sorting algorithms"
+    },
+    {
+      "id": "3f01c1206fbf-00156",
+      "kind": "text",
+      "start": 585.17,
+      "end": 591.33,
+      "page": null,
+      "section": null,
+      "text": "exist, because in specific cases, they end up winning on"
+    },
+    {
+      "id": "3f01c1206fbf-00157",
+      "kind": "text",
+      "start": 591.33,
+      "end": 595.65,
+      "page": null,
+      "section": null,
+      "text": "types of inputs or types of problems."
+    },
+    {
+      "id": "3f01c1206fbf-00158",
+      "kind": "text",
+      "start": 595.65,
+      "end": 599.49,
+      "page": null,
+      "section": null,
+      "text": "So let's take a look at our first sorting algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00159",
+      "kind": "text",
+      "start": 599.49,
+      "end": 603.65,
+      "page": null,
+      "section": null,
+      "text": "I'm not going to write code, but it will be in the notes."
+    },
+    {
+      "id": "3f01c1206fbf-00160",
+      "kind": "text",
+      "start": 603.65,
+      "end": 608.89,
+      "page": null,
+      "section": null,
+      "text": "And it is in your document distance Python files."
+    },
+    {
+      "id": "3f01c1206fbf-00161",
+      "kind": "text",
+      "start": 608.89,
+      "end": 612.09,
+      "page": null,
+      "section": null,
+      "text": "But I'll just give you a pseudocode here and walk"
+    },
+    {
+      "id": "3f01c1206fbf-00162",
+      "kind": "text",
+      "start": 612.09,
+      "end": 614.61,
+      "page": null,
+      "section": null,
+      "text": "through what insertion sort looks like, because the"
+    },
+    {
+      "id": "3f01c1206fbf-00163",
+      "kind": "text",
+      "start": 614.61,
+      "end": 619.13,
+      "page": null,
+      "section": null,
+      "text": "purpose of really describing this algorithm to you is to"
+    },
+    {
+      "id": "3f01c1206fbf-00164",
+      "kind": "text",
+      "start": 619.13,
+      "end": 620.73,
+      "page": null,
+      "section": null,
+      "text": "analyze its complexity."
+    },
+    {
+      "id": "3f01c1206fbf-00165",
+      "kind": "text",
+      "start": 620.73,
+      "end": 622.85,
+      "page": null,
+      "section": null,
+      "text": "We need to do some counting here with respect to this"
+    },
+    {
+      "id": "3f01c1206fbf-00166",
+      "kind": "text",
+      "start": 622.85,
+      "end": 627.73,
+      "page": null,
+      "section": null,
+      "text": "algorithm to figure out how fast it's going to run and"
+    },
+    {
+      "id": "3f01c1206fbf-00167",
+      "kind": "text",
+      "start": 627.73,
+      "end": 630.29,
+      "page": null,
+      "section": null,
+      "text": "what the worst case complexity is."
+    },
+    {
+      "id": "3f01c1206fbf-00168",
+      "kind": "text",
+      "start": 630.29,
+      "end": 632.69,
+      "page": null,
+      "section": null,
+      "text": "So what is insertion sort?"
+    },
+    {
+      "id": "3f01c1206fbf-00169",
+      "kind": "text",
+      "start": 632.69,
+      "end": 641.81,
+      "page": null,
+      "section": null,
+      "text": "For i equals 1, 2, through n, given an input to be sorted,"
+    },
+    {
+      "id": "3f01c1206fbf-00170",
+      "kind": "text",
+      "start": 641.81,
+      "end": 646.73,
+      "page": null,
+      "section": null,
+      "text": "what we're going to do is we're going to insert a of i in"
+    },
+    {
+      "id": "3f01c1206fbf-00171",
+      "kind": "text",
+      "start": 646.73,
+      "end": 648.49,
+      "page": null,
+      "section": null,
+      "text": "the right position."
+    },
+    {
+      "id": "3f01c1206fbf-00172",
+      "kind": "text",
+      "start": 648.49,
+      "end": 652.81,
+      "page": null,
+      "section": null,
+      "text": "And we're going to assume that we are sort of midway"
+    },
+    {
+      "id": "3f01c1206fbf-00173",
+      "kind": "text",
+      "start": 652.81,
+      "end": 659.22,
+      "page": null,
+      "section": null,
+      "text": "through the sorting process where we have sorted a0"
+    },
+    {
+      "id": "3f01c1206fbf-00174",
+      "kind": "text",
+      "start": 659.22,
+      "end": 660.94,
+      "page": null,
+      "section": null,
+      "text": "through i minus 1."
+    },
+    {
+      "id": "3f01c1206fbf-00175",
+      "kind": "text",
+      "start": 660.94,
+      "end": 666.3,
+      "page": null,
+      "section": null,
+      "text": "And we're going to expand this to this array to have i plus 1"
+    },
+    {
+      "id": "3f01c1206fbf-00176",
+      "kind": "text",
+      "start": 666.3,
+      "end": 670.38,
+      "page": null,
+      "section": null,
+      "text": "elements, and a of i is going to get inserted into the"
+    },
+    {
+      "id": "3f01c1206fbf-00177",
+      "kind": "text",
+      "start": 670.38,
+      "end": 672.86,
+      "page": null,
+      "section": null,
+      "text": "correct position."
+    },
+    {
+      "id": "3f01c1206fbf-00178",
+      "kind": "text",
+      "start": 672.86,
+      "end": 686.44,
+      "page": null,
+      "section": null,
+      "text": "And we're going to do this by pairwise swaps down to the"
+    },
+    {
+      "id": "3f01c1206fbf-00179",
+      "kind": "text",
+      "start": 686.44,
+      "end": 696.04,
+      "page": null,
+      "section": null,
+      "text": "correct position for the number that is initially in a of i."
+    },
+    {
+      "id": "3f01c1206fbf-00180",
+      "kind": "text",
+      "start": 696.04,
+      "end": 702.41,
+      "page": null,
+      "section": null,
+      "text": "So let's go through an example of this."
+    },
+    {
+      "id": "3f01c1206fbf-00181",
+      "kind": "text",
+      "start": 702.41,
+      "end": 704.85,
+      "page": null,
+      "section": null,
+      "text": "We're going to sort in increasing order."
+    },
+    {
+      "id": "3f01c1206fbf-00182",
+      "kind": "text",
+      "start": 704.85,
+      "end": 710.42,
+      "page": null,
+      "section": null,
+      "text": "Just have six numbers."
+    },
+    {
+      "id": "3f01c1206fbf-00183",
+      "kind": "text",
+      "start": 710.42,
+      "end": 715.26,
+      "page": null,
+      "section": null,
+      "text": "And initially, we have 5, 2, 4, 6, 1, 3."
+    },
+    {
+      "id": "3f01c1206fbf-00184",
+      "kind": "text",
+      "start": 715.26,
+      "end": 716.42,
+      "page": null,
+      "section": null,
+      "text": "And we're going to take a look at this."
+    },
+    {
+      "id": "3f01c1206fbf-00185",
+      "kind": "text",
+      "start": 716.42,
+      "end": 720.58,
+      "page": null,
+      "section": null,
+      "text": "And you start with the index 1 or the second element,"
+    },
+    {
+      "id": "3f01c1206fbf-00186",
+      "kind": "text",
+      "start": 720.58,
+      "end": 723.7,
+      "page": null,
+      "section": null,
+      "text": "because the very first element, it's a single element, and"
+    },
+    {
+      "id": "3f01c1206fbf-00187",
+      "kind": "text",
+      "start": 723.7,
+      "end": 726.02,
+      "page": null,
+      "section": null,
+      "text": "it's already sorted by definition."
+    },
+    {
+      "id": "3f01c1206fbf-00188",
+      "kind": "text",
+      "start": 726.02,
+      "end": 730.86,
+      "page": null,
+      "section": null,
+      "text": "But you start from here, and this is what we call our key."
+    },
+    {
+      "id": "3f01c1206fbf-00189",
+      "kind": "text",
+      "start": 730.86,
+      "end": 734.86,
+      "page": null,
+      "section": null,
+      "text": "And that's essentially a pointer to where we're at"
+    },
+    {
+      "id": "3f01c1206fbf-00190",
+      "kind": "text",
+      "start": 734.86,
+      "end": 735.22,
+      "page": null,
+      "section": null,
+      "text": "right now."
+    },
+    {
+      "id": "3f01c1206fbf-00191",
+      "kind": "text",
+      "start": 735.22,
+      "end": 737.74,
+      "page": null,
+      "section": null,
+      "text": "And the key keeps moving to the right as we go through the"
+    },
+    {
+      "id": "3f01c1206fbf-00192",
+      "kind": "text",
+      "start": 737.74,
+      "end": 740.18,
+      "page": null,
+      "section": null,
+      "text": "different steps of the algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00193",
+      "kind": "text",
+      "start": 740.18,
+      "end": 743.06,
+      "page": null,
+      "section": null,
+      "text": "And so what you do is you look at this, and you have"
+    },
+    {
+      "id": "3f01c1206fbf-00194",
+      "kind": "text",
+      "start": 743.06,
+      "end": 744.82,
+      "page": null,
+      "section": null,
+      "text": "this is a of i."
+    },
+    {
+      "id": "3f01c1206fbf-00195",
+      "kind": "text",
+      "start": 744.82,
+      "end": 746.02,
+      "page": null,
+      "section": null,
+      "text": "That's your key."
+    },
+    {
+      "id": "3f01c1206fbf-00196",
+      "kind": "text",
+      "start": 746.02,
+      "end": 750.06,
+      "page": null,
+      "section": null,
+      "text": "And you have a of 0 to 0, which is 5."
+    },
+    {
+      "id": "3f01c1206fbf-00197",
+      "kind": "text",
+      "start": 750.06,
+      "end": 755.14,
+      "page": null,
+      "section": null,
+      "text": "And since we want to sort in increasing order, this is not"
+    },
+    {
+      "id": "3f01c1206fbf-00198",
+      "kind": "text",
+      "start": 755.14,
+      "end": 757.74,
+      "page": null,
+      "section": null,
+      "text": "sorted, and so we do a swap."
+    },
+    {
+      "id": "3f01c1206fbf-00199",
+      "kind": "text",
+      "start": 757.74,
+      "end": 762.42,
+      "page": null,
+      "section": null,
+      "text": "So what this would do in this step is to do a swap."
+    },
+    {
+      "id": "3f01c1206fbf-00200",
+      "kind": "text",
+      "start": 762.42,
+      "end": 771.81,
+      "page": null,
+      "section": null,
+      "text": "And we would go obtain 2, 5, 4, 6, 1, 3."
+    },
+    {
+      "id": "3f01c1206fbf-00201",
+      "kind": "text",
+      "start": 771.81,
+      "end": 775.33,
+      "page": null,
+      "section": null,
+      "text": "So all that's happened here in this step, in the very first"
+    },
+    {
+      "id": "3f01c1206fbf-00202",
+      "kind": "text",
+      "start": 775.33,
+      "end": 777.77,
+      "page": null,
+      "section": null,
+      "text": "step where the key is in the second position, is"
+    },
+    {
+      "id": "3f01c1206fbf-00203",
+      "kind": "text",
+      "start": 777.77,
+      "end": 780.01,
+      "page": null,
+      "section": null,
+      "text": "what one swap happened."
+    },
+    {
+      "id": "3f01c1206fbf-00204",
+      "kind": "text",
+      "start": 780.01,
+      "end": 783.33,
+      "page": null,
+      "section": null,
+      "text": "Now your key is here, at item 4."
+    },
+    {
+      "id": "3f01c1206fbf-00205",
+      "kind": "text",
+      "start": 783.33,
+      "end": 786.01,
+      "page": null,
+      "section": null,
+      "text": "Again, you need to put 4 into the right spot."
+    },
+    {
+      "id": "3f01c1206fbf-00206",
+      "kind": "text",
+      "start": 786.01,
+      "end": 788.69,
+      "page": null,
+      "section": null,
+      "text": "And so you do pairwise swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00207",
+      "kind": "text",
+      "start": 788.69,
+      "end": 791.29,
+      "page": null,
+      "section": null,
+      "text": "And in this case, you have to do one swap."
+    },
+    {
+      "id": "3f01c1206fbf-00208",
+      "kind": "text",
+      "start": 791.29,
+      "end": 792.77,
+      "page": null,
+      "section": null,
+      "text": "And you get 2, 4, 5."
+    },
+    {
+      "id": "3f01c1206fbf-00209",
+      "kind": "text",
+      "start": 792.77,
+      "end": 795.65,
+      "page": null,
+      "section": null,
+      "text": "And you're done with this iteration."
+    },
+    {
+      "id": "3f01c1206fbf-00210",
+      "kind": "text",
+      "start": 795.65,
+      "end": 807.86,
+      "page": null,
+      "section": null,
+      "text": "So what happens here is you have 2, 4, 5, 6, 1, 3."
+    },
+    {
+      "id": "3f01c1206fbf-00211",
+      "kind": "text",
+      "start": 807.86,
+      "end": 812.98,
+      "page": null,
+      "section": null,
+      "text": "And now the key is over here at 6."
+    },
+    {
+      "id": "3f01c1206fbf-00212",
+      "kind": "text",
+      "start": 812.98,
+      "end": 818.46,
+      "page": null,
+      "section": null,
+      "text": "Now at this point, things are kind of easy in the sense"
+    },
+    {
+      "id": "3f01c1206fbf-00213",
+      "kind": "text",
+      "start": 818.46,
+      "end": 821.62,
+      "page": null,
+      "section": null,
+      "text": "that you look at it and you say, well, 6 is, I know that this"
+    },
+    {
+      "id": "3f01c1206fbf-00214",
+      "kind": "text",
+      "start": 821.62,
+      "end": 823.5,
+      "page": null,
+      "section": null,
+      "text": "part is already sorted."
+    },
+    {
+      "id": "3f01c1206fbf-00215",
+      "kind": "text",
+      "start": 823.5,
+      "end": 827.02,
+      "page": null,
+      "section": null,
+      "text": "6 is greater than 5, so you have to do nothing."
+    },
+    {
+      "id": "3f01c1206fbf-00216",
+      "kind": "text",
+      "start": 827.02,
+      "end": 831.54,
+      "page": null,
+      "section": null,
+      "text": "So there's no swaps that happen in this step."
+    },
+    {
+      "id": "3f01c1206fbf-00217",
+      "kind": "text",
+      "start": 831.54,
+      "end": 838.42,
+      "page": null,
+      "section": null,
+      "text": "So all that happens here is you're going to move the key"
+    },
+    {
+      "id": "3f01c1206fbf-00218",
+      "kind": "text",
+      "start": 838.42,
+      "end": 842.3,
+      "page": null,
+      "section": null,
+      "text": "to one step to the right."
+    },
+    {
+      "id": "3f01c1206fbf-00219",
+      "kind": "text",
+      "start": 842.3,
+      "end": 846.38,
+      "page": null,
+      "section": null,
+      "text": "So you have 2, 4, 5, 6, 1, 3."
+    },
+    {
+      "id": "3f01c1206fbf-00220",
+      "kind": "text",
+      "start": 846.38,
+      "end": 850.3,
+      "page": null,
+      "section": null,
+      "text": "And your key is now at 1."
+    },
+    {
+      "id": "3f01c1206fbf-00221",
+      "kind": "text",
+      "start": 850.3,
+      "end": 851.9,
+      "page": null,
+      "section": null,
+      "text": "Here you have to do more work."
+    },
+    {
+      "id": "3f01c1206fbf-00222",
+      "kind": "text",
+      "start": 851.9,
+      "end": 856.74,
+      "page": null,
+      "section": null,
+      "text": "Now you see one aspect of the complexity of this algorithm,"
+    },
+    {
+      "id": "3f01c1206fbf-00223",
+      "kind": "text",
+      "start": 856.74,
+      "end": 859.74,
+      "page": null,
+      "section": null,
+      "text": "given that you're doing pairwise swaps, the way this"
+    },
+    {
+      "id": "3f01c1206fbf-00224",
+      "kind": "text",
+      "start": 859.74,
+      "end": 863.42,
+      "page": null,
+      "section": null,
+      "text": "algorithm was defined in pseudocode out there was I'm"
+    },
+    {
+      "id": "3f01c1206fbf-00225",
+      "kind": "text",
+      "start": 863.42,
+      "end": 867.74,
+      "page": null,
+      "section": null,
+      "text": "going to use pairwise swaps to find the correct position."
+    },
+    {
+      "id": "3f01c1206fbf-00226",
+      "kind": "text",
+      "start": 867.74,
+      "end": 870.7,
+      "page": null,
+      "section": null,
+      "text": "So what you're going to do is you're going to have to"
+    },
+    {
+      "id": "3f01c1206fbf-00227",
+      "kind": "text",
+      "start": 870.7,
+      "end": 874.06,
+      "page": null,
+      "section": null,
+      "text": "swap first 1 and 6."
+    },
+    {
+      "id": "3f01c1206fbf-00228",
+      "kind": "text",
+      "start": 874.06,
+      "end": 876.3,
+      "page": null,
+      "section": null,
+      "text": "And then you'll swap, 1 is over here."
+    },
+    {
+      "id": "3f01c1206fbf-00229",
+      "kind": "text",
+      "start": 876.3,
+      "end": 879.94,
+      "page": null,
+      "section": null,
+      "text": "So you'll swap this position and that position."
+    },
+    {
+      "id": "3f01c1206fbf-00230",
+      "kind": "text",
+      "start": 879.94,
+      "end": 886.44,
+      "page": null,
+      "section": null,
+      "text": "And then you'll swap, essentially, do four swaps"
+    },
+    {
+      "id": "3f01c1206fbf-00231",
+      "kind": "text",
+      "start": 886.44,
+      "end": 892.96,
+      "page": null,
+      "section": null,
+      "text": "to get to the point where you have 1, 2, 4, 5, 6, 3."
+    },
+    {
+      "id": "3f01c1206fbf-00232",
+      "kind": "text",
+      "start": 892.96,
+      "end": 903.78,
+      "page": null,
+      "section": null,
+      "text": "So this is the result, 1, 2, 4, 5, 6, 3."
+    },
+    {
+      "id": "3f01c1206fbf-00233",
+      "kind": "text",
+      "start": 903.78,
+      "end": 906.9,
+      "page": null,
+      "section": null,
+      "text": "And the important thing to understand here is that you've"
+    },
+    {
+      "id": "3f01c1206fbf-00234",
+      "kind": "text",
+      "start": 906.9,
+      "end": 910.18,
+      "page": null,
+      "section": null,
+      "text": "done four swaps to get 1 to the correct position."
+    },
+    {
+      "id": "3f01c1206fbf-00235",
+      "kind": "text",
+      "start": 910.18,
+      "end": 913.7,
+      "page": null,
+      "section": null,
+      "text": "Now you can imagine a different data structure where you"
+    },
+    {
+      "id": "3f01c1206fbf-00236",
+      "kind": "text",
+      "start": 913.7,
+      "end": 916.94,
+      "page": null,
+      "section": null,
+      "text": "move this over there and you shift them all to the right."
+    },
+    {
+      "id": "3f01c1206fbf-00237",
+      "kind": "text",
+      "start": 916.94,
+      "end": 920.5,
+      "page": null,
+      "section": null,
+      "text": "But in fact, that shifting of these four elements is going"
+    },
+    {
+      "id": "3f01c1206fbf-00238",
+      "kind": "text",
+      "start": 920.5,
+      "end": 925.3,
+      "page": null,
+      "section": null,
+      "text": "to be computed in our model as four operations, or four"
+    },
+    {
+      "id": "3f01c1206fbf-00239",
+      "kind": "text",
+      "start": 925.3,
+      "end": 926.54,
+      "page": null,
+      "section": null,
+      "text": "steps, anyway."
+    },
+    {
+      "id": "3f01c1206fbf-00240",
+      "kind": "text",
+      "start": 926.54,
+      "end": 928.7,
+      "page": null,
+      "section": null,
+      "text": "So there's no getting away from the fact that you have"
+    },
+    {
+      "id": "3f01c1206fbf-00241",
+      "kind": "text",
+      "start": 928.7,
+      "end": 930.66,
+      "page": null,
+      "section": null,
+      "text": "to do four things here."
+    },
+    {
+      "id": "3f01c1206fbf-00242",
+      "kind": "text",
+      "start": 930.66,
+      "end": 936.82,
+      "page": null,
+      "section": null,
+      "text": "And the way the code that we have for insertion sort"
+    },
+    {
+      "id": "3f01c1206fbf-00243",
+      "kind": "text",
+      "start": 936.82,
+      "end": 939.38,
+      "page": null,
+      "section": null,
+      "text": "does this is by using pairwise swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00244",
+      "kind": "text",
+      "start": 939.38,
+      "end": 941.46,
+      "page": null,
+      "section": null,
+      "text": "So we're almost done."
+    },
+    {
+      "id": "3f01c1206fbf-00245",
+      "kind": "text",
+      "start": 941.46,
+      "end": 949.52,
+      "page": null,
+      "section": null,
+      "text": "Now we have the key at 3."
+    },
+    {
+      "id": "3f01c1206fbf-00246",
+      "kind": "text",
+      "start": 949.52,
+      "end": 952.92,
+      "page": null,
+      "section": null,
+      "text": "And now 3 needs to get put into the correct position."
+    },
+    {
+      "id": "3f01c1206fbf-00247",
+      "kind": "text",
+      "start": 952.92,
+      "end": 955.32,
+      "page": null,
+      "section": null,
+      "text": "And so you've got to do a few swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00248",
+      "kind": "text",
+      "start": 955.32,
+      "end": 958.33,
+      "page": null,
+      "section": null,
+      "text": "This is the last step."
+    },
+    {
+      "id": "3f01c1206fbf-00249",
+      "kind": "text",
+      "start": 958.33,
+      "end": 961.57,
+      "page": null,
+      "section": null,
+      "text": "And what happens here is 3 is going to get swapped with"
+    },
+    {
+      "id": "3f01c1206fbf-00250",
+      "kind": "text",
+      "start": 961.57,
+      "end": 963.57,
+      "page": null,
+      "section": null,
+      "text": "6."
+    },
+    {
+      "id": "3f01c1206fbf-00251",
+      "kind": "text",
+      "start": 963.57,
+      "end": 966.53,
+      "page": null,
+      "section": null,
+      "text": "And then 3 needs to get swapped with 5."
+    },
+    {
+      "id": "3f01c1206fbf-00252",
+      "kind": "text",
+      "start": 966.53,
+      "end": 969.81,
+      "page": null,
+      "section": null,
+      "text": "And then 3 needs to get swapped with 4."
+    },
+    {
+      "id": "3f01c1206fbf-00253",
+      "kind": "text",
+      "start": 969.81,
+      "end": 973.21,
+      "page": null,
+      "section": null,
+      "text": "And then since 3 is greater than 2, you're done."
+    },
+    {
+      "id": "3f01c1206fbf-00254",
+      "kind": "text",
+      "start": 973.21,
+      "end": 978.9,
+      "page": null,
+      "section": null,
+      "text": "So you have 1, 2, 3, 4, 5, 6."
+    },
+    {
+      "id": "3f01c1206fbf-00255",
+      "kind": "text",
+      "start": 978.9,
+      "end": 981.18,
+      "page": null,
+      "section": null,
+      "text": "And that's it."
+    },
+    {
+      "id": "3f01c1206fbf-00256",
+      "kind": "text",
+      "start": 981.18,
+      "end": 985.38,
+      "page": null,
+      "section": null,
+      "text": "So analysis."
+    },
+    {
+      "id": "3f01c1206fbf-00257",
+      "kind": "text",
+      "start": 985.38,
+      "end": 990.28,
+      "page": null,
+      "section": null,
+      "text": "How many steps do I have?"
+    },
+    {
+      "id": "3f01c1206fbf-00258",
+      "kind": "text",
+      "start": 990.28,
+      "end": 992.28,
+      "page": null,
+      "section": null,
+      "text": "Yep?"
+    },
+    {
+      "id": "3f01c1206fbf-00259",
+      "kind": "text",
+      "start": 992.36,
+      "end": 993.84,
+      "page": null,
+      "section": null,
+      "text": "And how many steps do I have?"
+    },
+    {
+      "id": "3f01c1206fbf-00260",
+      "kind": "text",
+      "start": 996.36,
+      "end": 1000.12,
+      "page": null,
+      "section": null,
+      "text": "I guess that wasn't a good question."
+    },
+    {
+      "id": "3f01c1206fbf-00261",
+      "kind": "text",
+      "start": 1000.12,
+      "end": 1003.92,
+      "page": null,
+      "section": null,
+      "text": "If I think of a step as being a movement of the key,"
+    },
+    {
+      "id": "3f01c1206fbf-00262",
+      "kind": "text",
+      "start": 1003.92,
+      "end": 1006.6,
+      "page": null,
+      "section": null,
+      "text": "how many steps do I have?"
+    },
+    {
+      "id": "3f01c1206fbf-00263",
+      "kind": "text",
+      "start": 1006.6,
+      "end": 1009.92,
+      "page": null,
+      "section": null,
+      "text": "I have theta n steps."
+    },
+    {
+      "id": "3f01c1206fbf-00264",
+      "kind": "text",
+      "start": 1009.92,
+      "end": 1016.56,
+      "page": null,
+      "section": null,
+      "text": "And in this case, you can think of it as n minus 1 steps"
+    },
+    {
+      "id": "3f01c1206fbf-00265",
+      "kind": "text",
+      "start": 1016.56,
+      "end": 1018.04,
+      "page": null,
+      "section": null,
+      "text": "since you started with 2."
+    },
+    {
+      "id": "3f01c1206fbf-00266",
+      "kind": "text",
+      "start": 1018.04,
+      "end": 1030.07,
+      "page": null,
+      "section": null,
+      "text": "But let's just call it theta n steps in terms of key positions."
+    },
+    {
+      "id": "3f01c1206fbf-00267",
+      "kind": "text",
+      "start": 1030.07,
+      "end": 1031.15,
+      "page": null,
+      "section": null,
+      "text": "And you're right."
+    },
+    {
+      "id": "3f01c1206fbf-00268",
+      "kind": "text",
+      "start": 1031.15,
+      "end": 1035.35,
+      "page": null,
+      "section": null,
+      "text": "It is n square because at any given step,"
+    },
+    {
+      "id": "3f01c1206fbf-00269",
+      "kind": "text",
+      "start": 1035.35,
+      "end": 1039.75,
+      "page": null,
+      "section": null,
+      "text": "it's quite possible that I have to do theta n work."
+    },
+    {
+      "id": "3f01c1206fbf-00270",
+      "kind": "text",
+      "start": 1039.75,
+      "end": 1042.43,
+      "page": null,
+      "section": null,
+      "text": "And one example is this one right here"
+    },
+    {
+      "id": "3f01c1206fbf-00271",
+      "kind": "text",
+      "start": 1042.43,
+      "end": 1045.19,
+      "page": null,
+      "section": null,
+      "text": "where I had to do four swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00272",
+      "kind": "text",
+      "start": 1045.19,
+      "end": 1047.59,
+      "page": null,
+      "section": null,
+      "text": "And in general, you can construct a scenario"
+    },
+    {
+      "id": "3f01c1206fbf-00273",
+      "kind": "text",
+      "start": 1047.59,
+      "end": 1051.51,
+      "page": null,
+      "section": null,
+      "text": "where towards the end of the algorithm,"
+    },
+    {
+      "id": "3f01c1206fbf-00274",
+      "kind": "text",
+      "start": 1051.51,
+      "end": 1054.11,
+      "page": null,
+      "section": null,
+      "text": "you'd have to do theta n work."
+    },
+    {
+      "id": "3f01c1206fbf-00275",
+      "kind": "text",
+      "start": 1054.11,
+      "end": 1057.59,
+      "page": null,
+      "section": null,
+      "text": "But if you had a list that was reverse sorted,"
+    },
+    {
+      "id": "3f01c1206fbf-00276",
+      "kind": "text",
+      "start": 1057.59,
+      "end": 1062.07,
+      "page": null,
+      "section": null,
+      "text": "you would essentially have to do on an average n by 2 swaps"
+    },
+    {
+      "id": "3f01c1206fbf-00277",
+      "kind": "text",
+      "start": 1062.07,
+      "end": 1063.87,
+      "page": null,
+      "section": null,
+      "text": "as you go through each of the steps."
+    },
+    {
+      "id": "3f01c1206fbf-00278",
+      "kind": "text",
+      "start": 1063.87,
+      "end": 1065.31,
+      "page": null,
+      "section": null,
+      "text": "And that's theta n."
+    },
+    {
+      "id": "3f01c1206fbf-00279",
+      "kind": "text",
+      "start": 1065.31,
+      "end": 1075.93,
+      "page": null,
+      "section": null,
+      "text": "So each step is theta n swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00280",
+      "kind": "text",
+      "start": 1075.93,
+      "end": 1078.73,
+      "page": null,
+      "section": null,
+      "text": "And when I say swaps, I could also"
+    },
+    {
+      "id": "3f01c1206fbf-00281",
+      "kind": "text",
+      "start": 1078.77,
+      "end": 1086.8,
+      "page": null,
+      "section": null,
+      "text": "say each step is theta n compares n swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00282",
+      "kind": "text",
+      "start": 1086.8,
+      "end": 1088.76,
+      "page": null,
+      "section": null,
+      "text": "And this is going to be important because I'm going to ask you"
+    },
+    {
+      "id": "3f01c1206fbf-00283",
+      "kind": "text",
+      "start": 1088.76,
+      "end": 1091.56,
+      "page": null,
+      "section": null,
+      "text": "an interesting question in a minute."
+    },
+    {
+      "id": "3f01c1206fbf-00284",
+      "kind": "text",
+      "start": 1091.56,
+      "end": 1093.88,
+      "page": null,
+      "section": null,
+      "text": "But let me summarize."
+    },
+    {
+      "id": "3f01c1206fbf-00285",
+      "kind": "text",
+      "start": 1093.88,
+      "end": 1096.48,
+      "page": null,
+      "section": null,
+      "text": "What I have here is a theta n square algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00286",
+      "kind": "text",
+      "start": 1096.48,
+      "end": 1099.04,
+      "page": null,
+      "section": null,
+      "text": "The reason this is a theta n square algorithm"
+    },
+    {
+      "id": "3f01c1206fbf-00287",
+      "kind": "text",
+      "start": 1099.04,
+      "end": 1106.88,
+      "page": null,
+      "section": null,
+      "text": "is because I have theta n steps and each step is theta n."
+    },
+    {
+      "id": "3f01c1206fbf-00288",
+      "kind": "text",
+      "start": 1106.88,
+      "end": 1109.12,
+      "page": null,
+      "section": null,
+      "text": "When I'm counting, what am I counting"
+    },
+    {
+      "id": "3f01c1206fbf-00289",
+      "kind": "text",
+      "start": 1109.12,
+      "end": 1110.72,
+      "page": null,
+      "section": null,
+      "text": "in terms of operations?"
+    },
+    {
+      "id": "3f01c1206fbf-00290",
+      "kind": "text",
+      "start": 1110.72,
+      "end": 1113.52,
+      "page": null,
+      "section": null,
+      "text": "The assumption here, unspoken assumption,"
+    },
+    {
+      "id": "3f01c1206fbf-00291",
+      "kind": "text",
+      "start": 1113.52,
+      "end": 1116.84,
+      "page": null,
+      "section": null,
+      "text": "is being that an operation is a compare and a swap,"
+    },
+    {
+      "id": "3f01c1206fbf-00292",
+      "kind": "text",
+      "start": 1116.84,
+      "end": 1119.6,
+      "page": null,
+      "section": null,
+      "text": "and they're essentially equal in cost."
+    },
+    {
+      "id": "3f01c1206fbf-00293",
+      "kind": "text",
+      "start": 1119.6,
+      "end": 1121.84,
+      "page": null,
+      "section": null,
+      "text": "And in most computers, that's true."
+    },
+    {
+      "id": "3f01c1206fbf-00294",
+      "kind": "text",
+      "start": 1121.84,
+      "end": 1125.2,
+      "page": null,
+      "section": null,
+      "text": "You have a single instruction in, say, the x86"
+    },
+    {
+      "id": "3f01c1206fbf-00295",
+      "kind": "text",
+      "start": 1125.2,
+      "end": 1127.72,
+      "page": null,
+      "section": null,
+      "text": "of the MIPS architecture that can do a compare"
+    },
+    {
+      "id": "3f01c1206fbf-00296",
+      "kind": "text",
+      "start": 1127.72,
+      "end": 1130.56,
+      "page": null,
+      "section": null,
+      "text": "and the same thing for swapping registers."
+    },
+    {
+      "id": "3f01c1206fbf-00297",
+      "kind": "text",
+      "start": 1130.56,
+      "end": 1132.64,
+      "page": null,
+      "section": null,
+      "text": "So perfectly reasonable assumption"
+    },
+    {
+      "id": "3f01c1206fbf-00298",
+      "kind": "text",
+      "start": 1132.64,
+      "end": 1136.48,
+      "page": null,
+      "section": null,
+      "text": "that compares and swaps for numbers"
+    },
+    {
+      "id": "3f01c1206fbf-00299",
+      "kind": "text",
+      "start": 1136.48,
+      "end": 1138.32,
+      "page": null,
+      "section": null,
+      "text": "have exactly the same cost."
+    },
+    {
+      "id": "3f01c1206fbf-00300",
+      "kind": "text",
+      "start": 1138.32,
+      "end": 1141.92,
+      "page": null,
+      "section": null,
+      "text": "But if you had a record and you were comparing records"
+    },
+    {
+      "id": "3f01c1206fbf-00301",
+      "kind": "text",
+      "start": 1141.92,
+      "end": 1145.48,
+      "page": null,
+      "section": null,
+      "text": "and the comparison function that you use for the records"
+    },
+    {
+      "id": "3f01c1206fbf-00302",
+      "kind": "text",
+      "start": 1145.48,
+      "end": 1148.84,
+      "page": null,
+      "section": null,
+      "text": "was in itself a method call or a subroutine,"
+    },
+    {
+      "id": "3f01c1206fbf-00303",
+      "kind": "text",
+      "start": 1148.84,
+      "end": 1151.28,
+      "page": null,
+      "section": null,
+      "text": "it's quite possible that all you're doing"
+    },
+    {
+      "id": "3f01c1206fbf-00304",
+      "kind": "text",
+      "start": 1151.28,
+      "end": 1155.6,
+      "page": null,
+      "section": null,
+      "text": "is swapping pointers or references to do the swap."
+    },
+    {
+      "id": "3f01c1206fbf-00305",
+      "kind": "text",
+      "start": 1155.6,
+      "end": 1158.04,
+      "page": null,
+      "section": null,
+      "text": "But the comparison could be substantially more expensive."
+    },
+    {
+      "id": "3f01c1206fbf-00306",
+      "kind": "text",
+      "start": 1162.8,
+      "end": 1164.92,
+      "page": null,
+      "section": null,
+      "text": "Most of the time, and we'll differentiate"
+    },
+    {
+      "id": "3f01c1206fbf-00307",
+      "kind": "text",
+      "start": 1164.92,
+      "end": 1167.24,
+      "page": null,
+      "section": null,
+      "text": "if it becomes necessary, we're going"
+    },
+    {
+      "id": "3f01c1206fbf-00308",
+      "kind": "text",
+      "start": 1167.24,
+      "end": 1169.52,
+      "page": null,
+      "section": null,
+      "text": "to be counting comparisons in the sorting algorithms"
+    },
+    {
+      "id": "3f01c1206fbf-00309",
+      "kind": "text",
+      "start": 1169.52,
+      "end": 1171.2,
+      "page": null,
+      "section": null,
+      "text": "that we'll be putting out."
+    },
+    {
+      "id": "3f01c1206fbf-00310",
+      "kind": "text",
+      "start": 1171.2,
+      "end": 1176.52,
+      "page": null,
+      "section": null,
+      "text": "And we'll be assuming that either comparison swaps are roughly"
+    },
+    {
+      "id": "3f01c1206fbf-00311",
+      "kind": "text",
+      "start": 1176.52,
+      "end": 1181.84,
+      "page": null,
+      "section": null,
+      "text": "the same or that compares are, and we'll say which one,"
+    },
+    {
+      "id": "3f01c1206fbf-00312",
+      "kind": "text",
+      "start": 1181.84,
+      "end": 1185.32,
+      "page": null,
+      "section": null,
+      "text": "of course, all that compares are substantially more"
+    },
+    {
+      "id": "3f01c1206fbf-00313",
+      "kind": "text",
+      "start": 1185.32,
+      "end": 1187.8,
+      "page": null,
+      "section": null,
+      "text": "expensive than swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00314",
+      "kind": "text",
+      "start": 1187.8,
+      "end": 1192.24,
+      "page": null,
+      "section": null,
+      "text": "So if you had either of those cases for insertion sort,"
+    },
+    {
+      "id": "3f01c1206fbf-00315",
+      "kind": "text",
+      "start": 1192.24,
+      "end": 1194.08,
+      "page": null,
+      "section": null,
+      "text": "you have a theta n squared algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00316",
+      "kind": "text",
+      "start": 1194.08,
+      "end": 1195.56,
+      "page": null,
+      "section": null,
+      "text": "You have theta n squared compares"
+    },
+    {
+      "id": "3f01c1206fbf-00317",
+      "kind": "text",
+      "start": 1195.56,
+      "end": 1198.2,
+      "page": null,
+      "section": null,
+      "text": "and theta n squared swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00318",
+      "kind": "text",
+      "start": 1198.2,
+      "end": 1200.8,
+      "page": null,
+      "section": null,
+      "text": "Now, here's the question."
+    },
+    {
+      "id": "3f01c1206fbf-00319",
+      "kind": "text",
+      "start": 1200.8,
+      "end": 1211.18,
+      "page": null,
+      "section": null,
+      "text": "Let's say that compares are more expensive than swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00320",
+      "kind": "text",
+      "start": 1211.18,
+      "end": 1217.28,
+      "page": null,
+      "section": null,
+      "text": "And so I'm concerned about the theta n squared comparison cost."
+    },
+    {
+      "id": "3f01c1206fbf-00321",
+      "kind": "text",
+      "start": 1217.28,
+      "end": 1220.84,
+      "page": null,
+      "section": null,
+      "text": "I'm not as concerned because of the constant factors involved"
+    },
+    {
+      "id": "3f01c1206fbf-00322",
+      "kind": "text",
+      "start": 1220.84,
+      "end": 1224.28,
+      "page": null,
+      "section": null,
+      "text": "with the theta n squared swap cost."
+    },
+    {
+      "id": "3f01c1206fbf-00323",
+      "kind": "text",
+      "start": 1224.28,
+      "end": 1228.2,
+      "page": null,
+      "section": null,
+      "text": "What's a simple, this is a question question."
+    },
+    {
+      "id": "3f01c1206fbf-00324",
+      "kind": "text",
+      "start": 1228.72,
+      "end": 1233.4,
+      "page": null,
+      "section": null,
+      "text": "What's a simple fix, change to this algorithm"
+    },
+    {
+      "id": "3f01c1206fbf-00325",
+      "kind": "text",
+      "start": 1233.4,
+      "end": 1237.28,
+      "page": null,
+      "section": null,
+      "text": "that would give me a better complexity in the case"
+    },
+    {
+      "id": "3f01c1206fbf-00326",
+      "kind": "text",
+      "start": 1237.28,
+      "end": 1240.32,
+      "page": null,
+      "section": null,
+      "text": "where compares are more expensive or I'm only"
+    },
+    {
+      "id": "3f01c1206fbf-00327",
+      "kind": "text",
+      "start": 1240.32,
+      "end": 1243.32,
+      "page": null,
+      "section": null,
+      "text": "looking at the complexity of compares,"
+    },
+    {
+      "id": "3f01c1206fbf-00328",
+      "kind": "text",
+      "start": 1243.32,
+      "end": 1247.0,
+      "page": null,
+      "section": null,
+      "text": "so the theta whatever of compares."
+    },
+    {
+      "id": "3f01c1206fbf-00329",
+      "kind": "text",
+      "start": 1247.0,
+      "end": 1247.96,
+      "page": null,
+      "section": null,
+      "text": "Anyone?"
+    },
+    {
+      "id": "3f01c1206fbf-00330",
+      "kind": "text",
+      "start": 1247.96,
+      "end": 1257.04,
+      "page": null,
+      "section": null,
+      "text": "Yeah, back there."
+    },
+    {
+      "id": "3f01c1206fbf-00331",
+      "kind": "text",
+      "start": 1257.04,
+      "end": 1259.88,
+      "page": null,
+      "section": null,
+      "text": "You could compare it with the middle, what did I call it?"
+    },
+    {
+      "id": "3f01c1206fbf-00332",
+      "kind": "text",
+      "start": 1259.88,
+      "end": 1261.92,
+      "page": null,
+      "section": null,
+      "text": "What is what?"
+    },
+    {
+      "id": "3f01c1206fbf-00333",
+      "kind": "text",
+      "start": 1261.92,
+      "end": 1263.12,
+      "page": null,
+      "section": null,
+      "text": "I called it something."
+    },
+    {
+      "id": "3f01c1206fbf-00334",
+      "kind": "text",
+      "start": 1263.12,
+      "end": 1265.56,
+      "page": null,
+      "section": null,
+      "text": "What you just said, I called it something."
+    },
+    {
+      "id": "3f01c1206fbf-00335",
+      "kind": "text",
+      "start": 1265.56,
+      "end": 1267.08,
+      "page": null,
+      "section": null,
+      "text": "Yeah, I saw you first."
+    },
+    {
+      "id": "3f01c1206fbf-00336",
+      "kind": "text",
+      "start": 1267.08,
+      "end": 1270.28,
+      "page": null,
+      "section": null,
+      "text": "Binary search, just right, two questions for this one."
+    },
+    {
+      "id": "3f01c1206fbf-00337",
+      "kind": "text",
+      "start": 1270.28,
+      "end": 1272.28,
+      "page": null,
+      "section": null,
+      "text": "So you pick them up after lecture."
+    },
+    {
+      "id": "3f01c1206fbf-00338",
+      "kind": "text",
+      "start": 1272.28,
+      "end": 1273.88,
+      "page": null,
+      "section": null,
+      "text": "So you're exactly right, you got it right."
+    },
+    {
+      "id": "3f01c1206fbf-00339",
+      "kind": "text",
+      "start": 1273.88,
+      "end": 1278.2,
+      "page": null,
+      "section": null,
+      "text": "I called it binary search up here."
+    },
+    {
+      "id": "3f01c1206fbf-00340",
+      "kind": "text",
+      "start": 1278.2,
+      "end": 1281.64,
+      "page": null,
+      "section": null,
+      "text": "And so if you can take insertion sort"
+    },
+    {
+      "id": "3f01c1206fbf-00341",
+      "kind": "text",
+      "start": 1281.64,
+      "end": 1283.16,
+      "page": null,
+      "section": null,
+      "text": "and you can sort of trivially turn it"
+    },
+    {
+      "id": "3f01c1206fbf-00342",
+      "kind": "text",
+      "start": 1283.16,
+      "end": 1286.2,
+      "page": null,
+      "section": null,
+      "text": "into a theta n log n algorithm if you're"
+    },
+    {
+      "id": "3f01c1206fbf-00343",
+      "kind": "text",
+      "start": 1286.2,
+      "end": 1289.92,
+      "page": null,
+      "section": null,
+      "text": "talking about n being the number of compares."
+    },
+    {
+      "id": "3f01c1206fbf-00344",
+      "kind": "text",
+      "start": 1289.92,
+      "end": 1292.76,
+      "page": null,
+      "section": null,
+      "text": "And all you have to do to do that is to say,"
+    },
+    {
+      "id": "3f01c1206fbf-00345",
+      "kind": "text",
+      "start": 1292.76,
+      "end": 1297.96,
+      "page": null,
+      "section": null,
+      "text": "you know what, I'm going to replace this with binary search."
+    },
+    {
+      "id": "3f01c1206fbf-00346",
+      "kind": "text",
+      "start": 1297.96,
+      "end": 1302.68,
+      "page": null,
+      "section": null,
+      "text": "And you can do that, and that was the key observation,"
+    },
+    {
+      "id": "3f01c1206fbf-00347",
+      "kind": "text",
+      "start": 1302.68,
+      "end": 1308.0,
+      "page": null,
+      "section": null,
+      "text": "because a of 0 through i minus 1 is already sorted."
+    },
+    {
+      "id": "3f01c1206fbf-00348",
+      "kind": "text",
+      "start": 1308.0,
+      "end": 1311.96,
+      "page": null,
+      "section": null,
+      "text": "And so you can do binary search on that part of the array."
+    },
+    {
+      "id": "3f01c1206fbf-00349",
+      "kind": "text",
+      "start": 1311.96,
+      "end": 1316.65,
+      "page": null,
+      "section": null,
+      "text": "So let me just write that down."
+    },
+    {
+      "id": "3f01c1206fbf-00350",
+      "kind": "text",
+      "start": 1316.65,
+      "end": 1323.97,
+      "page": null,
+      "section": null,
+      "text": "Do a binary search on a of 0 through i minus 1,"
+    },
+    {
+      "id": "3f01c1206fbf-00351",
+      "kind": "text",
+      "start": 1324.01,
+      "end": 1330.54,
+      "page": null,
+      "section": null,
+      "text": "which is already sorted."
+    },
+    {
+      "id": "3f01c1206fbf-00352",
+      "kind": "text",
+      "start": 1330.54,
+      "end": 1336.81,
+      "page": null,
+      "section": null,
+      "text": "And essentially, you can think of it as theta log i time."
+    },
+    {
+      "id": "3f01c1206fbf-00353",
+      "kind": "text",
+      "start": 1336.81,
+      "end": 1338.61,
+      "page": null,
+      "section": null,
+      "text": "And for each of those steps, and so then you"
+    },
+    {
+      "id": "3f01c1206fbf-00354",
+      "kind": "text",
+      "start": 1338.61,
+      "end": 1340.65,
+      "page": null,
+      "section": null,
+      "text": "get your theta n log n."
+    },
+    {
+      "id": "3f01c1206fbf-00355",
+      "kind": "text",
+      "start": 1340.65,
+      "end": 1350.39,
+      "page": null,
+      "section": null,
+      "text": "But why can't I theta log n in terms of compares?"
+    },
+    {
+      "id": "3f01c1206fbf-00356",
+      "kind": "text",
+      "start": 1350.39,
+      "end": 1357.92,
+      "page": null,
+      "section": null,
+      "text": "Does this help the swaps for an array data structure?"
+    },
+    {
+      "id": "3f01c1206fbf-00357",
+      "kind": "text",
+      "start": 1357.92,
+      "end": 1361.28,
+      "page": null,
+      "section": null,
+      "text": "No, because binary search will require insertion"
+    },
+    {
+      "id": "3f01c1206fbf-00358",
+      "kind": "text",
+      "start": 1361.28,
+      "end": 1364.68,
+      "page": null,
+      "section": null,
+      "text": "into a of 0 through i minus 1."
+    },
+    {
+      "id": "3f01c1206fbf-00359",
+      "kind": "text",
+      "start": 1364.68,
+      "end": 1365.88,
+      "page": null,
+      "section": null,
+      "text": "So here's the problem."
+    },
+    {
+      "id": "3f01c1206fbf-00360",
+      "kind": "text",
+      "start": 1365.88,
+      "end": 1370.44,
+      "page": null,
+      "section": null,
+      "text": "Why don't we have a full-fledged theta n log n algorithm,"
+    },
+    {
+      "id": "3f01c1206fbf-00361",
+      "kind": "text",
+      "start": 1370.44,
+      "end": 1373.92,
+      "page": null,
+      "section": null,
+      "text": "regardless of the cost of compares or swaps?"
+    },
+    {
+      "id": "3f01c1206fbf-00362",
+      "kind": "text",
+      "start": 1373.92,
+      "end": 1375.68,
+      "page": null,
+      "section": null,
+      "text": "We don't quite have that."
+    },
+    {
+      "id": "3f01c1206fbf-00363",
+      "kind": "text",
+      "start": 1375.68,
+      "end": 1378.16,
+      "page": null,
+      "section": null,
+      "text": "We don't quite have that, because we"
+    },
+    {
+      "id": "3f01c1206fbf-00364",
+      "kind": "text",
+      "start": 1378.16,
+      "end": 1384.7,
+      "page": null,
+      "section": null,
+      "text": "need to insert our a of i into the right position"
+    },
+    {
+      "id": "3f01c1206fbf-00365",
+      "kind": "text",
+      "start": 1384.7,
+      "end": 1387.7,
+      "page": null,
+      "section": null,
+      "text": "into a of 0 through i minus 1."
+    },
+    {
+      "id": "3f01c1206fbf-00366",
+      "kind": "text",
+      "start": 1387.7,
+      "end": 1389.82,
+      "page": null,
+      "section": null,
+      "text": "When you do that, if you have an array structure,"
+    },
+    {
+      "id": "3f01c1206fbf-00367",
+      "kind": "text",
+      "start": 1389.82,
+      "end": 1390.82,
+      "page": null,
+      "section": null,
+      "text": "it might get into the middle."
+    },
+    {
+      "id": "3f01c1206fbf-00368",
+      "kind": "text",
+      "start": 1390.82,
+      "end": 1393.46,
+      "page": null,
+      "section": null,
+      "text": "And you have to shift things over to the right."
+    },
+    {
+      "id": "3f01c1206fbf-00369",
+      "kind": "text",
+      "start": 1393.46,
+      "end": 1395.86,
+      "page": null,
+      "section": null,
+      "text": "And when you shift things over to the right, in the worst case,"
+    },
+    {
+      "id": "3f01c1206fbf-00370",
+      "kind": "text",
+      "start": 1395.86,
+      "end": 1398.02,
+      "page": null,
+      "section": null,
+      "text": "you may be shifting a lot of things over to the right."
+    },
+    {
+      "id": "3f01c1206fbf-00371",
+      "kind": "text",
+      "start": 1398.02,
+      "end": 1402.1,
+      "page": null,
+      "section": null,
+      "text": "And that gives back to worst-case complexity of theta n."
+    },
+    {
+      "id": "3f01c1206fbf-00372",
+      "kind": "text",
+      "start": 1402.1,
+      "end": 1407.02,
+      "page": null,
+      "section": null,
+      "text": "So a binary search in insertion sort"
+    },
+    {
+      "id": "3f01c1206fbf-00373",
+      "kind": "text",
+      "start": 1407.02,
+      "end": 1409.42,
+      "page": null,
+      "section": null,
+      "text": "gives you theta n log n for compares,"
+    },
+    {
+      "id": "3f01c1206fbf-00374",
+      "kind": "text",
+      "start": 1409.42,
+      "end": 1414.02,
+      "page": null,
+      "section": null,
+      "text": "but it's still theta n squared for swaps, all right?"
+    },
+    {
+      "id": "3f01c1206fbf-00375",
+      "kind": "text",
+      "start": 1414.02,
+      "end": 1414.98,
+      "page": null,
+      "section": null,
+      "text": "OK, good."
+    },
+    {
+      "id": "3f01c1206fbf-00376",
+      "kind": "text",
+      "start": 1414.98,
+      "end": 1416.98,
+      "page": null,
+      "section": null,
+      "text": "So as you can see, there's many varieties"
+    },
+    {
+      "id": "3f01c1206fbf-00377",
+      "kind": "text",
+      "start": 1416.98,
+      "end": 1417.78,
+      "page": null,
+      "section": null,
+      "text": "of sorting algorithms."
+    },
+    {
+      "id": "3f01c1206fbf-00378",
+      "kind": "text",
+      "start": 1417.78,
+      "end": 1419.86,
+      "page": null,
+      "section": null,
+      "text": "We just looked at a couple of them."
+    },
+    {
+      "id": "3f01c1206fbf-00379",
+      "kind": "text",
+      "start": 1419.86,
+      "end": 1423.02,
+      "page": null,
+      "section": null,
+      "text": "And they were both insertion sort."
+    },
+    {
+      "id": "3f01c1206fbf-00380",
+      "kind": "text",
+      "start": 1423.02,
+      "end": 1426.66,
+      "page": null,
+      "section": null,
+      "text": "The second one that I just put up is, I guess, technically"
+    },
+    {
+      "id": "3f01c1206fbf-00381",
+      "kind": "text",
+      "start": 1426.66,
+      "end": 1430.74,
+      "page": null,
+      "section": null,
+      "text": "called binary insertion sort, because it does binary search."
+    },
+    {
+      "id": "3f01c1206fbf-00382",
+      "kind": "text",
+      "start": 1430.74,
+      "end": 1433.82,
+      "page": null,
+      "section": null,
+      "text": "And the vanilla insertion sort is the one"
+    },
+    {
+      "id": "3f01c1206fbf-00383",
+      "kind": "text",
+      "start": 1433.82,
+      "end": 1436.9,
+      "page": null,
+      "section": null,
+      "text": "that you have the code for and the DOCTIS program,"
+    },
+    {
+      "id": "3f01c1206fbf-00384",
+      "kind": "text",
+      "start": 1436.9,
+      "end": 1439.38,
+      "page": null,
+      "section": null,
+      "text": "or at least one of the DOCTIS files."
+    },
+    {
+      "id": "3f01c1206fbf-00385",
+      "kind": "text",
+      "start": 1439.38,
+      "end": 1444.62,
+      "page": null,
+      "section": null,
+      "text": "So let's move on and talk about a different algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00386",
+      "kind": "text",
+      "start": 1444.62,
+      "end": 1446.82,
+      "page": null,
+      "section": null,
+      "text": "So what we'd like to do now, this class"
+    },
+    {
+      "id": "3f01c1206fbf-00387",
+      "kind": "text",
+      "start": 1446.82,
+      "end": 1448.9,
+      "page": null,
+      "section": null,
+      "text": "is about constant improvement, right?"
+    },
+    {
+      "id": "3f01c1206fbf-00388",
+      "kind": "text",
+      "start": 1449.14,
+      "end": 1451.5,
+      "page": null,
+      "section": null,
+      "text": "We're never happy."
+    },
+    {
+      "id": "3f01c1206fbf-00389",
+      "kind": "text",
+      "start": 1451.5,
+      "end": 1454.38,
+      "page": null,
+      "section": null,
+      "text": "We always want to do a little bit better."
+    },
+    {
+      "id": "3f01c1206fbf-00390",
+      "kind": "text",
+      "start": 1454.38,
+      "end": 1456.9,
+      "page": null,
+      "section": null,
+      "text": "And eventually, once we run out of room"
+    },
+    {
+      "id": "3f01c1206fbf-00391",
+      "kind": "text",
+      "start": 1456.9,
+      "end": 1459.18,
+      "page": null,
+      "section": null,
+      "text": "from an asymptotic standpoint, you take these other classes"
+    },
+    {
+      "id": "3f01c1206fbf-00392",
+      "kind": "text",
+      "start": 1459.18,
+      "end": 1461.26,
+      "page": null,
+      "section": null,
+      "text": "where you're trying to improve constant factors"
+    },
+    {
+      "id": "3f01c1206fbf-00393",
+      "kind": "text",
+      "start": 1461.26,
+      "end": 1465.54,
+      "page": null,
+      "section": null,
+      "text": "and get 10% and 5% and 1%, and so on and so forth."
+    },
+    {
+      "id": "3f01c1206fbf-00394",
+      "kind": "text",
+      "start": 1465.54,
+      "end": 1471.22,
+      "page": null,
+      "section": null,
+      "text": "But we'll stick to improving asymptotic complexity."
+    },
+    {
+      "id": "3f01c1206fbf-00395",
+      "kind": "text",
+      "start": 1471.22,
+      "end": 1474.14,
+      "page": null,
+      "section": null,
+      "text": "And we're not quite happy with binary insertion sort,"
+    },
+    {
+      "id": "3f01c1206fbf-00396",
+      "kind": "text",
+      "start": 1474.14,
+      "end": 1475.98,
+      "page": null,
+      "section": null,
+      "text": "because in the case of numbers,"
+    },
+    {
+      "id": "3f01c1206fbf-00397",
+      "kind": "text",
+      "start": 1475.98,
+      "end": 1479.18,
+      "page": null,
+      "section": null,
+      "text": "our binary insertion sort has theta n square complexity"
+    },
+    {
+      "id": "3f01c1206fbf-00398",
+      "kind": "text",
+      "start": 1479.18,
+      "end": 1480.74,
+      "page": null,
+      "section": null,
+      "text": "if you look at swaps."
+    },
+    {
+      "id": "3f01c1206fbf-00399",
+      "kind": "text",
+      "start": 1480.74,
+      "end": 1484.82,
+      "page": null,
+      "section": null,
+      "text": "So we'd like to go find an algorithm that is theta n log n."
+    },
+    {
+      "id": "3f01c1206fbf-00400",
+      "kind": "text",
+      "start": 1484.82,
+      "end": 1489.58,
+      "page": null,
+      "section": null,
+      "text": "And then, I guess, eventually we'll have to stop."
+    },
+    {
+      "id": "3f01c1206fbf-00401",
+      "kind": "text",
+      "start": 1489.58,
+      "end": 1491.14,
+      "page": null,
+      "section": null,
+      "text": "But Eric will take care of that."
+    },
+    {
+      "id": "3f01c1206fbf-00402",
+      "kind": "text",
+      "start": 1493.94,
+      "end": 1494.98,
+      "page": null,
+      "section": null,
+      "text": "There's a reason to stop."
+    },
+    {
+      "id": "3f01c1206fbf-00403",
+      "kind": "text",
+      "start": 1494.98,
+      "end": 1498.62,
+      "page": null,
+      "section": null,
+      "text": "It's when you can prove that you can't do any better."
+    },
+    {
+      "id": "3f01c1206fbf-00404",
+      "kind": "text",
+      "start": 1498.62,
+      "end": 1501.1,
+      "page": null,
+      "section": null,
+      "text": "And so we'll get to that eventually."
+    },
+    {
+      "id": "3f01c1206fbf-00405",
+      "kind": "text",
+      "start": 1501.1,
+      "end": 1502.94,
+      "page": null,
+      "section": null,
+      "text": "So merge sort is also something"
+    },
+    {
+      "id": "3f01c1206fbf-00406",
+      "kind": "text",
+      "start": 1502.94,
+      "end": 1507.34,
+      "page": null,
+      "section": null,
+      "text": "that you've probably seen."
+    },
+    {
+      "id": "3f01c1206fbf-00407",
+      "kind": "text",
+      "start": 1507.34,
+      "end": 1509.46,
+      "page": null,
+      "section": null,
+      "text": "But there'd probably be a couple of subtleties"
+    },
+    {
+      "id": "3f01c1206fbf-00408",
+      "kind": "text",
+      "start": 1509.46,
+      "end": 1512.1,
+      "page": null,
+      "section": null,
+      "text": "that come out, as I described this algorithm,"
+    },
+    {
+      "id": "3f01c1206fbf-00409",
+      "kind": "text",
+      "start": 1512.1,
+      "end": 1514.78,
+      "page": null,
+      "section": null,
+      "text": "that hopefully will be interesting to those of you"
+    },
+    {
+      "id": "3f01c1206fbf-00410",
+      "kind": "text",
+      "start": 1514.78,
+      "end": 1516.82,
+      "page": null,
+      "section": null,
+      "text": "who already know merge sort."
+    },
+    {
+      "id": "3f01c1206fbf-00411",
+      "kind": "text",
+      "start": 1516.82,
+      "end": 1521.02,
+      "page": null,
+      "section": null,
+      "text": "And for those of you who don't, it's a very pretty algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00412",
+      "kind": "text",
+      "start": 1521.02,
+      "end": 1528.22,
+      "page": null,
+      "section": null,
+      "text": "It's a standard recursive algorithm"
+    },
+    {
+      "id": "3f01c1206fbf-00413",
+      "kind": "text",
+      "start": 1528.22,
+      "end": 1530.62,
+      "page": null,
+      "section": null,
+      "text": "similar to bind research."
+    },
+    {
+      "id": "3f01c1206fbf-00414",
+      "kind": "text",
+      "start": 1530.62,
+      "end": 1533.42,
+      "page": null,
+      "section": null,
+      "text": "What we do here is we have an array A."
+    },
+    {
+      "id": "3f01c1206fbf-00415",
+      "kind": "text",
+      "start": 1533.42,
+      "end": 1541.82,
+      "page": null,
+      "section": null,
+      "text": "We split it into two parts, L and R. And essentially,"
+    },
+    {
+      "id": "3f01c1206fbf-00416",
+      "kind": "text",
+      "start": 1541.82,
+      "end": 1547.22,
+      "page": null,
+      "section": null,
+      "text": "we kind of do no work, really, in terms of the L and R"
+    },
+    {
+      "id": "3f01c1206fbf-00417",
+      "kind": "text",
+      "start": 1547.22,
+      "end": 1550.78,
+      "page": null,
+      "section": null,
+      "text": "in the sense that we just call, we keep splitting, splitting,"
+    },
+    {
+      "id": "3f01c1206fbf-00418",
+      "kind": "text",
+      "start": 1550.78,
+      "end": 1551.5,
+      "page": null,
+      "section": null,
+      "text": "splitting."
+    },
+    {
+      "id": "3f01c1206fbf-00419",
+      "kind": "text",
+      "start": 1551.5,
+      "end": 1553.94,
+      "page": null,
+      "section": null,
+      "text": "And all the work is done down at the bottom"
+    },
+    {
+      "id": "3f01c1206fbf-00420",
+      "kind": "text",
+      "start": 1553.94,
+      "end": 1556.1,
+      "page": null,
+      "section": null,
+      "text": "in this routine called merge, where"
+    },
+    {
+      "id": "3f01c1206fbf-00421",
+      "kind": "text",
+      "start": 1556.1,
+      "end": 1560.14,
+      "page": null,
+      "section": null,
+      "text": "we are merging a pair of elements at the leaves."
+    },
+    {
+      "id": "3f01c1206fbf-00422",
+      "kind": "text",
+      "start": 1560.14,
+      "end": 1564.5,
+      "page": null,
+      "section": null,
+      "text": "And then we merge two pairs and get four elements."
+    },
+    {
+      "id": "3f01c1206fbf-00423",
+      "kind": "text",
+      "start": 1564.5,
+      "end": 1568.7,
+      "page": null,
+      "section": null,
+      "text": "And then we merge two four tuples of elements, et cetera,"
+    },
+    {
+      "id": "3f01c1206fbf-00424",
+      "kind": "text",
+      "start": 1568.7,
+      "end": 1570.1,
+      "page": null,
+      "section": null,
+      "text": "and go all the way up."
+    },
+    {
+      "id": "3f01c1206fbf-00425",
+      "kind": "text",
+      "start": 1570.1,
+      "end": 1579.02,
+      "page": null,
+      "section": null,
+      "text": "So while I'm saying L turns into L prime out here,"
+    },
+    {
+      "id": "3f01c1206fbf-00426",
+      "kind": "text",
+      "start": 1579.02,
+      "end": 1580.98,
+      "page": null,
+      "section": null,
+      "text": "there's no real explicit code that you"
+    },
+    {
+      "id": "3f01c1206fbf-00427",
+      "kind": "text",
+      "start": 1580.98,
+      "end": 1583.9,
+      "page": null,
+      "section": null,
+      "text": "can see that turns L into L prime."
+    },
+    {
+      "id": "3f01c1206fbf-00428",
+      "kind": "text",
+      "start": 1583.9,
+      "end": 1585.62,
+      "page": null,
+      "section": null,
+      "text": "It happens really later."
+    },
+    {
+      "id": "3f01c1206fbf-00429",
+      "kind": "text",
+      "start": 1585.62,
+      "end": 1587.18,
+      "page": null,
+      "section": null,
+      "text": "There's no real sorting code here."
+    },
+    {
+      "id": "3f01c1206fbf-00430",
+      "kind": "text",
+      "start": 1587.18,
+      "end": 1588.82,
+      "page": null,
+      "section": null,
+      "text": "It happens in the merge routine."
+    },
+    {
+      "id": "3f01c1206fbf-00431",
+      "kind": "text",
+      "start": 1588.82,
+      "end": 1590.94,
+      "page": null,
+      "section": null,
+      "text": "And you'll see that quite clearly"
+    },
+    {
+      "id": "3f01c1206fbf-00432",
+      "kind": "text",
+      "start": 1590.94,
+      "end": 1595.02,
+      "page": null,
+      "section": null,
+      "text": "when we run through an example."
+    },
+    {
+      "id": "3f01c1206fbf-00433",
+      "kind": "text",
+      "start": 1595.02,
+      "end": 1601.54,
+      "page": null,
+      "section": null,
+      "text": "So you have L and R turning to L prime and R prime."
+    },
+    {
+      "id": "3f01c1206fbf-00434",
+      "kind": "text",
+      "start": 1601.54,
+      "end": 1612.37,
+      "page": null,
+      "section": null,
+      "text": "And what we end up getting is a sorted array A."
+    },
+    {
+      "id": "3f01c1206fbf-00435",
+      "kind": "text",
+      "start": 1612.37,
+      "end": 1618.42,
+      "page": null,
+      "section": null,
+      "text": "And we have what's called a merge routine"
+    },
+    {
+      "id": "3f01c1206fbf-00436",
+      "kind": "text",
+      "start": 1618.42,
+      "end": 1621.1,
+      "page": null,
+      "section": null,
+      "text": "that takes L prime and R prime and merges them"
+    },
+    {
+      "id": "3f01c1206fbf-00437",
+      "kind": "text",
+      "start": 1621.1,
+      "end": 1622.42,
+      "page": null,
+      "section": null,
+      "text": "into the sorted array."
+    },
+    {
+      "id": "3f01c1206fbf-00438",
+      "kind": "text",
+      "start": 1622.42,
+      "end": 1624.94,
+      "page": null,
+      "section": null,
+      "text": "So at the top level, what you see"
+    },
+    {
+      "id": "3f01c1206fbf-00439",
+      "kind": "text",
+      "start": 1624.94,
+      "end": 1633.3,
+      "page": null,
+      "section": null,
+      "text": "is split into two and do a merge and get to the sorted array."
+    },
+    {
+      "id": "3f01c1206fbf-00440",
+      "kind": "text",
+      "start": 1633.3,
+      "end": 1636.7,
+      "page": null,
+      "section": null,
+      "text": "The input is of size n."
+    },
+    {
+      "id": "3f01c1206fbf-00441",
+      "kind": "text",
+      "start": 1636.7,
+      "end": 1644.69,
+      "page": null,
+      "section": null,
+      "text": "You have two arrays of size n over 2."
+    },
+    {
+      "id": "3f01c1206fbf-00442",
+      "kind": "text",
+      "start": 1644.69,
+      "end": 1653.24,
+      "page": null,
+      "section": null,
+      "text": "These are two sorted arrays of size n over 2."
+    },
+    {
+      "id": "3f01c1206fbf-00443",
+      "kind": "text",
+      "start": 1653.24,
+      "end": 1659.79,
+      "page": null,
+      "section": null,
+      "text": "And then finally, you have a sorted array of size n."
+    },
+    {
+      "id": "3f01c1206fbf-00444",
+      "kind": "text",
+      "start": 1662.06,
+      "end": 1664.22,
+      "page": null,
+      "section": null,
+      "text": "So if you want to follow the recursive execution"
+    },
+    {
+      "id": "3f01c1206fbf-00445",
+      "kind": "text",
+      "start": 1664.22,
+      "end": 1669.89,
+      "page": null,
+      "section": null,
+      "text": "of this in a small example, then you'll"
+    },
+    {
+      "id": "3f01c1206fbf-00446",
+      "kind": "text",
+      "start": 1669.89,
+      "end": 1673.83,
+      "page": null,
+      "section": null,
+      "text": "be able to see how this works."
+    },
+    {
+      "id": "3f01c1206fbf-00447",
+      "kind": "text",
+      "start": 1673.83,
+      "end": 1676.13,
+      "page": null,
+      "section": null,
+      "text": "And we'll do a fairly straightforward example"
+    },
+    {
+      "id": "3f01c1206fbf-00448",
+      "kind": "text",
+      "start": 1676.13,
+      "end": 1678.23,
+      "page": null,
+      "section": null,
+      "text": "with eight elements."
+    },
+    {
+      "id": "3f01c1206fbf-00449",
+      "kind": "text",
+      "start": 1678.23,
+      "end": 1682.59,
+      "page": null,
+      "section": null,
+      "text": "So at the top level, before we get there,"
+    },
+    {
+      "id": "3f01c1206fbf-00450",
+      "kind": "text",
+      "start": 1682.59,
+      "end": 1688.67,
+      "page": null,
+      "section": null,
+      "text": "merge is going to assume that you have two sorted arrays"
+    },
+    {
+      "id": "3f01c1206fbf-00451",
+      "kind": "text",
+      "start": 1688.67,
+      "end": 1691.71,
+      "page": null,
+      "section": null,
+      "text": "and merge them together."
+    },
+    {
+      "id": "3f01c1206fbf-00452",
+      "kind": "text",
+      "start": 1691.71,
+      "end": 1694.75,
+      "page": null,
+      "section": null,
+      "text": "That's the invariant in merge sort,"
+    },
+    {
+      "id": "3f01c1206fbf-00453",
+      "kind": "text",
+      "start": 1694.75,
+      "end": 1695.95,
+      "page": null,
+      "section": null,
+      "text": "or for the merge routine."
+    },
+    {
+      "id": "3f01c1206fbf-00454",
+      "kind": "text",
+      "start": 1695.95,
+      "end": 1698.23,
+      "page": null,
+      "section": null,
+      "text": "It assumes the inputs are sorted."
+    },
+    {
+      "id": "3f01c1206fbf-00455",
+      "kind": "text",
+      "start": 1698.23,
+      "end": 1702.83,
+      "page": null,
+      "section": null,
+      "text": "L and R. Actually, I should say L prime and R prime."
+    },
+    {
+      "id": "3f01c1206fbf-00456",
+      "kind": "text",
+      "start": 1702.83,
+      "end": 1707.87,
+      "page": null,
+      "section": null,
+      "text": "So let's say you have 20, 13, 7, and 2."
+    },
+    {
+      "id": "3f01c1206fbf-00457",
+      "kind": "text",
+      "start": 1707.87,
+      "end": 1711.35,
+      "page": null,
+      "section": null,
+      "text": "You have 12, 11, 9, and 1."
+    },
+    {
+      "id": "3f01c1206fbf-00458",
+      "kind": "text",
+      "start": 1711.35,
+      "end": 1713.39,
+      "page": null,
+      "section": null,
+      "text": "And this could be L prime."
+    },
+    {
+      "id": "3f01c1206fbf-00459",
+      "kind": "text",
+      "start": 1713.39,
+      "end": 1716.79,
+      "page": null,
+      "section": null,
+      "text": "And this could be R prime."
+    },
+    {
+      "id": "3f01c1206fbf-00460",
+      "kind": "text",
+      "start": 1716.79,
+      "end": 1719.67,
+      "page": null,
+      "section": null,
+      "text": "What you have is what we call a two-finger algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00461",
+      "kind": "text",
+      "start": 1719.67,
+      "end": 1721.67,
+      "page": null,
+      "section": null,
+      "text": "And so you've got two fingers."
+    },
+    {
+      "id": "3f01c1206fbf-00462",
+      "kind": "text",
+      "start": 1721.67,
+      "end": 1724.51,
+      "page": null,
+      "section": null,
+      "text": "And each of them point to something."
+    },
+    {
+      "id": "3f01c1206fbf-00463",
+      "kind": "text",
+      "start": 1724.51,
+      "end": 1726.63,
+      "page": null,
+      "section": null,
+      "text": "And in this case, one of them is pointing to L."
+    },
+    {
+      "id": "3f01c1206fbf-00464",
+      "kind": "text",
+      "start": 1726.63,
+      "end": 1729.19,
+      "page": null,
+      "section": null,
+      "text": "My left finger is pointing to L prime,"
+    },
+    {
+      "id": "3f01c1206fbf-00465",
+      "kind": "text",
+      "start": 1729.19,
+      "end": 1730.79,
+      "page": null,
+      "section": null,
+      "text": "or some element in L prime."
+    },
+    {
+      "id": "3f01c1206fbf-00466",
+      "kind": "text",
+      "start": 1730.79,
+      "end": 1733.87,
+      "page": null,
+      "section": null,
+      "text": "My right finger is pointing to some element in R prime."
+    },
+    {
+      "id": "3f01c1206fbf-00467",
+      "kind": "text",
+      "start": 1733.87,
+      "end": 1736.83,
+      "page": null,
+      "section": null,
+      "text": "And I'm going to compare the two elements"
+    },
+    {
+      "id": "3f01c1206fbf-00468",
+      "kind": "text",
+      "start": 1736.83,
+      "end": 1738.75,
+      "page": null,
+      "section": null,
+      "text": "that my fingers are pointing to."
+    },
+    {
+      "id": "3f01c1206fbf-00469",
+      "kind": "text",
+      "start": 1738.75,
+      "end": 1742.15,
+      "page": null,
+      "section": null,
+      "text": "And I'm going to choose, in this case,"
+    },
+    {
+      "id": "3f01c1206fbf-00470",
+      "kind": "text",
+      "start": 1742.15,
+      "end": 1743.87,
+      "page": null,
+      "section": null,
+      "text": "the smaller of those elements."
+    },
+    {
+      "id": "3f01c1206fbf-00471",
+      "kind": "text",
+      "start": 1743.87,
+      "end": 1747.79,
+      "page": null,
+      "section": null,
+      "text": "And I'm going to put them into the sorted array."
+    },
+    {
+      "id": "3f01c1206fbf-00472",
+      "kind": "text",
+      "start": 1747.79,
+      "end": 1750.91,
+      "page": null,
+      "section": null,
+      "text": "So start out here."
+    },
+    {
+      "id": "3f01c1206fbf-00473",
+      "kind": "text",
+      "start": 1750.91,
+      "end": 1752.43,
+      "page": null,
+      "section": null,
+      "text": "I look at that and that."
+    },
+    {
+      "id": "3f01c1206fbf-00474",
+      "kind": "text",
+      "start": 1752.43,
+      "end": 1754.35,
+      "page": null,
+      "section": null,
+      "text": "And I compare two and one."
+    },
+    {
+      "id": "3f01c1206fbf-00475",
+      "kind": "text",
+      "start": 1754.35,
+      "end": 1755.15,
+      "page": null,
+      "section": null,
+      "text": "And which is smaller?"
+    },
+    {
+      "id": "3f01c1206fbf-00476",
+      "kind": "text",
+      "start": 1755.15,
+      "end": 1756.31,
+      "page": null,
+      "section": null,
+      "text": "One is smaller."
+    },
+    {
+      "id": "3f01c1206fbf-00477",
+      "kind": "text",
+      "start": 1756.31,
+      "end": 1759.11,
+      "page": null,
+      "section": null,
+      "text": "So I'm going to write one down."
+    },
+    {
+      "id": "3f01c1206fbf-00478",
+      "kind": "text",
+      "start": 1759.11,
+      "end": 1763.62,
+      "page": null,
+      "section": null,
+      "text": "So this is a two-finger algorithm for merge."
+    },
+    {
+      "id": "3f01c1206fbf-00479",
+      "kind": "text",
+      "start": 1763.62,
+      "end": 1764.9,
+      "page": null,
+      "section": null,
+      "text": "And I put one down."
+    },
+    {
+      "id": "3f01c1206fbf-00480",
+      "kind": "text",
+      "start": 1764.9,
+      "end": 1767.38,
+      "page": null,
+      "section": null,
+      "text": "When I put one down, I have to cross out one."
+    },
+    {
+      "id": "3f01c1206fbf-00481",
+      "kind": "text",
+      "start": 1767.38,
+      "end": 1770.26,
+      "page": null,
+      "section": null,
+      "text": "So effectively, what happens is, let me just circle that"
+    },
+    {
+      "id": "3f01c1206fbf-00482",
+      "kind": "text",
+      "start": 1770.26,
+      "end": 1771.5,
+      "page": null,
+      "section": null,
+      "text": "and sort of crossing it out."
+    },
+    {
+      "id": "3f01c1206fbf-00483",
+      "kind": "text",
+      "start": 1771.5,
+      "end": 1775.46,
+      "page": null,
+      "section": null,
+      "text": "And my finger moves up to 9."
+    },
+    {
+      "id": "3f01c1206fbf-00484",
+      "kind": "text",
+      "start": 1775.46,
+      "end": 1778.14,
+      "page": null,
+      "section": null,
+      "text": "So now I'm pointing at 2 and 9."
+    },
+    {
+      "id": "3f01c1206fbf-00485",
+      "kind": "text",
+      "start": 1778.14,
+      "end": 1780.06,
+      "page": null,
+      "section": null,
+      "text": "And I repeat this step."
+    },
+    {
+      "id": "3f01c1206fbf-00486",
+      "kind": "text",
+      "start": 1780.06,
+      "end": 1781.9,
+      "page": null,
+      "section": null,
+      "text": "So now in this case, 2 is smaller."
+    },
+    {
+      "id": "3f01c1206fbf-00487",
+      "kind": "text",
+      "start": 1781.9,
+      "end": 1784.06,
+      "page": null,
+      "section": null,
+      "text": "So I'm going to go ahead and write 2 down."
+    },
+    {
+      "id": "3f01c1206fbf-00488",
+      "kind": "text",
+      "start": 1784.06,
+      "end": 1789.46,
+      "page": null,
+      "section": null,
+      "text": "And I can cross out 2 and move my finger up to 7."
+    },
+    {
+      "id": "3f01c1206fbf-00489",
+      "kind": "text",
+      "start": 1789.46,
+      "end": 1790.86,
+      "page": null,
+      "section": null,
+      "text": "And so that's it."
+    },
+    {
+      "id": "3f01c1206fbf-00490",
+      "kind": "text",
+      "start": 1790.86,
+      "end": 1794.02,
+      "page": null,
+      "section": null,
+      "text": "I want to bore you with the rest of the steps."
+    },
+    {
+      "id": "3f01c1206fbf-00491",
+      "kind": "text",
+      "start": 1794.02,
+      "end": 1796.46,
+      "page": null,
+      "section": null,
+      "text": "It's essentially walking up."
+    },
+    {
+      "id": "3f01c1206fbf-00492",
+      "kind": "text",
+      "start": 1796.46,
+      "end": 1797.58,
+      "page": null,
+      "section": null,
+      "text": "You have a couple of pointers."
+    },
+    {
+      "id": "3f01c1206fbf-00493",
+      "kind": "text",
+      "start": 1797.58,
+      "end": 1799.94,
+      "page": null,
+      "section": null,
+      "text": "And you're walking up these two arrays."
+    },
+    {
+      "id": "3f01c1206fbf-00494",
+      "kind": "text",
+      "start": 1799.94,
+      "end": 1807.26,
+      "page": null,
+      "section": null,
+      "text": "And you're writing down 1, 2, 7, 9, 11, 12, 13, 20."
+    },
+    {
+      "id": "3f01c1206fbf-00495",
+      "kind": "text",
+      "start": 1807.26,
+      "end": 1808.74,
+      "page": null,
+      "section": null,
+      "text": "And that's your merge routine."
+    },
+    {
+      "id": "3f01c1206fbf-00496",
+      "kind": "text",
+      "start": 1808.74,
+      "end": 1812.34,
+      "page": null,
+      "section": null,
+      "text": "And all of the work really is done in the merge routine."
+    },
+    {
+      "id": "3f01c1206fbf-00497",
+      "kind": "text",
+      "start": 1812.34,
+      "end": 1815.46,
+      "page": null,
+      "section": null,
+      "text": "Because other than that, the body is simply"
+    },
+    {
+      "id": "3f01c1206fbf-00498",
+      "kind": "text",
+      "start": 1815.46,
+      "end": 1816.5,
+      "page": null,
+      "section": null,
+      "text": "a recursive call."
+    },
+    {
+      "id": "3f01c1206fbf-00499",
+      "kind": "text",
+      "start": 1816.5,
+      "end": 1818.42,
+      "page": null,
+      "section": null,
+      "text": "I mean, you have to obviously split the array."
+    },
+    {
+      "id": "3f01c1206fbf-00500",
+      "kind": "text",
+      "start": 1818.42,
+      "end": 1820.14,
+      "page": null,
+      "section": null,
+      "text": "But that's fairly straightforward."
+    },
+    {
+      "id": "3f01c1206fbf-00501",
+      "kind": "text",
+      "start": 1820.14,
+      "end": 1824.14,
+      "page": null,
+      "section": null,
+      "text": "If you have an array a0 through n,"
+    },
+    {
+      "id": "3f01c1206fbf-00502",
+      "kind": "text",
+      "start": 1824.14,
+      "end": 1828.1,
+      "page": null,
+      "section": null,
+      "text": "then depending on whether n is odd or even,"
+    },
+    {
+      "id": "3f01c1206fbf-00503",
+      "kind": "text",
+      "start": 1828.1,
+      "end": 1838.54,
+      "page": null,
+      "section": null,
+      "text": "you can imagine that you set l to be a0 n by 2 minus 1."
+    },
+    {
+      "id": "3f01c1206fbf-00504",
+      "kind": "text",
+      "start": 1838.54,
+      "end": 1841.46,
+      "page": null,
+      "section": null,
+      "text": "And r similarly."
+    },
+    {
+      "id": "3f01c1206fbf-00505",
+      "kind": "text",
+      "start": 1841.46,
+      "end": 1843.9,
+      "page": null,
+      "section": null,
+      "text": "And so you just split it halfway in the middle."
+    },
+    {
+      "id": "3f01c1206fbf-00506",
+      "kind": "text",
+      "start": 1843.9,
+      "end": 1845.74,
+      "page": null,
+      "section": null,
+      "text": "And I'll talk about that a little bit more."
+    },
+    {
+      "id": "3f01c1206fbf-00507",
+      "kind": "text",
+      "start": 1845.74,
+      "end": 1847.3,
+      "page": null,
+      "section": null,
+      "text": "There's a subtlety associated with that"
+    },
+    {
+      "id": "3f01c1206fbf-00508",
+      "kind": "text",
+      "start": 1847.3,
+      "end": 1851.18,
+      "page": null,
+      "section": null,
+      "text": "that we'll get to in a few minutes."
+    },
+    {
+      "id": "3f01c1206fbf-00509",
+      "kind": "text",
+      "start": 1851.18,
+      "end": 1855.3,
+      "page": null,
+      "section": null,
+      "text": "But to finish up in terms of the computation of merge sort,"
+    },
+    {
+      "id": "3f01c1206fbf-00510",
+      "kind": "text",
+      "start": 1855.3,
+      "end": 1856.1,
+      "page": null,
+      "section": null,
+      "text": "this is it."
+    },
+    {
+      "id": "3f01c1206fbf-00511",
+      "kind": "text",
+      "start": 1856.1,
+      "end": 1860.9,
+      "page": null,
+      "section": null,
+      "text": "The merge routine is doing most, if not all, of the work."
+    },
+    {
+      "id": "3f01c1206fbf-00512",
+      "kind": "text",
+      "start": 1860.9,
+      "end": 1862.26,
+      "page": null,
+      "section": null,
+      "text": "And this two-finger algorithm is"
+    },
+    {
+      "id": "3f01c1206fbf-00513",
+      "kind": "text",
+      "start": 1862.26,
+      "end": 1864.66,
+      "page": null,
+      "section": null,
+      "text": "going to be able to take two sorted arrays"
+    },
+    {
+      "id": "3f01c1206fbf-00514",
+      "kind": "text",
+      "start": 1864.66,
+      "end": 1869.54,
+      "page": null,
+      "section": null,
+      "text": "and put them into a single sorted array"
+    },
+    {
+      "id": "3f01c1206fbf-00515",
+      "kind": "text",
+      "start": 1869.54,
+      "end": 1873.18,
+      "page": null,
+      "section": null,
+      "text": "by interspersing or interleaving these elements."
+    },
+    {
+      "id": "3f01c1206fbf-00516",
+      "kind": "text",
+      "start": 1873.18,
+      "end": 1875.02,
+      "page": null,
+      "section": null,
+      "text": "And what's the complexity of merge"
+    },
+    {
+      "id": "3f01c1206fbf-00517",
+      "kind": "text",
+      "start": 1875.02,
+      "end": 1878.94,
+      "page": null,
+      "section": null,
+      "text": "if I have two arrays of size n over 2 here?"
+    },
+    {
+      "id": "3f01c1206fbf-00518",
+      "kind": "text",
+      "start": 1878.94,
+      "end": 1881.06,
+      "page": null,
+      "section": null,
+      "text": "What do I have?"
+    },
+    {
+      "id": "3f01c1206fbf-00519",
+      "kind": "text",
+      "start": 1881.06,
+      "end": 1882.62,
+      "page": null,
+      "section": null,
+      "text": "Yeah?"
+    },
+    {
+      "id": "3f01c1206fbf-00520",
+      "kind": "text",
+      "start": 1882.62,
+      "end": 1883.18,
+      "page": null,
+      "section": null,
+      "text": "n."
+    },
+    {
+      "id": "3f01c1206fbf-00521",
+      "kind": "text",
+      "start": 1883.18,
+      "end": 1884.06,
+      "page": null,
+      "section": null,
+      "text": "All right."
+    },
+    {
+      "id": "3f01c1206fbf-00522",
+      "kind": "text",
+      "start": 1884.06,
+      "end": 1888.13,
+      "page": null,
+      "section": null,
+      "text": "We'll give you a cushion, too."
+    },
+    {
+      "id": "3f01c1206fbf-00523",
+      "kind": "text",
+      "start": 1888.13,
+      "end": 1894.36,
+      "page": null,
+      "section": null,
+      "text": "Theta n complexity."
+    },
+    {
+      "id": "3f01c1206fbf-00524",
+      "kind": "text",
+      "start": 1894.36,
+      "end": 1897.36,
+      "page": null,
+      "section": null,
+      "text": "So far, so good."
+    },
+    {
+      "id": "3f01c1206fbf-00525",
+      "kind": "text",
+      "start": 1897.36,
+      "end": 1901.14,
+      "page": null,
+      "section": null,
+      "text": "It's a little, I know you know the answer"
+    },
+    {
+      "id": "3f01c1206fbf-00526",
+      "kind": "text",
+      "start": 1901.14,
+      "end": 1903.52,
+      "page": null,
+      "section": null,
+      "text": "as to what the complexity of merge sort is."
+    },
+    {
+      "id": "3f01c1206fbf-00527",
+      "kind": "text",
+      "start": 1903.52,
+      "end": 1905.12,
+      "page": null,
+      "section": null,
+      "text": "But I'm guessing that most of you"
+    },
+    {
+      "id": "3f01c1206fbf-00528",
+      "kind": "text",
+      "start": 1905.12,
+      "end": 1907.88,
+      "page": null,
+      "section": null,
+      "text": "won't be able to prove it to me, because I'm kind of a hard guy"
+    },
+    {
+      "id": "3f01c1206fbf-00529",
+      "kind": "text",
+      "start": 1907.88,
+      "end": 1909.28,
+      "page": null,
+      "section": null,
+      "text": "to prove something to."
+    },
+    {
+      "id": "3f01c1206fbf-00530",
+      "kind": "text",
+      "start": 1909.28,
+      "end": 1913.04,
+      "page": null,
+      "section": null,
+      "text": "Anyway, and I can always say, no, I don't believe you"
+    },
+    {
+      "id": "3f01c1206fbf-00531",
+      "kind": "text",
+      "start": 1913.04,
+      "end": 1914.56,
+      "page": null,
+      "section": null,
+      "text": "or I don't understand."
+    },
+    {
+      "id": "3f01c1206fbf-00532",
+      "kind": "text",
+      "start": 1914.56,
+      "end": 1920.88,
+      "page": null,
+      "section": null,
+      "text": "So the complexity, and you've said this before in class,"
+    },
+    {
+      "id": "3f01c1206fbf-00533",
+      "kind": "text",
+      "start": 1920.88,
+      "end": 1922.6,
+      "page": null,
+      "section": null,
+      "text": "and I think Eric's mentioned it,"
+    },
+    {
+      "id": "3f01c1206fbf-00534",
+      "kind": "text",
+      "start": 1922.6,
+      "end": 1924.8,
+      "page": null,
+      "section": null,
+      "text": "the overall complexity of this algorithm"
+    },
+    {
+      "id": "3f01c1206fbf-00535",
+      "kind": "text",
+      "start": 1924.8,
+      "end": 1928.4,
+      "page": null,
+      "section": null,
+      "text": "is theta n log n."
+    },
+    {
+      "id": "3f01c1206fbf-00536",
+      "kind": "text",
+      "start": 1928.4,
+      "end": 1929.84,
+      "page": null,
+      "section": null,
+      "text": "And where does that come from?"
+    },
+    {
+      "id": "3f01c1206fbf-00537",
+      "kind": "text",
+      "start": 1929.84,
+      "end": 1931.8,
+      "page": null,
+      "section": null,
+      "text": "How do you prove that?"
+    },
+    {
+      "id": "3f01c1206fbf-00538",
+      "kind": "text",
+      "start": 1931.8,
+      "end": 1936.84,
+      "page": null,
+      "section": null,
+      "text": "And so what we'll do now is take a look at merge sort"
+    },
+    {
+      "id": "3f01c1206fbf-00539",
+      "kind": "text",
+      "start": 1936.84,
+      "end": 1939.24,
+      "page": null,
+      "section": null,
+      "text": "and we'll look at a recursion tree."
+    },
+    {
+      "id": "3f01c1206fbf-00540",
+      "kind": "text",
+      "start": 1939.24,
+      "end": 1941.2,
+      "page": null,
+      "section": null,
+      "text": "And we'll try and, there are many ways of proving"
+    },
+    {
+      "id": "3f01c1206fbf-00541",
+      "kind": "text",
+      "start": 1941.2,
+      "end": 1943.4,
+      "page": null,
+      "section": null,
+      "text": "that merge sort is theta n log n."
+    },
+    {
+      "id": "3f01c1206fbf-00542",
+      "kind": "text",
+      "start": 1943.4,
+      "end": 1946.08,
+      "page": null,
+      "section": null,
+      "text": "The way we're going to do this is what's"
+    },
+    {
+      "id": "3f01c1206fbf-00543",
+      "kind": "text",
+      "start": 1946.08,
+      "end": 1948.64,
+      "page": null,
+      "section": null,
+      "text": "called proof by picture."
+    },
+    {
+      "id": "3f01c1206fbf-00544",
+      "kind": "text",
+      "start": 1948.64,
+      "end": 1952.32,
+      "page": null,
+      "section": null,
+      "text": "And it's not a established proof technique,"
+    },
+    {
+      "id": "3f01c1206fbf-00545",
+      "kind": "text",
+      "start": 1952.32,
+      "end": 1955.0,
+      "page": null,
+      "section": null,
+      "text": "but it's something that is very helpful"
+    },
+    {
+      "id": "3f01c1206fbf-00546",
+      "kind": "text",
+      "start": 1955.0,
+      "end": 1958.12,
+      "page": null,
+      "section": null,
+      "text": "to get an intuition behind the proof"
+    },
+    {
+      "id": "3f01c1206fbf-00547",
+      "kind": "text",
+      "start": 1958.12,
+      "end": 1960.84,
+      "page": null,
+      "section": null,
+      "text": "and why the result is true."
+    },
+    {
+      "id": "3f01c1206fbf-00548",
+      "kind": "text",
+      "start": 1960.84,
+      "end": 1963.12,
+      "page": null,
+      "section": null,
+      "text": "And you can always take that and you can formalize it"
+    },
+    {
+      "id": "3f01c1206fbf-00549",
+      "kind": "text",
+      "start": 1963.12,
+      "end": 1969.68,
+      "page": null,
+      "section": null,
+      "text": "and make this something that everyone believes."
+    },
+    {
+      "id": "3f01c1206fbf-00550",
+      "kind": "text",
+      "start": 1969.68,
+      "end": 1972.96,
+      "page": null,
+      "section": null,
+      "text": "And you can also look at substitution possibly"
+    },
+    {
+      "id": "3f01c1206fbf-00551",
+      "kind": "text",
+      "start": 1972.96,
+      "end": 1976.32,
+      "page": null,
+      "section": null,
+      "text": "in section tomorrow for recurrence solving."
+    },
+    {
+      "id": "3f01c1206fbf-00552",
+      "kind": "text",
+      "start": 1976.32,
+      "end": 1978.68,
+      "page": null,
+      "section": null,
+      "text": "So what we're at right now is that we"
+    },
+    {
+      "id": "3f01c1206fbf-00553",
+      "kind": "text",
+      "start": 1978.68,
+      "end": 1981.92,
+      "page": null,
+      "section": null,
+      "text": "have a divide and conquer algorithm"
+    },
+    {
+      "id": "3f01c1206fbf-00554",
+      "kind": "text",
+      "start": 1981.92,
+      "end": 1987.76,
+      "page": null,
+      "section": null,
+      "text": "that has a merge step that is theta n."
+    },
+    {
+      "id": "3f01c1206fbf-00555",
+      "kind": "text",
+      "start": 1987.76,
+      "end": 1992.56,
+      "page": null,
+      "section": null,
+      "text": "And so if I just look at this structure that I have here,"
+    },
+    {
+      "id": "3f01c1206fbf-00556",
+      "kind": "text",
+      "start": 1992.56,
+      "end": 1998.28,
+      "page": null,
+      "section": null,
+      "text": "I can write a recurrence for merge sort that looks like this."
+    },
+    {
+      "id": "3f01c1206fbf-00557",
+      "kind": "text",
+      "start": 1998.28,
+      "end": 2003.63,
+      "page": null,
+      "section": null,
+      "text": "So when I say complexity, I can say t of n,"
+    },
+    {
+      "id": "3f01c1206fbf-00558",
+      "kind": "text",
+      "start": 2003.63,
+      "end": 2006.27,
+      "page": null,
+      "section": null,
+      "text": "which is the work done for n items,"
+    },
+    {
+      "id": "3f01c1206fbf-00559",
+      "kind": "text",
+      "start": 2006.27,
+      "end": 2011.99,
+      "page": null,
+      "section": null,
+      "text": "is going to be some constant time in order to divide their A."
+    },
+    {
+      "id": "3f01c1206fbf-00560",
+      "kind": "text",
+      "start": 2011.99,
+      "end": 2014.15,
+      "page": null,
+      "section": null,
+      "text": "So this could be the part corresponding"
+    },
+    {
+      "id": "3f01c1206fbf-00561",
+      "kind": "text",
+      "start": 2014.15,
+      "end": 2017.19,
+      "page": null,
+      "section": null,
+      "text": "to dividing their A. And there's going"
+    },
+    {
+      "id": "3f01c1206fbf-00562",
+      "kind": "text",
+      "start": 2017.19,
+      "end": 2020.39,
+      "page": null,
+      "section": null,
+      "text": "to be two problems of size n over 2."
+    },
+    {
+      "id": "3f01c1206fbf-00563",
+      "kind": "text",
+      "start": 2020.39,
+      "end": 2022.83,
+      "page": null,
+      "section": null,
+      "text": "And so I have 2t of n over 2."
+    },
+    {
+      "id": "3f01c1206fbf-00564",
+      "kind": "text",
+      "start": 2022.83,
+      "end": 2028.64,
+      "page": null,
+      "section": null,
+      "text": "And this is the recursive part."
+    },
+    {
+      "id": "3f01c1206fbf-00565",
+      "kind": "text",
+      "start": 2028.64,
+      "end": 2033.96,
+      "page": null,
+      "section": null,
+      "text": "And I'm going to have c times n, which is the merge part."
+    },
+    {
+      "id": "3f01c1206fbf-00566",
+      "kind": "text",
+      "start": 2033.96,
+      "end": 2035.72,
+      "page": null,
+      "section": null,
+      "text": "And that's some constant times n,"
+    },
+    {
+      "id": "3f01c1206fbf-00567",
+      "kind": "text",
+      "start": 2035.72,
+      "end": 2039.6,
+      "page": null,
+      "section": null,
+      "text": "which is what we have here with respect"
+    },
+    {
+      "id": "3f01c1206fbf-00568",
+      "kind": "text",
+      "start": 2039.6,
+      "end": 2041.8,
+      "page": null,
+      "section": null,
+      "text": "to the theta n complexity."
+    },
+    {
+      "id": "3f01c1206fbf-00569",
+      "kind": "text",
+      "start": 2041.8,
+      "end": 2043.24,
+      "page": null,
+      "section": null,
+      "text": "So you have a recurrence like this."
+    },
+    {
+      "id": "3f01c1206fbf-00570",
+      "kind": "text",
+      "start": 2043.24,
+      "end": 2047.16,
+      "page": null,
+      "section": null,
+      "text": "And I know some of you have seen recurrences in 6.042."
+    },
+    {
+      "id": "3f01c1206fbf-00571",
+      "kind": "text",
+      "start": 2047.16,
+      "end": 2049.28,
+      "page": null,
+      "section": null,
+      "text": "And you know how to solve this."
+    },
+    {
+      "id": "3f01c1206fbf-00572",
+      "kind": "text",
+      "start": 2049.28,
+      "end": 2054.48,
+      "page": null,
+      "section": null,
+      "text": "What I'd like to do is show you this recursion tree expansion"
+    },
+    {
+      "id": "3f01c1206fbf-00573",
+      "kind": "text",
+      "start": 2054.48,
+      "end": 2058.0,
+      "page": null,
+      "section": null,
+      "text": "that not only tells you how to solve this recurrence,"
+    },
+    {
+      "id": "3f01c1206fbf-00574",
+      "kind": "text",
+      "start": 2058.0,
+      "end": 2062.6,
+      "page": null,
+      "section": null,
+      "text": "but also gives you a means of solving recurrences"
+    },
+    {
+      "id": "3f01c1206fbf-00575",
+      "kind": "text",
+      "start": 2062.6,
+      "end": 2065.16,
+      "page": null,
+      "section": null,
+      "text": "where instead of having c of n, you have something else"
+    },
+    {
+      "id": "3f01c1206fbf-00576",
+      "kind": "text",
+      "start": 2065.16,
+      "end": 2065.66,
+      "page": null,
+      "section": null,
+      "text": "out here."
+    },
+    {
+      "id": "3f01c1206fbf-00577",
+      "kind": "text",
+      "start": 2065.66,
+      "end": 2067.8,
+      "page": null,
+      "section": null,
+      "text": "You have f of n, which is a different function"
+    },
+    {
+      "id": "3f01c1206fbf-00578",
+      "kind": "text",
+      "start": 2067.8,
+      "end": 2069.32,
+      "page": null,
+      "section": null,
+      "text": "from the linear function."
+    },
+    {
+      "id": "3f01c1206fbf-00579",
+      "kind": "text",
+      "start": 2069.32,
+      "end": 2073.36,
+      "page": null,
+      "section": null,
+      "text": "And this recursion tree is, in my mind,"
+    },
+    {
+      "id": "3f01c1206fbf-00580",
+      "kind": "text",
+      "start": 2073.36,
+      "end": 2079.56,
+      "page": null,
+      "section": null,
+      "text": "the simplest way of arguing the theta n log n complexity"
+    },
+    {
+      "id": "3f01c1206fbf-00581",
+      "kind": "text",
+      "start": 2079.56,
+      "end": 2081.12,
+      "page": null,
+      "section": null,
+      "text": "of merge sort."
+    },
+    {
+      "id": "3f01c1206fbf-00582",
+      "kind": "text",
+      "start": 2081.12,
+      "end": 2084.44,
+      "page": null,
+      "section": null,
+      "text": "So what I want to do is expand this recurrence out."
+    },
+    {
+      "id": "3f01c1206fbf-00583",
+      "kind": "text",
+      "start": 2084.44,
+      "end": 2106.84,
+      "page": null,
+      "section": null,
+      "text": "And let's do that over here."
+    },
+    {
+      "id": "3f01c1206fbf-00584",
+      "kind": "text",
+      "start": 2106.84,
+      "end": 2110.96,
+      "page": null,
+      "section": null,
+      "text": "So I have c of n on top."
+    },
+    {
+      "id": "3f01c1206fbf-00585",
+      "kind": "text",
+      "start": 2110.96,
+      "end": 2114.2,
+      "page": null,
+      "section": null,
+      "text": "I'm going to ignore this constant factor"
+    },
+    {
+      "id": "3f01c1206fbf-00586",
+      "kind": "text",
+      "start": 2114.2,
+      "end": 2116.56,
+      "page": null,
+      "section": null,
+      "text": "because c of n dominates."
+    },
+    {
+      "id": "3f01c1206fbf-00587",
+      "kind": "text",
+      "start": 2116.56,
+      "end": 2118.08,
+      "page": null,
+      "section": null,
+      "text": "So I just start with c of n."
+    },
+    {
+      "id": "3f01c1206fbf-00588",
+      "kind": "text",
+      "start": 2118.08,
+      "end": 2123.49,
+      "page": null,
+      "section": null,
+      "text": "I want to break things up as I do the recursion."
+    },
+    {
+      "id": "3f01c1206fbf-00589",
+      "kind": "text",
+      "start": 2123.49,
+      "end": 2126.73,
+      "page": null,
+      "section": null,
+      "text": "So when I go c of n at the top level,"
+    },
+    {
+      "id": "3f01c1206fbf-00590",
+      "kind": "text",
+      "start": 2126.73,
+      "end": 2129.77,
+      "page": null,
+      "section": null,
+      "text": "that's the work I have to do at the merge at the top level."
+    },
+    {
+      "id": "3f01c1206fbf-00591",
+      "kind": "text",
+      "start": 2129.77,
+      "end": 2132.65,
+      "page": null,
+      "section": null,
+      "text": "And then when I go down to two smaller problems,"
+    },
+    {
+      "id": "3f01c1206fbf-00592",
+      "kind": "text",
+      "start": 2132.65,
+      "end": 2134.49,
+      "page": null,
+      "section": null,
+      "text": "each of them is size n over 2."
+    },
+    {
+      "id": "3f01c1206fbf-00593",
+      "kind": "text",
+      "start": 2134.49,
+      "end": 2138.45,
+      "page": null,
+      "section": null,
+      "text": "So I do c times n, excuse me, divided by 2 work."
+    },
+    {
+      "id": "3f01c1206fbf-00594",
+      "kind": "text",
+      "start": 2138.45,
+      "end": 2140.65,
+      "page": null,
+      "section": null,
+      "text": "So this is just a constant c."
+    },
+    {
+      "id": "3f01c1206fbf-00595",
+      "kind": "text",
+      "start": 2140.65,
+      "end": 2142.49,
+      "page": null,
+      "section": null,
+      "text": "It just represents, I don't want to write"
+    },
+    {
+      "id": "3f01c1206fbf-00596",
+      "kind": "text",
+      "start": 2142.49,
+      "end": 2143.17,
+      "page": null,
+      "section": null,
+      "text": "thetas up here."
+    },
+    {
+      "id": "3f01c1206fbf-00597",
+      "kind": "text",
+      "start": 2143.17,
+      "end": 2144.45,
+      "page": null,
+      "section": null,
+      "text": "You could."
+    },
+    {
+      "id": "3f01c1206fbf-00598",
+      "kind": "text",
+      "start": 2144.45,
+      "end": 2146.69,
+      "page": null,
+      "section": null,
+      "text": "And I'll say a little bit more about that later."
+    },
+    {
+      "id": "3f01c1206fbf-00599",
+      "kind": "text",
+      "start": 2146.69,
+      "end": 2148.57,
+      "page": null,
+      "section": null,
+      "text": "But think of this cn as representing"
+    },
+    {
+      "id": "3f01c1206fbf-00600",
+      "kind": "text",
+      "start": 2148.57,
+      "end": 2150.25,
+      "page": null,
+      "section": null,
+      "text": "the theta n complexity."
+    },
+    {
+      "id": "3f01c1206fbf-00601",
+      "kind": "text",
+      "start": 2150.25,
+      "end": 2152.77,
+      "page": null,
+      "section": null,
+      "text": "And c is this constant."
+    },
+    {
+      "id": "3f01c1206fbf-00602",
+      "kind": "text",
+      "start": 2152.77,
+      "end": 2157.97,
+      "page": null,
+      "section": null,
+      "text": "So c times n here, c times n over 2 here."
+    },
+    {
+      "id": "3f01c1206fbf-00603",
+      "kind": "text",
+      "start": 2157.97,
+      "end": 2161.73,
+      "page": null,
+      "section": null,
+      "text": "And then when I keep going, I have c times n over 4,"
+    },
+    {
+      "id": "3f01c1206fbf-00604",
+      "kind": "text",
+      "start": 2161.73,
+      "end": 2168.82,
+      "page": null,
+      "section": null,
+      "text": "c times n over 4, et cetera, and so on and so forth."
+    },
+    {
+      "id": "3f01c1206fbf-00605",
+      "kind": "text",
+      "start": 2168.82,
+      "end": 2170.66,
+      "page": null,
+      "section": null,
+      "text": "And when I come down all the way here,"
+    },
+    {
+      "id": "3f01c1206fbf-00606",
+      "kind": "text",
+      "start": 2170.66,
+      "end": 2175.38,
+      "page": null,
+      "section": null,
+      "text": "n is eventually going to become 1, or essentially"
+    },
+    {
+      "id": "3f01c1206fbf-00607",
+      "kind": "text",
+      "start": 2175.38,
+      "end": 2176.66,
+      "page": null,
+      "section": null,
+      "text": "a constant."
+    },
+    {
+      "id": "3f01c1206fbf-00608",
+      "kind": "text",
+      "start": 2176.66,
+      "end": 2180.1,
+      "page": null,
+      "section": null,
+      "text": "And I'm going to have a bunch of c's here."
+    },
+    {
+      "id": "3f01c1206fbf-00609",
+      "kind": "text",
+      "start": 2180.78,
+      "end": 2187.02,
+      "page": null,
+      "section": null,
+      "text": "So here's another question that I'd like you to answer."
+    },
+    {
+      "id": "3f01c1206fbf-00610",
+      "kind": "text",
+      "start": 2187.02,
+      "end": 2190.86,
+      "page": null,
+      "section": null,
+      "text": "Someone tell me what the number of levels in this tree"
+    },
+    {
+      "id": "3f01c1206fbf-00611",
+      "kind": "text",
+      "start": 2190.86,
+      "end": 2193.9,
+      "page": null,
+      "section": null,
+      "text": "are precisely, and the number of leaves in this tree"
+    },
+    {
+      "id": "3f01c1206fbf-00612",
+      "kind": "text",
+      "start": 2193.9,
+      "end": 2198.13,
+      "page": null,
+      "section": null,
+      "text": "are precisely."
+    },
+    {
+      "id": "3f01c1206fbf-00613",
+      "kind": "text",
+      "start": 2198.13,
+      "end": 2201.25,
+      "page": null,
+      "section": null,
+      "text": "Log n plus 1, log to the base 2 plus 1."
+    },
+    {
+      "id": "3f01c1206fbf-00614",
+      "kind": "text",
+      "start": 2201.25,
+      "end": 2207.81,
+      "page": null,
+      "section": null,
+      "text": "And the number of leaves."
+    },
+    {
+      "id": "3f01c1206fbf-00615",
+      "kind": "text",
+      "start": 2207.81,
+      "end": 2210.57,
+      "page": null,
+      "section": null,
+      "text": "You raise your hand back there first."
+    },
+    {
+      "id": "3f01c1206fbf-00616",
+      "kind": "text",
+      "start": 2210.57,
+      "end": 2212.89,
+      "page": null,
+      "section": null,
+      "text": "Number of leaves."
+    },
+    {
+      "id": "3f01c1206fbf-00617",
+      "kind": "text",
+      "start": 2212.89,
+      "end": 2214.09,
+      "page": null,
+      "section": null,
+      "text": "Yeah, you're right."
+    },
+    {
+      "id": "3f01c1206fbf-00618",
+      "kind": "text",
+      "start": 2214.09,
+      "end": 2215.45,
+      "page": null,
+      "section": null,
+      "text": "You think right."
+    },
+    {
+      "id": "3f01c1206fbf-00619",
+      "kind": "text",
+      "start": 2216.25,
+      "end": 2222.49,
+      "page": null,
+      "section": null,
+      "text": "So 1 plus log n and n leaves."
+    },
+    {
+      "id": "3f01c1206fbf-00620",
+      "kind": "text",
+      "start": 2222.49,
+      "end": 2225.89,
+      "page": null,
+      "section": null,
+      "text": "When n becomes 1, how many of them do you have?"
+    },
+    {
+      "id": "3f01c1206fbf-00621",
+      "kind": "text",
+      "start": 2225.89,
+      "end": 2230.61,
+      "page": null,
+      "section": null,
+      "text": "You're down to a single element, which is by definition sorted."
+    },
+    {
+      "id": "3f01c1206fbf-00622",
+      "kind": "text",
+      "start": 2230.61,
+      "end": 2233.73,
+      "page": null,
+      "section": null,
+      "text": "And you have n leaves."
+    },
+    {
+      "id": "3f01c1206fbf-00623",
+      "kind": "text",
+      "start": 2233.73,
+      "end": 2235.77,
+      "page": null,
+      "section": null,
+      "text": "So now let's add up the work."
+    },
+    {
+      "id": "3f01c1206fbf-00624",
+      "kind": "text",
+      "start": 2235.77,
+      "end": 2241.33,
+      "page": null,
+      "section": null,
+      "text": "So I really like this picture, because it's just so intuitive"
+    },
+    {
+      "id": "3f01c1206fbf-00625",
+      "kind": "text",
+      "start": 2241.33,
+      "end": 2245.05,
+      "page": null,
+      "section": null,
+      "text": "in terms of getting us the result that we're looking for."
+    },
+    {
+      "id": "3f01c1206fbf-00626",
+      "kind": "text",
+      "start": 2245.05,
+      "end": 2250.05,
+      "page": null,
+      "section": null,
+      "text": "So you add up the work in each of the levels of this tree."
+    },
+    {
+      "id": "3f01c1206fbf-00627",
+      "kind": "text",
+      "start": 2250.05,
+      "end": 2252.21,
+      "page": null,
+      "section": null,
+      "text": "So the top level is cn."
+    },
+    {
+      "id": "3f01c1206fbf-00628",
+      "kind": "text",
+      "start": 2252.21,
+      "end": 2256.77,
+      "page": null,
+      "section": null,
+      "text": "The second level is cn, because I added half and half."
+    },
+    {
+      "id": "3f01c1206fbf-00629",
+      "kind": "text",
+      "start": 2256.77,
+      "end": 2258.65,
+      "page": null,
+      "section": null,
+      "text": "cn."
+    },
+    {
+      "id": "3f01c1206fbf-00630",
+      "kind": "text",
+      "start": 2258.65,
+      "end": 2259.77,
+      "page": null,
+      "section": null,
+      "text": "cn."
+    },
+    {
+      "id": "3f01c1206fbf-00631",
+      "kind": "text",
+      "start": 2259.77,
+      "end": 2263.01,
+      "page": null,
+      "section": null,
+      "text": "Wow, what symmetry."
+    },
+    {
+      "id": "3f01c1206fbf-00632",
+      "kind": "text",
+      "start": 2263.01,
+      "end": 2270.47,
+      "page": null,
+      "section": null,
+      "text": "So you're doing the same amount of work, modulo,"
+    },
+    {
+      "id": "3f01c1206fbf-00633",
+      "kind": "text",
+      "start": 2270.47,
+      "end": 2275.19,
+      "page": null,
+      "section": null,
+      "text": "the constant factors here with what's going on with the c1,"
+    },
+    {
+      "id": "3f01c1206fbf-00634",
+      "kind": "text",
+      "start": 2275.19,
+      "end": 2276.27,
+      "page": null,
+      "section": null,
+      "text": "which we've ignored."
+    },
+    {
+      "id": "3f01c1206fbf-00635",
+      "kind": "text",
+      "start": 2276.31,
+      "end": 2279.87,
+      "page": null,
+      "section": null,
+      "text": "But roughly the same amount of work in each of the levels."
+    },
+    {
+      "id": "3f01c1206fbf-00636",
+      "kind": "text",
+      "start": 2279.87,
+      "end": 2282.63,
+      "page": null,
+      "section": null,
+      "text": "And now you know how many levels there are."
+    },
+    {
+      "id": "3f01c1206fbf-00637",
+      "kind": "text",
+      "start": 2282.63,
+      "end": 2284.87,
+      "page": null,
+      "section": null,
+      "text": "It's 1 plus log n."
+    },
+    {
+      "id": "3f01c1206fbf-00638",
+      "kind": "text",
+      "start": 2284.87,
+      "end": 2291.95,
+      "page": null,
+      "section": null,
+      "text": "So if you want to write an equation for t of n,"
+    },
+    {
+      "id": "3f01c1206fbf-00639",
+      "kind": "text",
+      "start": 2291.95,
+      "end": 2305.71,
+      "page": null,
+      "section": null,
+      "text": "it's 1 plus log n times c of n, which is theta of n log n."
+    },
+    {
+      "id": "3f01c1206fbf-00640",
+      "kind": "text",
+      "start": 2306.51,
+      "end": 2311.03,
+      "page": null,
+      "section": null,
+      "text": "So I've mixed in constant c and theta's."
+    },
+    {
+      "id": "3f01c1206fbf-00641",
+      "kind": "text",
+      "start": 2311.03,
+      "end": 2312.59,
+      "page": null,
+      "section": null,
+      "text": "For the purposes of this description,"
+    },
+    {
+      "id": "3f01c1206fbf-00642",
+      "kind": "text",
+      "start": 2312.59,
+      "end": 2313.87,
+      "page": null,
+      "section": null,
+      "text": "they're interchangeable."
+    },
+    {
+      "id": "3f01c1206fbf-00643",
+      "kind": "text",
+      "start": 2313.87,
+      "end": 2325.2,
+      "page": null,
+      "section": null,
+      "text": "You will see recurrences that look like this in class"
+    },
+    {
+      "id": "3f01c1206fbf-00644",
+      "kind": "text",
+      "start": 2325.2,
+      "end": 2326.84,
+      "page": null,
+      "section": null,
+      "text": "and things like that."
+    },
+    {
+      "id": "3f01c1206fbf-00645",
+      "kind": "text",
+      "start": 2326.84,
+      "end": 2328.4,
+      "page": null,
+      "section": null,
+      "text": "Don't get confused."
+    },
+    {
+      "id": "3f01c1206fbf-00646",
+      "kind": "text",
+      "start": 2328.4,
+      "end": 2331.16,
+      "page": null,
+      "section": null,
+      "text": "It's just a constant multiplicative factor"
+    },
+    {
+      "id": "3f01c1206fbf-00647",
+      "kind": "text",
+      "start": 2331.16,
+      "end": 2334.52,
+      "page": null,
+      "section": null,
+      "text": "in front of the function that you have."
+    },
+    {
+      "id": "3f01c1206fbf-00648",
+      "kind": "text",
+      "start": 2334.52,
+      "end": 2336.2,
+      "page": null,
+      "section": null,
+      "text": "And it's just a little easier, I think,"
+    },
+    {
+      "id": "3f01c1206fbf-00649",
+      "kind": "text",
+      "start": 2336.2,
+      "end": 2338.16,
+      "page": null,
+      "section": null,
+      "text": "to write down these constant factors"
+    },
+    {
+      "id": "3f01c1206fbf-00650",
+      "kind": "text",
+      "start": 2338.16,
+      "end": 2340.52,
+      "page": null,
+      "section": null,
+      "text": "and realize that the amount of work done"
+    },
+    {
+      "id": "3f01c1206fbf-00651",
+      "kind": "text",
+      "start": 2340.52,
+      "end": 2343.0,
+      "page": null,
+      "section": null,
+      "text": "is the same in each of the leaves."
+    },
+    {
+      "id": "3f01c1206fbf-00652",
+      "kind": "text",
+      "start": 2343.0,
+      "end": 2346.0,
+      "page": null,
+      "section": null,
+      "text": "And once you know the dimensions of this tree"
+    },
+    {
+      "id": "3f01c1206fbf-00653",
+      "kind": "text",
+      "start": 2346.0,
+      "end": 2350.28,
+      "page": null,
+      "section": null,
+      "text": "in terms of levels and in terms of the number of leaves,"
+    },
+    {
+      "id": "3f01c1206fbf-00654",
+      "kind": "text",
+      "start": 2350.28,
+      "end": 2354.6,
+      "page": null,
+      "section": null,
+      "text": "you get your result."
+    },
+    {
+      "id": "3f01c1206fbf-00655",
+      "kind": "text",
+      "start": 2354.6,
+      "end": 2366.19,
+      "page": null,
+      "section": null,
+      "text": "So we've looked at two algorithms so far."
+    },
+    {
+      "id": "3f01c1206fbf-00656",
+      "kind": "text",
+      "start": 2366.19,
+      "end": 2369.55,
+      "page": null,
+      "section": null,
+      "text": "And insertion sort, if you talk about numbers,"
+    },
+    {
+      "id": "3f01c1206fbf-00657",
+      "kind": "text",
+      "start": 2369.55,
+      "end": 2372.27,
+      "page": null,
+      "section": null,
+      "text": "is theta n square for swaps?"
+    },
+    {
+      "id": "3f01c1206fbf-00658",
+      "kind": "text",
+      "start": 2372.27,
+      "end": 2376.27,
+      "page": null,
+      "section": null,
+      "text": "Merge sort is theta n log n."
+    },
+    {
+      "id": "3f01c1206fbf-00659",
+      "kind": "text",
+      "start": 2376.27,
+      "end": 2378.67,
+      "page": null,
+      "section": null,
+      "text": "Here's another interesting question."
+    },
+    {
+      "id": "3f01c1206fbf-00660",
+      "kind": "text",
+      "start": 2378.67,
+      "end": 2387.78,
+      "page": null,
+      "section": null,
+      "text": "What is one advantage of insertion sort over merge sort?"
+    },
+    {
+      "id": "3f01c1206fbf-00661",
+      "kind": "text",
+      "start": 2387.78,
+      "end": 2391.18,
+      "page": null,
+      "section": null,
+      "text": "Yeah."
+    },
+    {
+      "id": "3f01c1206fbf-00662",
+      "kind": "text",
+      "start": 2391.18,
+      "end": 2397.28,
+      "page": null,
+      "section": null,
+      "text": "What does that mean?"
+    },
+    {
+      "id": "3f01c1206fbf-00663",
+      "kind": "text",
+      "start": 2397.28,
+      "end": 2398.4,
+      "page": null,
+      "section": null,
+      "text": "That's exactly right."
+    },
+    {
+      "id": "3f01c1206fbf-00664",
+      "kind": "text",
+      "start": 2398.4,
+      "end": 2401.32,
+      "page": null,
+      "section": null,
+      "text": "That's exactly right."
+    },
+    {
+      "id": "3f01c1206fbf-00665",
+      "kind": "text",
+      "start": 2401.32,
+      "end": 2403.64,
+      "page": null,
+      "section": null,
+      "text": "So the two guys who answered the questions before,"
+    },
+    {
+      "id": "3f01c1206fbf-00666",
+      "kind": "text",
+      "start": 2403.64,
+      "end": 2407.76,
+      "page": null,
+      "section": null,
+      "text": "but the levels and you, come to me after class."
+    },
+    {
+      "id": "3f01c1206fbf-00667",
+      "kind": "text",
+      "start": 2407.76,
+      "end": 2409.64,
+      "page": null,
+      "section": null,
+      "text": "So that's a great answer."
+    },
+    {
+      "id": "3f01c1206fbf-00668",
+      "kind": "text",
+      "start": 2409.64,
+      "end": 2412.16,
+      "page": null,
+      "section": null,
+      "text": "It's in place sorting is something"
+    },
+    {
+      "id": "3f01c1206fbf-00669",
+      "kind": "text",
+      "start": 2412.16,
+      "end": 2414.84,
+      "page": null,
+      "section": null,
+      "text": "that has to do with auxiliary space."
+    },
+    {
+      "id": "3f01c1206fbf-00670",
+      "kind": "text",
+      "start": 2414.84,
+      "end": 2419.24,
+      "page": null,
+      "section": null,
+      "text": "And so what you see here, and it was a bit hidden here,"
+    },
+    {
+      "id": "3f01c1206fbf-00671",
+      "kind": "text",
+      "start": 2419.24,
+      "end": 2424.52,
+      "page": null,
+      "section": null,
+      "text": "but the fact of the matter is that you had L prime and R"
+    },
+    {
+      "id": "3f01c1206fbf-00672",
+      "kind": "text",
+      "start": 2424.52,
+      "end": 2429.72,
+      "page": null,
+      "section": null,
+      "text": "prime, and L prime and R prime are different from L and R,"
+    },
+    {
+      "id": "3f01c1206fbf-00673",
+      "kind": "text",
+      "start": 2429.72,
+      "end": 2432.68,
+      "page": null,
+      "section": null,
+      "text": "which were the initial halves of the inputs"
+    },
+    {
+      "id": "3f01c1206fbf-00674",
+      "kind": "text",
+      "start": 2432.68,
+      "end": 2435.0,
+      "page": null,
+      "section": null,
+      "text": "to the sorting algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00675",
+      "kind": "text",
+      "start": 2435.0,
+      "end": 2438.8,
+      "page": null,
+      "section": null,
+      "text": "And what I said here is we're going to dump this into A."
+    },
+    {
+      "id": "3f01c1206fbf-00676",
+      "kind": "text",
+      "start": 2438.8,
+      "end": 2440.44,
+      "page": null,
+      "section": null,
+      "text": "That's what this picture shows."
+    },
+    {
+      "id": "3f01c1206fbf-00677",
+      "kind": "text",
+      "start": 2440.44,
+      "end": 2443.36,
+      "page": null,
+      "section": null,
+      "text": "This says sorted array A. And so you"
+    },
+    {
+      "id": "3f01c1206fbf-00678",
+      "kind": "text",
+      "start": 2443.36,
+      "end": 2449.72,
+      "page": null,
+      "section": null,
+      "text": "had to make a copy of the array in the two halves L and R"
+    },
+    {
+      "id": "3f01c1206fbf-00679",
+      "kind": "text",
+      "start": 2449.72,
+      "end": 2453.96,
+      "page": null,
+      "section": null,
+      "text": "in order to do the recursion and then to take the results"
+    },
+    {
+      "id": "3f01c1206fbf-00680",
+      "kind": "text",
+      "start": 2453.96,
+      "end": 2456.8,
+      "page": null,
+      "section": null,
+      "text": "and put them into the sorted array A."
+    },
+    {
+      "id": "3f01c1206fbf-00681",
+      "kind": "text",
+      "start": 2456.8,
+      "end": 2463.96,
+      "page": null,
+      "section": null,
+      "text": "So in merge sort, you needed theta n auxiliary space."
+    },
+    {
+      "id": "3f01c1206fbf-00682",
+      "kind": "text",
+      "start": 2463.96,
+      "end": 2470.4,
+      "page": null,
+      "section": null,
+      "text": "So merge sort, you need theta n extra space."
+    },
+    {
+      "id": "3f01c1206fbf-00683",
+      "kind": "text",
+      "start": 2470.4,
+      "end": 2477.34,
+      "page": null,
+      "section": null,
+      "text": "And the definition of in place sorting"
+    },
+    {
+      "id": "3f01c1206fbf-00684",
+      "kind": "text",
+      "start": 2477.34,
+      "end": 2481.94,
+      "page": null,
+      "section": null,
+      "text": "implies that you have theta 1 constant auxiliary space."
+    },
+    {
+      "id": "3f01c1206fbf-00685",
+      "kind": "text",
+      "start": 2484.58,
+      "end": 2487.34,
+      "page": null,
+      "section": null,
+      "text": "The auxiliary space for insertion sort"
+    },
+    {
+      "id": "3f01c1206fbf-00686",
+      "kind": "text",
+      "start": 2487.34,
+      "end": 2490.5,
+      "page": null,
+      "section": null,
+      "text": "is simply that temporary variable"
+    },
+    {
+      "id": "3f01c1206fbf-00687",
+      "kind": "text",
+      "start": 2490.5,
+      "end": 2493.5,
+      "page": null,
+      "section": null,
+      "text": "that you need when you swap two elements."
+    },
+    {
+      "id": "3f01c1206fbf-00688",
+      "kind": "text",
+      "start": 2493.5,
+      "end": 2495.54,
+      "page": null,
+      "section": null,
+      "text": "So when you want to swap a couple of registers,"
+    },
+    {
+      "id": "3f01c1206fbf-00689",
+      "kind": "text",
+      "start": 2495.54,
+      "end": 2498.06,
+      "page": null,
+      "section": null,
+      "text": "you've got to store one of the values in a temporary location"
+    },
+    {
+      "id": "3f01c1206fbf-00690",
+      "kind": "text",
+      "start": 2498.06,
+      "end": 2499.62,
+      "page": null,
+      "section": null,
+      "text": "over right the other, et cetera."
+    },
+    {
+      "id": "3f01c1206fbf-00691",
+      "kind": "text",
+      "start": 2499.62,
+      "end": 2502.06,
+      "page": null,
+      "section": null,
+      "text": "And that's the theta 1 auxiliary space for insertion"
+    },
+    {
+      "id": "3f01c1206fbf-00692",
+      "kind": "text",
+      "start": 2502.06,
+      "end": 2503.18,
+      "page": null,
+      "section": null,
+      "text": "sort."
+    },
+    {
+      "id": "3f01c1206fbf-00693",
+      "kind": "text",
+      "start": 2503.18,
+      "end": 2507.34,
+      "page": null,
+      "section": null,
+      "text": "So there is an advantage of the version of insertion sort"
+    },
+    {
+      "id": "3f01c1206fbf-00694",
+      "kind": "text",
+      "start": 2507.34,
+      "end": 2509.34,
+      "page": null,
+      "section": null,
+      "text": "we've talked about today over merge sort."
+    },
+    {
+      "id": "3f01c1206fbf-00695",
+      "kind": "text",
+      "start": 2509.34,
+      "end": 2511.06,
+      "page": null,
+      "section": null,
+      "text": "And if you have a billion elements,"
+    },
+    {
+      "id": "3f01c1206fbf-00696",
+      "kind": "text",
+      "start": 2511.06,
+      "end": 2514.66,
+      "page": null,
+      "section": null,
+      "text": "that's potentially something you don't want to store in memory."
+    },
+    {
+      "id": "3f01c1206fbf-00697",
+      "kind": "text",
+      "start": 2514.66,
+      "end": 2516.46,
+      "page": null,
+      "section": null,
+      "text": "If you want to do something really fast"
+    },
+    {
+      "id": "3f01c1206fbf-00698",
+      "kind": "text",
+      "start": 2516.46,
+      "end": 2520.02,
+      "page": null,
+      "section": null,
+      "text": "and do everything in cache or main memory"
+    },
+    {
+      "id": "3f01c1206fbf-00699",
+      "kind": "text",
+      "start": 2520.02,
+      "end": 2522.74,
+      "page": null,
+      "section": null,
+      "text": "and you want to sort billions or maybe even trillions"
+    },
+    {
+      "id": "3f01c1206fbf-00700",
+      "kind": "text",
+      "start": 2522.74,
+      "end": 2527.78,
+      "page": null,
+      "section": null,
+      "text": "of items, this becomes an important consideration."
+    },
+    {
+      "id": "3f01c1206fbf-00701",
+      "kind": "text",
+      "start": 2527.78,
+      "end": 2531.34,
+      "page": null,
+      "section": null,
+      "text": "I will say that you can reduce"
+    },
+    {
+      "id": "3f01c1206fbf-00702",
+      "kind": "text",
+      "start": 2531.34,
+      "end": 2534.54,
+      "page": null,
+      "section": null,
+      "text": "the constant factor of the theta n."
+    },
+    {
+      "id": "3f01c1206fbf-00703",
+      "kind": "text",
+      "start": 2534.54,
+      "end": 2536.94,
+      "page": null,
+      "section": null,
+      "text": "So in the vanilla scheme, you can imagine"
+    },
+    {
+      "id": "3f01c1206fbf-00704",
+      "kind": "text",
+      "start": 2536.94,
+      "end": 2538.62,
+      "page": null,
+      "section": null,
+      "text": "that you have to have a copy of the array."
+    },
+    {
+      "id": "3f01c1206fbf-00705",
+      "kind": "text",
+      "start": 2538.62,
+      "end": 2540.9,
+      "page": null,
+      "section": null,
+      "text": "So if you had n elements, you essentially"
+    },
+    {
+      "id": "3f01c1206fbf-00706",
+      "kind": "text",
+      "start": 2540.9,
+      "end": 2544.5,
+      "page": null,
+      "section": null,
+      "text": "have n extra items of storage."
+    },
+    {
+      "id": "3f01c1206fbf-00707",
+      "kind": "text",
+      "start": 2544.5,
+      "end": 2548.1,
+      "page": null,
+      "section": null,
+      "text": "You can make that n over 2 with a simple coding trick"
+    },
+    {
+      "id": "3f01c1206fbf-00708",
+      "kind": "text",
+      "start": 2548.1,
+      "end": 2553.82,
+      "page": null,
+      "section": null,
+      "text": "by keeping 1 half of a, you can sort of throw away"
+    },
+    {
+      "id": "3f01c1206fbf-00709",
+      "kind": "text",
+      "start": 2553.82,
+      "end": 2555.82,
+      "page": null,
+      "section": null,
+      "text": "one of the L's or one of the R's"
+    },
+    {
+      "id": "3f01c1206fbf-00710",
+      "kind": "text",
+      "start": 2555.82,
+      "end": 2557.78,
+      "page": null,
+      "section": null,
+      "text": "and you can get it down to n over 2."
+    },
+    {
+      "id": "3f01c1206fbf-00711",
+      "kind": "text",
+      "start": 2557.78,
+      "end": 2560.06,
+      "page": null,
+      "section": null,
+      "text": "And that turns out it's a reasonable thing to do"
+    },
+    {
+      "id": "3f01c1206fbf-00712",
+      "kind": "text",
+      "start": 2560.1,
+      "end": 2562.7,
+      "page": null,
+      "section": null,
+      "text": "if you have a billion elements and you want to reduce"
+    },
+    {
+      "id": "3f01c1206fbf-00713",
+      "kind": "text",
+      "start": 2562.7,
+      "end": 2565.42,
+      "page": null,
+      "section": null,
+      "text": "your storage by a constant factor."
+    },
+    {
+      "id": "3f01c1206fbf-00714",
+      "kind": "text",
+      "start": 2565.42,
+      "end": 2567.1,
+      "page": null,
+      "section": null,
+      "text": "So that's one coding trick."
+    },
+    {
+      "id": "3f01c1206fbf-00715",
+      "kind": "text",
+      "start": 2567.1,
+      "end": 2569.62,
+      "page": null,
+      "section": null,
+      "text": "Now it turns out that you can actually go further"
+    },
+    {
+      "id": "3f01c1206fbf-00716",
+      "kind": "text",
+      "start": 2569.62,
+      "end": 2572.14,
+      "page": null,
+      "section": null,
+      "text": "and there's a fairly sophisticated algorithm"
+    },
+    {
+      "id": "3f01c1206fbf-00717",
+      "kind": "text",
+      "start": 2572.14,
+      "end": 2574.74,
+      "page": null,
+      "section": null,
+      "text": "that's sort of beyond the scope of 6006"
+    },
+    {
+      "id": "3f01c1206fbf-00718",
+      "kind": "text",
+      "start": 2574.74,
+      "end": 2579.33,
+      "page": null,
+      "section": null,
+      "text": "that's an in-place merge sort."
+    },
+    {
+      "id": "3f01c1206fbf-00719",
+      "kind": "text",
+      "start": 2579.33,
+      "end": 2584.73,
+      "page": null,
+      "section": null,
+      "text": "And this in-place merge sort is kind of impractical"
+    },
+    {
+      "id": "3f01c1206fbf-00720",
+      "kind": "text",
+      "start": 2584.73,
+      "end": 2588.57,
+      "page": null,
+      "section": null,
+      "text": "in the sense that it doesn't do very well"
+    },
+    {
+      "id": "3f01c1206fbf-00721",
+      "kind": "text",
+      "start": 2588.57,
+      "end": 2590.09,
+      "page": null,
+      "section": null,
+      "text": "in terms of the constant factor."
+    },
+    {
+      "id": "3f01c1206fbf-00722",
+      "kind": "text",
+      "start": 2590.09,
+      "end": 2595.09,
+      "page": null,
+      "section": null,
+      "text": "So while it's in-place and it's still theta n log n,"
+    },
+    {
+      "id": "3f01c1206fbf-00723",
+      "kind": "text",
+      "start": 2595.09,
+      "end": 2598.93,
+      "page": null,
+      "section": null,
+      "text": "the problem is that the running time of an in-place merge"
+    },
+    {
+      "id": "3f01c1206fbf-00724",
+      "kind": "text",
+      "start": 2598.93,
+      "end": 2603.21,
+      "page": null,
+      "section": null,
+      "text": "sort is much worse than the regular merge sort that"
+    },
+    {
+      "id": "3f01c1206fbf-00725",
+      "kind": "text",
+      "start": 2603.21,
+      "end": 2605.49,
+      "page": null,
+      "section": null,
+      "text": "uses theta n auxiliary space."
+    },
+    {
+      "id": "3f01c1206fbf-00726",
+      "kind": "text",
+      "start": 2605.49,
+      "end": 2607.97,
+      "page": null,
+      "section": null,
+      "text": "So people don't really use in-place merge sort."
+    },
+    {
+      "id": "3f01c1206fbf-00727",
+      "kind": "text",
+      "start": 2607.97,
+      "end": 2609.41,
+      "page": null,
+      "section": null,
+      "text": "It's a great paper."
+    },
+    {
+      "id": "3f01c1206fbf-00728",
+      "kind": "text",
+      "start": 2609.41,
+      "end": 2611.81,
+      "page": null,
+      "section": null,
+      "text": "It's a great thing to read."
+    },
+    {
+      "id": "3f01c1206fbf-00729",
+      "kind": "text",
+      "start": 2611.81,
+      "end": 2617.05,
+      "page": null,
+      "section": null,
+      "text": "Its analysis is a bit sophisticated for 006."
+    },
+    {
+      "id": "3f01c1206fbf-00730",
+      "kind": "text",
+      "start": 2617.05,
+      "end": 2619.05,
+      "page": null,
+      "section": null,
+      "text": "So we won't go there."
+    },
+    {
+      "id": "3f01c1206fbf-00731",
+      "kind": "text",
+      "start": 2619.05,
+      "end": 2620.33,
+      "page": null,
+      "section": null,
+      "text": "But it does exist."
+    },
+    {
+      "id": "3f01c1206fbf-00732",
+      "kind": "text",
+      "start": 2620.33,
+      "end": 2621.93,
+      "page": null,
+      "section": null,
+      "text": "So you can take merge sort and I just"
+    },
+    {
+      "id": "3f01c1206fbf-00733",
+      "kind": "text",
+      "start": 2621.93,
+      "end": 2625.25,
+      "page": null,
+      "section": null,
+      "text": "want to let you know that you can do things in-place."
+    },
+    {
+      "id": "3f01c1206fbf-00734",
+      "kind": "text",
+      "start": 2625.25,
+      "end": 2628.81,
+      "page": null,
+      "section": null,
+      "text": "In terms of numbers, some experiments"
+    },
+    {
+      "id": "3f01c1206fbf-00735",
+      "kind": "text",
+      "start": 2628.81,
+      "end": 2631.49,
+      "page": null,
+      "section": null,
+      "text": "we ran a few years ago, so these may not"
+    },
+    {
+      "id": "3f01c1206fbf-00736",
+      "kind": "text",
+      "start": 2631.49,
+      "end": 2635.81,
+      "page": null,
+      "section": null,
+      "text": "be completely valid because I'm going to actually give you"
+    },
+    {
+      "id": "3f01c1206fbf-00737",
+      "kind": "text",
+      "start": 2635.81,
+      "end": 2636.65,
+      "page": null,
+      "section": null,
+      "text": "numbers."
+    },
+    {
+      "id": "3f01c1206fbf-00738",
+      "kind": "text",
+      "start": 2636.65,
+      "end": 2647.35,
+      "page": null,
+      "section": null,
+      "text": "But merge sort in Python, if you write a little curve fit"
+    },
+    {
+      "id": "3f01c1206fbf-00739",
+      "kind": "text",
+      "start": 2647.35,
+      "end": 2656.07,
+      "page": null,
+      "section": null,
+      "text": "program to do this, is 2.2 n log n microseconds"
+    },
+    {
+      "id": "3f01c1206fbf-00740",
+      "kind": "text",
+      "start": 2656.07,
+      "end": 2657.75,
+      "page": null,
+      "section": null,
+      "text": "for a given n."
+    },
+    {
+      "id": "3f01c1206fbf-00741",
+      "kind": "text",
+      "start": 2657.75,
+      "end": 2662.39,
+      "page": null,
+      "section": null,
+      "text": "So this is the merge sort routine."
+    },
+    {
+      "id": "3f01c1206fbf-00742",
+      "kind": "text",
+      "start": 2662.39,
+      "end": 2672.17,
+      "page": null,
+      "section": null,
+      "text": "And if you look at insertion sort in Python,"
+    },
+    {
+      "id": "3f01c1206fbf-00743",
+      "kind": "text",
+      "start": 2672.17,
+      "end": 2679.37,
+      "page": null,
+      "section": null,
+      "text": "that's something like 0.2 n square microseconds."
+    },
+    {
+      "id": "3f01c1206fbf-00744",
+      "kind": "text",
+      "start": 2679.37,
+      "end": 2682.57,
+      "page": null,
+      "section": null,
+      "text": "So you see the constant factors here."
+    },
+    {
+      "id": "3f01c1206fbf-00745",
+      "kind": "text",
+      "start": 2682.65,
+      "end": 2688.21,
+      "page": null,
+      "section": null,
+      "text": "If you do insertion sort in C, which is a compiled language,"
+    },
+    {
+      "id": "3f01c1206fbf-00746",
+      "kind": "text",
+      "start": 2688.21,
+      "end": 2690.41,
+      "page": null,
+      "section": null,
+      "text": "then it's much faster."
+    },
+    {
+      "id": "3f01c1206fbf-00747",
+      "kind": "text",
+      "start": 2690.41,
+      "end": 2695.41,
+      "page": null,
+      "section": null,
+      "text": "It's about 20 times faster."
+    },
+    {
+      "id": "3f01c1206fbf-00748",
+      "kind": "text",
+      "start": 2695.41,
+      "end": 2699.21,
+      "page": null,
+      "section": null,
+      "text": "It's 0.01 n square microseconds."
+    },
+    {
+      "id": "3f01c1206fbf-00749",
+      "kind": "text",
+      "start": 2699.21,
+      "end": 2701.21,
+      "page": null,
+      "section": null,
+      "text": "So a little bit of practice on the side."
+    },
+    {
+      "id": "3f01c1206fbf-00750",
+      "kind": "text",
+      "start": 2701.21,
+      "end": 2703.41,
+      "page": null,
+      "section": null,
+      "text": "We do ask you to write code, and this is important."
+    },
+    {
+      "id": "3f01c1206fbf-00751",
+      "kind": "text",
+      "start": 2703.41,
+      "end": 2704.89,
+      "page": null,
+      "section": null,
+      "text": "The reason we're interested in algorithms"
+    },
+    {
+      "id": "3f01c1206fbf-00752",
+      "kind": "text",
+      "start": 2704.89,
+      "end": 2706.73,
+      "page": null,
+      "section": null,
+      "text": "is because people want to run them."
+    },
+    {
+      "id": "3f01c1206fbf-00753",
+      "kind": "text",
+      "start": 2706.73,
+      "end": 2713.69,
+      "page": null,
+      "section": null,
+      "text": "And what you can see is that you can actually find an m."
+    },
+    {
+      "id": "3f01c1206fbf-00754",
+      "kind": "text",
+      "start": 2713.73,
+      "end": 2716.29,
+      "page": null,
+      "section": null,
+      "text": "So regardless of whether you're Python or C,"
+    },
+    {
+      "id": "3f01c1206fbf-00755",
+      "kind": "text",
+      "start": 2716.29,
+      "end": 2718.57,
+      "page": null,
+      "section": null,
+      "text": "this tells you that asymptotic complexity"
+    },
+    {
+      "id": "3f01c1206fbf-00756",
+      "kind": "text",
+      "start": 2718.57,
+      "end": 2724.13,
+      "page": null,
+      "section": null,
+      "text": "is pretty important because once n gets beyond about 4,000,"
+    },
+    {
+      "id": "3f01c1206fbf-00757",
+      "kind": "text",
+      "start": 2724.13,
+      "end": 2727.17,
+      "page": null,
+      "section": null,
+      "text": "you're going to see that merge sort in Python"
+    },
+    {
+      "id": "3f01c1206fbf-00758",
+      "kind": "text",
+      "start": 2727.17,
+      "end": 2732.29,
+      "page": null,
+      "section": null,
+      "text": "in a beats insertion sort in C. So the constant factors"
+    },
+    {
+      "id": "3f01c1206fbf-00759",
+      "kind": "text",
+      "start": 2732.29,
+      "end": 2737.17,
+      "page": null,
+      "section": null,
+      "text": "get subsumed beyond certain values of n."
+    },
+    {
+      "id": "3f01c1206fbf-00760",
+      "kind": "text",
+      "start": 2737.17,
+      "end": 2739.93,
+      "page": null,
+      "section": null,
+      "text": "So that's why asymptotic complexity is important."
+    },
+    {
+      "id": "3f01c1206fbf-00761",
+      "kind": "text",
+      "start": 2739.93,
+      "end": 2741.37,
+      "page": null,
+      "section": null,
+      "text": "You do have a factor of 20 here,"
+    },
+    {
+      "id": "3f01c1206fbf-00762",
+      "kind": "text",
+      "start": 2741.37,
+      "end": 2744.53,
+      "page": null,
+      "section": null,
+      "text": "and that doesn't really help you in terms of keeping"
+    },
+    {
+      "id": "3f01c1206fbf-00763",
+      "kind": "text",
+      "start": 2744.53,
+      "end": 2747.17,
+      "page": null,
+      "section": null,
+      "text": "an n square algorithm competitive."
+    },
+    {
+      "id": "3f01c1206fbf-00764",
+      "kind": "text",
+      "start": 2747.17,
+      "end": 2749.37,
+      "page": null,
+      "section": null,
+      "text": "It stays competitive for a little bit longer,"
+    },
+    {
+      "id": "3f01c1206fbf-00765",
+      "kind": "text",
+      "start": 2749.37,
+      "end": 2751.25,
+      "page": null,
+      "section": null,
+      "text": "but then falls behind."
+    },
+    {
+      "id": "3f01c1206fbf-00766",
+      "kind": "text",
+      "start": 2751.25,
+      "end": 2752.93,
+      "page": null,
+      "section": null,
+      "text": "All right?"
+    },
+    {
+      "id": "3f01c1206fbf-00767",
+      "kind": "text",
+      "start": 2752.93,
+      "end": 2757.33,
+      "page": null,
+      "section": null,
+      "text": "OK, so that's what I wanted to cover for sorting."
+    },
+    {
+      "id": "3f01c1206fbf-00768",
+      "kind": "text",
+      "start": 2757.33,
+      "end": 2758.97,
+      "page": null,
+      "section": null,
+      "text": "So hopefully you have a sense of what"
+    },
+    {
+      "id": "3f01c1206fbf-00769",
+      "kind": "text",
+      "start": 2758.97,
+      "end": 2761.89,
+      "page": null,
+      "section": null,
+      "text": "happens with these two sorting algorithms."
+    },
+    {
+      "id": "3f01c1206fbf-00770",
+      "kind": "text",
+      "start": 2761.89,
+      "end": 2764.49,
+      "page": null,
+      "section": null,
+      "text": "I will look at a very different sorting algorithm"
+    },
+    {
+      "id": "3f01c1206fbf-00771",
+      "kind": "text",
+      "start": 2764.49,
+      "end": 2767.21,
+      "page": null,
+      "section": null,
+      "text": "next time using heaps, which is a different data"
+    },
+    {
+      "id": "3f01c1206fbf-00772",
+      "kind": "text",
+      "start": 2767.21,
+      "end": 2768.53,
+      "page": null,
+      "section": null,
+      "text": "structure."
+    },
+    {
+      "id": "3f01c1206fbf-00773",
+      "kind": "text",
+      "start": 2768.53,
+      "end": 2770.69,
+      "page": null,
+      "section": null,
+      "text": "The last thing I want to do in the couple of minutes"
+    },
+    {
+      "id": "3f01c1206fbf-00774",
+      "kind": "text",
+      "start": 2770.73,
+      "end": 2774.05,
+      "page": null,
+      "section": null,
+      "text": "I have left is give you a little more intuition"
+    },
+    {
+      "id": "3f01c1206fbf-00775",
+      "kind": "text",
+      "start": 2774.05,
+      "end": 2777.09,
+      "page": null,
+      "section": null,
+      "text": "as to recurrence solving based on this diagram"
+    },
+    {
+      "id": "3f01c1206fbf-00776",
+      "kind": "text",
+      "start": 2777.09,
+      "end": 2778.69,
+      "page": null,
+      "section": null,
+      "text": "that I wrote up there."
+    },
+    {
+      "id": "3f01c1206fbf-00777",
+      "kind": "text",
+      "start": 2778.69,
+      "end": 2781.49,
+      "page": null,
+      "section": null,
+      "text": "And so we're going to use exactly this structure,"
+    },
+    {
+      "id": "3f01c1206fbf-00778",
+      "kind": "text",
+      "start": 2781.49,
+      "end": 2784.25,
+      "page": null,
+      "section": null,
+      "text": "and we're going to look at a couple of different recurrences"
+    },
+    {
+      "id": "3f01c1206fbf-00779",
+      "kind": "text",
+      "start": 2784.25,
+      "end": 2786.33,
+      "page": null,
+      "section": null,
+      "text": "that I won't really motivate in terms"
+    },
+    {
+      "id": "3f01c1206fbf-00780",
+      "kind": "text",
+      "start": 2786.33,
+      "end": 2789.41,
+      "page": null,
+      "section": null,
+      "text": "of having a specific algorithm, but I'll just"
+    },
+    {
+      "id": "3f01c1206fbf-00781",
+      "kind": "text",
+      "start": 2789.41,
+      "end": 2791.17,
+      "page": null,
+      "section": null,
+      "text": "write out the recurrence."
+    },
+    {
+      "id": "3f01c1206fbf-00782",
+      "kind": "text",
+      "start": 2791.17,
+      "end": 2796.33,
+      "page": null,
+      "section": null,
+      "text": "And we look at the recursion tree for that,"
+    },
+    {
+      "id": "3f01c1206fbf-00783",
+      "kind": "text",
+      "start": 2796.33,
+      "end": 2800.33,
+      "page": null,
+      "section": null,
+      "text": "and I'll try and tease out of you"
+    },
+    {
+      "id": "3f01c1206fbf-00784",
+      "kind": "text",
+      "start": 2800.33,
+      "end": 2804.85,
+      "page": null,
+      "section": null,
+      "text": "the complexity associated with these recurrences"
+    },
+    {
+      "id": "3f01c1206fbf-00785",
+      "kind": "text",
+      "start": 2804.85,
+      "end": 2809.36,
+      "page": null,
+      "section": null,
+      "text": "or the overall complexity."
+    },
+    {
+      "id": "3f01c1206fbf-00786",
+      "kind": "text",
+      "start": 2809.36,
+      "end": 2818.0,
+      "page": null,
+      "section": null,
+      "text": "So let's take a look at t of n equals 2t of n over 2"
+    },
+    {
+      "id": "3f01c1206fbf-00787",
+      "kind": "text",
+      "start": 2818.0,
+      "end": 2821.92,
+      "page": null,
+      "section": null,
+      "text": "plus cn square."
+    },
+    {
+      "id": "3f01c1206fbf-00788",
+      "kind": "text",
+      "start": 2821.92,
+      "end": 2825.12,
+      "page": null,
+      "section": null,
+      "text": "c times n, all right, let me just call that cn."
+    },
+    {
+      "id": "3f01c1206fbf-00789",
+      "kind": "text",
+      "start": 2825.12,
+      "end": 2828.36,
+      "page": null,
+      "section": null,
+      "text": "No need for the brackets."
+    },
+    {
+      "id": "3f01c1206fbf-00790",
+      "kind": "text",
+      "start": 2828.56,
+      "end": 2830.88,
+      "page": null,
+      "section": null,
+      "text": "So constant c times n square."
+    },
+    {
+      "id": "3f01c1206fbf-00791",
+      "kind": "text",
+      "start": 2830.88,
+      "end": 2833.2,
+      "page": null,
+      "section": null,
+      "text": "So if you had a crummy merge routine,"
+    },
+    {
+      "id": "3f01c1206fbf-00792",
+      "kind": "text",
+      "start": 2833.2,
+      "end": 2837.24,
+      "page": null,
+      "section": null,
+      "text": "and it was taking n square, and you coded it up wrong,"
+    },
+    {
+      "id": "3f01c1206fbf-00793",
+      "kind": "text",
+      "start": 2837.24,
+      "end": 2840.08,
+      "page": null,
+      "section": null,
+      "text": "that would be it's not a great motivation for this recurrence,"
+    },
+    {
+      "id": "3f01c1206fbf-00794",
+      "kind": "text",
+      "start": 2840.08,
+      "end": 2844.0,
+      "page": null,
+      "section": null,
+      "text": "but it is a way this recurrence could have come up."
+    },
+    {
+      "id": "3f01c1206fbf-00795",
+      "kind": "text",
+      "start": 2844.0,
+      "end": 2847.48,
+      "page": null,
+      "section": null,
+      "text": "So what does this recursive tree look like?"
+    },
+    {
+      "id": "3f01c1206fbf-00796",
+      "kind": "text",
+      "start": 2847.48,
+      "end": 2849.52,
+      "page": null,
+      "section": null,
+      "text": "Well, it looks kind of the same, obviously."
+    },
+    {
+      "id": "3f01c1206fbf-00797",
+      "kind": "text",
+      "start": 2849.52,
+      "end": 2851.04,
+      "page": null,
+      "section": null,
+      "text": "You have cn square."
+    },
+    {
+      "id": "3f01c1206fbf-00798",
+      "kind": "text",
+      "start": 2851.04,
+      "end": 2855.76,
+      "page": null,
+      "section": null,
+      "text": "You have cn square divided by 4, cn square divided by 4,"
+    },
+    {
+      "id": "3f01c1206fbf-00799",
+      "kind": "text",
+      "start": 2855.76,
+      "end": 2861.04,
+      "page": null,
+      "section": null,
+      "text": "cn square divided by 16, 4 times, looking"
+    },
+    {
+      "id": "3f01c1206fbf-00800",
+      "kind": "text",
+      "start": 2861.04,
+      "end": 2864.44,
+      "page": null,
+      "section": null,
+      "text": "a little bit different from the other one."
+    },
+    {
+      "id": "3f01c1206fbf-00801",
+      "kind": "text",
+      "start": 2864.44,
+      "end": 2867.56,
+      "page": null,
+      "section": null,
+      "text": "The levels and the leaves are exactly the same."
+    },
+    {
+      "id": "3f01c1206fbf-00802",
+      "kind": "text",
+      "start": 2867.56,
+      "end": 2869.72,
+      "page": null,
+      "section": null,
+      "text": "Eventually, n is going to go down to 1."
+    },
+    {
+      "id": "3f01c1206fbf-00803",
+      "kind": "text",
+      "start": 2869.72,
+      "end": 2873.56,
+      "page": null,
+      "section": null,
+      "text": "So you will see c all the way here,"
+    },
+    {
+      "id": "3f01c1206fbf-00804",
+      "kind": "text",
+      "start": 2873.56,
+      "end": 2877.91,
+      "page": null,
+      "section": null,
+      "text": "and you're going to have n leaves."
+    },
+    {
+      "id": "3f01c1206fbf-00805",
+      "kind": "text",
+      "start": 2877.91,
+      "end": 2883.43,
+      "page": null,
+      "section": null,
+      "text": "And you will have, as before, 1 plus log n levels."
+    },
+    {
+      "id": "3f01c1206fbf-00806",
+      "kind": "text",
+      "start": 2883.43,
+      "end": 2885.07,
+      "page": null,
+      "section": null,
+      "text": "Everything is the same, right?"
+    },
+    {
+      "id": "3f01c1206fbf-00807",
+      "kind": "text",
+      "start": 2885.07,
+      "end": 2887.43,
+      "page": null,
+      "section": null,
+      "text": "And this is why I like this recursive tree formulation"
+    },
+    {
+      "id": "3f01c1206fbf-00808",
+      "kind": "text",
+      "start": 2887.43,
+      "end": 2889.35,
+      "page": null,
+      "section": null,
+      "text": "so much, because now all I have to do"
+    },
+    {
+      "id": "3f01c1206fbf-00809",
+      "kind": "text",
+      "start": 2889.35,
+      "end": 2894.71,
+      "page": null,
+      "section": null,
+      "text": "is add up the work associated with each of the levels"
+    },
+    {
+      "id": "3f01c1206fbf-00810",
+      "kind": "text",
+      "start": 2894.71,
+      "end": 2897.07,
+      "page": null,
+      "section": null,
+      "text": "to get the solution to the recurrence, right?"
+    },
+    {
+      "id": "3f01c1206fbf-00811",
+      "kind": "text",
+      "start": 2897.07,
+      "end": 2898.75,
+      "page": null,
+      "section": null,
+      "text": "Now take a look at what happens here."
+    },
+    {
+      "id": "3f01c1206fbf-00812",
+      "kind": "text",
+      "start": 2898.75,
+      "end": 2905.47,
+      "page": null,
+      "section": null,
+      "text": "cn square, cn square divided by 2, cn square divided by 4."
+    },
+    {
+      "id": "3f01c1206fbf-00813",
+      "kind": "text",
+      "start": 2905.47,
+      "end": 2910.87,
+      "page": null,
+      "section": null,
+      "text": "And this is n times c, right?"
+    },
+    {
+      "id": "3f01c1206fbf-00814",
+      "kind": "text",
+      "start": 2910.87,
+      "end": 2913.11,
+      "page": null,
+      "section": null,
+      "text": "So what does that add up to?"
+    },
+    {
+      "id": "3f01c1206fbf-00815",
+      "kind": "text",
+      "start": 2915.99,
+      "end": 2916.87,
+      "page": null,
+      "section": null,
+      "text": "Yeah, exactly."
+    },
+    {
+      "id": "3f01c1206fbf-00816",
+      "kind": "text",
+      "start": 2916.87,
+      "end": 2917.83,
+      "page": null,
+      "section": null,
+      "text": "Exactly right."
+    },
+    {
+      "id": "3f01c1206fbf-00817",
+      "kind": "text",
+      "start": 2917.83,
+      "end": 2919.63,
+      "page": null,
+      "section": null,
+      "text": "So if you look at what happens here,"
+    },
+    {
+      "id": "3f01c1206fbf-00818",
+      "kind": "text",
+      "start": 2919.63,
+      "end": 2925.5,
+      "page": null,
+      "section": null,
+      "text": "this dominates all of the other things that actually"
+    },
+    {
+      "id": "3f01c1206fbf-00819",
+      "kind": "text",
+      "start": 2925.5,
+      "end": 2927.5,
+      "page": null,
+      "section": null,
+      "text": "less than that."
+    },
+    {
+      "id": "3f01c1206fbf-00820",
+      "kind": "text",
+      "start": 2927.5,
+      "end": 2929.22,
+      "page": null,
+      "section": null,
+      "text": "And you said bounded by 2 cn square,"
+    },
+    {
+      "id": "3f01c1206fbf-00821",
+      "kind": "text",
+      "start": 2929.22,
+      "end": 2931.42,
+      "page": null,
+      "section": null,
+      "text": "because this part is bounded by cn square,"
+    },
+    {
+      "id": "3f01c1206fbf-00822",
+      "kind": "text",
+      "start": 2931.42,
+      "end": 2934.54,
+      "page": null,
+      "section": null,
+      "text": "and I already have cn square up at the top."
+    },
+    {
+      "id": "3f01c1206fbf-00823",
+      "kind": "text",
+      "start": 2934.54,
+      "end": 2937.58,
+      "page": null,
+      "section": null,
+      "text": "So this particular algorithm that corresponds"
+    },
+    {
+      "id": "3f01c1206fbf-00824",
+      "kind": "text",
+      "start": 2937.58,
+      "end": 2939.14,
+      "page": null,
+      "section": null,
+      "text": "to this crummy merge sort, or wherever"
+    },
+    {
+      "id": "3f01c1206fbf-00825",
+      "kind": "text",
+      "start": 2939.14,
+      "end": 2946.7,
+      "page": null,
+      "section": null,
+      "text": "this recurrence came from, is a theta n square algorithm."
+    },
+    {
+      "id": "3f01c1206fbf-00826",
+      "kind": "text",
+      "start": 2946.7,
+      "end": 2950.54,
+      "page": null,
+      "section": null,
+      "text": "And in this case, all of the work done"
+    },
+    {
+      "id": "3f01c1206fbf-00827",
+      "kind": "text",
+      "start": 2950.54,
+      "end": 2955.38,
+      "page": null,
+      "section": null,
+      "text": "is at the root, at the top level of the recursion, OK?"
+    },
+    {
+      "id": "3f01c1206fbf-00828",
+      "kind": "text",
+      "start": 2955.38,
+      "end": 2958.02,
+      "page": null,
+      "section": null,
+      "text": "Here, there was a roughly equal amount of work"
+    },
+    {
+      "id": "3f01c1206fbf-00829",
+      "kind": "text",
+      "start": 2958.02,
+      "end": 2961.62,
+      "page": null,
+      "section": null,
+      "text": "done in each of the different levels, all right?"
+    },
+    {
+      "id": "3f01c1206fbf-00830",
+      "kind": "text",
+      "start": 2961.62,
+      "end": 2966.62,
+      "page": null,
+      "section": null,
+      "text": "Here, all of the work was done at the root, OK?"
+    },
+    {
+      "id": "3f01c1206fbf-00831",
+      "kind": "text",
+      "start": 2966.62,
+      "end": 2969.46,
+      "page": null,
+      "section": null,
+      "text": "And so to close up shop here, let"
+    },
+    {
+      "id": "3f01c1206fbf-00832",
+      "kind": "text",
+      "start": 2969.46,
+      "end": 2974.22,
+      "page": null,
+      "section": null,
+      "text": "me just give you a real quick a recurrence where"
+    },
+    {
+      "id": "3f01c1206fbf-00833",
+      "kind": "text",
+      "start": 2974.22,
+      "end": 2980.5,
+      "page": null,
+      "section": null,
+      "text": "all of the work is done at the leaves, just for closure."
+    },
+    {
+      "id": "3f01c1206fbf-00834",
+      "kind": "text",
+      "start": 2980.5,
+      "end": 2985.38,
+      "page": null,
+      "section": null,
+      "text": "So if I had magically a merge routine that actually"
+    },
+    {
+      "id": "3f01c1206fbf-00835",
+      "kind": "text",
+      "start": 2985.38,
+      "end": 2988.7,
+      "page": null,
+      "section": null,
+      "text": "happened in constant time, either through buggy analysis"
+    },
+    {
+      "id": "3f01c1206fbf-00836",
+      "kind": "text",
+      "start": 2988.7,
+      "end": 2994.46,
+      "page": null,
+      "section": null,
+      "text": "or because it was buggy, then what does the tree look like"
+    },
+    {
+      "id": "3f01c1206fbf-00837",
+      "kind": "text",
+      "start": 2994.46,
+      "end": 2995.66,
+      "page": null,
+      "section": null,
+      "text": "for that?"
+    },
+    {
+      "id": "3f01c1206fbf-00838",
+      "kind": "text",
+      "start": 2995.66,
+      "end": 2998.3,
+      "page": null,
+      "section": null,
+      "text": "And I can think of this as being theta 1,"
+    },
+    {
+      "id": "3f01c1206fbf-00839",
+      "kind": "text",
+      "start": 2998.3,
+      "end": 3001.22,
+      "page": null,
+      "section": null,
+      "text": "or I can think of this as being just a constant c."
+    },
+    {
+      "id": "3f01c1206fbf-00840",
+      "kind": "text",
+      "start": 3001.22,
+      "end": 3002.1,
+      "page": null,
+      "section": null,
+      "text": "I'll stick with that."
+    },
+    {
+      "id": "3f01c1206fbf-00841",
+      "kind": "text",
+      "start": 3002.1,
+      "end": 3011.35,
+      "page": null,
+      "section": null,
+      "text": "I have c, c, c, and well, I tried to move that up."
+    },
+    {
+      "id": "3f01c1206fbf-00842",
+      "kind": "text",
+      "start": 3011.35,
+      "end": 3013.75,
+      "page": null,
+      "section": null,
+      "text": "That doesn't work."
+    },
+    {
+      "id": "3f01c1206fbf-00843",
+      "kind": "text",
+      "start": 3013.75,
+      "end": 3018.36,
+      "page": null,
+      "section": null,
+      "text": "So I have n leaves as before."
+    },
+    {
+      "id": "3f01c1206fbf-00844",
+      "kind": "text",
+      "start": 3018.36,
+      "end": 3019.88,
+      "page": null,
+      "section": null,
+      "text": "And so if I look at what I have here,"
+    },
+    {
+      "id": "3f01c1206fbf-00845",
+      "kind": "text",
+      "start": 3019.88,
+      "end": 3021.84,
+      "page": null,
+      "section": null,
+      "text": "I have c at the top level."
+    },
+    {
+      "id": "3f01c1206fbf-00846",
+      "kind": "text",
+      "start": 3021.84,
+      "end": 3026.92,
+      "page": null,
+      "section": null,
+      "text": "I have 2c, and so on and so forth, 4c."
+    },
+    {
+      "id": "3f01c1206fbf-00847",
+      "kind": "text",
+      "start": 3026.92,
+      "end": 3030.96,
+      "page": null,
+      "section": null,
+      "text": "And then I go all the way down to nc, all right?"
+    },
+    {
+      "id": "3f01c1206fbf-00848",
+      "kind": "text",
+      "start": 3030.96,
+      "end": 3036.02,
+      "page": null,
+      "section": null,
+      "text": "And so what happens here is this dominates."
+    },
+    {
+      "id": "3f01c1206fbf-00849",
+      "kind": "text",
+      "start": 3036.02,
+      "end": 3041.62,
+      "page": null,
+      "section": null,
+      "text": "And so in this recurrence, the whole thing runs in theta n."
+    },
+    {
+      "id": "3f01c1206fbf-00850",
+      "kind": "text",
+      "start": 3041.62,
+      "end": 3046.3,
+      "page": null,
+      "section": null,
+      "text": "So the solution to that is theta n."
+    },
+    {
+      "id": "3f01c1206fbf-00851",
+      "kind": "text",
+      "start": 3046.3,
+      "end": 3050.95,
+      "page": null,
+      "section": null,
+      "text": "And what you have here is all of the work"
+    },
+    {
+      "id": "3f01c1206fbf-00852",
+      "kind": "text",
+      "start": 3050.95,
+      "end": 3054.31,
+      "page": null,
+      "section": null,
+      "text": "being done at the leaves, all right?"
+    },
+    {
+      "id": "3f01c1206fbf-00853",
+      "kind": "text",
+      "start": 3054.31,
+      "end": 3057.99,
+      "page": null,
+      "section": null,
+      "text": "You're not going to really cover this theorem that"
+    },
+    {
+      "id": "3f01c1206fbf-00854",
+      "kind": "text",
+      "start": 3057.99,
+      "end": 3061.19,
+      "page": null,
+      "section": null,
+      "text": "gives you a mechanical way of figuring this out,"
+    },
+    {
+      "id": "3f01c1206fbf-00855",
+      "kind": "text",
+      "start": 3061.19,
+      "end": 3064.95,
+      "page": null,
+      "section": null,
+      "text": "because we think the recursive tree is a better way"
+    },
+    {
+      "id": "3f01c1206fbf-00856",
+      "kind": "text",
+      "start": 3064.95,
+      "end": 3065.75,
+      "page": null,
+      "section": null,
+      "text": "of looking at it."
+    },
+    {
+      "id": "3f01c1206fbf-00857",
+      "kind": "text",
+      "start": 3065.75,
+      "end": 3068.91,
+      "page": null,
+      "section": null,
+      "text": "But you can see that depending on what that function is,"
+    },
+    {
+      "id": "3f01c1206fbf-00858",
+      "kind": "text",
+      "start": 3068.91,
+      "end": 3072.11,
+      "page": null,
+      "section": null,
+      "text": "in terms of the work being done in the merge routine,"
+    },
+    {
+      "id": "3f01c1206fbf-00859",
+      "kind": "text",
+      "start": 3072.11,
+      "end": 3074.71,
+      "page": null,
+      "section": null,
+      "text": "you'd have different versions of recurrences, all right?"
+    },
+    {
+      "id": "3f01c1206fbf-00860",
+      "kind": "text",
+      "start": 3074.71,
+      "end": 3076.75,
+      "page": null,
+      "section": null,
+      "text": "I'll stick around, and people who answer questions,"
+    },
+    {
+      "id": "3f01c1206fbf-00861",
+      "kind": "text",
+      "start": 3076.75,
+      "end": 3078.27,
+      "page": null,
+      "section": null,
+      "text": "please pick up your questions."
+    },
+    {
+      "id": "3f01c1206fbf-00862",
+      "kind": "text",
+      "start": 3078.27,
+      "end": 3080.15,
+      "page": null,
+      "section": null,
+      "text": "See you next time."
+    }
+  ]
+}

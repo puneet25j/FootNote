@@ -1,0 +1,7329 @@
+{
+  "doc_id": "513cff6f2767",
+  "lecture": "lec01",
+  "source_type": "video",
+  "source_file": "data/raw/lec01/video.mp4",
+  "source_sha256": "513cff6f27675e2ea5726a5cca98aeaff6f2e78fd7eca5c194d4d3834ac5f8c3",
+  "model": "small",
+  "duration": 3201.0453125,
+  "created_at": "2026-10-05T02:54:18+00:00",
+  "segments": [
+    {
+      "id": "513cff6f2767-00000",
+      "kind": "text",
+      "start": 0.0,
+      "end": 2.48,
+      "page": null,
+      "section": null,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "id": "513cff6f2767-00001",
+      "kind": "text",
+      "start": 2.48,
+      "end": 3.88,
+      "page": null,
+      "section": null,
+      "text": "Commons license."
+    },
+    {
+      "id": "513cff6f2767-00002",
+      "kind": "text",
+      "start": 3.88,
+      "end": 6.92,
+      "page": null,
+      "section": null,
+      "text": "Your support will help MIT OpenCourseWare continue to"
+    },
+    {
+      "id": "513cff6f2767-00003",
+      "kind": "text",
+      "start": 6.92,
+      "end": 10.56,
+      "page": null,
+      "section": null,
+      "text": "offer high quality educational resources for free."
+    },
+    {
+      "id": "513cff6f2767-00004",
+      "kind": "text",
+      "start": 10.56,
+      "end": 13.48,
+      "page": null,
+      "section": null,
+      "text": "To make a donation or view additional materials from"
+    },
+    {
+      "id": "513cff6f2767-00005",
+      "kind": "text",
+      "start": 13.48,
+      "end": 17.4,
+      "page": null,
+      "section": null,
+      "text": "hundreds of MIT courses, visit MIT OpenCourseWare at"
+    },
+    {
+      "id": "513cff6f2767-00006",
+      "kind": "text",
+      "start": 17.4,
+      "end": 22.68,
+      "page": null,
+      "section": null,
+      "text": "ocw.mit.edu."
+    },
+    {
+      "id": "513cff6f2767-00007",
+      "kind": "text",
+      "start": 22.68,
+      "end": 24.68,
+      "page": null,
+      "section": null,
+      "text": "Hi, I'm Srini Davidas."
+    },
+    {
+      "id": "513cff6f2767-00008",
+      "kind": "text",
+      "start": 24.68,
+      "end": 26.68,
+      "page": null,
+      "section": null,
+      "text": "I'm a professor of Electroengineering and"
+    },
+    {
+      "id": "513cff6f2767-00009",
+      "kind": "text",
+      "start": 26.68,
+      "end": 27.64,
+      "page": null,
+      "section": null,
+      "text": "Computer Science."
+    },
+    {
+      "id": "513cff6f2767-00010",
+      "kind": "text",
+      "start": 27.64,
+      "end": 30.92,
+      "page": null,
+      "section": null,
+      "text": "I'm going to be co-lecturing 6.006, introduction"
+    },
+    {
+      "id": "513cff6f2767-00011",
+      "kind": "text",
+      "start": 30.92,
+      "end": 34.84,
+      "page": null,
+      "section": null,
+      "text": "to algorithms this term, with Professor Eric DeMaine."
+    },
+    {
+      "id": "513cff6f2767-00012",
+      "kind": "text",
+      "start": 34.84,
+      "end": 36.04,
+      "page": null,
+      "section": null,
+      "text": "Eric, say hi."
+    },
+    {
+      "id": "513cff6f2767-00013",
+      "kind": "text",
+      "start": 38.64,
+      "end": 42.56,
+      "page": null,
+      "section": null,
+      "text": "And we hope you're going to have a fun time in 6.006"
+    },
+    {
+      "id": "513cff6f2767-00014",
+      "kind": "text",
+      "start": 42.56,
+      "end": 45.72,
+      "page": null,
+      "section": null,
+      "text": "learning a variety of algorithms."
+    },
+    {
+      "id": "513cff6f2767-00015",
+      "kind": "text",
+      "start": 45.72,
+      "end": 50.72,
+      "page": null,
+      "section": null,
+      "text": "What I want to do today is spend literally a minute or so"
+    },
+    {
+      "id": "513cff6f2767-00016",
+      "kind": "text",
+      "start": 50.72,
+      "end": 54.96,
+      "page": null,
+      "section": null,
+      "text": "on administrative details, maybe even less."
+    },
+    {
+      "id": "513cff6f2767-00017",
+      "kind": "text",
+      "start": 54.96,
+      "end": 56.8,
+      "page": null,
+      "section": null,
+      "text": "What I'd like to do is to tell you to go to the"
+    },
+    {
+      "id": "513cff6f2767-00018",
+      "kind": "text",
+      "start": 56.8,
+      "end": 60.64,
+      "page": null,
+      "section": null,
+      "text": "website that's listed up there and read it."
+    },
+    {
+      "id": "513cff6f2767-00019",
+      "kind": "text",
+      "start": 60.64,
+      "end": 64.44,
+      "page": null,
+      "section": null,
+      "text": "And you'll get all the information you need about what"
+    },
+    {
+      "id": "513cff6f2767-00020",
+      "kind": "text",
+      "start": 64.44,
+      "end": 67.64,
+      "page": null,
+      "section": null,
+      "text": "this class is about from a standpoint of syllabus, what's"
+    },
+    {
+      "id": "513cff6f2767-00021",
+      "kind": "text",
+      "start": 67.64,
+      "end": 72.92,
+      "page": null,
+      "section": null,
+      "text": "expected of you, the problem set schedule, the quiz"
+    },
+    {
+      "id": "513cff6f2767-00022",
+      "kind": "text",
+      "start": 72.92,
+      "end": 75.64,
+      "page": null,
+      "section": null,
+      "text": "schedule, and so on and so forth."
+    },
+    {
+      "id": "513cff6f2767-00023",
+      "kind": "text",
+      "start": 75.64,
+      "end": 78.52,
+      "page": null,
+      "section": null,
+      "text": "I want to dive right in and tell you about interesting"
+    },
+    {
+      "id": "513cff6f2767-00024",
+      "kind": "text",
+      "start": 78.52,
+      "end": 84.52,
+      "page": null,
+      "section": null,
+      "text": "things like algorithms and complexity of algorithms."
+    },
+    {
+      "id": "513cff6f2767-00025",
+      "kind": "text",
+      "start": 84.52,
+      "end": 87.2,
+      "page": null,
+      "section": null,
+      "text": "I want to spend some time giving you an overview of"
+    },
+    {
+      "id": "513cff6f2767-00026",
+      "kind": "text",
+      "start": 87.2,
+      "end": 89.36,
+      "page": null,
+      "section": null,
+      "text": "the course content."
+    },
+    {
+      "id": "513cff6f2767-00027",
+      "kind": "text",
+      "start": 89.36,
+      "end": 93.08,
+      "page": null,
+      "section": null,
+      "text": "And then we're going to dive right in and look at a"
+    },
+    {
+      "id": "513cff6f2767-00028",
+      "kind": "text",
+      "start": 93.08,
+      "end": 97.32,
+      "page": null,
+      "section": null,
+      "text": "particular problem of peak finding, both a one-dimensional"
+    },
+    {
+      "id": "513cff6f2767-00029",
+      "kind": "text",
+      "start": 97.32,
+      "end": 100.28,
+      "page": null,
+      "section": null,
+      "text": "version and a two-dimensional version, and talk about"
+    },
+    {
+      "id": "513cff6f2767-00030",
+      "kind": "text",
+      "start": 100.28,
+      "end": 104.96,
+      "page": null,
+      "section": null,
+      "text": "algorithms to solve this peak finding problem, both"
+    },
+    {
+      "id": "513cff6f2767-00031",
+      "kind": "text",
+      "start": 104.96,
+      "end": 106.56,
+      "page": null,
+      "section": null,
+      "text": "varieties of it."
+    },
+    {
+      "id": "513cff6f2767-00032",
+      "kind": "text",
+      "start": 106.56,
+      "end": 112.04,
+      "page": null,
+      "section": null,
+      "text": "And you'll find that there's really a difference between"
+    },
+    {
+      "id": "513cff6f2767-00033",
+      "kind": "text",
+      "start": 112.04,
+      "end": 114.72,
+      "page": null,
+      "section": null,
+      "text": "these various algorithms that we'll look at in terms of"
+    },
+    {
+      "id": "513cff6f2767-00034",
+      "kind": "text",
+      "start": 114.72,
+      "end": 116.44,
+      "page": null,
+      "section": null,
+      "text": "their complexity."
+    },
+    {
+      "id": "513cff6f2767-00035",
+      "kind": "text",
+      "start": 116.44,
+      "end": 120.84,
+      "page": null,
+      "section": null,
+      "text": "And what I mean by that is you're going to have different"
+    },
+    {
+      "id": "513cff6f2767-00036",
+      "kind": "text",
+      "start": 120.84,
+      "end": 125.8,
+      "page": null,
+      "section": null,
+      "text": "run times of these algorithms, depending on input size, based"
+    },
+    {
+      "id": "513cff6f2767-00037",
+      "kind": "text",
+      "start": 125.8,
+      "end": 128.64,
+      "page": null,
+      "section": null,
+      "text": "on how efficient these algorithms are."
+    },
+    {
+      "id": "513cff6f2767-00038",
+      "kind": "text",
+      "start": 128.64,
+      "end": 134.32,
+      "page": null,
+      "section": null,
+      "text": "And a prerequisite for this class is 6042."
+    },
+    {
+      "id": "513cff6f2767-00039",
+      "kind": "text",
+      "start": 134.32,
+      "end": 138.6,
+      "page": null,
+      "section": null,
+      "text": "And in 6042, you learned about asymptotic complexity."
+    },
+    {
+      "id": "513cff6f2767-00040",
+      "kind": "text",
+      "start": 138.6,
+      "end": 143.4,
+      "page": null,
+      "section": null,
+      "text": "And you'll see that in this lecture, we'll analyze"
+    },
+    {
+      "id": "513cff6f2767-00041",
+      "kind": "text",
+      "start": 143.4,
+      "end": 146.4,
+      "page": null,
+      "section": null,
+      "text": "relatively simple algorithms today in terms of their"
+    },
+    {
+      "id": "513cff6f2767-00042",
+      "kind": "text",
+      "start": 146.4,
+      "end": 148.04,
+      "page": null,
+      "section": null,
+      "text": "asymptotic complexity."
+    },
+    {
+      "id": "513cff6f2767-00043",
+      "kind": "text",
+      "start": 148.04,
+      "end": 151.2,
+      "page": null,
+      "section": null,
+      "text": "And you'll be able to compare and say that this algorithm is"
+    },
+    {
+      "id": "513cff6f2767-00044",
+      "kind": "text",
+      "start": 151.2,
+      "end": 154.68,
+      "page": null,
+      "section": null,
+      "text": "faster than this other one, assuming that you have large"
+    },
+    {
+      "id": "513cff6f2767-00045",
+      "kind": "text",
+      "start": 154.68,
+      "end": 160.8,
+      "page": null,
+      "section": null,
+      "text": "inputs because it's asymptotically less complex."
+    },
+    {
+      "id": "513cff6f2767-00046",
+      "kind": "text",
+      "start": 160.8,
+      "end": 172.38,
+      "page": null,
+      "section": null,
+      "text": "So let's dive right in and talk about the class."
+    },
+    {
+      "id": "513cff6f2767-00047",
+      "kind": "text",
+      "start": 172.38,
+      "end": 176.34,
+      "page": null,
+      "section": null,
+      "text": "So the one-sentence summary of this class is that this"
+    },
+    {
+      "id": "513cff6f2767-00048",
+      "kind": "text",
+      "start": 176.34,
+      "end": 182.5,
+      "page": null,
+      "section": null,
+      "text": "is about efficient procedures for solving problems on large"
+    },
+    {
+      "id": "513cff6f2767-00049",
+      "kind": "text",
+      "start": 182.5,
+      "end": 184.78,
+      "page": null,
+      "section": null,
+      "text": "inputs."
+    },
+    {
+      "id": "513cff6f2767-00050",
+      "kind": "text",
+      "start": 184.78,
+      "end": 188.94,
+      "page": null,
+      "section": null,
+      "text": "And when I say large inputs, I mean things like the US"
+    },
+    {
+      "id": "513cff6f2767-00051",
+      "kind": "text",
+      "start": 188.94,
+      "end": 192.78,
+      "page": null,
+      "section": null,
+      "text": "highway system, a map of all of the highways in the United"
+    },
+    {
+      "id": "513cff6f2767-00052",
+      "kind": "text",
+      "start": 192.78,
+      "end": 197.78,
+      "page": null,
+      "section": null,
+      "text": "States, the human genome, which has a billion letters"
+    },
+    {
+      "id": "513cff6f2767-00053",
+      "kind": "text",
+      "start": 197.78,
+      "end": 202.3,
+      "page": null,
+      "section": null,
+      "text": "in its alphabet, a social network corresponding to"
+    },
+    {
+      "id": "513cff6f2767-00054",
+      "kind": "text",
+      "start": 202.3,
+      "end": 206.78,
+      "page": null,
+      "section": null,
+      "text": "Facebook that, I guess, has 500 million nodes or so."
+    },
+    {
+      "id": "513cff6f2767-00055",
+      "kind": "text",
+      "start": 206.78,
+      "end": 208.22,
+      "page": null,
+      "section": null,
+      "text": "So these are large inputs."
+    },
+    {
+      "id": "513cff6f2767-00056",
+      "kind": "text",
+      "start": 208.22,
+      "end": 210.66,
+      "page": null,
+      "section": null,
+      "text": "Now, our definition of large has really changed with the"
+    },
+    {
+      "id": "513cff6f2767-00057",
+      "kind": "text",
+      "start": 210.66,
+      "end": 211.42,
+      "page": null,
+      "section": null,
+      "text": "times."
+    },
+    {
+      "id": "513cff6f2767-00058",
+      "kind": "text",
+      "start": 211.42,
+      "end": 215.94,
+      "page": null,
+      "section": null,
+      "text": "And so really the 21st century definition of large is, I"
+    },
+    {
+      "id": "513cff6f2767-00059",
+      "kind": "text",
+      "start": 215.94,
+      "end": 217.42,
+      "page": null,
+      "section": null,
+      "text": "guess, a trillion."
+    },
+    {
+      "id": "513cff6f2767-00060",
+      "kind": "text",
+      "start": 217.42,
+      "end": 222.38,
+      "page": null,
+      "section": null,
+      "text": "Back when I was your age, large was like 1,000."
+    },
+    {
+      "id": "513cff6f2767-00061",
+      "kind": "text",
+      "start": 222.38,
+      "end": 224.94,
+      "page": null,
+      "section": null,
+      "text": "I guess I'm dating myself here."
+    },
+    {
+      "id": "513cff6f2767-00062",
+      "kind": "text",
+      "start": 224.94,
+      "end": 228.58,
+      "page": null,
+      "section": null,
+      "text": "Back when Eric was your age, it was a million."
+    },
+    {
+      "id": "513cff6f2767-00063",
+      "kind": "text",
+      "start": 228.58,
+      "end": 234.94,
+      "page": null,
+      "section": null,
+      "text": "But what's happening really, the world is moving faster."
+    },
+    {
+      "id": "513cff6f2767-00064",
+      "kind": "text",
+      "start": 234.94,
+      "end": 236.26,
+      "page": null,
+      "section": null,
+      "text": "Things are getting bigger."
+    },
+    {
+      "id": "513cff6f2767-00065",
+      "kind": "text",
+      "start": 236.26,
+      "end": 240.78,
+      "page": null,
+      "section": null,
+      "text": "We have the capability of computing on large inputs."
+    },
+    {
+      "id": "513cff6f2767-00066",
+      "kind": "text",
+      "start": 240.78,
+      "end": 244.26,
+      "page": null,
+      "section": null,
+      "text": "But that doesn't mean that efficiency isn't of paramount"
+    },
+    {
+      "id": "513cff6f2767-00067",
+      "kind": "text",
+      "start": 244.26,
+      "end": 245.74,
+      "page": null,
+      "section": null,
+      "text": "concern."
+    },
+    {
+      "id": "513cff6f2767-00068",
+      "kind": "text",
+      "start": 245.74,
+      "end": 250.54,
+      "page": null,
+      "section": null,
+      "text": "The fact of the matter is that you can maybe scan a"
+    },
+    {
+      "id": "513cff6f2767-00069",
+      "kind": "text",
+      "start": 250.54,
+      "end": 253.46,
+      "page": null,
+      "section": null,
+      "text": "billion elements in a matter of seconds."
+    },
+    {
+      "id": "513cff6f2767-00070",
+      "kind": "text",
+      "start": 253.46,
+      "end": 256.5,
+      "page": null,
+      "section": null,
+      "text": "But if you had an algorithm that required cubic"
+    },
+    {
+      "id": "513cff6f2767-00071",
+      "kind": "text",
+      "start": 256.5,
+      "end": 259.42,
+      "page": null,
+      "section": null,
+      "text": "complexity, suddenly you're not talking about 10 raised to"
+    },
+    {
+      "id": "513cff6f2767-00072",
+      "kind": "text",
+      "start": 259.42,
+      "end": 263.54,
+      "page": null,
+      "section": null,
+      "text": "9, you're talking about 10 raised to 27, and even current"
+    },
+    {
+      "id": "513cff6f2767-00073",
+      "kind": "text",
+      "start": 263.54,
+      "end": 268.34,
+      "page": null,
+      "section": null,
+      "text": "computers can't really handle those kinds of numbers."
+    },
+    {
+      "id": "513cff6f2767-00074",
+      "kind": "text",
+      "start": 268.34,
+      "end": 270.82,
+      "page": null,
+      "section": null,
+      "text": "So efficiency is a concern."
+    },
+    {
+      "id": "513cff6f2767-00075",
+      "kind": "text",
+      "start": 270.82,
+      "end": 275.26,
+      "page": null,
+      "section": null,
+      "text": "And as inputs get larger, it becomes more of a concern."
+    },
+    {
+      "id": "513cff6f2767-00076",
+      "kind": "text",
+      "start": 275.26,
+      "end": 289.55,
+      "page": null,
+      "section": null,
+      "text": "So we're concerned about efficient procedures for"
+    },
+    {
+      "id": "513cff6f2767-00077",
+      "kind": "text",
+      "start": 289.55,
+      "end": 298.06,
+      "page": null,
+      "section": null,
+      "text": "solving large-scale problems in this class."
+    },
+    {
+      "id": "513cff6f2767-00078",
+      "kind": "text",
+      "start": 298.14,
+      "end": 301.66,
+      "page": null,
+      "section": null,
+      "text": "And we're concerned about scalability."
+    },
+    {
+      "id": "513cff6f2767-00079",
+      "kind": "text",
+      "start": 301.66,
+      "end": 309.26,
+      "page": null,
+      "section": null,
+      "text": "Because just as 1,000 was a big number a couple of decades"
+    },
+    {
+      "id": "513cff6f2767-00080",
+      "kind": "text",
+      "start": 309.26,
+      "end": 312.34,
+      "page": null,
+      "section": null,
+      "text": "ago, and now it's kind of a small number, it's quite"
+    },
+    {
+      "id": "513cff6f2767-00081",
+      "kind": "text",
+      "start": 312.34,
+      "end": 316.42,
+      "page": null,
+      "section": null,
+      "text": "possible that by the time you guys are professors"
+    },
+    {
+      "id": "513cff6f2767-00082",
+      "kind": "text",
+      "start": 316.42,
+      "end": 319.22,
+      "page": null,
+      "section": null,
+      "text": "teaching this class in some university, that a trillion is"
+    },
+    {
+      "id": "513cff6f2767-00083",
+      "kind": "text",
+      "start": 319.22,
+      "end": 320.66,
+      "page": null,
+      "section": null,
+      "text": "going to be a small number."
+    },
+    {
+      "id": "513cff6f2767-00084",
+      "kind": "text",
+      "start": 320.66,
+      "end": 325.94,
+      "page": null,
+      "section": null,
+      "text": "And we're going to be talking about 10 raised to 18 as"
+    },
+    {
+      "id": "513cff6f2767-00085",
+      "kind": "text",
+      "start": 325.94,
+      "end": 330.98,
+      "page": null,
+      "section": null,
+      "text": "being something that we're concerned with from a"
+    },
+    {
+      "id": "513cff6f2767-00086",
+      "kind": "text",
+      "start": 330.98,
+      "end": 334.46,
+      "page": null,
+      "section": null,
+      "text": "standpoint of a common case input for an algorithm."
+    },
+    {
+      "id": "513cff6f2767-00087",
+      "kind": "text",
+      "start": 334.46,
+      "end": 338.1,
+      "page": null,
+      "section": null,
+      "text": "So scalability is important."
+    },
+    {
+      "id": "513cff6f2767-00088",
+      "kind": "text",
+      "start": 338.1,
+      "end": 341.3,
+      "page": null,
+      "section": null,
+      "text": "And we want to be able to track how our algorithms are"
+    },
+    {
+      "id": "513cff6f2767-00089",
+      "kind": "text",
+      "start": 341.3,
+      "end": 347.18,
+      "page": null,
+      "section": null,
+      "text": "going to do as inputs get larger and larger."
+    },
+    {
+      "id": "513cff6f2767-00090",
+      "kind": "text",
+      "start": 347.18,
+      "end": 352.18,
+      "page": null,
+      "section": null,
+      "text": "You've got to learn a bunch of different data structures."
+    },
+    {
+      "id": "513cff6f2767-00091",
+      "kind": "text",
+      "start": 352.18,
+      "end": 357.78,
+      "page": null,
+      "section": null,
+      "text": "We'll call them classic data structures, like binary"
+    },
+    {
+      "id": "513cff6f2767-00092",
+      "kind": "text",
+      "start": 357.78,
+      "end": 362.26,
+      "page": null,
+      "section": null,
+      "text": "search trees, hash tables that are called dictionaries in"
+    },
+    {
+      "id": "513cff6f2767-00093",
+      "kind": "text",
+      "start": 362.26,
+      "end": 368.66,
+      "page": null,
+      "section": null,
+      "text": "Python, and data structures such as balanced binary"
+    },
+    {
+      "id": "513cff6f2767-00094",
+      "kind": "text",
+      "start": 368.66,
+      "end": 371.06,
+      "page": null,
+      "section": null,
+      "text": "search trees that are more efficient than just the"
+    },
+    {
+      "id": "513cff6f2767-00095",
+      "kind": "text",
+      "start": 371.06,
+      "end": 373.06,
+      "page": null,
+      "section": null,
+      "text": "regular binary search trees."
+    },
+    {
+      "id": "513cff6f2767-00096",
+      "kind": "text",
+      "start": 373.06,
+      "end": 377.02,
+      "page": null,
+      "section": null,
+      "text": "And these are all data structures that were invented"
+    },
+    {
+      "id": "513cff6f2767-00097",
+      "kind": "text",
+      "start": 377.02,
+      "end": 380.82,
+      "page": null,
+      "section": null,
+      "text": "many decades ago, but they've stood the test of time"
+    },
+    {
+      "id": "513cff6f2767-00098",
+      "kind": "text",
+      "start": 380.82,
+      "end": 383.62,
+      "page": null,
+      "section": null,
+      "text": "and they continue to be useful."
+    },
+    {
+      "id": "513cff6f2767-00099",
+      "kind": "text",
+      "start": 383.62,
+      "end": 385.78,
+      "page": null,
+      "section": null,
+      "text": "We're going to augment these data structures in various"
+    },
+    {
+      "id": "513cff6f2767-00100",
+      "kind": "text",
+      "start": 385.78,
+      "end": 389.22,
+      "page": null,
+      "section": null,
+      "text": "ways to make them more efficient for certain kinds of"
+    },
+    {
+      "id": "513cff6f2767-00101",
+      "kind": "text",
+      "start": 389.22,
+      "end": 390.26,
+      "page": null,
+      "section": null,
+      "text": "problems."
+    },
+    {
+      "id": "513cff6f2767-00102",
+      "kind": "text",
+      "start": 390.26,
+      "end": 393.42,
+      "page": null,
+      "section": null,
+      "text": "And while you're not going to be doing a whole lot of"
+    },
+    {
+      "id": "513cff6f2767-00103",
+      "kind": "text",
+      "start": 393.42,
+      "end": 396.66,
+      "page": null,
+      "section": null,
+      "text": "algorithm design in this class, you will be doing some"
+    },
+    {
+      "id": "513cff6f2767-00104",
+      "kind": "text",
+      "start": 396.66,
+      "end": 400.82,
+      "page": null,
+      "section": null,
+      "text": "design and a whole lot of analysis."
+    },
+    {
+      "id": "513cff6f2767-00105",
+      "kind": "text",
+      "start": 400.82,
+      "end": 406.1,
+      "page": null,
+      "section": null,
+      "text": "The class following this one, 6046, Design Analysis of"
+    },
+    {
+      "id": "513cff6f2767-00106",
+      "kind": "text",
+      "start": 406.1,
+      "end": 411.02,
+      "page": null,
+      "section": null,
+      "text": "Algorithms, is a class that you should take if you"
+    },
+    {
+      "id": "513cff6f2767-00107",
+      "kind": "text",
+      "start": 411.02,
+      "end": 414.3,
+      "page": null,
+      "section": null,
+      "text": "like this one and you can do a whole lot more design of"
+    },
+    {
+      "id": "513cff6f2767-00108",
+      "kind": "text",
+      "start": 414.3,
+      "end": 417.1,
+      "page": null,
+      "section": null,
+      "text": "algorithms in 6046."
+    },
+    {
+      "id": "513cff6f2767-00109",
+      "kind": "text",
+      "start": 417.1,
+      "end": 421.3,
+      "page": null,
+      "section": null,
+      "text": "But you will look at classic data structures and classical"
+    },
+    {
+      "id": "513cff6f2767-00110",
+      "kind": "text",
+      "start": 421.3,
+      "end": 426.94,
+      "page": null,
+      "section": null,
+      "text": "algorithms for these data structures, including things"
+    },
+    {
+      "id": "513cff6f2767-00111",
+      "kind": "text",
+      "start": 426.94,
+      "end": 432.34,
+      "page": null,
+      "section": null,
+      "text": "like sorting and matching and so on."
+    },
+    {
+      "id": "513cff6f2767-00112",
+      "kind": "text",
+      "start": 432.34,
+      "end": 437.62,
+      "page": null,
+      "section": null,
+      "text": "And one of the nice things about this class is that"
+    },
+    {
+      "id": "513cff6f2767-00113",
+      "kind": "text",
+      "start": 437.62,
+      "end": 441.74,
+      "page": null,
+      "section": null,
+      "text": "you'll be doing real implementations of these data"
+    },
+    {
+      "id": "513cff6f2767-00114",
+      "kind": "text",
+      "start": 441.74,
+      "end": 448.18,
+      "page": null,
+      "section": null,
+      "text": "structures and algorithms in Python."
+    },
+    {
+      "id": "513cff6f2767-00115",
+      "kind": "text",
+      "start": 448.18,
+      "end": 454.46,
+      "page": null,
+      "section": null,
+      "text": "And in particular, each of the problem sets in this class"
+    },
+    {
+      "id": "513cff6f2767-00116",
+      "kind": "text",
+      "start": 454.46,
+      "end": 460.22,
+      "page": null,
+      "section": null,
+      "text": "are going to have both a theory part to them and a"
+    },
+    {
+      "id": "513cff6f2767-00117",
+      "kind": "text",
+      "start": 460.22,
+      "end": 461.82,
+      "page": null,
+      "section": null,
+      "text": "programming part to them."
+    },
+    {
+      "id": "513cff6f2767-00118",
+      "kind": "text",
+      "start": 461.82,
+      "end": 463.42,
+      "page": null,
+      "section": null,
+      "text": "So hopefully, it'll all tie together."
+    },
+    {
+      "id": "513cff6f2767-00119",
+      "kind": "text",
+      "start": 463.42,
+      "end": 465.06,
+      "page": null,
+      "section": null,
+      "text": "The kinds of things we're going to be talking about in"
+    },
+    {
+      "id": "513cff6f2767-00120",
+      "kind": "text",
+      "start": 465.06,
+      "end": 471.14,
+      "page": null,
+      "section": null,
+      "text": "lectures and recitations are going to be directly connected"
+    },
+    {
+      "id": "513cff6f2767-00121",
+      "kind": "text",
+      "start": 471.14,
+      "end": 473.22,
+      "page": null,
+      "section": null,
+      "text": "to the theory parts of the problem sets."
+    },
+    {
+      "id": "513cff6f2767-00122",
+      "kind": "text",
+      "start": 473.22,
+      "end": 475.54,
+      "page": null,
+      "section": null,
+      "text": "And you'll be programming the algorithms that we talk"
+    },
+    {
+      "id": "513cff6f2767-00123",
+      "kind": "text",
+      "start": 475.54,
+      "end": 478.62,
+      "page": null,
+      "section": null,
+      "text": "about in lecture or augmenting them, running them,"
+    },
+    {
+      "id": "513cff6f2767-00124",
+      "kind": "text",
+      "start": 478.62,
+      "end": 486.47,
+      "page": null,
+      "section": null,
+      "text": "figuring out whether they work well on large inputs or not."
+    },
+    {
+      "id": "513cff6f2767-00125",
+      "kind": "text",
+      "start": 486.47,
+      "end": 489.75,
+      "page": null,
+      "section": null,
+      "text": "So let me talk a little bit about the modules in this"
+    },
+    {
+      "id": "513cff6f2767-00126",
+      "kind": "text",
+      "start": 489.75,
+      "end": 491.63,
+      "page": null,
+      "section": null,
+      "text": "class and the problem sets."
+    },
+    {
+      "id": "513cff6f2767-00127",
+      "kind": "text",
+      "start": 491.63,
+      "end": 493.67,
+      "page": null,
+      "section": null,
+      "text": "And we hope that these problem sets are going to be"
+    },
+    {
+      "id": "513cff6f2767-00128",
+      "kind": "text",
+      "start": 493.67,
+      "end": 495.43,
+      "page": null,
+      "section": null,
+      "text": "fun for you."
+    },
+    {
+      "id": "513cff6f2767-00129",
+      "kind": "text",
+      "start": 495.43,
+      "end": 499.39,
+      "page": null,
+      "section": null,
+      "text": "And by fun, I don't mean easy."
+    },
+    {
+      "id": "513cff6f2767-00130",
+      "kind": "text",
+      "start": 499.39,
+      "end": 501.59,
+      "page": null,
+      "section": null,
+      "text": "I mean challenging and worthwhile."
+    },
+    {
+      "id": "513cff6f2767-00131",
+      "kind": "text",
+      "start": 501.59,
+      "end": 503.47,
+      "page": null,
+      "section": null,
+      "text": "So at the end of it, you feel like you've learned"
+    },
+    {
+      "id": "513cff6f2767-00132",
+      "kind": "text",
+      "start": 503.47,
+      "end": 508.55,
+      "page": null,
+      "section": null,
+      "text": "something, and you've had some fun along the way."
+    },
+    {
+      "id": "513cff6f2767-00133",
+      "kind": "text",
+      "start": 508.55,
+      "end": 522.03,
+      "page": null,
+      "section": null,
+      "text": "So content-wise, we have eight modules in the class, each"
+    },
+    {
+      "id": "513cff6f2767-00134",
+      "kind": "text",
+      "start": 522.03,
+      "end": 525.55,
+      "page": null,
+      "section": null,
+      "text": "of which, roughly speaking, has a problem set associated"
+    },
+    {
+      "id": "513cff6f2767-00135",
+      "kind": "text",
+      "start": 525.55,
+      "end": 527.07,
+      "page": null,
+      "section": null,
+      "text": "with it."
+    },
+    {
+      "id": "513cff6f2767-00136",
+      "kind": "text",
+      "start": 527.07,
+      "end": 535.64,
+      "page": null,
+      "section": null,
+      "text": "The first of these is what we call algorithmic thinking."
+    },
+    {
+      "id": "513cff6f2767-00137",
+      "kind": "text",
+      "start": 535.64,
+      "end": 538.92,
+      "page": null,
+      "section": null,
+      "text": "And we'll kick-start that one today."
+    },
+    {
+      "id": "513cff6f2767-00138",
+      "kind": "text",
+      "start": 538.92,
+      "end": 541.6,
+      "page": null,
+      "section": null,
+      "text": "I will look at a particular problem, as I mentioned, of"
+    },
+    {
+      "id": "513cff6f2767-00139",
+      "kind": "text",
+      "start": 541.6,
+      "end": 542.76,
+      "page": null,
+      "section": null,
+      "text": "peak finding."
+    },
+    {
+      "id": "513cff6f2767-00140",
+      "kind": "text",
+      "start": 542.76,
+      "end": 545.72,
+      "page": null,
+      "section": null,
+      "text": "And as part of this, you're going to have a problem set"
+    },
+    {
+      "id": "513cff6f2767-00141",
+      "kind": "text",
+      "start": 545.72,
+      "end": 547.84,
+      "page": null,
+      "section": null,
+      "text": "that's going to go out today as well."
+    },
+    {
+      "id": "513cff6f2767-00142",
+      "kind": "text",
+      "start": 547.84,
+      "end": 552.8,
+      "page": null,
+      "section": null,
+      "text": "And you'll find that in this problem set, some of these"
+    },
+    {
+      "id": "513cff6f2767-00143",
+      "kind": "text",
+      "start": 552.8,
+      "end": 555.52,
+      "page": null,
+      "section": null,
+      "text": "algorithms I've talked about today will be coded in Python"
+    },
+    {
+      "id": "513cff6f2767-00144",
+      "kind": "text",
+      "start": 555.52,
+      "end": 557.04,
+      "page": null,
+      "section": null,
+      "text": "and given to you."
+    },
+    {
+      "id": "513cff6f2767-00145",
+      "kind": "text",
+      "start": 557.04,
+      "end": 560.16,
+      "page": null,
+      "section": null,
+      "text": "A couple of them are going to have bugs in them."
+    },
+    {
+      "id": "513cff6f2767-00146",
+      "kind": "text",
+      "start": 560.16,
+      "end": 564.36,
+      "page": null,
+      "section": null,
+      "text": "You'll have to analyze the complexity of these algorithms,"
+    },
+    {
+      "id": "513cff6f2767-00147",
+      "kind": "text",
+      "start": 564.36,
+      "end": 567.92,
+      "page": null,
+      "section": null,
+      "text": "figure out which ones are correct and efficient, and"
+    },
+    {
+      "id": "513cff6f2767-00148",
+      "kind": "text",
+      "start": 567.92,
+      "end": 570.16,
+      "page": null,
+      "section": null,
+      "text": "write a proof for one of them."
+    },
+    {
+      "id": "513cff6f2767-00149",
+      "kind": "text",
+      "start": 570.16,
+      "end": 573.32,
+      "page": null,
+      "section": null,
+      "text": "So that's sort of an example problem set."
+    },
+    {
+      "id": "513cff6f2767-00150",
+      "kind": "text",
+      "start": 573.32,
+      "end": 577.96,
+      "page": null,
+      "section": null,
+      "text": "And you can expect that most of the problem sets are going to"
+    },
+    {
+      "id": "513cff6f2767-00151",
+      "kind": "text",
+      "start": 577.96,
+      "end": 580.56,
+      "page": null,
+      "section": null,
+      "text": "follow that sort of template."
+    },
+    {
+      "id": "513cff6f2767-00152",
+      "kind": "text",
+      "start": 580.56,
+      "end": 585.48,
+      "page": null,
+      "section": null,
+      "text": "So you'll get a better sense of this by the end of the day"
+    },
+    {
+      "id": "513cff6f2767-00153",
+      "kind": "text",
+      "start": 585.48,
+      "end": 588.92,
+      "page": null,
+      "section": null,
+      "text": "today, for sure, or a concrete sense of this, because we'll"
+    },
+    {
+      "id": "513cff6f2767-00154",
+      "kind": "text",
+      "start": 588.92,
+      "end": 591.52,
+      "page": null,
+      "section": null,
+      "text": "be done with lecture and you'll see your first problem"
+    },
+    {
+      "id": "513cff6f2767-00155",
+      "kind": "text",
+      "start": 591.52,
+      "end": 592.88,
+      "page": null,
+      "section": null,
+      "text": "set."
+    },
+    {
+      "id": "513cff6f2767-00156",
+      "kind": "text",
+      "start": 592.88,
+      "end": 597.52,
+      "page": null,
+      "section": null,
+      "text": "We're going to be doing a module on sorting and trees."
+    },
+    {
+      "id": "513cff6f2767-00157",
+      "kind": "text",
+      "start": 597.52,
+      "end": 600.72,
+      "page": null,
+      "section": null,
+      "text": "Sorting you know about, sorting a bunch of numbers."
+    },
+    {
+      "id": "513cff6f2767-00158",
+      "kind": "text",
+      "start": 600.72,
+      "end": 602.92,
+      "page": null,
+      "section": null,
+      "text": "Imagine if you had a trillion numbers and you wanted to sort"
+    },
+    {
+      "id": "513cff6f2767-00159",
+      "kind": "text",
+      "start": 602.92,
+      "end": 604.24,
+      "page": null,
+      "section": null,
+      "text": "them."
+    },
+    {
+      "id": "513cff6f2767-00160",
+      "kind": "text",
+      "start": 604.24,
+      "end": 607.6,
+      "page": null,
+      "section": null,
+      "text": "What kind of algorithm could you use for that?"
+    },
+    {
+      "id": "513cff6f2767-00161",
+      "kind": "text",
+      "start": 607.6,
+      "end": 610.44,
+      "page": null,
+      "section": null,
+      "text": "Trees are a wonderful data structure."
+    },
+    {
+      "id": "513cff6f2767-00162",
+      "kind": "text",
+      "start": 610.44,
+      "end": 613.6,
+      "page": null,
+      "section": null,
+      "text": "There's different varieties, the most common being binary"
+    },
+    {
+      "id": "513cff6f2767-00163",
+      "kind": "text",
+      "start": 613.6,
+      "end": 614.76,
+      "page": null,
+      "section": null,
+      "text": "trees."
+    },
+    {
+      "id": "513cff6f2767-00164",
+      "kind": "text",
+      "start": 614.76,
+      "end": 618.2,
+      "page": null,
+      "section": null,
+      "text": "And there's ways of doing all sorts of things like"
+    },
+    {
+      "id": "513cff6f2767-00165",
+      "kind": "text",
+      "start": 618.2,
+      "end": 622.56,
+      "page": null,
+      "section": null,
+      "text": "scheduling and sorting using various kinds of trees,"
+    },
+    {
+      "id": "513cff6f2767-00166",
+      "kind": "text",
+      "start": 622.56,
+      "end": 624.2,
+      "page": null,
+      "section": null,
+      "text": "including binary trees."
+    },
+    {
+      "id": "513cff6f2767-00167",
+      "kind": "text",
+      "start": 624.2,
+      "end": 631.32,
+      "page": null,
+      "section": null,
+      "text": "And we have a problem set on simulating a logic network"
+    },
+    {
+      "id": "513cff6f2767-00168",
+      "kind": "text",
+      "start": 631.32,
+      "end": 636.64,
+      "page": null,
+      "section": null,
+      "text": "using a particular kind of sorting algorithm and a data"
+    },
+    {
+      "id": "513cff6f2767-00169",
+      "kind": "text",
+      "start": 636.64,
+      "end": 641.16,
+      "page": null,
+      "section": null,
+      "text": "structure that is going to be your second problem set."
+    },
+    {
+      "id": "513cff6f2767-00170",
+      "kind": "text",
+      "start": 641.16,
+      "end": 647.12,
+      "page": null,
+      "section": null,
+      "text": "And more quickly, we're going to have modules on hashing"
+    },
+    {
+      "id": "513cff6f2767-00171",
+      "kind": "text",
+      "start": 647.12,
+      "end": 651.76,
+      "page": null,
+      "section": null,
+      "text": "where we'll do things like genome comparison in past"
+    },
+    {
+      "id": "513cff6f2767-00172",
+      "kind": "text",
+      "start": 651.76,
+      "end": 653.48,
+      "page": null,
+      "section": null,
+      "text": "terms."
+    },
+    {
+      "id": "513cff6f2767-00173",
+      "kind": "text",
+      "start": 653.48,
+      "end": 656.96,
+      "page": null,
+      "section": null,
+      "text": "We compared a human genome to a rat genome and discovered"
+    },
+    {
+      "id": "513cff6f2767-00174",
+      "kind": "text",
+      "start": 656.96,
+      "end": 659.32,
+      "page": null,
+      "section": null,
+      "text": "they were pretty similar."
+    },
+    {
+      "id": "513cff6f2767-00175",
+      "kind": "text",
+      "start": 659.32,
+      "end": 661.92,
+      "page": null,
+      "section": null,
+      "text": "99% similar was just kind of amazing."
+    },
+    {
+      "id": "513cff6f2767-00176",
+      "kind": "text",
+      "start": 661.92,
+      "end": 665.36,
+      "page": null,
+      "section": null,
+      "text": "But again, these things are so large that you have to have"
+    },
+    {
+      "id": "513cff6f2767-00177",
+      "kind": "text",
+      "start": 665.36,
+      "end": 668.48,
+      "page": null,
+      "section": null,
+      "text": "efficiency in the comparison methods that you use."
+    },
+    {
+      "id": "513cff6f2767-00178",
+      "kind": "text",
+      "start": 668.48,
+      "end": 671.44,
+      "page": null,
+      "section": null,
+      "text": "And you'll find that if you don't get the complexity"
+    },
+    {
+      "id": "513cff6f2767-00179",
+      "kind": "text",
+      "start": 671.44,
+      "end": 677.32,
+      "page": null,
+      "section": null,
+      "text": "low enough, your program won't be able to finish"
+    },
+    {
+      "id": "513cff6f2767-00180",
+      "kind": "text",
+      "start": 677.32,
+      "end": 681.72,
+      "page": null,
+      "section": null,
+      "text": "running within the time that your problem set is due."
+    },
+    {
+      "id": "513cff6f2767-00181",
+      "kind": "text",
+      "start": 681.72,
+      "end": 683.72,
+      "page": null,
+      "section": null,
+      "text": "Which is a bit of a problem."
+    },
+    {
+      "id": "513cff6f2767-00182",
+      "kind": "text",
+      "start": 683.72,
+      "end": 688.84,
+      "page": null,
+      "section": null,
+      "text": "So that's something to keep in mind as you test your code."
+    },
+    {
+      "id": "513cff6f2767-00183",
+      "kind": "text",
+      "start": 688.84,
+      "end": 691.08,
+      "page": null,
+      "section": null,
+      "text": "The fact is that you will get large inputs to run your"
+    },
+    {
+      "id": "513cff6f2767-00184",
+      "kind": "text",
+      "start": 691.08,
+      "end": 695.84,
+      "page": null,
+      "section": null,
+      "text": "code, and you want to keep complexity in mind as you're"
+    },
+    {
+      "id": "513cff6f2767-00185",
+      "kind": "text",
+      "start": 695.84,
+      "end": 700.6,
+      "page": null,
+      "section": null,
+      "text": "coding and thinking about the pseudocode, if you will, of"
+    },
+    {
+      "id": "513cff6f2767-00186",
+      "kind": "text",
+      "start": 700.6,
+      "end": 703.69,
+      "page": null,
+      "section": null,
+      "text": "your algorithm itself."
+    },
+    {
+      "id": "513cff6f2767-00187",
+      "kind": "text",
+      "start": 703.69,
+      "end": 707.37,
+      "page": null,
+      "section": null,
+      "text": "We will talk about numerics."
+    },
+    {
+      "id": "513cff6f2767-00188",
+      "kind": "text",
+      "start": 707.37,
+      "end": 710.85,
+      "page": null,
+      "section": null,
+      "text": "A lot of the time, we talk about such large numbers"
+    },
+    {
+      "id": "513cff6f2767-00189",
+      "kind": "text",
+      "start": 710.85,
+      "end": 715.69,
+      "page": null,
+      "section": null,
+      "text": "that 32 bits isn't enough, or 64 bits isn't enough to"
+    },
+    {
+      "id": "513cff6f2767-00190",
+      "kind": "text",
+      "start": 715.69,
+      "end": 717.01,
+      "page": null,
+      "section": null,
+      "text": "represent these numbers."
+    },
+    {
+      "id": "513cff6f2767-00191",
+      "kind": "text",
+      "start": 717.01,
+      "end": 718.89,
+      "page": null,
+      "section": null,
+      "text": "These numbers have thousands of bits."
+    },
+    {
+      "id": "513cff6f2767-00192",
+      "kind": "text",
+      "start": 718.89,
+      "end": 724.09,
+      "page": null,
+      "section": null,
+      "text": "A good example is RSA encryption that is used in SSL,"
+    },
+    {
+      "id": "513cff6f2767-00193",
+      "kind": "text",
+      "start": 724.09,
+      "end": 725.13,
+      "page": null,
+      "section": null,
+      "text": "for example."
+    },
+    {
+      "id": "513cff6f2767-00194",
+      "kind": "text",
+      "start": 725.13,
+      "end": 731.69,
+      "page": null,
+      "section": null,
+      "text": "And when you use HTTPS on websites, RSA is used at"
+    },
+    {
+      "id": "513cff6f2767-00195",
+      "kind": "text",
+      "start": 731.69,
+      "end": 732.69,
+      "page": null,
+      "section": null,
+      "text": "the back end."
+    },
+    {
+      "id": "513cff6f2767-00196",
+      "kind": "text",
+      "start": 732.69,
+      "end": 735.61,
+      "page": null,
+      "section": null,
+      "text": "And typically, you work with prime numbers that are"
+    },
+    {
+      "id": "513cff6f2767-00197",
+      "kind": "text",
+      "start": 735.61,
+      "end": 738.49,
+      "page": null,
+      "section": null,
+      "text": "thousands of bits long in RSA."
+    },
+    {
+      "id": "513cff6f2767-00198",
+      "kind": "text",
+      "start": 738.49,
+      "end": 739.81,
+      "page": null,
+      "section": null,
+      "text": "So how do you handle that?"
+    },
+    {
+      "id": "513cff6f2767-00199",
+      "kind": "text",
+      "start": 739.85,
+      "end": 741.17,
+      "page": null,
+      "section": null,
+      "text": "How does Python handle that?"
+    },
+    {
+      "id": "513cff6f2767-00200",
+      "kind": "text",
+      "start": 741.17,
+      "end": 744.45,
+      "page": null,
+      "section": null,
+      "text": "How do you write algorithms that can deal with what are called"
+    },
+    {
+      "id": "513cff6f2767-00201",
+      "kind": "text",
+      "start": 744.45,
+      "end": 746.29,
+      "page": null,
+      "section": null,
+      "text": "infinite precision numbers?"
+    },
+    {
+      "id": "513cff6f2767-00202",
+      "kind": "text",
+      "start": 746.29,
+      "end": 750.49,
+      "page": null,
+      "section": null,
+      "text": "So we have a module on numerics in the middle of the term that"
+    },
+    {
+      "id": "513cff6f2767-00203",
+      "kind": "text",
+      "start": 750.49,
+      "end": 751.85,
+      "page": null,
+      "section": null,
+      "text": "talks about that."
+    },
+    {
+      "id": "513cff6f2767-00204",
+      "kind": "text",
+      "start": 751.85,
+      "end": 756.05,
+      "page": null,
+      "section": null,
+      "text": "Graphs, really a fundamental data structure in all of"
+    },
+    {
+      "id": "513cff6f2767-00205",
+      "kind": "text",
+      "start": 756.05,
+      "end": 757.97,
+      "page": null,
+      "section": null,
+      "text": "computer science."
+    },
+    {
+      "id": "513cff6f2767-00206",
+      "kind": "text",
+      "start": 757.97,
+      "end": 762.05,
+      "page": null,
+      "section": null,
+      "text": "You might have heard of the famous Rubik's Cube"
+    },
+    {
+      "id": "513cff6f2767-00207",
+      "kind": "text",
+      "start": 762.05,
+      "end": 766.85,
+      "page": null,
+      "section": null,
+      "text": "assignment from 006, a 2 by 2 by 2 Rubik's Cube."
+    },
+    {
+      "id": "513cff6f2767-00208",
+      "kind": "text",
+      "start": 766.85,
+      "end": 770.81,
+      "page": null,
+      "section": null,
+      "text": "What's the minimum number of moves necessary to go from a"
+    },
+    {
+      "id": "513cff6f2767-00209",
+      "kind": "text",
+      "start": 770.81,
+      "end": 774.21,
+      "page": null,
+      "section": null,
+      "text": "given starting configuration to the final end"
+    },
+    {
+      "id": "513cff6f2767-00210",
+      "kind": "text",
+      "start": 774.21,
+      "end": 778.89,
+      "page": null,
+      "section": null,
+      "text": "configuration where each of the faces has uniform color?"
+    },
+    {
+      "id": "513cff6f2767-00211",
+      "kind": "text",
+      "start": 778.89,
+      "end": 781.89,
+      "page": null,
+      "section": null,
+      "text": "And that can be posed as a graph problem."
+    },
+    {
+      "id": "513cff6f2767-00212",
+      "kind": "text",
+      "start": 781.89,
+      "end": 784.93,
+      "page": null,
+      "section": null,
+      "text": "We'll probably do that one in previous terms."
+    },
+    {
+      "id": "513cff6f2767-00213",
+      "kind": "text",
+      "start": 784.93,
+      "end": 787.29,
+      "page": null,
+      "section": null,
+      "text": "We've done other things like the 15 puzzle."
+    },
+    {
+      "id": "513cff6f2767-00214",
+      "kind": "text",
+      "start": 787.29,
+      "end": 790.09,
+      "page": null,
+      "section": null,
+      "text": "And so some of these are tentative."
+    },
+    {
+      "id": "513cff6f2767-00215",
+      "kind": "text",
+      "start": 790.09,
+      "end": 792.37,
+      "page": null,
+      "section": null,
+      "text": "We definitely know what the first problem set is like."
+    },
+    {
+      "id": "513cff6f2767-00216",
+      "kind": "text",
+      "start": 792.37,
+      "end": 796.41,
+      "page": null,
+      "section": null,
+      "text": "But the rest of them are, at this moment, tentative."
+    },
+    {
+      "id": "513cff6f2767-00217",
+      "kind": "text",
+      "start": 796.41,
+      "end": 803.01,
+      "page": null,
+      "section": null,
+      "text": "And to finish up, shortest paths, again, in terms past, we've"
+    },
+    {
+      "id": "513cff6f2767-00218",
+      "kind": "text",
+      "start": 803.01,
+      "end": 807.61,
+      "page": null,
+      "section": null,
+      "text": "asked you to write code using a particular algorithm that finds"
+    },
+    {
+      "id": "513cff6f2767-00219",
+      "kind": "text",
+      "start": 807.61,
+      "end": 811.09,
+      "page": null,
+      "section": null,
+      "text": "the shortest path from Caltech to MIT."
+    },
+    {
+      "id": "513cff6f2767-00220",
+      "kind": "text",
+      "start": 811.09,
+      "end": 813.49,
+      "page": null,
+      "section": null,
+      "text": "This time, we may do things a little bit differently."
+    },
+    {
+      "id": "513cff6f2767-00221",
+      "kind": "text",
+      "start": 813.49,
+      "end": 816.05,
+      "page": null,
+      "section": null,
+      "text": "We're thinking maybe we'll give you a street map of"
+    },
+    {
+      "id": "513cff6f2767-00222",
+      "kind": "text",
+      "start": 816.05,
+      "end": 821.77,
+      "page": null,
+      "section": null,
+      "text": "Boston and go figure out if Paul Revere used the shortest"
+    },
+    {
+      "id": "513cff6f2767-00223",
+      "kind": "text",
+      "start": 821.77,
+      "end": 825.13,
+      "page": null,
+      "section": null,
+      "text": "path to get to where he was going, or things like that."
+    },
+    {
+      "id": "513cff6f2767-00224",
+      "kind": "text",
+      "start": 825.17,
+      "end": 827.53,
+      "page": null,
+      "section": null,
+      "text": "We'll try and make it fun."
+    },
+    {
+      "id": "513cff6f2767-00225",
+      "kind": "text",
+      "start": 827.53,
+      "end": 834.37,
+      "page": null,
+      "section": null,
+      "text": "Dynamic programming is an important algorithm design"
+    },
+    {
+      "id": "513cff6f2767-00226",
+      "kind": "text",
+      "start": 834.37,
+      "end": 840.65,
+      "page": null,
+      "section": null,
+      "text": "technique that's used in many, many problems."
+    },
+    {
+      "id": "513cff6f2767-00227",
+      "kind": "text",
+      "start": 840.65,
+      "end": 844.45,
+      "page": null,
+      "section": null,
+      "text": "And it can be used to do a variety of things, including"
+    },
+    {
+      "id": "513cff6f2767-00228",
+      "kind": "text",
+      "start": 844.45,
+      "end": 846.53,
+      "page": null,
+      "section": null,
+      "text": "image compression."
+    },
+    {
+      "id": "513cff6f2767-00229",
+      "kind": "text",
+      "start": 846.53,
+      "end": 848.25,
+      "page": null,
+      "section": null,
+      "text": "How do you compress an image?"
+    },
+    {
+      "id": "513cff6f2767-00230",
+      "kind": "text",
+      "start": 848.25,
+      "end": 852.33,
+      "page": null,
+      "section": null,
+      "text": "So the number of pixels reduces, but it still looks"
+    },
+    {
+      "id": "513cff6f2767-00231",
+      "kind": "text",
+      "start": 852.33,
+      "end": 854.89,
+      "page": null,
+      "section": null,
+      "text": "like the image that you started out with that had many"
+    },
+    {
+      "id": "513cff6f2767-00232",
+      "kind": "text",
+      "start": 854.89,
+      "end": 856.21,
+      "page": null,
+      "section": null,
+      "text": "more pixels."
+    },
+    {
+      "id": "513cff6f2767-00233",
+      "kind": "text",
+      "start": 856.21,
+      "end": 858.85,
+      "page": null,
+      "section": null,
+      "text": "So you could use dynamic programming for that."
+    },
+    {
+      "id": "513cff6f2767-00234",
+      "kind": "text",
+      "start": 858.85,
+      "end": 863.37,
+      "page": null,
+      "section": null,
+      "text": "And finally, advanced topics, complexity theory, research"
+    },
+    {
+      "id": "513cff6f2767-00235",
+      "kind": "text",
+      "start": 863.37,
+      "end": 865.73,
+      "page": null,
+      "section": null,
+      "text": "and algorithms."
+    },
+    {
+      "id": "513cff6f2767-00236",
+      "kind": "text",
+      "start": 865.73,
+      "end": 868.69,
+      "page": null,
+      "section": null,
+      "text": "Hopefully, by this time in the course, you would have"
+    },
+    {
+      "id": "513cff6f2767-00237",
+      "kind": "text",
+      "start": 868.69,
+      "end": 870.33,
+      "page": null,
+      "section": null,
+      "text": "been sold on algorithms."
+    },
+    {
+      "id": "513cff6f2767-00238",
+      "kind": "text",
+      "start": 870.33,
+      "end": 873.21,
+      "page": null,
+      "section": null,
+      "text": "And most if not all of you would want to pursue a"
+    },
+    {
+      "id": "513cff6f2767-00239",
+      "kind": "text",
+      "start": 873.21,
+      "end": 874.53,
+      "page": null,
+      "section": null,
+      "text": "career in algorithms."
+    },
+    {
+      "id": "513cff6f2767-00240",
+      "kind": "text",
+      "start": 874.53,
+      "end": 877.69,
+      "page": null,
+      "section": null,
+      "text": "And we'll give you a sense of what else is there."
+    },
+    {
+      "id": "513cff6f2767-00241",
+      "kind": "text",
+      "start": 877.69,
+      "end": 880.57,
+      "page": null,
+      "section": null,
+      "text": "We're just scratching the surface in this class."
+    },
+    {
+      "id": "513cff6f2767-00242",
+      "kind": "text",
+      "start": 880.57,
+      "end": 882.09,
+      "page": null,
+      "section": null,
+      "text": "And there's many, many classes that you can"
+    },
+    {
+      "id": "513cff6f2767-00243",
+      "kind": "text",
+      "start": 882.09,
+      "end": 887.17,
+      "page": null,
+      "section": null,
+      "text": "possibly take if you want to continue to learn about"
+    },
+    {
+      "id": "513cff6f2767-00244",
+      "kind": "text",
+      "start": 887.17,
+      "end": 889.73,
+      "page": null,
+      "section": null,
+      "text": "algorithms or to pursue a career in algorithms."
+    },
+    {
+      "id": "513cff6f2767-00245",
+      "kind": "text",
+      "start": 889.73,
+      "end": 891.53,
+      "page": null,
+      "section": null,
+      "text": "All right?"
+    },
+    {
+      "id": "513cff6f2767-00246",
+      "kind": "text",
+      "start": 891.53,
+      "end": 894.05,
+      "page": null,
+      "section": null,
+      "text": "So that's the story of the class, of the"
+    },
+    {
+      "id": "513cff6f2767-00247",
+      "kind": "text",
+      "start": 894.05,
+      "end": 895.81,
+      "page": null,
+      "section": null,
+      "text": "synopsis of the class."
+    },
+    {
+      "id": "513cff6f2767-00248",
+      "kind": "text",
+      "start": 895.81,
+      "end": 901.09,
+      "page": null,
+      "section": null,
+      "text": "And I encourage you to go spend a few minutes on the"
+    },
+    {
+      "id": "513cff6f2767-00249",
+      "kind": "text",
+      "start": 901.09,
+      "end": 901.93,
+      "page": null,
+      "section": null,
+      "text": "website."
+    },
+    {
+      "id": "513cff6f2767-00250",
+      "kind": "text",
+      "start": 901.93,
+      "end": 905.69,
+      "page": null,
+      "section": null,
+      "text": "In particular, please read the collaboration policy and"
+    },
+    {
+      "id": "513cff6f2767-00251",
+      "kind": "text",
+      "start": 905.69,
+      "end": 909.81,
+      "page": null,
+      "section": null,
+      "text": "get a sense of what is expected of you, what the"
+    },
+    {
+      "id": "513cff6f2767-00252",
+      "kind": "text",
+      "start": 909.85,
+      "end": 913.57,
+      "page": null,
+      "section": null,
+      "text": "rules are in terms of doing the problem sets."
+    },
+    {
+      "id": "513cff6f2767-00253",
+      "kind": "text",
+      "start": 913.57,
+      "end": 917.61,
+      "page": null,
+      "section": null,
+      "text": "And the course grading breakdown and the grading"
+    },
+    {
+      "id": "513cff6f2767-00254",
+      "kind": "text",
+      "start": 917.61,
+      "end": 921.25,
+      "page": null,
+      "section": null,
+      "text": "policies are all listed on the website as well."
+    },
+    {
+      "id": "513cff6f2767-00255",
+      "kind": "text",
+      "start": 921.25,
+      "end": 922.97,
+      "page": null,
+      "section": null,
+      "text": "Right?"
+    },
+    {
+      "id": "513cff6f2767-00256",
+      "kind": "text",
+      "start": 922.97,
+      "end": 923.85,
+      "page": null,
+      "section": null,
+      "text": "OK."
+    },
+    {
+      "id": "513cff6f2767-00257",
+      "kind": "text",
+      "start": 923.85,
+      "end": 926.17,
+      "page": null,
+      "section": null,
+      "text": "So let's get started."
+    },
+    {
+      "id": "513cff6f2767-00258",
+      "kind": "text",
+      "start": 926.17,
+      "end": 929.45,
+      "page": null,
+      "section": null,
+      "text": "I want to talk about a specific problem and talk"
+    },
+    {
+      "id": "513cff6f2767-00259",
+      "kind": "text",
+      "start": 929.45,
+      "end": 932.01,
+      "page": null,
+      "section": null,
+      "text": "about algorithms for a specific problem."
+    },
+    {
+      "id": "513cff6f2767-00260",
+      "kind": "text",
+      "start": 932.01,
+      "end": 934.17,
+      "page": null,
+      "section": null,
+      "text": "We picked this problem because it's so easy to"
+    },
+    {
+      "id": "513cff6f2767-00261",
+      "kind": "text",
+      "start": 934.17,
+      "end": 935.53,
+      "page": null,
+      "section": null,
+      "text": "understand."
+    },
+    {
+      "id": "513cff6f2767-00262",
+      "kind": "text",
+      "start": 935.53,
+      "end": 938.77,
+      "page": null,
+      "section": null,
+      "text": "And they're fairly straightforward algorithms"
+    },
+    {
+      "id": "513cff6f2767-00263",
+      "kind": "text",
+      "start": 938.77,
+      "end": 941.41,
+      "page": null,
+      "section": null,
+      "text": "that are not particularly efficient to solve this"
+    },
+    {
+      "id": "513cff6f2767-00264",
+      "kind": "text",
+      "start": 941.41,
+      "end": 942.41,
+      "page": null,
+      "section": null,
+      "text": "problem."
+    },
+    {
+      "id": "513cff6f2767-00265",
+      "kind": "text",
+      "start": 942.41,
+      "end": 945.01,
+      "page": null,
+      "section": null,
+      "text": "And so this is kind of a toy problem."
+    },
+    {
+      "id": "513cff6f2767-00266",
+      "kind": "text",
+      "start": 945.01,
+      "end": 951.57,
+      "page": null,
+      "section": null,
+      "text": "But like a lot of toy problems, it's very evocative in"
+    },
+    {
+      "id": "513cff6f2767-00267",
+      "kind": "text",
+      "start": 951.57,
+      "end": 955.97,
+      "page": null,
+      "section": null,
+      "text": "that it points out the issues involved in designing"
+    },
+    {
+      "id": "513cff6f2767-00268",
+      "kind": "text",
+      "start": 955.97,
+      "end": 957.73,
+      "page": null,
+      "section": null,
+      "text": "efficient algorithms."
+    },
+    {
+      "id": "513cff6f2767-00269",
+      "kind": "text",
+      "start": 957.73,
+      "end": 960.49,
+      "page": null,
+      "section": null,
+      "text": "So we start with a one dimensional version of what"
+    },
+    {
+      "id": "513cff6f2767-00270",
+      "kind": "text",
+      "start": 960.49,
+      "end": 965.76,
+      "page": null,
+      "section": null,
+      "text": "we call peak finding."
+    },
+    {
+      "id": "513cff6f2767-00271",
+      "kind": "text",
+      "start": 965.76,
+      "end": 969.84,
+      "page": null,
+      "section": null,
+      "text": "And a peak finder is something in the one"
+    },
+    {
+      "id": "513cff6f2767-00272",
+      "kind": "text",
+      "start": 969.88,
+      "end": 978.25,
+      "page": null,
+      "section": null,
+      "text": "dimensional case runs on an array of numbers."
+    },
+    {
+      "id": "513cff6f2767-00273",
+      "kind": "text",
+      "start": 978.25,
+      "end": 984.19,
+      "page": null,
+      "section": null,
+      "text": "And I'm just putting symbols for each of these numbers"
+    },
+    {
+      "id": "513cff6f2767-00274",
+      "kind": "text",
+      "start": 984.19,
+      "end": 987.03,
+      "page": null,
+      "section": null,
+      "text": "here."
+    },
+    {
+      "id": "513cff6f2767-00275",
+      "kind": "text",
+      "start": 987.03,
+      "end": 991.55,
+      "page": null,
+      "section": null,
+      "text": "And the numbers are positive, negative."
+    },
+    {
+      "id": "513cff6f2767-00276",
+      "kind": "text",
+      "start": 991.55,
+      "end": 993.15,
+      "page": null,
+      "section": null,
+      "text": "We'll just assume they're all positive."
+    },
+    {
+      "id": "513cff6f2767-00277",
+      "kind": "text",
+      "start": 993.15,
+      "end": 994.47,
+      "page": null,
+      "section": null,
+      "text": "It doesn't really matter."
+    },
+    {
+      "id": "513cff6f2767-00278",
+      "kind": "text",
+      "start": 994.47,
+      "end": 998.47,
+      "page": null,
+      "section": null,
+      "text": "The algorithms we describe will work."
+    },
+    {
+      "id": "513cff6f2767-00279",
+      "kind": "text",
+      "start": 998.47,
+      "end": 1001.63,
+      "page": null,
+      "section": null,
+      "text": "And so we have this one dimensional array that has"
+    },
+    {
+      "id": "513cff6f2767-00280",
+      "kind": "text",
+      "start": 1001.63,
+      "end": 1009.88,
+      "page": null,
+      "section": null,
+      "text": "nine different positions and a through i are numbers."
+    },
+    {
+      "id": "513cff6f2767-00281",
+      "kind": "text",
+      "start": 1009.88,
+      "end": 1013.0,
+      "page": null,
+      "section": null,
+      "text": "And we want to find a peak."
+    },
+    {
+      "id": "513cff6f2767-00282",
+      "kind": "text",
+      "start": 1013.0,
+      "end": 1016.16,
+      "page": null,
+      "section": null,
+      "text": "And so we have to define what we mean by a peak."
+    },
+    {
+      "id": "513cff6f2767-00283",
+      "kind": "text",
+      "start": 1016.16,
+      "end": 1023.12,
+      "page": null,
+      "section": null,
+      "text": "And so in particular, as an example, position two is a"
+    },
+    {
+      "id": "513cff6f2767-00284",
+      "kind": "text",
+      "start": 1023.12,
+      "end": 1036.18,
+      "page": null,
+      "section": null,
+      "text": "peak if and only if b greater than or equal to a and b"
+    },
+    {
+      "id": "513cff6f2767-00285",
+      "kind": "text",
+      "start": 1036.18,
+      "end": 1037.98,
+      "page": null,
+      "section": null,
+      "text": "greater than or equal to c."
+    },
+    {
+      "id": "513cff6f2767-00286",
+      "kind": "text",
+      "start": 1037.98,
+      "end": 1041.5,
+      "page": null,
+      "section": null,
+      "text": "So it's really a very local property corresponding to a"
+    },
+    {
+      "id": "513cff6f2767-00287",
+      "kind": "text",
+      "start": 1041.5,
+      "end": 1042.26,
+      "page": null,
+      "section": null,
+      "text": "peak."
+    },
+    {
+      "id": "513cff6f2767-00288",
+      "kind": "text",
+      "start": 1042.26,
+      "end": 1044.98,
+      "page": null,
+      "section": null,
+      "text": "In the one dimensional case, it's trivial."
+    },
+    {
+      "id": "513cff6f2767-00289",
+      "kind": "text",
+      "start": 1044.98,
+      "end": 1047.98,
+      "page": null,
+      "section": null,
+      "text": "Look to your left, look to your right."
+    },
+    {
+      "id": "513cff6f2767-00290",
+      "kind": "text",
+      "start": 1047.98,
+      "end": 1052.1,
+      "page": null,
+      "section": null,
+      "text": "If you're equal or greater than both of the elements that"
+    },
+    {
+      "id": "513cff6f2767-00291",
+      "kind": "text",
+      "start": 1052.1,
+      "end": 1055.74,
+      "page": null,
+      "section": null,
+      "text": "you see on the left and the right, you're a peak."
+    },
+    {
+      "id": "513cff6f2767-00292",
+      "kind": "text",
+      "start": 1055.74,
+      "end": 1058.82,
+      "page": null,
+      "section": null,
+      "text": "And in the case of the edges, you only have"
+    },
+    {
+      "id": "513cff6f2767-00293",
+      "kind": "text",
+      "start": 1058.82,
+      "end": 1060.66,
+      "page": null,
+      "section": null,
+      "text": "to look to one side."
+    },
+    {
+      "id": "513cff6f2767-00294",
+      "kind": "text",
+      "start": 1060.7,
+      "end": 1073.73,
+      "page": null,
+      "section": null,
+      "text": "So position nine is a peak if i greater than or equal to h."
+    },
+    {
+      "id": "513cff6f2767-00295",
+      "kind": "text",
+      "start": 1073.73,
+      "end": 1075.77,
+      "page": null,
+      "section": null,
+      "text": "So you just have to look to your left there, because you're"
+    },
+    {
+      "id": "513cff6f2767-00296",
+      "kind": "text",
+      "start": 1075.77,
+      "end": 1078.25,
+      "page": null,
+      "section": null,
+      "text": "all the way on the right-hand side."
+    },
+    {
+      "id": "513cff6f2767-00297",
+      "kind": "text",
+      "start": 1078.25,
+      "end": 1080.45,
+      "page": null,
+      "section": null,
+      "text": "So that's it."
+    },
+    {
+      "id": "513cff6f2767-00298",
+      "kind": "text",
+      "start": 1080.45,
+      "end": 1083.93,
+      "page": null,
+      "section": null,
+      "text": "And the statement of the problem, the one dimensional"
+    },
+    {
+      "id": "513cff6f2767-00299",
+      "kind": "text",
+      "start": 1083.93,
+      "end": 1102.03,
+      "page": null,
+      "section": null,
+      "text": "version, is find a peak if it exists."
+    },
+    {
+      "id": "513cff6f2767-00300",
+      "kind": "text",
+      "start": 1102.03,
+      "end": 1104.75,
+      "page": null,
+      "section": null,
+      "text": "That's all there is to it."
+    },
+    {
+      "id": "513cff6f2767-00301",
+      "kind": "text",
+      "start": 1104.75,
+      "end": 1107.87,
+      "page": null,
+      "section": null,
+      "text": "I'm going to give you a straightforward algorithm."
+    },
+    {
+      "id": "513cff6f2767-00302",
+      "kind": "text",
+      "start": 1107.87,
+      "end": 1111.27,
+      "page": null,
+      "section": null,
+      "text": "And then we'll see if you can improve it."
+    },
+    {
+      "id": "513cff6f2767-00303",
+      "kind": "text",
+      "start": 1111.27,
+      "end": 1114.11,
+      "page": null,
+      "section": null,
+      "text": "You can imagine that the straightforward algorithm is"
+    },
+    {
+      "id": "513cff6f2767-00304",
+      "kind": "text",
+      "start": 1114.11,
+      "end": 1119.35,
+      "page": null,
+      "section": null,
+      "text": "something that just walks across the array."
+    },
+    {
+      "id": "513cff6f2767-00305",
+      "kind": "text",
+      "start": 1119.35,
+      "end": 1123.47,
+      "page": null,
+      "section": null,
+      "text": "But we need that as a starting point for building"
+    },
+    {
+      "id": "513cff6f2767-00306",
+      "kind": "text",
+      "start": 1123.47,
+      "end": 1129.54,
+      "page": null,
+      "section": null,
+      "text": "something more sophisticated."
+    },
+    {
+      "id": "513cff6f2767-00307",
+      "kind": "text",
+      "start": 1129.54,
+      "end": 1137.17,
+      "page": null,
+      "section": null,
+      "text": "So let's say we start from left."
+    },
+    {
+      "id": "513cff6f2767-00308",
+      "kind": "text",
+      "start": 1137.17,
+      "end": 1145.37,
+      "page": null,
+      "section": null,
+      "text": "All we have is one traversal, really."
+    },
+    {
+      "id": "513cff6f2767-00309",
+      "kind": "text",
+      "start": 1145.37,
+      "end": 1147.65,
+      "page": null,
+      "section": null,
+      "text": "So let's say we have 1, 2."
+    },
+    {
+      "id": "513cff6f2767-00310",
+      "kind": "text",
+      "start": 1147.65,
+      "end": 1150.21,
+      "page": null,
+      "section": null,
+      "text": "And then we have n over 2 over here,"
+    },
+    {
+      "id": "513cff6f2767-00311",
+      "kind": "text",
+      "start": 1150.21,
+      "end": 1154.61,
+      "page": null,
+      "section": null,
+      "text": "corresponding to the middle of this n element array."
+    },
+    {
+      "id": "513cff6f2767-00312",
+      "kind": "text",
+      "start": 1154.61,
+      "end": 1159.01,
+      "page": null,
+      "section": null,
+      "text": "And then we have n minus 1 and n."
+    },
+    {
+      "id": "513cff6f2767-00313",
+      "kind": "text",
+      "start": 1159.01,
+      "end": 1162.17,
+      "page": null,
+      "section": null,
+      "text": "What I'm interested in doing is not only coming up"
+    },
+    {
+      "id": "513cff6f2767-00314",
+      "kind": "text",
+      "start": 1162.17,
+      "end": 1167.77,
+      "page": null,
+      "section": null,
+      "text": "with a straightforward algorithm, but also precisely"
+    },
+    {
+      "id": "513cff6f2767-00315",
+      "kind": "text",
+      "start": 1167.77,
+      "end": 1172.01,
+      "page": null,
+      "section": null,
+      "text": "categorizing what its complexity is in relation"
+    },
+    {
+      "id": "513cff6f2767-00316",
+      "kind": "text",
+      "start": 1172.01,
+      "end": 1175.53,
+      "page": null,
+      "section": null,
+      "text": "to n, which is the number of inputs."
+    },
+    {
+      "id": "513cff6f2767-00317",
+      "kind": "text",
+      "start": 1175.53,
+      "end": 1181.75,
+      "page": null,
+      "section": null,
+      "text": "Yeah, question."
+    },
+    {
+      "id": "513cff6f2767-00318",
+      "kind": "text",
+      "start": 1181.75,
+      "end": 1182.75,
+      "page": null,
+      "section": null,
+      "text": "That's exactly right."
+    },
+    {
+      "id": "513cff6f2767-00319",
+      "kind": "text",
+      "start": 1182.75,
+      "end": 1184.55,
+      "page": null,
+      "section": null,
+      "text": "I was going to get to that."
+    },
+    {
+      "id": "513cff6f2767-00320",
+      "kind": "text",
+      "start": 1184.55,
+      "end": 1191.79,
+      "page": null,
+      "section": null,
+      "text": "So if you look at the definition of the peak, then what I have"
+    },
+    {
+      "id": "513cff6f2767-00321",
+      "kind": "text",
+      "start": 1191.79,
+      "end": 1196.03,
+      "page": null,
+      "section": null,
+      "text": "here is greater than or equal to."
+    },
+    {
+      "id": "513cff6f2767-00322",
+      "kind": "text",
+      "start": 1196.03,
+      "end": 1199.67,
+      "page": null,
+      "section": null,
+      "text": "And so that's a great question that was asked."
+    },
+    {
+      "id": "513cff6f2767-00323",
+      "kind": "text",
+      "start": 1199.67,
+      "end": 1204.47,
+      "page": null,
+      "section": null,
+      "text": "Why is there if it exists in this problem?"
+    },
+    {
+      "id": "513cff6f2767-00324",
+      "kind": "text",
+      "start": 1204.47,
+      "end": 1209.99,
+      "page": null,
+      "section": null,
+      "text": "Now in the case where I have greater than or equal to, then"
+    },
+    {
+      "id": "513cff6f2767-00325",
+      "kind": "text",
+      "start": 1209.99,
+      "end": 1214.31,
+      "page": null,
+      "section": null,
+      "text": "this is a homework question for you and for the rest of you."
+    },
+    {
+      "id": "513cff6f2767-00326",
+      "kind": "text",
+      "start": 1214.31,
+      "end": 1220.79,
+      "page": null,
+      "section": null,
+      "text": "Argue that any array will always have a peak."
+    },
+    {
+      "id": "513cff6f2767-00327",
+      "kind": "text",
+      "start": 1220.79,
+      "end": 1224.43,
+      "page": null,
+      "section": null,
+      "text": "Now if you didn't have the greater than or equal to and"
+    },
+    {
+      "id": "513cff6f2767-00328",
+      "kind": "text",
+      "start": 1224.43,
+      "end": 1229.07,
+      "page": null,
+      "section": null,
+      "text": "you had a greater than, then can you make that argument?"
+    },
+    {
+      "id": "513cff6f2767-00329",
+      "kind": "text",
+      "start": 1229.07,
+      "end": 1230.83,
+      "page": null,
+      "section": null,
+      "text": "No, you can't."
+    },
+    {
+      "id": "513cff6f2767-00330",
+      "kind": "text",
+      "start": 1230.83,
+      "end": 1233.31,
+      "page": null,
+      "section": null,
+      "text": "So great question."
+    },
+    {
+      "id": "513cff6f2767-00331",
+      "kind": "text",
+      "start": 1233.31,
+      "end": 1237.83,
+      "page": null,
+      "section": null,
+      "text": "In this case, you would want to modify this problem statement"
+    },
+    {
+      "id": "513cff6f2767-00332",
+      "kind": "text",
+      "start": 1237.83,
+      "end": 1238.95,
+      "page": null,
+      "section": null,
+      "text": "to find a peak."
+    },
+    {
+      "id": "513cff6f2767-00333",
+      "kind": "text",
+      "start": 1238.95,
+      "end": 1243.75,
+      "page": null,
+      "section": null,
+      "text": "But if I had a different definition of a peak, and this"
+    },
+    {
+      "id": "513cff6f2767-00334",
+      "kind": "text",
+      "start": 1243.75,
+      "end": 1247.03,
+      "page": null,
+      "section": null,
+      "text": "is part of algorithmic thinking, you want to be able to"
+    },
+    {
+      "id": "513cff6f2767-00335",
+      "kind": "text",
+      "start": 1247.03,
+      "end": 1249.59,
+      "page": null,
+      "section": null,
+      "text": "create algorithms that are general."
+    },
+    {
+      "id": "513cff6f2767-00336",
+      "kind": "text",
+      "start": 1249.59,
+      "end": 1252.83,
+      "page": null,
+      "section": null,
+      "text": "So if the problem definition changes on you, you still have"
+    },
+    {
+      "id": "513cff6f2767-00337",
+      "kind": "text",
+      "start": 1252.83,
+      "end": 1254.79,
+      "page": null,
+      "section": null,
+      "text": "a starting point to go attack the"
+    },
+    {
+      "id": "513cff6f2767-00338",
+      "kind": "text",
+      "start": 1254.79,
+      "end": 1257.31,
+      "page": null,
+      "section": null,
+      "text": "second version of the problem."
+    },
+    {
+      "id": "513cff6f2767-00339",
+      "kind": "text",
+      "start": 1257.31,
+      "end": 1262.23,
+      "page": null,
+      "section": null,
+      "text": "So you could eliminate this in the case of the greater"
+    },
+    {
+      "id": "513cff6f2767-00340",
+      "kind": "text",
+      "start": 1262.27,
+      "end": 1264.51,
+      "page": null,
+      "section": null,
+      "text": "than or equal to definition that if it exists because a peak"
+    },
+    {
+      "id": "513cff6f2767-00341",
+      "kind": "text",
+      "start": 1264.51,
+      "end": 1265.67,
+      "page": null,
+      "section": null,
+      "text": "will always exist."
+    },
+    {
+      "id": "513cff6f2767-00342",
+      "kind": "text",
+      "start": 1265.67,
+      "end": 1267.87,
+      "page": null,
+      "section": null,
+      "text": "But you probably want to argue that when you want to show the"
+    },
+    {
+      "id": "513cff6f2767-00343",
+      "kind": "text",
+      "start": 1267.87,
+      "end": 1269.91,
+      "page": null,
+      "section": null,
+      "text": "correctness of your algorithm."
+    },
+    {
+      "id": "513cff6f2767-00344",
+      "kind": "text",
+      "start": 1269.91,
+      "end": 1273.83,
+      "page": null,
+      "section": null,
+      "text": "And if, in fact, you had a different definition, well,"
+    },
+    {
+      "id": "513cff6f2767-00345",
+      "kind": "text",
+      "start": 1273.83,
+      "end": 1279.27,
+      "page": null,
+      "section": null,
+      "text": "you would have to create an algorithm that tells you for"
+    },
+    {
+      "id": "513cff6f2767-00346",
+      "kind": "text",
+      "start": 1279.27,
+      "end": 1284.31,
+      "page": null,
+      "section": null,
+      "text": "sure that a peak doesn't exist or find a peak if it exists."
+    },
+    {
+      "id": "513cff6f2767-00347",
+      "kind": "text",
+      "start": 1284.31,
+      "end": 1286.27,
+      "page": null,
+      "section": null,
+      "text": "So that's really the general case."
+    },
+    {
+      "id": "513cff6f2767-00348",
+      "kind": "text",
+      "start": 1286.27,
+      "end": 1288.99,
+      "page": null,
+      "section": null,
+      "text": "Many a time it's possible that you're asked to do"
+    },
+    {
+      "id": "513cff6f2767-00349",
+      "kind": "text",
+      "start": 1288.99,
+      "end": 1294.55,
+      "page": null,
+      "section": null,
+      "text": "something, and you can't actually give an answer to the"
+    },
+    {
+      "id": "513cff6f2767-00350",
+      "kind": "text",
+      "start": 1294.55,
+      "end": 1298.67,
+      "page": null,
+      "section": null,
+      "text": "question or find something that satisfies all the constraints"
+    },
+    {
+      "id": "513cff6f2767-00351",
+      "kind": "text",
+      "start": 1298.67,
+      "end": 1299.51,
+      "page": null,
+      "section": null,
+      "text": "required."
+    },
+    {
+      "id": "513cff6f2767-00352",
+      "kind": "text",
+      "start": 1299.51,
+      "end": 1301.63,
+      "page": null,
+      "section": null,
+      "text": "And in that case, you want to be able to put up your hand"
+    },
+    {
+      "id": "513cff6f2767-00353",
+      "kind": "text",
+      "start": 1301.63,
+      "end": 1303.39,
+      "page": null,
+      "section": null,
+      "text": "and say, you know what?"
+    },
+    {
+      "id": "513cff6f2767-00354",
+      "kind": "text",
+      "start": 1303.39,
+      "end": 1304.83,
+      "page": null,
+      "section": null,
+      "text": "I searched long and hard."
+    },
+    {
+      "id": "513cff6f2767-00355",
+      "kind": "text",
+      "start": 1304.83,
+      "end": 1306.67,
+      "page": null,
+      "section": null,
+      "text": "I searched exhaustively."
+    },
+    {
+      "id": "513cff6f2767-00356",
+      "kind": "text",
+      "start": 1306.67,
+      "end": 1310.23,
+      "page": null,
+      "section": null,
+      "text": "Here's my argument that I searched exhaustively, and I"
+    },
+    {
+      "id": "513cff6f2767-00357",
+      "kind": "text",
+      "start": 1310.23,
+      "end": 1311.79,
+      "page": null,
+      "section": null,
+      "text": "couldn't find it."
+    },
+    {
+      "id": "513cff6f2767-00358",
+      "kind": "text",
+      "start": 1311.79,
+      "end": 1314.51,
+      "page": null,
+      "section": null,
+      "text": "If you do that, you get to keep your job."
+    },
+    {
+      "id": "513cff6f2767-00359",
+      "kind": "text",
+      "start": 1314.51,
+      "end": 1318.07,
+      "page": null,
+      "section": null,
+      "text": "Otherwise, there's always the case that you didn't search"
+    },
+    {
+      "id": "513cff6f2767-00360",
+      "kind": "text",
+      "start": 1318.07,
+      "end": 1318.99,
+      "page": null,
+      "section": null,
+      "text": "hard enough."
+    },
+    {
+      "id": "513cff6f2767-00361",
+      "kind": "text",
+      "start": 1318.99,
+      "end": 1322.19,
+      "page": null,
+      "section": null,
+      "text": "So it's nice to have that argument."
+    },
+    {
+      "id": "513cff6f2767-00362",
+      "kind": "text",
+      "start": 1322.19,
+      "end": 1322.99,
+      "page": null,
+      "section": null,
+      "text": "All right, great."
+    },
+    {
+      "id": "513cff6f2767-00363",
+      "kind": "text",
+      "start": 1322.99,
+      "end": 1324.03,
+      "page": null,
+      "section": null,
+      "text": "Thanks for the question."
+    },
+    {
+      "id": "513cff6f2767-00364",
+      "kind": "text",
+      "start": 1324.03,
+      "end": 1326.95,
+      "page": null,
+      "section": null,
+      "text": "Now feel free to interrupt, raise your hand, and I'm"
+    },
+    {
+      "id": "513cff6f2767-00365",
+      "kind": "text",
+      "start": 1326.95,
+      "end": 1329.23,
+      "page": null,
+      "section": null,
+      "text": "watching you guys, and I'm happy to answer questions at"
+    },
+    {
+      "id": "513cff6f2767-00366",
+      "kind": "text",
+      "start": 1329.23,
+      "end": 1331.39,
+      "page": null,
+      "section": null,
+      "text": "any time."
+    },
+    {
+      "id": "513cff6f2767-00367",
+      "kind": "text",
+      "start": 1331.39,
+      "end": 1334.47,
+      "page": null,
+      "section": null,
+      "text": "So let's talk about the straightforward algorithm."
+    },
+    {
+      "id": "513cff6f2767-00368",
+      "kind": "text",
+      "start": 1334.47,
+      "end": 1336.55,
+      "page": null,
+      "section": null,
+      "text": "The straightforward algorithm is something that"
+    },
+    {
+      "id": "513cff6f2767-00369",
+      "kind": "text",
+      "start": 1336.55,
+      "end": 1341.91,
+      "page": null,
+      "section": null,
+      "text": "starts from the left and just walks across, and you"
+    },
+    {
+      "id": "513cff6f2767-00370",
+      "kind": "text",
+      "start": 1341.91,
+      "end": 1344.75,
+      "page": null,
+      "section": null,
+      "text": "might have something that looks like that."
+    },
+    {
+      "id": "513cff6f2767-00371",
+      "kind": "text",
+      "start": 1345.23,
+      "end": 1348.47,
+      "page": null,
+      "section": null,
+      "text": "By this, I mean the numbers that are increasing as you start"
+    },
+    {
+      "id": "513cff6f2767-00372",
+      "kind": "text",
+      "start": 1348.47,
+      "end": 1351.87,
+      "page": null,
+      "section": null,
+      "text": "from the left, the peak is somewhere in the middle, and"
+    },
+    {
+      "id": "513cff6f2767-00373",
+      "kind": "text",
+      "start": 1351.87,
+      "end": 1354.07,
+      "page": null,
+      "section": null,
+      "text": "then things start decreasing."
+    },
+    {
+      "id": "513cff6f2767-00374",
+      "kind": "text",
+      "start": 1354.07,
+      "end": 1367.1,
+      "page": null,
+      "section": null,
+      "text": "So in this case, this might be the peak."
+    },
+    {
+      "id": "513cff6f2767-00375",
+      "kind": "text",
+      "start": 1367.1,
+      "end": 1370.3,
+      "page": null,
+      "section": null,
+      "text": "You also may have a situation where the peak is all the"
+    },
+    {
+      "id": "513cff6f2767-00376",
+      "kind": "text",
+      "start": 1370.3,
+      "end": 1371.22,
+      "page": null,
+      "section": null,
+      "text": "way on the right."
+    },
+    {
+      "id": "513cff6f2767-00377",
+      "kind": "text",
+      "start": 1371.22,
+      "end": 1374.58,
+      "page": null,
+      "section": null,
+      "text": "You start it from the left, and it's 1, 2, 3, 4, 5, 6,"
+    },
+    {
+      "id": "513cff6f2767-00378",
+      "kind": "text",
+      "start": 1374.58,
+      "end": 1376.38,
+      "page": null,
+      "section": null,
+      "text": "literally in terms of the numbers."
+    },
+    {
+      "id": "513cff6f2767-00379",
+      "kind": "text",
+      "start": 1376.38,
+      "end": 1380.98,
+      "page": null,
+      "section": null,
+      "text": "And you're going to look at n elements going all the way"
+    },
+    {
+      "id": "513cff6f2767-00380",
+      "kind": "text",
+      "start": 1380.98,
+      "end": 1384.78,
+      "page": null,
+      "section": null,
+      "text": "to the right in order to find the peak."
+    },
+    {
+      "id": "513cff6f2767-00381",
+      "kind": "text",
+      "start": 1384.78,
+      "end": 1390.66,
+      "page": null,
+      "section": null,
+      "text": "So in the case of the middle, you'd look at n over 2"
+    },
+    {
+      "id": "513cff6f2767-00382",
+      "kind": "text",
+      "start": 1390.66,
+      "end": 1398.39,
+      "page": null,
+      "section": null,
+      "text": "elements if it was right in the middle."
+    },
+    {
+      "id": "513cff6f2767-00383",
+      "kind": "text",
+      "start": 1398.39,
+      "end": 1409.82,
+      "page": null,
+      "section": null,
+      "text": "And the worst case complexity is what we call theta n."
+    },
+    {
+      "id": "513cff6f2767-00384",
+      "kind": "text",
+      "start": 1409.82,
+      "end": 1414.18,
+      "page": null,
+      "section": null,
+      "text": "And it's theta n because in the worst case, you may have to"
+    },
+    {
+      "id": "513cff6f2767-00385",
+      "kind": "text",
+      "start": 1414.18,
+      "end": 1416.38,
+      "page": null,
+      "section": null,
+      "text": "look at all n elements."
+    },
+    {
+      "id": "513cff6f2767-00386",
+      "kind": "text",
+      "start": 1416.38,
+      "end": 1418.06,
+      "page": null,
+      "section": null,
+      "text": "And that would be the case where you started from the"
+    },
+    {
+      "id": "513cff6f2767-00387",
+      "kind": "text",
+      "start": 1418.1,
+      "end": 1420.86,
+      "page": null,
+      "section": null,
+      "text": "left, and you had to go all the way to the right."
+    },
+    {
+      "id": "513cff6f2767-00388",
+      "kind": "text",
+      "start": 1420.86,
+      "end": 1424.02,
+      "page": null,
+      "section": null,
+      "text": "Now remember, theta n is essentially something that"
+    },
+    {
+      "id": "513cff6f2767-00389",
+      "kind": "text",
+      "start": 1424.02,
+      "end": 1425.86,
+      "page": null,
+      "section": null,
+      "text": "says of the order of n."
+    },
+    {
+      "id": "513cff6f2767-00390",
+      "kind": "text",
+      "start": 1425.86,
+      "end": 1429.42,
+      "page": null,
+      "section": null,
+      "text": "So it gives you both the lower bound and an upper bound."
+    },
+    {
+      "id": "513cff6f2767-00391",
+      "kind": "text",
+      "start": 1429.42,
+      "end": 1432.5,
+      "page": null,
+      "section": null,
+      "text": "Big O of n is just the upper bound."
+    },
+    {
+      "id": "513cff6f2767-00392",
+      "kind": "text",
+      "start": 1432.5,
+      "end": 1435.74,
+      "page": null,
+      "section": null,
+      "text": "And what we're saying here is we're saying this algorithm"
+    },
+    {
+      "id": "513cff6f2767-00393",
+      "kind": "text",
+      "start": 1435.74,
+      "end": 1441.78,
+      "page": null,
+      "section": null,
+      "text": "that starts from the left is going to essentially require,"
+    },
+    {
+      "id": "513cff6f2767-00394",
+      "kind": "text",
+      "start": 1441.78,
+      "end": 1447.82,
+      "page": null,
+      "section": null,
+      "text": "in the worst case, something that's a constant times n."
+    },
+    {
+      "id": "513cff6f2767-00395",
+      "kind": "text",
+      "start": 1447.86,
+      "end": 1451.22,
+      "page": null,
+      "section": null,
+      "text": "And that constant could be 1."
+    },
+    {
+      "id": "513cff6f2767-00396",
+      "kind": "text",
+      "start": 1451.22,
+      "end": 1453.38,
+      "page": null,
+      "section": null,
+      "text": "You could certainly set things up that way."
+    },
+    {
+      "id": "513cff6f2767-00397",
+      "kind": "text",
+      "start": 1453.38,
+      "end": 1456.38,
+      "page": null,
+      "section": null,
+      "text": "Or if you had a different kind of algorithm, maybe you could"
+    },
+    {
+      "id": "513cff6f2767-00398",
+      "kind": "text",
+      "start": 1456.38,
+      "end": 1458.42,
+      "page": null,
+      "section": null,
+      "text": "work on the constant."
+    },
+    {
+      "id": "513cff6f2767-00399",
+      "kind": "text",
+      "start": 1458.42,
+      "end": 1463.14,
+      "page": null,
+      "section": null,
+      "text": "But bottom line, we're only concerned at this moment about"
+    },
+    {
+      "id": "513cff6f2767-00400",
+      "kind": "text",
+      "start": 1463.14,
+      "end": 1464.74,
+      "page": null,
+      "section": null,
+      "text": "asymptotic complexity."
+    },
+    {
+      "id": "513cff6f2767-00401",
+      "kind": "text",
+      "start": 1464.74,
+      "end": 1467.3,
+      "page": null,
+      "section": null,
+      "text": "And the asymptotic complexity of this algorithm"
+    },
+    {
+      "id": "513cff6f2767-00402",
+      "kind": "text",
+      "start": 1467.3,
+      "end": 1469.66,
+      "page": null,
+      "section": null,
+      "text": "is linear."
+    },
+    {
+      "id": "513cff6f2767-00403",
+      "kind": "text",
+      "start": 1469.66,
+      "end": 1471.98,
+      "page": null,
+      "section": null,
+      "text": "That makes sense?"
+    },
+    {
+      "id": "513cff6f2767-00404",
+      "kind": "text",
+      "start": 1471.98,
+      "end": 1472.9,
+      "page": null,
+      "section": null,
+      "text": "OK."
+    },
+    {
+      "id": "513cff6f2767-00405",
+      "kind": "text",
+      "start": 1472.9,
+      "end": 1478.84,
+      "page": null,
+      "section": null,
+      "text": "So someone help me do better."
+    },
+    {
+      "id": "513cff6f2767-00406",
+      "kind": "text",
+      "start": 1478.84,
+      "end": 1479.72,
+      "page": null,
+      "section": null,
+      "text": "How can we do better?"
+    },
+    {
+      "id": "513cff6f2767-00407",
+      "kind": "text",
+      "start": 1479.76,
+      "end": 1484.0,
+      "page": null,
+      "section": null,
+      "text": "How can we lower the asymptotic complexity of a one-dimensional"
+    },
+    {
+      "id": "513cff6f2767-00408",
+      "kind": "text",
+      "start": 1484.0,
+      "end": 1486.93,
+      "page": null,
+      "section": null,
+      "text": "peak finder?"
+    },
+    {
+      "id": "513cff6f2767-00409",
+      "kind": "text",
+      "start": 1486.93,
+      "end": 1488.45,
+      "page": null,
+      "section": null,
+      "text": "Anybody want to take a stab at that?"
+    },
+    {
+      "id": "513cff6f2767-00410",
+      "kind": "text",
+      "start": 1488.45,
+      "end": 1500.21,
+      "page": null,
+      "section": null,
+      "text": "Yeah, back there."
+    },
+    {
+      "id": "513cff6f2767-00411",
+      "kind": "text",
+      "start": 1500.21,
+      "end": 1508.88,
+      "page": null,
+      "section": null,
+      "text": "Example it here."
+    },
+    {
+      "id": "513cff6f2767-00412",
+      "kind": "text",
+      "start": 1508.88,
+      "end": 1509.36,
+      "page": null,
+      "section": null,
+      "text": "Excellent."
+    },
+    {
+      "id": "513cff6f2767-00413",
+      "kind": "text",
+      "start": 1509.36,
+      "end": 1509.72,
+      "page": null,
+      "section": null,
+      "text": "Excellent."
+    },
+    {
+      "id": "513cff6f2767-00414",
+      "kind": "text",
+      "start": 1509.72,
+      "end": 1510.88,
+      "page": null,
+      "section": null,
+      "text": "That's exactly right."
+    },
+    {
+      "id": "513cff6f2767-00415",
+      "kind": "text",
+      "start": 1510.88,
+      "end": 1516.36,
+      "page": null,
+      "section": null,
+      "text": "So you can do something different, which is essentially"
+    },
+    {
+      "id": "513cff6f2767-00416",
+      "kind": "text",
+      "start": 1516.36,
+      "end": 1519.96,
+      "page": null,
+      "section": null,
+      "text": "try and break up this problem, use a divide and"
+    },
+    {
+      "id": "513cff6f2767-00417",
+      "kind": "text",
+      "start": 1519.96,
+      "end": 1523.6,
+      "page": null,
+      "section": null,
+      "text": "conquer strategy, and recursively break up this one"
+    },
+    {
+      "id": "513cff6f2767-00418",
+      "kind": "text",
+      "start": 1523.6,
+      "end": 1528.84,
+      "page": null,
+      "section": null,
+      "text": "dimensional array into smaller arrays, and try and get"
+    },
+    {
+      "id": "513cff6f2767-00419",
+      "kind": "text",
+      "start": 1528.84,
+      "end": 1530.08,
+      "page": null,
+      "section": null,
+      "text": "this complexity down."
+    },
+    {
+      "id": "513cff6f2767-00420",
+      "kind": "text",
+      "start": 1530.08,
+      "end": 1530.68,
+      "page": null,
+      "section": null,
+      "text": "Yeah?"
+    },
+    {
+      "id": "513cff6f2767-00421",
+      "kind": "text",
+      "start": 1530.68,
+      "end": 1533.4,
+      "page": null,
+      "section": null,
+      "text": "Are you assuming there's only one peak?"
+    },
+    {
+      "id": "513cff6f2767-00422",
+      "kind": "text",
+      "start": 1533.4,
+      "end": 1534.72,
+      "page": null,
+      "section": null,
+      "text": "No, we're not."
+    },
+    {
+      "id": "513cff6f2767-00423",
+      "kind": "text",
+      "start": 1534.72,
+      "end": 1540.16,
+      "page": null,
+      "section": null,
+      "text": "If it's find a peak if it exists, and in this case, it's"
+    },
+    {
+      "id": "513cff6f2767-00424",
+      "kind": "text",
+      "start": 1540.16,
+      "end": 1543.0,
+      "page": null,
+      "section": null,
+      "text": "find a peak because of the definition, we don't really"
+    },
+    {
+      "id": "513cff6f2767-00425",
+      "kind": "text",
+      "start": 1543.0,
+      "end": 1546.6,
+      "page": null,
+      "section": null,
+      "text": "need this, as it was discussed."
+    },
+    {
+      "id": "513cff6f2767-00426",
+      "kind": "text",
+      "start": 1546.6,
+      "end": 1550.44,
+      "page": null,
+      "section": null,
+      "text": "OK, so that was a great answer."
+    },
+    {
+      "id": "513cff6f2767-00427",
+      "kind": "text",
+      "start": 1550.44,
+      "end": 1555.72,
+      "page": null,
+      "section": null,
+      "text": "And this class, after a while, is going to get boring."
+    },
+    {
+      "id": "513cff6f2767-00428",
+      "kind": "text",
+      "start": 1555.72,
+      "end": 1557.6,
+      "page": null,
+      "section": null,
+      "text": "Every class gets boring."
+    },
+    {
+      "id": "513cff6f2767-00429",
+      "kind": "text",
+      "start": 1557.6,
+      "end": 1561.44,
+      "page": null,
+      "section": null,
+      "text": "So we try and break the monotony here a bit."
+    },
+    {
+      "id": "513cff6f2767-00430",
+      "kind": "text",
+      "start": 1561.44,
+      "end": 1563.6,
+      "page": null,
+      "section": null,
+      "text": "And then the other thing that we realized was that these"
+    },
+    {
+      "id": "513cff6f2767-00431",
+      "kind": "text",
+      "start": 1563.6,
+      "end": 1565.84,
+      "page": null,
+      "section": null,
+      "text": "seats you're sitting on, this is a nice classroom, but the"
+    },
+    {
+      "id": "513cff6f2767-00432",
+      "kind": "text",
+      "start": 1565.84,
+      "end": 1568.12,
+      "page": null,
+      "section": null,
+      "text": "seats you're sitting on are kind of hard."
+    },
+    {
+      "id": "513cff6f2767-00433",
+      "kind": "text",
+      "start": 1568.12,
+      "end": 1571.56,
+      "page": null,
+      "section": null,
+      "text": "So what Eric and I did was we decided we'll help you guys"
+    },
+    {
+      "id": "513cff6f2767-00434",
+      "kind": "text",
+      "start": 1571.56,
+      "end": 1575.8,
+      "page": null,
+      "section": null,
+      "text": "out, especially the ones who are interacting with us."
+    },
+    {
+      "id": "513cff6f2767-00435",
+      "kind": "text",
+      "start": 1575.8,
+      "end": 1582.32,
+      "page": null,
+      "section": null,
+      "text": "And we have these cushions that are 6006 cushions."
+    },
+    {
+      "id": "513cff6f2767-00436",
+      "kind": "text",
+      "start": 1582.32,
+      "end": 1585.08,
+      "page": null,
+      "section": null,
+      "text": "And that's a 2 by 2 by 2 Rubik's cube here."
+    },
+    {
+      "id": "513cff6f2767-00437",
+      "kind": "text",
+      "start": 1585.08,
+      "end": 1587.56,
+      "page": null,
+      "section": null,
+      "text": "And since you answered the first question, you get a"
+    },
+    {
+      "id": "513cff6f2767-00438",
+      "kind": "text",
+      "start": 1587.6,
+      "end": 1591.4,
+      "page": null,
+      "section": null,
+      "text": "cushion, this is kind of like a Frisbee, but not really."
+    },
+    {
+      "id": "513cff6f2767-00439",
+      "kind": "text",
+      "start": 1591.4,
+      "end": 1595.12,
+      "page": null,
+      "section": null,
+      "text": "So I'm not sure I'm going to get it to you."
+    },
+    {
+      "id": "513cff6f2767-00440",
+      "kind": "text",
+      "start": 1595.12,
+      "end": 1597.28,
+      "page": null,
+      "section": null,
+      "text": "But the other thing I want to say is this is not a baseball"
+    },
+    {
+      "id": "513cff6f2767-00441",
+      "kind": "text",
+      "start": 1597.28,
+      "end": 1600.4,
+      "page": null,
+      "section": null,
+      "text": "game, where you just grab the balls that come by."
+    },
+    {
+      "id": "513cff6f2767-00442",
+      "kind": "text",
+      "start": 1600.4,
+      "end": 1603.64,
+      "page": null,
+      "section": null,
+      "text": "This is meant for him, my friend in the red shirt."
+    },
+    {
+      "id": "513cff6f2767-00443",
+      "kind": "text",
+      "start": 1603.64,
+      "end": 1606.2,
+      "page": null,
+      "section": null,
+      "text": "So here you go."
+    },
+    {
+      "id": "513cff6f2767-00444",
+      "kind": "text",
+      "start": 1606.2,
+      "end": 1606.8,
+      "page": null,
+      "section": null,
+      "text": "Too bad."
+    },
+    {
+      "id": "513cff6f2767-00445",
+      "kind": "text",
+      "start": 1606.8,
+      "end": 1608.56,
+      "page": null,
+      "section": null,
+      "text": "All right, it is soft."
+    },
+    {
+      "id": "513cff6f2767-00446",
+      "kind": "text",
+      "start": 1608.56,
+      "end": 1612.52,
+      "page": null,
+      "section": null,
+      "text": "So it won't hurt you if it hits you."
+    },
+    {
+      "id": "513cff6f2767-00447",
+      "kind": "text",
+      "start": 1612.52,
+      "end": 1617.16,
+      "page": null,
+      "section": null,
+      "text": "So if you've got a bunch of these, and raise your hands."
+    },
+    {
+      "id": "513cff6f2767-00448",
+      "kind": "text",
+      "start": 1617.16,
+      "end": 1622.24,
+      "page": null,
+      "section": null,
+      "text": "When I ask, there's going to be some trivial questions that"
+    },
+    {
+      "id": "513cff6f2767-00449",
+      "kind": "text",
+      "start": 1622.24,
+      "end": 1625.16,
+      "page": null,
+      "section": null,
+      "text": "we're going to ask just to make sure you're away."
+    },
+    {
+      "id": "513cff6f2767-00450",
+      "kind": "text",
+      "start": 1625.16,
+      "end": 1627.72,
+      "page": null,
+      "section": null,
+      "text": "So an answer to that doesn't get you a cushion."
+    },
+    {
+      "id": "513cff6f2767-00451",
+      "kind": "text",
+      "start": 1627.72,
+      "end": 1631.16,
+      "page": null,
+      "section": null,
+      "text": "But an answer like, what's your name?"
+    },
+    {
+      "id": "513cff6f2767-00452",
+      "kind": "text",
+      "start": 1631.16,
+      "end": 1635.6,
+      "page": null,
+      "section": null,
+      "text": "Jace, an answer like Jace just gave is that's a good"
+    },
+    {
+      "id": "513cff6f2767-00453",
+      "kind": "text",
+      "start": 1635.6,
+      "end": 1637.6,
+      "page": null,
+      "section": null,
+      "text": "answer to a non-trivial question that gets you a"
+    },
+    {
+      "id": "513cff6f2767-00454",
+      "kind": "text",
+      "start": 1637.6,
+      "end": 1639.28,
+      "page": null,
+      "section": null,
+      "text": "cushion."
+    },
+    {
+      "id": "513cff6f2767-00455",
+      "kind": "text",
+      "start": 1639.28,
+      "end": 1640.28,
+      "page": null,
+      "section": null,
+      "text": "All right, great."
+    },
+    {
+      "id": "513cff6f2767-00456",
+      "kind": "text",
+      "start": 1640.28,
+      "end": 1644.24,
+      "page": null,
+      "section": null,
+      "text": "So let's put up Jace's algorithm up here."
+    },
+    {
+      "id": "513cff6f2767-00457",
+      "kind": "text",
+      "start": 1644.24,
+      "end": 1661.34,
+      "page": null,
+      "section": null,
+      "text": "I'm going to write it out for the 1D version."
+    },
+    {
+      "id": "513cff6f2767-00458",
+      "kind": "text",
+      "start": 1661.34,
+      "end": 1683.26,
+      "page": null,
+      "section": null,
+      "text": "So what we have here is a recursive algorithm."
+    },
+    {
+      "id": "513cff6f2767-00459",
+      "kind": "text",
+      "start": 1683.26,
+      "end": 1685.42,
+      "page": null,
+      "section": null,
+      "text": "So the picture you want to keep in your head is this picture"
+    },
+    {
+      "id": "513cff6f2767-00460",
+      "kind": "text",
+      "start": 1685.42,
+      "end": 1686.82,
+      "page": null,
+      "section": null,
+      "text": "that I've put up there."
+    },
+    {
+      "id": "513cff6f2767-00461",
+      "kind": "text",
+      "start": 1686.82,
+      "end": 1690.98,
+      "page": null,
+      "section": null,
+      "text": "And this is a divide and conquer algorithm."
+    },
+    {
+      "id": "513cff6f2767-00462",
+      "kind": "text",
+      "start": 1690.98,
+      "end": 1694.1,
+      "page": null,
+      "section": null,
+      "text": "You're going to see this over and over, this paradigm,"
+    },
+    {
+      "id": "513cff6f2767-00463",
+      "kind": "text",
+      "start": 1694.1,
+      "end": 1697.34,
+      "page": null,
+      "section": null,
+      "text": "over and over in 6006."
+    },
+    {
+      "id": "513cff6f2767-00464",
+      "kind": "text",
+      "start": 1697.34,
+      "end": 1705.96,
+      "page": null,
+      "section": null,
+      "text": "We're going to look at the N over 2 position."
+    },
+    {
+      "id": "513cff6f2767-00465",
+      "kind": "text",
+      "start": 1705.96,
+      "end": 1708.68,
+      "page": null,
+      "section": null,
+      "text": "And we're going to look to the left."
+    },
+    {
+      "id": "513cff6f2767-00466",
+      "kind": "text",
+      "start": 1708.68,
+      "end": 1710.88,
+      "page": null,
+      "section": null,
+      "text": "And we're going to look to the right."
+    },
+    {
+      "id": "513cff6f2767-00467",
+      "kind": "text",
+      "start": 1710.88,
+      "end": 1713.52,
+      "page": null,
+      "section": null,
+      "text": "And we're going to do that in sequence."
+    },
+    {
+      "id": "513cff6f2767-00468",
+      "kind": "text",
+      "start": 1713.52,
+      "end": 1731.05,
+      "page": null,
+      "section": null,
+      "text": "So if A N over 2 is less than A N over 2 minus 1, then only"
+    },
+    {
+      "id": "513cff6f2767-00469",
+      "kind": "text",
+      "start": 1731.05,
+      "end": 1741.9,
+      "page": null,
+      "section": null,
+      "text": "look at the left half, 1 through N over 2 minus 1, to look"
+    },
+    {
+      "id": "513cff6f2767-00470",
+      "kind": "text",
+      "start": 1741.9,
+      "end": 1748.9,
+      "page": null,
+      "section": null,
+      "text": "for a peak, for a peak."
+    },
+    {
+      "id": "513cff6f2767-00471",
+      "kind": "text",
+      "start": 1748.9,
+      "end": 1751.02,
+      "page": null,
+      "section": null,
+      "text": "So that's step one."
+    },
+    {
+      "id": "513cff6f2767-00472",
+      "kind": "text",
+      "start": 1751.02,
+      "end": 1753.26,
+      "page": null,
+      "section": null,
+      "text": "And I can run the right hand side or the left hand side."
+    },
+    {
+      "id": "513cff6f2767-00473",
+      "kind": "text",
+      "start": 1753.26,
+      "end": 1755.98,
+      "page": null,
+      "section": null,
+      "text": "Doesn't really matter."
+    },
+    {
+      "id": "513cff6f2767-00474",
+      "kind": "text",
+      "start": 1755.98,
+      "end": 1760.62,
+      "page": null,
+      "section": null,
+      "text": "I chose to do the left hand side first, the left half."
+    },
+    {
+      "id": "513cff6f2767-00475",
+      "kind": "text",
+      "start": 1760.62,
+      "end": 1764.98,
+      "page": null,
+      "section": null,
+      "text": "And so what I've done is, through that one step, if,"
+    },
+    {
+      "id": "513cff6f2767-00476",
+      "kind": "text",
+      "start": 1764.98,
+      "end": 1770.42,
+      "page": null,
+      "section": null,
+      "text": "in fact, you have that condition A N over 2 is less"
+    },
+    {
+      "id": "513cff6f2767-00477",
+      "kind": "text",
+      "start": 1770.42,
+      "end": 1773.78,
+      "page": null,
+      "section": null,
+      "text": "than A N over 2 minus 1, then you moved your left and"
+    },
+    {
+      "id": "513cff6f2767-00478",
+      "kind": "text",
+      "start": 1773.78,
+      "end": 1777.42,
+      "page": null,
+      "section": null,
+      "text": "you work on one half of the problem."
+    },
+    {
+      "id": "513cff6f2767-00479",
+      "kind": "text",
+      "start": 1777.42,
+      "end": 1784.98,
+      "page": null,
+      "section": null,
+      "text": "But if that's not the case, then if A N over 2 is less than"
+    },
+    {
+      "id": "513cff6f2767-00480",
+      "kind": "text",
+      "start": 1784.98,
+      "end": 1794.58,
+      "page": null,
+      "section": null,
+      "text": "A N over N by 2 plus 1, then only look at N over 2 plus 1"
+    },
+    {
+      "id": "513cff6f2767-00481",
+      "kind": "text",
+      "start": 1794.58,
+      "end": 1797.5,
+      "page": null,
+      "section": null,
+      "text": "through N for a peak."
+    },
+    {
+      "id": "513cff6f2767-00482",
+      "kind": "text",
+      "start": 1797.5,
+      "end": 1799.94,
+      "page": null,
+      "section": null,
+      "text": "So I haven't bothered writing out all the words."
+    },
+    {
+      "id": "513cff6f2767-00483",
+      "kind": "text",
+      "start": 1799.94,
+      "end": 1803.46,
+      "page": null,
+      "section": null,
+      "text": "They're exactly the same as the left hand side."
+    },
+    {
+      "id": "513cff6f2767-00484",
+      "kind": "text",
+      "start": 1803.46,
+      "end": 1806.02,
+      "page": null,
+      "section": null,
+      "text": "You just look to the right hand side."
+    },
+    {
+      "id": "513cff6f2767-00485",
+      "kind": "text",
+      "start": 1806.02,
+      "end": 1810.58,
+      "page": null,
+      "section": null,
+      "text": "Otherwise, if both of these conditions don't fire, you're"
+    },
+    {
+      "id": "513cff6f2767-00486",
+      "kind": "text",
+      "start": 1810.58,
+      "end": 1812.62,
+      "page": null,
+      "section": null,
+      "text": "actually done."
+    },
+    {
+      "id": "513cff6f2767-00487",
+      "kind": "text",
+      "start": 1812.62,
+      "end": 1816.22,
+      "page": null,
+      "section": null,
+      "text": "That's actually the best case in terms of finishing early, at"
+    },
+    {
+      "id": "513cff6f2767-00488",
+      "kind": "text",
+      "start": 1816.22,
+      "end": 1818.26,
+      "page": null,
+      "section": null,
+      "text": "least in this recursive step."
+    },
+    {
+      "id": "513cff6f2767-00489",
+      "kind": "text",
+      "start": 1818.26,
+      "end": 1827.06,
+      "page": null,
+      "section": null,
+      "text": "Because now the N over 2 position is a peak."
+    },
+    {
+      "id": "513cff6f2767-00490",
+      "kind": "text",
+      "start": 1827.06,
+      "end": 1830.46,
+      "page": null,
+      "section": null,
+      "text": "Because what you've found is that the N over 2 position"
+    },
+    {
+      "id": "513cff6f2767-00491",
+      "kind": "text",
+      "start": 1830.46,
+      "end": 1833.86,
+      "page": null,
+      "section": null,
+      "text": "is greater than or equal to both of its adjacent"
+    },
+    {
+      "id": "513cff6f2767-00492",
+      "kind": "text",
+      "start": 1833.86,
+      "end": 1834.7,
+      "page": null,
+      "section": null,
+      "text": "positions."
+    },
+    {
+      "id": "513cff6f2767-00493",
+      "kind": "text",
+      "start": 1834.7,
+      "end": 1836.82,
+      "page": null,
+      "section": null,
+      "text": "And that's exactly the definition of a peak."
+    },
+    {
+      "id": "513cff6f2767-00494",
+      "kind": "text",
+      "start": 1836.82,
+      "end": 1839.3,
+      "page": null,
+      "section": null,
+      "text": "So you're done."
+    },
+    {
+      "id": "513cff6f2767-00495",
+      "kind": "text",
+      "start": 1839.3,
+      "end": 1844.46,
+      "page": null,
+      "section": null,
+      "text": "So all of this is good."
+    },
+    {
+      "id": "513cff6f2767-00496",
+      "kind": "text",
+      "start": 1844.46,
+      "end": 1851.99,
+      "page": null,
+      "section": null,
+      "text": "You want to write an argument that this algorithm is"
+    },
+    {
+      "id": "513cff6f2767-00497",
+      "kind": "text",
+      "start": 1851.99,
+      "end": 1854.83,
+      "page": null,
+      "section": null,
+      "text": "correct, and I'm not going to bother with that."
+    },
+    {
+      "id": "513cff6f2767-00498",
+      "kind": "text",
+      "start": 1854.83,
+      "end": 1859.51,
+      "page": null,
+      "section": null,
+      "text": "I just wave my hands a bit and you all nodded."
+    },
+    {
+      "id": "513cff6f2767-00499",
+      "kind": "text",
+      "start": 1859.51,
+      "end": 1861.27,
+      "page": null,
+      "section": null,
+      "text": "So we're done with that."
+    },
+    {
+      "id": "513cff6f2767-00500",
+      "kind": "text",
+      "start": 1861.27,
+      "end": 1867.35,
+      "page": null,
+      "section": null,
+      "text": "But the point being, you will see in your problem set a"
+    },
+    {
+      "id": "513cff6f2767-00501",
+      "kind": "text",
+      "start": 1867.35,
+      "end": 1871.51,
+      "page": null,
+      "section": null,
+      "text": "precise argument for a more complicated algorithm, the 2D"
+    },
+    {
+      "id": "513cff6f2767-00502",
+      "kind": "text",
+      "start": 1871.55,
+      "end": 1872.71,
+      "page": null,
+      "section": null,
+      "text": "version of this."
+    },
+    {
+      "id": "513cff6f2767-00503",
+      "kind": "text",
+      "start": 1872.71,
+      "end": 1877.03,
+      "page": null,
+      "section": null,
+      "text": "And that should be a template for you to go write a proof or"
+    },
+    {
+      "id": "513cff6f2767-00504",
+      "kind": "text",
+      "start": 1877.03,
+      "end": 1880.63,
+      "page": null,
+      "section": null,
+      "text": "an argument, a formal argument that a particular algorithm"
+    },
+    {
+      "id": "513cff6f2767-00505",
+      "kind": "text",
+      "start": 1880.63,
+      "end": 1883.51,
+      "page": null,
+      "section": null,
+      "text": "is correct, that it does what it claims to do."
+    },
+    {
+      "id": "513cff6f2767-00506",
+      "kind": "text",
+      "start": 1883.51,
+      "end": 1889.11,
+      "page": null,
+      "section": null,
+      "text": "And in this case, it's two, three lines of careful"
+    },
+    {
+      "id": "513cff6f2767-00507",
+      "kind": "text",
+      "start": 1889.11,
+      "end": 1893.43,
+      "page": null,
+      "section": null,
+      "text": "reasoning that essentially say, given the definition of the"
+    },
+    {
+      "id": "513cff6f2767-00508",
+      "kind": "text",
+      "start": 1893.43,
+      "end": 1898.55,
+      "page": null,
+      "section": null,
+      "text": "peak, that this is going to find a peak in the array"
+    },
+    {
+      "id": "513cff6f2767-00509",
+      "kind": "text",
+      "start": 1898.55,
+      "end": 1900.91,
+      "page": null,
+      "section": null,
+      "text": "that you're given."
+    },
+    {
+      "id": "513cff6f2767-00510",
+      "kind": "text",
+      "start": 1900.91,
+      "end": 1904.95,
+      "page": null,
+      "section": null,
+      "text": "So we all believe that this algorithm is correct."
+    },
+    {
+      "id": "513cff6f2767-00511",
+      "kind": "text",
+      "start": 1904.95,
+      "end": 1908.67,
+      "page": null,
+      "section": null,
+      "text": "Let's talk now about the complexity of this algorithm."
+    },
+    {
+      "id": "513cff6f2767-00512",
+      "kind": "text",
+      "start": 1908.67,
+      "end": 1911.19,
+      "page": null,
+      "section": null,
+      "text": "Because the whole point of this algorithm was because we didn't"
+    },
+    {
+      "id": "513cff6f2767-00513",
+      "kind": "text",
+      "start": 1911.19,
+      "end": 1914.99,
+      "page": null,
+      "section": null,
+      "text": "like this theta n complexity corresponding to the"
+    },
+    {
+      "id": "513cff6f2767-00514",
+      "kind": "text",
+      "start": 1914.99,
+      "end": 1916.35,
+      "page": null,
+      "section": null,
+      "text": "straightforward algorithm."
+    },
+    {
+      "id": "513cff6f2767-00515",
+      "kind": "text",
+      "start": 1916.35,
+      "end": 1928.38,
+      "page": null,
+      "section": null,
+      "text": "So it'd like to do better."
+    },
+    {
+      "id": "513cff6f2767-00516",
+      "kind": "text",
+      "start": 1928.38,
+      "end": 1931.54,
+      "page": null,
+      "section": null,
+      "text": "So what I'd like to do is ask one of you to give me a"
+    },
+    {
+      "id": "513cff6f2767-00517",
+      "kind": "text",
+      "start": 1931.54,
+      "end": 1936.34,
+      "page": null,
+      "section": null,
+      "text": "recurrence relation of the kind t of n equals blah, blah,"
+    },
+    {
+      "id": "513cff6f2767-00518",
+      "kind": "text",
+      "start": 1936.34,
+      "end": 1942.54,
+      "page": null,
+      "section": null,
+      "text": "blah, that would correspond to this recursive algorithm, this"
+    },
+    {
+      "id": "513cff6f2767-00519",
+      "kind": "text",
+      "start": 1942.54,
+      "end": 1944.02,
+      "page": null,
+      "section": null,
+      "text": "divide and concord algorithm."
+    },
+    {
+      "id": "513cff6f2767-00520",
+      "kind": "text",
+      "start": 1944.02,
+      "end": 1949.02,
+      "page": null,
+      "section": null,
+      "text": "And then using that, I'd like to get to the actual complexity"
+    },
+    {
+      "id": "513cff6f2767-00521",
+      "kind": "text",
+      "start": 1949.02,
+      "end": 1951.74,
+      "page": null,
+      "section": null,
+      "text": "in terms of what the theta of complexity"
+    },
+    {
+      "id": "513cff6f2767-00522",
+      "kind": "text",
+      "start": 1951.74,
+      "end": 1953.46,
+      "page": null,
+      "section": null,
+      "text": "corresponds to."
+    },
+    {
+      "id": "513cff6f2767-00523",
+      "kind": "text",
+      "start": 1953.46,
+      "end": 1972.51,
+      "page": null,
+      "section": null,
+      "text": "Yeah, back there."
+    },
+    {
+      "id": "513cff6f2767-00524",
+      "kind": "text",
+      "start": 1972.51,
+      "end": 1973.35,
+      "page": null,
+      "section": null,
+      "text": "Great, exactly right."
+    },
+    {
+      "id": "513cff6f2767-00525",
+      "kind": "text",
+      "start": 1973.35,
+      "end": 1974.43,
+      "page": null,
+      "section": null,
+      "text": "That's exactly right."
+    },
+    {
+      "id": "513cff6f2767-00526",
+      "kind": "text",
+      "start": 1974.43,
+      "end": 1979.07,
+      "page": null,
+      "section": null,
+      "text": "So if you look at this algorithm and you say, from a"
+    },
+    {
+      "id": "513cff6f2767-00527",
+      "kind": "text",
+      "start": 1979.07,
+      "end": 1984.67,
+      "page": null,
+      "section": null,
+      "text": "computation standpoint, can I write an equation corresponding"
+    },
+    {
+      "id": "513cff6f2767-00528",
+      "kind": "text",
+      "start": 1984.67,
+      "end": 1986.55,
+      "page": null,
+      "section": null,
+      "text": "to the execution of this algorithm?"
+    },
+    {
+      "id": "513cff6f2767-00529",
+      "kind": "text",
+      "start": 1986.55,
+      "end": 1991.35,
+      "page": null,
+      "section": null,
+      "text": "And you say t of n is the work that this algorithm does on"
+    },
+    {
+      "id": "513cff6f2767-00530",
+      "kind": "text",
+      "start": 1991.35,
+      "end": 2005.38,
+      "page": null,
+      "section": null,
+      "text": "as input of size n."
+    },
+    {
+      "id": "513cff6f2767-00531",
+      "kind": "text",
+      "start": 2005.38,
+      "end": 2011.26,
+      "page": null,
+      "section": null,
+      "text": "Then I can write this equation."
+    },
+    {
+      "id": "513cff6f2767-00532",
+      "kind": "text",
+      "start": 2011.26,
+      "end": 2014.78,
+      "page": null,
+      "section": null,
+      "text": "And this theta 1 corresponds to the two comparisons that you"
+    },
+    {
+      "id": "513cff6f2767-00533",
+      "kind": "text",
+      "start": 2014.78,
+      "end": 2018.5,
+      "page": null,
+      "section": null,
+      "text": "do, potentially the two comparisons that you do,"
+    },
+    {
+      "id": "513cff6f2767-00534",
+      "kind": "text",
+      "start": 2018.54,
+      "end": 2021.46,
+      "page": null,
+      "section": null,
+      "text": "looking at the left-hand side and the right-hand side."
+    },
+    {
+      "id": "513cff6f2767-00535",
+      "kind": "text",
+      "start": 2021.46,
+      "end": 2025.26,
+      "page": null,
+      "section": null,
+      "text": "So 2 is a constant, so that's why we put theta 1."
+    },
+    {
+      "id": "513cff6f2767-00536",
+      "kind": "text",
+      "start": 2025.26,
+      "end": 2027.06,
+      "page": null,
+      "section": null,
+      "text": "So you get a cushion 2."
+    },
+    {
+      "id": "513cff6f2767-00537",
+      "kind": "text",
+      "start": 2027.06,
+      "end": 2029.66,
+      "page": null,
+      "section": null,
+      "text": "Watch out, guys."
+    },
+    {
+      "id": "513cff6f2767-00538",
+      "kind": "text",
+      "start": 2029.66,
+      "end": 2034.06,
+      "page": null,
+      "section": null,
+      "text": "Whoa, actually, that wasn't so bad."
+    },
+    {
+      "id": "513cff6f2767-00539",
+      "kind": "text",
+      "start": 2034.06,
+      "end": 2037.42,
+      "page": null,
+      "section": null,
+      "text": "Vier's left, Eric, Vier's left."
+    },
+    {
+      "id": "513cff6f2767-00540",
+      "kind": "text",
+      "start": 2037.42,
+      "end": 2043.38,
+      "page": null,
+      "section": null,
+      "text": "So if you take this and you start expanding it,"
+    },
+    {
+      "id": "513cff6f2767-00541",
+      "kind": "text",
+      "start": 2043.38,
+      "end": 2046.54,
+      "page": null,
+      "section": null,
+      "text": "eventually you're going to get to the base case, which"
+    },
+    {
+      "id": "513cff6f2767-00542",
+      "kind": "text",
+      "start": 2046.54,
+      "end": 2052.59,
+      "page": null,
+      "section": null,
+      "text": "is t of 1 is theta 1."
+    },
+    {
+      "id": "513cff6f2767-00543",
+      "kind": "text",
+      "start": 2052.59,
+      "end": 2056.87,
+      "page": null,
+      "section": null,
+      "text": "Because you have a one element array, for that array you're"
+    },
+    {
+      "id": "513cff6f2767-00544",
+      "kind": "text",
+      "start": 2056.87,
+      "end": 2059.67,
+      "page": null,
+      "section": null,
+      "text": "just going to return that as a peak."
+    },
+    {
+      "id": "513cff6f2767-00545",
+      "kind": "text",
+      "start": 2059.67,
+      "end": 2063.15,
+      "page": null,
+      "section": null,
+      "text": "And so if you do that and you expand it all the way out,"
+    },
+    {
+      "id": "513cff6f2767-00546",
+      "kind": "text",
+      "start": 2063.15,
+      "end": 2071.07,
+      "page": null,
+      "section": null,
+      "text": "then you can write t of n equals theta 1 plus theta 1."
+    },
+    {
+      "id": "513cff6f2767-00547",
+      "kind": "text",
+      "start": 2071.07,
+      "end": 2079.31,
+      "page": null,
+      "section": null,
+      "text": "And you're going to do this log to the base 2 of n times."
+    },
+    {
+      "id": "513cff6f2767-00548",
+      "kind": "text",
+      "start": 2079.31,
+      "end": 2088.34,
+      "page": null,
+      "section": null,
+      "text": "And adding these all up gives you a complexity theta log 2 of n."
+    },
+    {
+      "id": "513cff6f2767-00549",
+      "kind": "text",
+      "start": 2088.34,
+      "end": 2093.14,
+      "page": null,
+      "section": null,
+      "text": "So now you compare this with that."
+    },
+    {
+      "id": "513cff6f2767-00550",
+      "kind": "text",
+      "start": 2093.14,
+      "end": 2094.62,
+      "page": null,
+      "section": null,
+      "text": "And there's really a huge difference."
+    },
+    {
+      "id": "513cff6f2767-00551",
+      "kind": "text",
+      "start": 2094.62,
+      "end": 2097.46,
+      "page": null,
+      "section": null,
+      "text": "There's an exponential difference."
+    },
+    {
+      "id": "513cff6f2767-00552",
+      "kind": "text",
+      "start": 2097.46,
+      "end": 2101.86,
+      "page": null,
+      "section": null,
+      "text": "If you coded up this algorithm in Python,"
+    },
+    {
+      "id": "513cff6f2767-00553",
+      "kind": "text",
+      "start": 2101.86,
+      "end": 2106.18,
+      "page": null,
+      "section": null,
+      "text": "and I did both these algorithms for the 1D version,"
+    },
+    {
+      "id": "513cff6f2767-00554",
+      "kind": "text",
+      "start": 2106.18,
+      "end": 2114.18,
+      "page": null,
+      "section": null,
+      "text": "and if you run it on n being 10 million or so,"
+    },
+    {
+      "id": "513cff6f2767-00555",
+      "kind": "text",
+      "start": 2114.18,
+      "end": 2118.26,
+      "page": null,
+      "section": null,
+      "text": "then this algorithm takes 13 seconds."
+    },
+    {
+      "id": "513cff6f2767-00556",
+      "kind": "text",
+      "start": 2118.26,
+      "end": 2121.9,
+      "page": null,
+      "section": null,
+      "text": "The theta n algorithm takes 13 seconds."
+    },
+    {
+      "id": "513cff6f2767-00557",
+      "kind": "text",
+      "start": 2121.9,
+      "end": 2126.58,
+      "page": null,
+      "section": null,
+      "text": "And this one takes 0.001 seconds."
+    },
+    {
+      "id": "513cff6f2767-00558",
+      "kind": "text",
+      "start": 2126.58,
+      "end": 2128.14,
+      "page": null,
+      "section": null,
+      "text": "Huge difference."
+    },
+    {
+      "id": "513cff6f2767-00559",
+      "kind": "text",
+      "start": 2128.14,
+      "end": 2131.82,
+      "page": null,
+      "section": null,
+      "text": "So there is a big difference between theta n and theta log n."
+    },
+    {
+      "id": "513cff6f2767-00560",
+      "kind": "text",
+      "start": 2131.82,
+      "end": 2135.86,
+      "page": null,
+      "section": null,
+      "text": "It's literally the difference between 2 raised to n and n."
+    },
+    {
+      "id": "513cff6f2767-00561",
+      "kind": "text",
+      "start": 2135.86,
+      "end": 2141.9,
+      "page": null,
+      "section": null,
+      "text": "It makes sense to try and reduce complexity, as you can see,"
+    },
+    {
+      "id": "513cff6f2767-00562",
+      "kind": "text",
+      "start": 2141.9,
+      "end": 2145.42,
+      "page": null,
+      "section": null,
+      "text": "especially if you're talking about large inputs."
+    },
+    {
+      "id": "513cff6f2767-00563",
+      "kind": "text",
+      "start": 2145.42,
+      "end": 2149.9,
+      "page": null,
+      "section": null,
+      "text": "And you'll see that more clearly as we go to a 2D version"
+    },
+    {
+      "id": "513cff6f2767-00564",
+      "kind": "text",
+      "start": 2149.9,
+      "end": 2152.22,
+      "page": null,
+      "section": null,
+      "text": "of this problem."
+    },
+    {
+      "id": "513cff6f2767-00565",
+      "kind": "text",
+      "start": 2152.22,
+      "end": 2153.9,
+      "page": null,
+      "section": null,
+      "text": "So you can't really do better for the 1D."
+    },
+    {
+      "id": "513cff6f2767-00566",
+      "kind": "text",
+      "start": 2153.9,
+      "end": 2156.74,
+      "page": null,
+      "section": null,
+      "text": "The 1D is a straightforward problem."
+    },
+    {
+      "id": "513cff6f2767-00567",
+      "kind": "text",
+      "start": 2156.74,
+      "end": 2158.5,
+      "page": null,
+      "section": null,
+      "text": "It gets a little more interesting."
+    },
+    {
+      "id": "513cff6f2767-00568",
+      "kind": "text",
+      "start": 2158.5,
+      "end": 2163.62,
+      "page": null,
+      "section": null,
+      "text": "The problems get a little more sophisticated"
+    },
+    {
+      "id": "513cff6f2767-00569",
+      "kind": "text",
+      "start": 2163.66,
+      "end": 2168.34,
+      "page": null,
+      "section": null,
+      "text": "when we look at a 2D version of peak finding."
+    },
+    {
+      "id": "513cff6f2767-00570",
+      "kind": "text",
+      "start": 2168.34,
+      "end": 2175.82,
+      "page": null,
+      "section": null,
+      "text": "So let's talk about the 2D version."
+    },
+    {
+      "id": "513cff6f2767-00571",
+      "kind": "text",
+      "start": 2175.82,
+      "end": 2178.26,
+      "page": null,
+      "section": null,
+      "text": "So as you can imagine, in the 2D version,"
+    },
+    {
+      "id": "513cff6f2767-00572",
+      "kind": "text",
+      "start": 2178.26,
+      "end": 2183.52,
+      "page": null,
+      "section": null,
+      "text": "you have a matrix or a two-dimensional array."
+    },
+    {
+      "id": "513cff6f2767-00573",
+      "kind": "text",
+      "start": 2183.52,
+      "end": 2194.72,
+      "page": null,
+      "section": null,
+      "text": "And we'll say this thing has n rows and m columns."
+    },
+    {
+      "id": "513cff6f2767-00574",
+      "kind": "text",
+      "start": 2194.72,
+      "end": 2197.24,
+      "page": null,
+      "section": null,
+      "text": "And now we have to define what a peak is."
+    },
+    {
+      "id": "513cff6f2767-00575",
+      "kind": "text",
+      "start": 2197.24,
+      "end": 2198.4,
+      "page": null,
+      "section": null,
+      "text": "And it's a hill."
+    },
+    {
+      "id": "513cff6f2767-00576",
+      "kind": "text",
+      "start": 2198.4,
+      "end": 2201.56,
+      "page": null,
+      "section": null,
+      "text": "It's the obvious definition of a peak."
+    },
+    {
+      "id": "513cff6f2767-00577",
+      "kind": "text",
+      "start": 2201.56,
+      "end": 2213.44,
+      "page": null,
+      "section": null,
+      "text": "So if you had a in here, c, b, d, e, then as you can guess,"
+    },
+    {
+      "id": "513cff6f2767-00578",
+      "kind": "text",
+      "start": 2213.44,
+      "end": 2222.74,
+      "page": null,
+      "section": null,
+      "text": "a is a 2D peak if and only if a greater"
+    },
+    {
+      "id": "513cff6f2767-00579",
+      "kind": "text",
+      "start": 2222.74,
+      "end": 2230.58,
+      "page": null,
+      "section": null,
+      "text": "than or equal to b, a greater than or equal to d, c, and e."
+    },
+    {
+      "id": "513cff6f2767-00580",
+      "kind": "text",
+      "start": 2230.58,
+      "end": 2232.74,
+      "page": null,
+      "section": null,
+      "text": "So it's a little hill up there."
+    },
+    {
+      "id": "513cff6f2767-00581",
+      "kind": "text",
+      "start": 2232.76,
+      "end": 2235.14,
+      "page": null,
+      "section": null,
+      "text": "And again, I've used the greater than or equal to here."
+    },
+    {
+      "id": "513cff6f2767-00582",
+      "kind": "text",
+      "start": 2235.14,
+      "end": 2238.5,
+      "page": null,
+      "section": null,
+      "text": "So that's similar to the 1D in the case"
+    },
+    {
+      "id": "513cff6f2767-00583",
+      "kind": "text",
+      "start": 2238.5,
+      "end": 2243.99,
+      "page": null,
+      "section": null,
+      "text": "that you'll always find a peak in any 2D matrix."
+    },
+    {
+      "id": "513cff6f2767-00584",
+      "kind": "text",
+      "start": 2243.99,
+      "end": 2249.23,
+      "page": null,
+      "section": null,
+      "text": "Now, again, I'll give you the straightforward algorithm."
+    },
+    {
+      "id": "513cff6f2767-00585",
+      "kind": "text",
+      "start": 2249.23,
+      "end": 2261.7,
+      "page": null,
+      "section": null,
+      "text": "And we'll call it the greedy ascent algorithm."
+    },
+    {
+      "id": "513cff6f2767-00586",
+      "kind": "text",
+      "start": 2261.7,
+      "end": 2263.74,
+      "page": null,
+      "section": null,
+      "text": "And the greedy ascent algorithm essentially"
+    },
+    {
+      "id": "513cff6f2767-00587",
+      "kind": "text",
+      "start": 2263.74,
+      "end": 2270.14,
+      "page": null,
+      "section": null,
+      "text": "picks the direction and tries to follow that direction"
+    },
+    {
+      "id": "513cff6f2767-00588",
+      "kind": "text",
+      "start": 2270.14,
+      "end": 2272.78,
+      "page": null,
+      "section": null,
+      "text": "in order to find a peak."
+    },
+    {
+      "id": "513cff6f2767-00589",
+      "kind": "text",
+      "start": 2272.82,
+      "end": 2283.06,
+      "page": null,
+      "section": null,
+      "text": "So for example, if I had this particular matrix,"
+    },
+    {
+      "id": "513cff6f2767-00590",
+      "kind": "text",
+      "start": 2283.06,
+      "end": 2297.02,
+      "page": null,
+      "section": null,
+      "text": "14, 13, 12, 15, 9, 11."
+    },
+    {
+      "id": "513cff6f2767-00591",
+      "kind": "text",
+      "start": 2297.02,
+      "end": 2299.18,
+      "page": null,
+      "section": null,
+      "text": "Then what might happen is if I started"
+    },
+    {
+      "id": "513cff6f2767-00592",
+      "kind": "text",
+      "start": 2299.18,
+      "end": 2303.38,
+      "page": null,
+      "section": null,
+      "text": "at some arbitrary midpoint, so the greedy ascent algorithm"
+    },
+    {
+      "id": "513cff6f2767-00593",
+      "kind": "text",
+      "start": 2303.38,
+      "end": 2306.18,
+      "page": null,
+      "section": null,
+      "text": "has to make choices as to where to start."
+    },
+    {
+      "id": "513cff6f2767-00594",
+      "kind": "text",
+      "start": 2306.18,
+      "end": 2309.22,
+      "page": null,
+      "section": null,
+      "text": "Just like we had different cases here,"
+    },
+    {
+      "id": "513cff6f2767-00595",
+      "kind": "text",
+      "start": 2309.22,
+      "end": 2311.1,
+      "page": null,
+      "section": null,
+      "text": "you have to make a choice as to where to start."
+    },
+    {
+      "id": "513cff6f2767-00596",
+      "kind": "text",
+      "start": 2311.1,
+      "end": 2312.82,
+      "page": null,
+      "section": null,
+      "text": "You might want to start in the middle."
+    },
+    {
+      "id": "513cff6f2767-00597",
+      "kind": "text",
+      "start": 2312.82,
+      "end": 2316.26,
+      "page": null,
+      "section": null,
+      "text": "And you might want to work your way left first."
+    },
+    {
+      "id": "513cff6f2767-00598",
+      "kind": "text",
+      "start": 2316.26,
+      "end": 2319.74,
+      "page": null,
+      "section": null,
+      "text": "You just keep going left or keep going right."
+    },
+    {
+      "id": "513cff6f2767-00599",
+      "kind": "text",
+      "start": 2319.74,
+      "end": 2322.34,
+      "page": null,
+      "section": null,
+      "text": "And if you hit an edge, you go down."
+    },
+    {
+      "id": "513cff6f2767-00600",
+      "kind": "text",
+      "start": 2322.34,
+      "end": 2324.18,
+      "page": null,
+      "section": null,
+      "text": "So you make some choices as to what"
+    },
+    {
+      "id": "513cff6f2767-00601",
+      "kind": "text",
+      "start": 2324.18,
+      "end": 2327.9,
+      "page": null,
+      "section": null,
+      "text": "the default traversal directions are."
+    },
+    {
+      "id": "513cff6f2767-00602",
+      "kind": "text",
+      "start": 2327.9,
+      "end": 2330.9,
+      "page": null,
+      "section": null,
+      "text": "And so if you say you want to start with 12,"
+    },
+    {
+      "id": "513cff6f2767-00603",
+      "kind": "text",
+      "start": 2330.9,
+      "end": 2334.06,
+      "page": null,
+      "section": null,
+      "text": "you're going to go look for something to your left."
+    },
+    {
+      "id": "513cff6f2767-00604",
+      "kind": "text",
+      "start": 2334.06,
+      "end": 2336.98,
+      "page": null,
+      "section": null,
+      "text": "And if it's greater, then you're"
+    },
+    {
+      "id": "513cff6f2767-00605",
+      "kind": "text",
+      "start": 2336.98,
+      "end": 2338.5,
+      "page": null,
+      "section": null,
+      "text": "going to follow that direction."
+    },
+    {
+      "id": "513cff6f2767-00606",
+      "kind": "text",
+      "start": 2338.5,
+      "end": 2343.54,
+      "page": null,
+      "section": null,
+      "text": "If it's less, then you're going to go in the other direction"
+    },
+    {
+      "id": "513cff6f2767-00607",
+      "kind": "text",
+      "start": 2343.54,
+      "end": 2345.06,
+      "page": null,
+      "section": null,
+      "text": "in this case, for example."
+    },
+    {
+      "id": "513cff6f2767-00608",
+      "kind": "text",
+      "start": 2345.06,
+      "end": 2354.26,
+      "page": null,
+      "section": null,
+      "text": "So in this case, you'll go 12, 13, 14, 15, 16, 17, 19, and 20."
+    },
+    {
+      "id": "513cff6f2767-00609",
+      "kind": "text",
+      "start": 2354.26,
+      "end": 2357.9,
+      "page": null,
+      "section": null,
+      "text": "And you'd find this peak."
+    },
+    {
+      "id": "513cff6f2767-00610",
+      "kind": "text",
+      "start": 2357.9,
+      "end": 2361.7,
+      "page": null,
+      "section": null,
+      "text": "Now, I haven't given you the specific details"
+    },
+    {
+      "id": "513cff6f2767-00611",
+      "kind": "text",
+      "start": 2361.7,
+      "end": 2363.74,
+      "page": null,
+      "section": null,
+      "text": "of a greedy ascent algorithm."
+    },
+    {
+      "id": "513cff6f2767-00612",
+      "kind": "text",
+      "start": 2363.74,
+      "end": 2373.79,
+      "page": null,
+      "section": null,
+      "text": "But I think if you look at the worst case possibilities here"
+    },
+    {
+      "id": "513cff6f2767-00613",
+      "kind": "text",
+      "start": 2373.79,
+      "end": 2378.07,
+      "page": null,
+      "section": null,
+      "text": "with respect to a given matrix and for any given starting"
+    },
+    {
+      "id": "513cff6f2767-00614",
+      "kind": "text",
+      "start": 2378.07,
+      "end": 2382.47,
+      "page": null,
+      "section": null,
+      "text": "point and for any given strategy in terms of choosing"
+    },
+    {
+      "id": "513cff6f2767-00615",
+      "kind": "text",
+      "start": 2382.47,
+      "end": 2388.63,
+      "page": null,
+      "section": null,
+      "text": "left first versus right first or down first versus up first,"
+    },
+    {
+      "id": "513cff6f2767-00616",
+      "kind": "text",
+      "start": 2388.63,
+      "end": 2391.91,
+      "page": null,
+      "section": null,
+      "text": "you will have a situation where just like we"
+    },
+    {
+      "id": "513cff6f2767-00617",
+      "kind": "text",
+      "start": 2391.91,
+      "end": 2395.43,
+      "page": null,
+      "section": null,
+      "text": "had in the 1D case, you may end up"
+    },
+    {
+      "id": "513cff6f2767-00618",
+      "kind": "text",
+      "start": 2395.43,
+      "end": 2402.75,
+      "page": null,
+      "section": null,
+      "text": "touching a large fraction of the elements in the 2D array."
+    },
+    {
+      "id": "513cff6f2767-00619",
+      "kind": "text",
+      "start": 2402.75,
+      "end": 2405.47,
+      "page": null,
+      "section": null,
+      "text": "So in this case, we ended up touching"
+    },
+    {
+      "id": "513cff6f2767-00620",
+      "kind": "text",
+      "start": 2405.47,
+      "end": 2406.87,
+      "page": null,
+      "section": null,
+      "text": "a bunch of different elements."
+    },
+    {
+      "id": "513cff6f2767-00621",
+      "kind": "text",
+      "start": 2406.87,
+      "end": 2409.55,
+      "page": null,
+      "section": null,
+      "text": "And it's quite possible that you"
+    },
+    {
+      "id": "513cff6f2767-00622",
+      "kind": "text",
+      "start": 2409.55,
+      "end": 2411.71,
+      "page": null,
+      "section": null,
+      "text": "could end up starting from the midpoint."
+    },
+    {
+      "id": "513cff6f2767-00623",
+      "kind": "text",
+      "start": 2411.71,
+      "end": 2413.79,
+      "page": null,
+      "section": null,
+      "text": "You could end up touching half the elements."
+    },
+    {
+      "id": "513cff6f2767-00624",
+      "kind": "text",
+      "start": 2413.79,
+      "end": 2416.91,
+      "page": null,
+      "section": null,
+      "text": "And in some cases, touching all of the elements."
+    },
+    {
+      "id": "513cff6f2767-00625",
+      "kind": "text",
+      "start": 2416.91,
+      "end": 2422.99,
+      "page": null,
+      "section": null,
+      "text": "So if you do a worst case analysis of this algorithm,"
+    },
+    {
+      "id": "513cff6f2767-00626",
+      "kind": "text",
+      "start": 2422.99,
+      "end": 2425.11,
+      "page": null,
+      "section": null,
+      "text": "a particular algorithm with particular choices"
+    },
+    {
+      "id": "513cff6f2767-00627",
+      "kind": "text",
+      "start": 2425.11,
+      "end": 2430.39,
+      "page": null,
+      "section": null,
+      "text": "in terms of the starting point and the direction of search,"
+    },
+    {
+      "id": "513cff6f2767-00628",
+      "kind": "text",
+      "start": 2430.39,
+      "end": 2434.35,
+      "page": null,
+      "section": null,
+      "text": "a greedy ascent algorithm would have theta nm complexity."
+    },
+    {
+      "id": "513cff6f2767-00629",
+      "kind": "text",
+      "start": 2434.35,
+      "end": 2442.51,
+      "page": null,
+      "section": null,
+      "text": "And in the case where n equals m or m equals n,"
+    },
+    {
+      "id": "513cff6f2767-00630",
+      "kind": "text",
+      "start": 2442.51,
+      "end": 2446.31,
+      "page": null,
+      "section": null,
+      "text": "you'd have theta n squared complexity."
+    },
+    {
+      "id": "513cff6f2767-00631",
+      "kind": "text",
+      "start": 2446.31,
+      "end": 2448.43,
+      "page": null,
+      "section": null,
+      "text": "I want to spend very much time on this"
+    },
+    {
+      "id": "513cff6f2767-00632",
+      "kind": "text",
+      "start": 2448.43,
+      "end": 2452.75,
+      "page": null,
+      "section": null,
+      "text": "because I want to talk to you about the divide and conquer"
+    },
+    {
+      "id": "513cff6f2767-00633",
+      "kind": "text",
+      "start": 2452.75,
+      "end": 2457.99,
+      "page": null,
+      "section": null,
+      "text": "versions of this algorithm for the 2D peak."
+    },
+    {
+      "id": "513cff6f2767-00634",
+      "kind": "text",
+      "start": 2457.99,
+      "end": 2460.83,
+      "page": null,
+      "section": null,
+      "text": "But hopefully, you're all with me with respect"
+    },
+    {
+      "id": "513cff6f2767-00635",
+      "kind": "text",
+      "start": 2460.83,
+      "end": 2463.55,
+      "page": null,
+      "section": null,
+      "text": "to what the worst case complexity is."
+    },
+    {
+      "id": "513cff6f2767-00636",
+      "kind": "text",
+      "start": 2463.55,
+      "end": 2464.99,
+      "page": null,
+      "section": null,
+      "text": "All right?"
+    },
+    {
+      "id": "513cff6f2767-00637",
+      "kind": "text",
+      "start": 2464.99,
+      "end": 2466.23,
+      "page": null,
+      "section": null,
+      "text": "People buy that?"
+    },
+    {
+      "id": "513cff6f2767-00638",
+      "kind": "text",
+      "start": 2466.23,
+      "end": 2467.35,
+      "page": null,
+      "section": null,
+      "text": "Yeah, question back there."
+    },
+    {
+      "id": "513cff6f2767-00639",
+      "kind": "text",
+      "start": 2467.35,
+      "end": 2474.65,
+      "page": null,
+      "section": null,
+      "text": "Can you use that?"
+    },
+    {
+      "id": "513cff6f2767-00640",
+      "kind": "text",
+      "start": 2474.65,
+      "end": 2478.81,
+      "page": null,
+      "section": null,
+      "text": "So there are specific greedy ascent algorithms"
+    },
+    {
+      "id": "513cff6f2767-00641",
+      "kind": "text",
+      "start": 2478.81,
+      "end": 2481.69,
+      "page": null,
+      "section": null,
+      "text": "and specific matrices where if I give you"
+    },
+    {
+      "id": "513cff6f2767-00642",
+      "kind": "text",
+      "start": 2481.69,
+      "end": 2484.69,
+      "page": null,
+      "section": null,
+      "text": "the code for the algorithm and I give you a specific matrix"
+    },
+    {
+      "id": "513cff6f2767-00643",
+      "kind": "text",
+      "start": 2484.69,
+      "end": 2488.21,
+      "page": null,
+      "section": null,
+      "text": "that I could make you touch all of these elements."
+    },
+    {
+      "id": "513cff6f2767-00644",
+      "kind": "text",
+      "start": 2488.21,
+      "end": 2488.89,
+      "page": null,
+      "section": null,
+      "text": "That's correct."
+    },
+    {
+      "id": "513cff6f2767-00645",
+      "kind": "text",
+      "start": 2488.89,
+      "end": 2490.61,
+      "page": null,
+      "section": null,
+      "text": "So if you're talking about worst case,"
+    },
+    {
+      "id": "513cff6f2767-00646",
+      "kind": "text",
+      "start": 2490.61,
+      "end": 2493.09,
+      "page": null,
+      "section": null,
+      "text": "you're being very paranoid when you talk about worst case"
+    },
+    {
+      "id": "513cff6f2767-00647",
+      "kind": "text",
+      "start": 2493.09,
+      "end": 2494.53,
+      "page": null,
+      "section": null,
+      "text": "complexity."
+    },
+    {
+      "id": "513cff6f2767-00648",
+      "kind": "text",
+      "start": 2494.53,
+      "end": 2499.09,
+      "page": null,
+      "section": null,
+      "text": "And so I'm hand waving a bit here simply"
+    },
+    {
+      "id": "513cff6f2767-00649",
+      "kind": "text",
+      "start": 2499.09,
+      "end": 2501.17,
+      "page": null,
+      "section": null,
+      "text": "because I haven't given you the specifics"
+    },
+    {
+      "id": "513cff6f2767-00650",
+      "kind": "text",
+      "start": 2501.17,
+      "end": 2502.41,
+      "page": null,
+      "section": null,
+      "text": "of the algorithm yet."
+    },
+    {
+      "id": "513cff6f2767-00651",
+      "kind": "text",
+      "start": 2502.41,
+      "end": 2504.69,
+      "page": null,
+      "section": null,
+      "text": "This is really a set of algorithms"
+    },
+    {
+      "id": "513cff6f2767-00652",
+      "kind": "text",
+      "start": 2504.69,
+      "end": 2506.09,
+      "page": null,
+      "section": null,
+      "text": "because I haven't given you the code."
+    },
+    {
+      "id": "513cff6f2767-00653",
+      "kind": "text",
+      "start": 2506.09,
+      "end": 2507.65,
+      "page": null,
+      "section": null,
+      "text": "I haven't told you where it starts"
+    },
+    {
+      "id": "513cff6f2767-00654",
+      "kind": "text",
+      "start": 2507.65,
+      "end": 2509.05,
+      "page": null,
+      "section": null,
+      "text": "and which direction it goes."
+    },
+    {
+      "id": "513cff6f2767-00655",
+      "kind": "text",
+      "start": 2509.05,
+      "end": 2511.57,
+      "page": null,
+      "section": null,
+      "text": "But you go do that, fix it."
+    },
+    {
+      "id": "513cff6f2767-00656",
+      "kind": "text",
+      "start": 2511.57,
+      "end": 2513.61,
+      "page": null,
+      "section": null,
+      "text": "And I would be the person who tries"
+    },
+    {
+      "id": "513cff6f2767-00657",
+      "kind": "text",
+      "start": 2513.61,
+      "end": 2515.37,
+      "page": null,
+      "section": null,
+      "text": "to find the worst case complexity."
+    },
+    {
+      "id": "513cff6f2767-00658",
+      "kind": "text",
+      "start": 2515.37,
+      "end": 2518.09,
+      "page": null,
+      "section": null,
+      "text": "Certainly, it's very easy to get to theta"
+    },
+    {
+      "id": "513cff6f2767-00659",
+      "kind": "text",
+      "start": 2518.09,
+      "end": 2523.17,
+      "page": null,
+      "section": null,
+      "text": "and m in terms of having some constant multiplying n times m."
+    },
+    {
+      "id": "513cff6f2767-00660",
+      "kind": "text",
+      "start": 2523.17,
+      "end": 2527.41,
+      "page": null,
+      "section": null,
+      "text": "But you can definitely get to that constant being very"
+    },
+    {
+      "id": "513cff6f2767-00661",
+      "kind": "text",
+      "start": 2527.41,
+      "end": 2531.37,
+      "page": null,
+      "section": null,
+      "text": "close to 1, if not 1."
+    },
+    {
+      "id": "513cff6f2767-00662",
+      "kind": "text",
+      "start": 2531.37,
+      "end": 2532.21,
+      "page": null,
+      "section": null,
+      "text": "All right."
+    },
+    {
+      "id": "513cff6f2767-00663",
+      "kind": "text",
+      "start": 2532.21,
+      "end": 2535.77,
+      "page": null,
+      "section": null,
+      "text": "So let's talk about divide and conquer."
+    },
+    {
+      "id": "513cff6f2767-00664",
+      "kind": "text",
+      "start": 2535.77,
+      "end": 2539.21,
+      "page": null,
+      "section": null,
+      "text": "Let's say that I did something like this"
+    },
+    {
+      "id": "513cff6f2767-00665",
+      "kind": "text",
+      "start": 2539.21,
+      "end": 2544.25,
+      "page": null,
+      "section": null,
+      "text": "where I just tried to jam the binary search algorithm"
+    },
+    {
+      "id": "513cff6f2767-00666",
+      "kind": "text",
+      "start": 2544.25,
+      "end": 2557.74,
+      "page": null,
+      "section": null,
+      "text": "into the 2D version."
+    },
+    {
+      "id": "513cff6f2767-00667",
+      "kind": "text",
+      "start": 2557.74,
+      "end": 2564.06,
+      "page": null,
+      "section": null,
+      "text": "So what I'm going to do is I'm going"
+    },
+    {
+      "id": "513cff6f2767-00668",
+      "kind": "text",
+      "start": 2564.06,
+      "end": 2575.38,
+      "page": null,
+      "section": null,
+      "text": "to pick the middle column, j equals m over 2."
+    },
+    {
+      "id": "513cff6f2767-00669",
+      "kind": "text",
+      "start": 2575.38,
+      "end": 2581.42,
+      "page": null,
+      "section": null,
+      "text": "And I'm going to find a 1D peak using whatever algorithm I"
+    },
+    {
+      "id": "513cff6f2767-00670",
+      "kind": "text",
+      "start": 2581.42,
+      "end": 2581.82,
+      "page": null,
+      "section": null,
+      "text": "want."
+    },
+    {
+      "id": "513cff6f2767-00671",
+      "kind": "text",
+      "start": 2581.82,
+      "end": 2584.78,
+      "page": null,
+      "section": null,
+      "text": "And I'll probably end up using the more efficient algorithm"
+    },
+    {
+      "id": "513cff6f2767-00672",
+      "kind": "text",
+      "start": 2584.78,
+      "end": 2588.18,
+      "page": null,
+      "section": null,
+      "text": "the binary search version that's gone all the way"
+    },
+    {
+      "id": "513cff6f2767-00673",
+      "kind": "text",
+      "start": 2588.18,
+      "end": 2590.46,
+      "page": null,
+      "section": null,
+      "text": "to the left of the board there."
+    },
+    {
+      "id": "513cff6f2767-00674",
+      "kind": "text",
+      "start": 2590.46,
+      "end": 2593.94,
+      "page": null,
+      "section": null,
+      "text": "And let's say I find a binary peak at i, j."
+    },
+    {
+      "id": "513cff6f2767-00675",
+      "kind": "text",
+      "start": 2593.94,
+      "end": 2600.25,
+      "page": null,
+      "section": null,
+      "text": "Because I've picked a column and I'm just finding a 1D peak."
+    },
+    {
+      "id": "513cff6f2767-00676",
+      "kind": "text",
+      "start": 2600.25,
+      "end": 2603.49,
+      "page": null,
+      "section": null,
+      "text": "So this is j equals m over 2."
+    },
+    {
+      "id": "513cff6f2767-00677",
+      "kind": "text",
+      "start": 2603.49,
+      "end": 2605.69,
+      "page": null,
+      "section": null,
+      "text": "That's i."
+    },
+    {
+      "id": "513cff6f2767-00678",
+      "kind": "text",
+      "start": 2605.69,
+      "end": 2618.7,
+      "page": null,
+      "section": null,
+      "text": "Now, I use i, j in particular wrote i as a start"
+    },
+    {
+      "id": "513cff6f2767-00679",
+      "kind": "text",
+      "start": 2618.7,
+      "end": 2627.49,
+      "page": null,
+      "section": null,
+      "text": "to find a 1D peak on row i."
+    },
+    {
+      "id": "513cff6f2767-00680",
+      "kind": "text",
+      "start": 2627.49,
+      "end": 2630.57,
+      "page": null,
+      "section": null,
+      "text": "And I stand up here and I'm really happy,"
+    },
+    {
+      "id": "513cff6f2767-00681",
+      "kind": "text",
+      "start": 2630.57,
+      "end": 2635.29,
+      "page": null,
+      "section": null,
+      "text": "because I say, wow, I picked a middle column."
+    },
+    {
+      "id": "513cff6f2767-00682",
+      "kind": "text",
+      "start": 2635.29,
+      "end": 2636.85,
+      "page": null,
+      "section": null,
+      "text": "I found a 1D peak."
+    },
+    {
+      "id": "513cff6f2767-00683",
+      "kind": "text",
+      "start": 2636.85,
+      "end": 2641.37,
+      "page": null,
+      "section": null,
+      "text": "That is theta n complexity to find a 1D peak, as we argued."
+    },
+    {
+      "id": "513cff6f2767-00684",
+      "kind": "text",
+      "start": 2641.37,
+      "end": 2652.41,
+      "page": null,
+      "section": null,
+      "text": "And one side, the theta m is log n complexity."
+    },
+    {
+      "id": "513cff6f2767-00685",
+      "kind": "text",
+      "start": 2652.41,
+      "end": 2653.49,
+      "page": null,
+      "section": null,
+      "text": "That's what this was."
+    },
+    {
+      "id": "513cff6f2767-00686",
+      "kind": "text",
+      "start": 2653.49,
+      "end": 2655.25,
+      "page": null,
+      "section": null,
+      "text": "Better have that here."
+    },
+    {
+      "id": "513cff6f2767-00687",
+      "kind": "text",
+      "start": 2655.25,
+      "end": 2656.45,
+      "page": null,
+      "section": null,
+      "text": "Yeah, log n complexity."
+    },
+    {
+      "id": "513cff6f2767-00688",
+      "kind": "text",
+      "start": 2656.45,
+      "end": 2658.05,
+      "page": null,
+      "section": null,
+      "text": "Thanks, Eric."
+    },
+    {
+      "id": "513cff6f2767-00689",
+      "kind": "text",
+      "start": 2658.05,
+      "end": 2666.13,
+      "page": null,
+      "section": null,
+      "text": "And then, once I do that, I can find a 1D peak on row i."
+    },
+    {
+      "id": "513cff6f2767-00690",
+      "kind": "text",
+      "start": 2666.13,
+      "end": 2668.77,
+      "page": null,
+      "section": null,
+      "text": "In this case, the row i would be m-wide."
+    },
+    {
+      "id": "513cff6f2767-00691",
+      "kind": "text",
+      "start": 2668.77,
+      "end": 2670.65,
+      "page": null,
+      "section": null,
+      "text": "So it'd be log m complexity."
+    },
+    {
+      "id": "513cff6f2767-00692",
+      "kind": "text",
+      "start": 2670.65,
+      "end": 2673.85,
+      "page": null,
+      "section": null,
+      "text": "If n equals m, then I have a couple of steps of log n."
+    },
+    {
+      "id": "513cff6f2767-00693",
+      "kind": "text",
+      "start": 2673.85,
+      "end": 2676.05,
+      "page": null,
+      "section": null,
+      "text": "And I'm done, right?"
+    },
+    {
+      "id": "513cff6f2767-00694",
+      "kind": "text",
+      "start": 2676.05,
+      "end": 2678.33,
+      "page": null,
+      "section": null,
+      "text": "Am I done?"
+    },
+    {
+      "id": "513cff6f2767-00695",
+      "kind": "text",
+      "start": 2678.33,
+      "end": 2679.49,
+      "page": null,
+      "section": null,
+      "text": "No."
+    },
+    {
+      "id": "513cff6f2767-00696",
+      "kind": "text",
+      "start": 2679.49,
+      "end": 2683.29,
+      "page": null,
+      "section": null,
+      "text": "Can someone tell me why I'm not done precisely?"
+    },
+    {
+      "id": "513cff6f2767-00697",
+      "kind": "text",
+      "start": 2694.29,
+      "end": 2696.21,
+      "page": null,
+      "section": null,
+      "text": "That's exactly correct."
+    },
+    {
+      "id": "513cff6f2767-00698",
+      "kind": "text",
+      "start": 2696.21,
+      "end": 2699.81,
+      "page": null,
+      "section": null,
+      "text": "So this algorithm is incorrect."
+    },
+    {
+      "id": "513cff6f2767-00699",
+      "kind": "text",
+      "start": 2699.81,
+      "end": 2701.45,
+      "page": null,
+      "section": null,
+      "text": "It doesn't work."
+    },
+    {
+      "id": "513cff6f2767-00700",
+      "kind": "text",
+      "start": 2701.45,
+      "end": 2703.73,
+      "page": null,
+      "section": null,
+      "text": "It's efficient, but incorrect."
+    },
+    {
+      "id": "513cff6f2767-00701",
+      "kind": "text",
+      "start": 2706.49,
+      "end": 2707.53,
+      "page": null,
+      "section": null,
+      "text": "You want to be correct."
+    },
+    {
+      "id": "513cff6f2767-00702",
+      "kind": "text",
+      "start": 2707.53,
+      "end": 2710.09,
+      "page": null,
+      "section": null,
+      "text": "Being correct and inefficient is definitely"
+    },
+    {
+      "id": "513cff6f2767-00703",
+      "kind": "text",
+      "start": 2710.09,
+      "end": 2715.65,
+      "page": null,
+      "section": null,
+      "text": "better than being incorrect and efficient."
+    },
+    {
+      "id": "513cff6f2767-00704",
+      "kind": "text",
+      "start": 2715.65,
+      "end": 2718.29,
+      "page": null,
+      "section": null,
+      "text": "So this is an efficient algorithm in the sense"
+    },
+    {
+      "id": "513cff6f2767-00705",
+      "kind": "text",
+      "start": 2718.29,
+      "end": 2722.89,
+      "page": null,
+      "section": null,
+      "text": "that it would only take log n time, but it doesn't work."
+    },
+    {
+      "id": "513cff6f2767-00706",
+      "kind": "text",
+      "start": 2722.89,
+      "end": 2732.53,
+      "page": null,
+      "section": null,
+      "text": "And I'll give you a simple example here where it doesn't work."
+    },
+    {
+      "id": "513cff6f2767-00707",
+      "kind": "text",
+      "start": 2732.53,
+      "end": 2746.14,
+      "page": null,
+      "section": null,
+      "text": "The problem is a 2D peak may not exist on row i."
+    },
+    {
+      "id": "513cff6f2767-00708",
+      "kind": "text",
+      "start": 2746.14,
+      "end": 2753.66,
+      "page": null,
+      "section": null,
+      "text": "And here's an example of that."
+    },
+    {
+      "id": "513cff6f2767-00709",
+      "kind": "text",
+      "start": 2753.66,
+      "end": 2758.3,
+      "page": null,
+      "section": null,
+      "text": "Actually, this is exactly the example of that."
+    },
+    {
+      "id": "513cff6f2767-00710",
+      "kind": "text",
+      "start": 2758.3,
+      "end": 2762.66,
+      "page": null,
+      "section": null,
+      "text": "Let's say that I started with this row."
+    },
+    {
+      "id": "513cff6f2767-00711",
+      "kind": "text",
+      "start": 2762.66,
+      "end": 2765.14,
+      "page": null,
+      "section": null,
+      "text": "Since I'm starting with the middle row,"
+    },
+    {
+      "id": "513cff6f2767-00712",
+      "kind": "text",
+      "start": 2765.14,
+      "end": 2766.9,
+      "page": null,
+      "section": null,
+      "text": "and I could start with this one or that one,"
+    },
+    {
+      "id": "513cff6f2767-00713",
+      "kind": "text",
+      "start": 2766.9,
+      "end": 2770.66,
+      "page": null,
+      "section": null,
+      "text": "let's say I started with that one,"
+    },
+    {
+      "id": "513cff6f2767-00714",
+      "kind": "text",
+      "start": 2770.66,
+      "end": 2776.38,
+      "page": null,
+      "section": null,
+      "text": "I end up finding a peak."
+    },
+    {
+      "id": "513cff6f2767-00715",
+      "kind": "text",
+      "start": 2776.38,
+      "end": 2782.34,
+      "page": null,
+      "section": null,
+      "text": "And if this were 10 up here, I'd choose 12 as a peak."
+    },
+    {
+      "id": "513cff6f2767-00716",
+      "kind": "text",
+      "start": 2782.34,
+      "end": 2786.3,
+      "page": null,
+      "section": null,
+      "text": "And it's quite possible that I've returned 12 as a peak,"
+    },
+    {
+      "id": "513cff6f2767-00717",
+      "kind": "text",
+      "start": 2786.3,
+      "end": 2789.02,
+      "page": null,
+      "section": null,
+      "text": "even though 19 is bigger, because 12 is a peak given 10"
+    },
+    {
+      "id": "513cff6f2767-00718",
+      "kind": "text",
+      "start": 2789.02,
+      "end": 2790.38,
+      "page": null,
+      "section": null,
+      "text": "and 11 up here."
+    },
+    {
+      "id": "513cff6f2767-00719",
+      "kind": "text",
+      "start": 2790.38,
+      "end": 2793.06,
+      "page": null,
+      "section": null,
+      "text": "And then when I choose this particular row"
+    },
+    {
+      "id": "513cff6f2767-00720",
+      "kind": "text",
+      "start": 2793.06,
+      "end": 2796.7,
+      "page": null,
+      "section": null,
+      "text": "and I find a peak on this row, it would be 14."
+    },
+    {
+      "id": "513cff6f2767-00721",
+      "kind": "text",
+      "start": 2796.7,
+      "end": 2802.78,
+      "page": null,
+      "section": null,
+      "text": "That is a 1D peak on this row, but 14 is not a 2D peak."
+    },
+    {
+      "id": "513cff6f2767-00722",
+      "kind": "text",
+      "start": 2802.78,
+      "end": 2807.66,
+      "page": null,
+      "section": null,
+      "text": "So this particular example, 14 would return 14."
+    },
+    {
+      "id": "513cff6f2767-00723",
+      "kind": "text",
+      "start": 2807.66,
+      "end": 2810.94,
+      "page": null,
+      "section": null,
+      "text": "And 14 is not a 2D peak."
+    },
+    {
+      "id": "513cff6f2767-00724",
+      "kind": "text",
+      "start": 2810.94,
+      "end": 2813.74,
+      "page": null,
+      "section": null,
+      "text": "All right?"
+    },
+    {
+      "id": "513cff6f2767-00725",
+      "kind": "text",
+      "start": 2813.74,
+      "end": 2817.46,
+      "page": null,
+      "section": null,
+      "text": "You can collect your question after the class."
+    },
+    {
+      "id": "513cff6f2767-00726",
+      "kind": "text",
+      "start": 2817.46,
+      "end": 2821.86,
+      "page": null,
+      "section": null,
+      "text": "So not so good."
+    },
+    {
+      "id": "513cff6f2767-00727",
+      "kind": "text",
+      "start": 2821.86,
+      "end": 2826.14,
+      "page": null,
+      "section": null,
+      "text": "Looked like an efficient algorithm, but doesn't work."
+    },
+    {
+      "id": "513cff6f2767-00728",
+      "kind": "text",
+      "start": 2826.18,
+      "end": 2829.18,
+      "page": null,
+      "section": null,
+      "text": "So how can we get to something that actually works?"
+    },
+    {
+      "id": "513cff6f2767-00729",
+      "kind": "text",
+      "start": 2829.18,
+      "end": 2834.32,
+      "page": null,
+      "section": null,
+      "text": "So the last algorithm that I'm going to show you,"
+    },
+    {
+      "id": "513cff6f2767-00730",
+      "kind": "text",
+      "start": 2834.32,
+      "end": 2841.14,
+      "page": null,
+      "section": null,
+      "text": "and you'll see four different algorithms in your problem set"
+    },
+    {
+      "id": "513cff6f2767-00731",
+      "kind": "text",
+      "start": 2841.14,
+      "end": 2844.18,
+      "page": null,
+      "section": null,
+      "text": "that you'll have to analyze the complexity for and decide"
+    },
+    {
+      "id": "513cff6f2767-00732",
+      "kind": "text",
+      "start": 2844.18,
+      "end": 2848.18,
+      "page": null,
+      "section": null,
+      "text": "if they're efficient and if they're correct."
+    },
+    {
+      "id": "513cff6f2767-00733",
+      "kind": "text",
+      "start": 2848.18,
+      "end": 2854.82,
+      "page": null,
+      "section": null,
+      "text": "But here's a recursive version that"
+    },
+    {
+      "id": "513cff6f2767-00734",
+      "kind": "text",
+      "start": 2854.82,
+      "end": 2857.66,
+      "page": null,
+      "section": null,
+      "text": "is better than, in terms of complexity,"
+    },
+    {
+      "id": "513cff6f2767-00735",
+      "kind": "text",
+      "start": 2857.66,
+      "end": 2860.14,
+      "page": null,
+      "section": null,
+      "text": "than the greedy ascent algorithm."
+    },
+    {
+      "id": "513cff6f2767-00736",
+      "kind": "text",
+      "start": 2860.14,
+      "end": 2863.42,
+      "page": null,
+      "section": null,
+      "text": "And this one works."
+    },
+    {
+      "id": "513cff6f2767-00737",
+      "kind": "text",
+      "start": 2863.42,
+      "end": 2869.71,
+      "page": null,
+      "section": null,
+      "text": "So what I'm going to do is pick a middle column."
+    },
+    {
+      "id": "513cff6f2767-00738",
+      "kind": "text",
+      "start": 2869.71,
+      "end": 2874.06,
+      "page": null,
+      "section": null,
+      "text": "j equals m over 2 as before."
+    },
+    {
+      "id": "513cff6f2767-00739",
+      "kind": "text",
+      "start": 2874.06,
+      "end": 2885.43,
+      "page": null,
+      "section": null,
+      "text": "I'm going to find the global maximum on column j."
+    },
+    {
+      "id": "513cff6f2767-00740",
+      "kind": "text",
+      "start": 2885.43,
+      "end": 2889.58,
+      "page": null,
+      "section": null,
+      "text": "And that's going to be at ij."
+    },
+    {
+      "id": "513cff6f2767-00741",
+      "kind": "text",
+      "start": 2889.58,
+      "end": 2900.43,
+      "page": null,
+      "section": null,
+      "text": "I'm going to compare i, j minus 1, i, j, and ij plus 1,"
+    },
+    {
+      "id": "513cff6f2767-00742",
+      "kind": "text",
+      "start": 2900.47,
+      "end": 2903.63,
+      "page": null,
+      "section": null,
+      "text": "which means that once I found the maximum in this row,"
+    },
+    {
+      "id": "513cff6f2767-00743",
+      "kind": "text",
+      "start": 2903.63,
+      "end": 2907.91,
+      "page": null,
+      "section": null,
+      "text": "all I'm going to look to the left and the right and compare."
+    },
+    {
+      "id": "513cff6f2767-00744",
+      "kind": "text",
+      "start": 2907.91,
+      "end": 2913.54,
+      "page": null,
+      "section": null,
+      "text": "I'm going to pick the left columns"
+    },
+    {
+      "id": "513cff6f2767-00745",
+      "kind": "text",
+      "start": 2913.54,
+      "end": 2920.9,
+      "page": null,
+      "section": null,
+      "text": "if i, j minus 1 is greater than i, j."
+    },
+    {
+      "id": "513cff6f2767-00746",
+      "kind": "text",
+      "start": 2920.9,
+      "end": 2929.52,
+      "page": null,
+      "section": null,
+      "text": "And similarly for the right."
+    },
+    {
+      "id": "513cff6f2767-00747",
+      "kind": "text",
+      "start": 2929.52,
+      "end": 2937.6,
+      "page": null,
+      "section": null,
+      "text": "And if, in fact, either of these two conditions don't fire,"
+    },
+    {
+      "id": "513cff6f2767-00748",
+      "kind": "text",
+      "start": 2937.64,
+      "end": 2944.32,
+      "page": null,
+      "section": null,
+      "text": "and what I have is i, j is greater than or equal to i, j minus 1"
+    },
+    {
+      "id": "513cff6f2767-00749",
+      "kind": "text",
+      "start": 2944.32,
+      "end": 2947.6,
+      "page": null,
+      "section": null,
+      "text": "and i, j plus 1, then I'm done."
+    },
+    {
+      "id": "513cff6f2767-00750",
+      "kind": "text",
+      "start": 2947.6,
+      "end": 2952.76,
+      "page": null,
+      "section": null,
+      "text": "Just like I had for the 1D version,"
+    },
+    {
+      "id": "513cff6f2767-00751",
+      "kind": "text",
+      "start": 2952.76,
+      "end": 2962.92,
+      "page": null,
+      "section": null,
+      "text": "if i, j is greater than or equal to i, j minus 1 and i, j plus 1,"
+    },
+    {
+      "id": "513cff6f2767-00752",
+      "kind": "text",
+      "start": 2962.92,
+      "end": 2969.44,
+      "page": null,
+      "section": null,
+      "text": "that implies i, j is a 2D peak."
+    },
+    {
+      "id": "513cff6f2767-00753",
+      "kind": "text",
+      "start": 2969.44,
+      "end": 2972.96,
+      "page": null,
+      "section": null,
+      "text": "And the reason that's the case is because i, j"
+    },
+    {
+      "id": "513cff6f2767-00754",
+      "kind": "text",
+      "start": 2972.96,
+      "end": 2976.04,
+      "page": null,
+      "section": null,
+      "text": "was the maximum element in that column."
+    },
+    {
+      "id": "513cff6f2767-00755",
+      "kind": "text",
+      "start": 2976.04,
+      "end": 2977.28,
+      "page": null,
+      "section": null,
+      "text": "So you know that you've compared it"
+    },
+    {
+      "id": "513cff6f2767-00756",
+      "kind": "text",
+      "start": 2977.28,
+      "end": 2981.52,
+      "page": null,
+      "section": null,
+      "text": "to all of the adjacent elements looking up and looking down."
+    },
+    {
+      "id": "513cff6f2767-00757",
+      "kind": "text",
+      "start": 2981.52,
+      "end": 2983.0,
+      "page": null,
+      "section": null,
+      "text": "That's the maximum element."
+    },
+    {
+      "id": "513cff6f2767-00758",
+      "kind": "text",
+      "start": 2983.0,
+      "end": 2985.16,
+      "page": null,
+      "section": null,
+      "text": "Now you've looked at the left and the right."
+    },
+    {
+      "id": "513cff6f2767-00759",
+      "kind": "text",
+      "start": 2985.16,
+      "end": 2987.74,
+      "page": null,
+      "section": null,
+      "text": "And in fact, it's greater than or equal to the elements"
+    },
+    {
+      "id": "513cff6f2767-00760",
+      "kind": "text",
+      "start": 2987.74,
+      "end": 2989.12,
+      "page": null,
+      "section": null,
+      "text": "on the left and the right."
+    },
+    {
+      "id": "513cff6f2767-00761",
+      "kind": "text",
+      "start": 2989.12,
+      "end": 2992.28,
+      "page": null,
+      "section": null,
+      "text": "And so therefore it's a 2D peak."
+    },
+    {
+      "id": "513cff6f2767-00762",
+      "kind": "text",
+      "start": 2992.28,
+      "end": 2997.84,
+      "page": null,
+      "section": null,
+      "text": "So in this case, when you pick the left or the right columns,"
+    },
+    {
+      "id": "513cff6f2767-00763",
+      "kind": "text",
+      "start": 2997.84,
+      "end": 2999.36,
+      "page": null,
+      "section": null,
+      "text": "you'll pick one of them."
+    },
+    {
+      "id": "513cff6f2767-00764",
+      "kind": "text",
+      "start": 2999.36,
+      "end": 3005.45,
+      "page": null,
+      "section": null,
+      "text": "You're going to solve the new problem"
+    },
+    {
+      "id": "513cff6f2767-00765",
+      "kind": "text",
+      "start": 3005.45,
+      "end": 3017.6,
+      "page": null,
+      "section": null,
+      "text": "with half the number of columns."
+    },
+    {
+      "id": "513cff6f2767-00766",
+      "kind": "text",
+      "start": 3017.6,
+      "end": 3021.84,
+      "page": null,
+      "section": null,
+      "text": "And again, you have to go through an analysis or an argument"
+    },
+    {
+      "id": "513cff6f2767-00767",
+      "kind": "text",
+      "start": 3021.84,
+      "end": 3024.96,
+      "page": null,
+      "section": null,
+      "text": "to make sure that this algorithm is correct."
+    },
+    {
+      "id": "513cff6f2767-00768",
+      "kind": "text",
+      "start": 3024.96,
+      "end": 3028.2,
+      "page": null,
+      "section": null,
+      "text": "But it's intuitively correct simply"
+    },
+    {
+      "id": "513cff6f2767-00769",
+      "kind": "text",
+      "start": 3028.2,
+      "end": 3033.2,
+      "page": null,
+      "section": null,
+      "text": "because it matches the 1D version much more closely."
+    },
+    {
+      "id": "513cff6f2767-00770",
+      "kind": "text",
+      "start": 3033.2,
+      "end": 3037.64,
+      "page": null,
+      "section": null,
+      "text": "And you also have your condition where you break away"
+    },
+    {
+      "id": "513cff6f2767-00771",
+      "kind": "text",
+      "start": 3037.64,
+      "end": 3041.16,
+      "page": null,
+      "section": null,
+      "text": "right here where you have a 2D peak just like the 1D version."
+    },
+    {
+      "id": "513cff6f2767-00772",
+      "kind": "text",
+      "start": 3041.16,
+      "end": 3043.92,
+      "page": null,
+      "section": null,
+      "text": "And what you've done is break this matrix up"
+    },
+    {
+      "id": "513cff6f2767-00773",
+      "kind": "text",
+      "start": 3043.92,
+      "end": 3046.2,
+      "page": null,
+      "section": null,
+      "text": "into half the size."
+    },
+    {
+      "id": "513cff6f2767-00774",
+      "kind": "text",
+      "start": 3046.2,
+      "end": 3051.12,
+      "page": null,
+      "section": null,
+      "text": "And that's essentially why this algorithm works."
+    },
+    {
+      "id": "513cff6f2767-00775",
+      "kind": "text",
+      "start": 3051.12,
+      "end": 3067.43,
+      "page": null,
+      "section": null,
+      "text": "When you have a single column, find the global maximum"
+    },
+    {
+      "id": "513cff6f2767-00776",
+      "kind": "text",
+      "start": 3067.43,
+      "end": 3070.11,
+      "page": null,
+      "section": null,
+      "text": "and you're done."
+    },
+    {
+      "id": "513cff6f2767-00777",
+      "kind": "text",
+      "start": 3070.11,
+      "end": 3072.55,
+      "page": null,
+      "section": null,
+      "text": "So that's the base case."
+    },
+    {
+      "id": "513cff6f2767-00778",
+      "kind": "text",
+      "start": 3072.55,
+      "end": 3074.63,
+      "page": null,
+      "section": null,
+      "text": "So let me end with just writing out"
+    },
+    {
+      "id": "513cff6f2767-00779",
+      "kind": "text",
+      "start": 3074.63,
+      "end": 3077.79,
+      "page": null,
+      "section": null,
+      "text": "what the recurrence relation for the complexity of this"
+    },
+    {
+      "id": "513cff6f2767-00780",
+      "kind": "text",
+      "start": 3077.79,
+      "end": 3085.59,
+      "page": null,
+      "section": null,
+      "text": "is and argue what the overall complexity of this algorithm is."
+    },
+    {
+      "id": "513cff6f2767-00781",
+      "kind": "text",
+      "start": 3085.59,
+      "end": 3090.95,
+      "page": null,
+      "section": null,
+      "text": "And then I'll give you the bad news."
+    },
+    {
+      "id": "513cff6f2767-00782",
+      "kind": "text",
+      "start": 3090.95,
+      "end": 3093.47,
+      "page": null,
+      "section": null,
+      "text": "All right, so overall what you have"
+    },
+    {
+      "id": "513cff6f2767-00783",
+      "kind": "text",
+      "start": 3093.47,
+      "end": 3096.23,
+      "page": null,
+      "section": null,
+      "text": "is you have something like t of nm"
+    },
+    {
+      "id": "513cff6f2767-00784",
+      "kind": "text",
+      "start": 3096.23,
+      "end": 3102.55,
+      "page": null,
+      "section": null,
+      "text": "equals t of nm over 2 plus theta n."
+    },
+    {
+      "id": "513cff6f2767-00785",
+      "kind": "text",
+      "start": 3102.55,
+      "end": 3103.63,
+      "page": null,
+      "section": null,
+      "text": "Why is that?"
+    },
+    {
+      "id": "513cff6f2767-00786",
+      "kind": "text",
+      "start": 3103.63,
+      "end": 3107.83,
+      "page": null,
+      "section": null,
+      "text": "Well, n is the number of rows, m is the number of columns."
+    },
+    {
+      "id": "513cff6f2767-00787",
+      "kind": "text",
+      "start": 3107.83,
+      "end": 3111.39,
+      "page": null,
+      "section": null,
+      "text": "In one case, you will be breaking things down"
+    },
+    {
+      "id": "513cff6f2767-00788",
+      "kind": "text",
+      "start": 3111.39,
+      "end": 3114.63,
+      "page": null,
+      "section": null,
+      "text": "into half the number of columns, which is m over 2."
+    },
+    {
+      "id": "513cff6f2767-00789",
+      "kind": "text",
+      "start": 3114.63,
+      "end": 3117.47,
+      "page": null,
+      "section": null,
+      "text": "And in order to find the global maximum,"
+    },
+    {
+      "id": "513cff6f2767-00790",
+      "kind": "text",
+      "start": 3117.47,
+      "end": 3119.91,
+      "page": null,
+      "section": null,
+      "text": "you'll be doing theta n work because you're"
+    },
+    {
+      "id": "513cff6f2767-00791",
+      "kind": "text",
+      "start": 3119.91,
+      "end": 3121.79,
+      "page": null,
+      "section": null,
+      "text": "finding the global maximum."
+    },
+    {
+      "id": "513cff6f2767-00792",
+      "kind": "text",
+      "start": 3121.79,
+      "end": 3123.31,
+      "page": null,
+      "section": null,
+      "text": "You just have to scan it."
+    },
+    {
+      "id": "513cff6f2767-00793",
+      "kind": "text",
+      "start": 3123.31,
+      "end": 3128.83,
+      "page": null,
+      "section": null,
+      "text": "There's that's what it's going to take."
+    },
+    {
+      "id": "513cff6f2767-00794",
+      "kind": "text",
+      "start": 3128.83,
+      "end": 3131.95,
+      "page": null,
+      "section": null,
+      "text": "And so if you do that and you go run through,"
+    },
+    {
+      "id": "513cff6f2767-00795",
+      "kind": "text",
+      "start": 3131.95,
+      "end": 3136.19,
+      "page": null,
+      "section": null,
+      "text": "and you know that t of n1 is theta n, which"
+    },
+    {
+      "id": "513cff6f2767-00796",
+      "kind": "text",
+      "start": 3136.19,
+      "end": 3140.87,
+      "page": null,
+      "section": null,
+      "text": "is this last part over here, that's your base case,"
+    },
+    {
+      "id": "513cff6f2767-00797",
+      "kind": "text",
+      "start": 3140.87,
+      "end": 3149.43,
+      "page": null,
+      "section": null,
+      "text": "you get t of nm is theta of n added to theta of n log of m"
+    },
+    {
+      "id": "513cff6f2767-00798",
+      "kind": "text",
+      "start": 3149.43,
+      "end": 3162.3,
+      "page": null,
+      "section": null,
+      "text": "times, log 2 of m times, which is theta of n log 2 of n."
+    },
+    {
+      "id": "513cff6f2767-00799",
+      "kind": "text",
+      "start": 3162.3,
+      "end": 3163.62,
+      "page": null,
+      "section": null,
+      "text": "All right?"
+    },
+    {
+      "id": "513cff6f2767-00800",
+      "kind": "text",
+      "start": 3163.62,
+      "end": 3168.14,
+      "page": null,
+      "section": null,
+      "text": "So you're not done with peak finding."
+    },
+    {
+      "id": "513cff6f2767-00801",
+      "kind": "text",
+      "start": 3168.14,
+      "end": 3173.18,
+      "page": null,
+      "section": null,
+      "text": "What you'll see is at four algorithms coded in Python,"
+    },
+    {
+      "id": "513cff6f2767-00802",
+      "kind": "text",
+      "start": 3173.18,
+      "end": 3175.26,
+      "page": null,
+      "section": null,
+      "text": "I'm not going to give away what those algorithms are,"
+    },
+    {
+      "id": "513cff6f2767-00803",
+      "kind": "text",
+      "start": 3175.26,
+      "end": 3177.1,
+      "page": null,
+      "section": null,
+      "text": "but you'll have to recognize them."
+    },
+    {
+      "id": "513cff6f2767-00804",
+      "kind": "text",
+      "start": 3177.1,
+      "end": 3180.18,
+      "page": null,
+      "section": null,
+      "text": "You will have seen versions of those algorithms"
+    },
+    {
+      "id": "513cff6f2767-00805",
+      "kind": "text",
+      "start": 3180.18,
+      "end": 3181.86,
+      "page": null,
+      "section": null,
+      "text": "already in lecture."
+    },
+    {
+      "id": "513cff6f2767-00806",
+      "kind": "text",
+      "start": 3181.86,
+      "end": 3186.02,
+      "page": null,
+      "section": null,
+      "text": "And your job is going to be to analyze the algorithms,"
+    },
+    {
+      "id": "513cff6f2767-00807",
+      "kind": "text",
+      "start": 3186.02,
+      "end": 3189.7,
+      "page": null,
+      "section": null,
+      "text": "as I said before, prove that one of them is correct,"
+    },
+    {
+      "id": "513cff6f2767-00808",
+      "kind": "text",
+      "start": 3189.7,
+      "end": 3193.06,
+      "page": null,
+      "section": null,
+      "text": "and find counter examples for the ones that aren't correct."
+    },
+    {
+      "id": "513cff6f2767-00809",
+      "kind": "text",
+      "start": 3193.06,
+      "end": 3194.98,
+      "page": null,
+      "section": null,
+      "text": "The course staff will stick around here"
+    },
+    {
+      "id": "513cff6f2767-00810",
+      "kind": "text",
+      "start": 3194.98,
+      "end": 3197.1,
+      "page": null,
+      "section": null,
+      "text": "to answer questions, logistical questions,"
+    },
+    {
+      "id": "513cff6f2767-00811",
+      "kind": "text",
+      "start": 3197.1,
+      "end": 3198.98,
+      "page": null,
+      "section": null,
+      "text": "or questions about lecture."
+    },
+    {
+      "id": "513cff6f2767-00812",
+      "kind": "text",
+      "start": 3198.98,
+      "end": 3201.66,
+      "page": null,
+      "section": null,
+      "text": "And I owe that gentleman a cushion."
+    }
+  ]
+}

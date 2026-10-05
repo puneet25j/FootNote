@@ -11,11 +11,11 @@ __pycache__/
 .env
 
 # Large media: anyone can download these from MIT OCW
-data/
 data/raw/
 data/clips/
 *.mp4
 *.wav
+*.tmp
 
 # Derived: rebuilt from data/processed/ JSON
 data/index/

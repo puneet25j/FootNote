@@ -10,7 +10,7 @@ from pathlib import Path
 from faster_whisper import WhisperModel
 
 CLIP = Path("data/clips/lec01_first5min.wav")
-OUT_DIR = Path("data/transcripts")
+OUT_DIR = Path("scratch/out")
 
 def fmt_ts(seconds: float) -> str:
     """Format seconds as MM:SS.sss"""

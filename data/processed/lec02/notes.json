@@ -1,0 +1,1429 @@
+{
+  "doc_id": "7b5596d22143",
+  "lecture": "lec02",
+  "source_type": "notes",
+  "source_file": "data/raw/lec02/notes.pdf",
+  "source_sha256": "7b5596d221433c276352775b0a41d9edef4c076af0bd0dcc0e46bfa921586a09",
+  "parser_version": 1,
+  "created_at": "2026-10-05T03:12:50+00:00",
+  "pages": [
+    {
+      "page": 1,
+      "chars": 808,
+      "images": 0,
+      "drawings": 40
+    },
+    {
+      "page": 2,
+      "chars": 655,
+      "images": 0,
+      "drawings": 15
+    },
+    {
+      "page": 3,
+      "chars": 673,
+      "images": 0,
+      "drawings": 22
+    },
+    {
+      "page": 4,
+      "chars": 1356,
+      "images": 0,
+      "drawings": 9
+    },
+    {
+      "page": 5,
+      "chars": 907,
+      "images": 0,
+      "drawings": 21
+    },
+    {
+      "page": 6,
+      "chars": 1006,
+      "images": 0,
+      "drawings": 1
+    },
+    {
+      "page": 7,
+      "chars": 639,
+      "images": 0,
+      "drawings": 7
+    },
+    {
+      "page": 8,
+      "chars": 176,
+      "images": 0,
+      "drawings": 0
+    }
+  ],
+  "segments": [
+    {
+      "id": "7b5596d22143-00000",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "Lecture 2: Models of Computation"
+    },
+    {
+      "id": "7b5596d22143-00001",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "Lecture Overview"
+    },
+    {
+      "id": "7b5596d22143-00002",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• What is an algorithm? What is time?"
+    },
+    {
+      "id": "7b5596d22143-00003",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• Random access machine"
+    },
+    {
+      "id": "7b5596d22143-00004",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• Pointer machine"
+    },
+    {
+      "id": "7b5596d22143-00005",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• Python model"
+    },
+    {
+      "id": "7b5596d22143-00006",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• Document distance: problem & algorithms"
+    },
+    {
+      "id": "7b5596d22143-00007",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "History"
+    },
+    {
+      "id": "7b5596d22143-00008",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "Al-Khw¯arizm¯ı “al-kha-raz-mi” (c. 780-850)"
+    },
+    {
+      "id": "7b5596d22143-00009",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• “father of algebra” with his book “The Compendious Book on Calculation by Com­ pletion & Balancing”"
+    },
+    {
+      "id": "7b5596d22143-00010",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• linear & quadratic equation solving: some of the ﬁrst algorithms"
+    },
+    {
+      "id": "7b5596d22143-00011",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "What is an Algorithm?"
+    },
+    {
+      "id": "7b5596d22143-00012",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• Mathematical abstraction of computer program"
+    },
+    {
+      "id": "7b5596d22143-00013",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• Computational procedure to solve a problem"
+    },
+    {
+      "id": "7b5596d22143-00014",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "analog"
+    },
+    {
+      "id": "7b5596d22143-00015",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "program algorithm"
+    },
+    {
+      "id": "7b5596d22143-00016",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "built on"
+    },
+    {
+      "id": "7b5596d22143-00017",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "programming"
+    },
+    {
+      "id": "7b5596d22143-00018",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "top of"
+    },
+    {
+      "id": "7b5596d22143-00019",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "language pseudocode"
+    },
+    {
+      "id": "7b5596d22143-00020",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "computer model of computation"
+    },
+    {
+      "id": "7b5596d22143-00021",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "Figure 1: Algorithm"
+    },
+    {
+      "id": "7b5596d22143-00022",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "Model of computation speciﬁes"
+    },
+    {
+      "id": "7b5596d22143-00023",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• what operations an algorithm is allowed"
+    },
+    {
+      "id": "7b5596d22143-00024",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• cost (time, space, . . . ) of each operation"
+    },
+    {
+      "id": "7b5596d22143-00025",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "• cost of algorithm = sum of operation costs"
+    },
+    {
+      "id": "7b5596d22143-00026",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "Random Access Machine (RAM)"
+    },
+    {
+      "id": "7b5596d22143-00027",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": ". . ."
+    },
+    {
+      "id": "7b5596d22143-00028",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "5 . . ."
+    },
+    {
+      "id": "7b5596d22143-00029",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "word"
+    },
+    {
+      "id": "7b5596d22143-00030",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• Random Access Memory (RAM) modeled by a big array"
+    },
+    {
+      "id": "7b5596d22143-00031",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• Θ(1) registers (each 1 word)"
+    },
+    {
+      "id": "7b5596d22143-00032",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• In Θ(1) time, can"
+    },
+    {
+      "id": "7b5596d22143-00033",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "– load word @ ri into register rj"
+    },
+    {
+      "id": "7b5596d22143-00034",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "– compute (+, −, ∗, /, &, |, ˆ) on registers"
+    },
+    {
+      "id": "7b5596d22143-00035",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "– store register rj into memory @ ri"
+    },
+    {
+      "id": "7b5596d22143-00036",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• What’s a word? w ≥ lg (memory size) bits"
+    },
+    {
+      "id": "7b5596d22143-00037",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "– assume basic objects (e.g., int) ﬁt in word"
+    },
+    {
+      "id": "7b5596d22143-00038",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "– unit 4 in the course deals with big numbers"
+    },
+    {
+      "id": "7b5596d22143-00039",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• realistic and powerful → implement abstractions"
+    },
+    {
+      "id": "7b5596d22143-00040",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "Pointer Machine"
+    },
+    {
+      "id": "7b5596d22143-00041",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• dynamically allocated objects (namedtuple)"
+    },
+    {
+      "id": "7b5596d22143-00042",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• object has O(1) ﬁelds"
+    },
+    {
+      "id": "7b5596d22143-00043",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• ﬁeld = word (e.g., int) or pointer to object/null (a.k.a. reference)"
+    },
+    {
+      "id": "7b5596d22143-00044",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "• weaker than (can be implemented on) RAM"
+    },
+    {
+      "id": "7b5596d22143-00045",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "val 5 prev null next"
+    },
+    {
+      "id": "7b5596d22143-00046",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "val -1 prev"
+    },
+    {
+      "id": "7b5596d22143-00047",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "null next"
+    },
+    {
+      "id": "7b5596d22143-00048",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "Python Model"
+    },
+    {
+      "id": "7b5596d22143-00049",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "Python lets you use either mode of thinking"
+    },
+    {
+      "id": "7b5596d22143-00050",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "1. “list” is actually an array → RAM"
+    },
+    {
+      "id": "7b5596d22143-00051",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "L[i] = L[j] + 5 → Θ(1) time"
+    },
+    {
+      "id": "7b5596d22143-00052",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "2. object with O(1) attributes (including references) → pointer machine"
+    },
+    {
+      "id": "7b5596d22143-00053",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "x = x.next → Θ(1) time"
+    },
+    {
+      "id": "7b5596d22143-00054",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "Python has many other operations. To determine their cost, imagine implementation in terms of (1) or (2):"
+    },
+    {
+      "id": "7b5596d22143-00055",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "1. list"
+    },
+    {
+      "id": "7b5596d22143-00056",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "(a) L.append(x) → θ(1) time"
+    },
+    {
+      "id": "7b5596d22143-00057",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "obvious if you think of inﬁnite array"
+    },
+    {
+      "id": "7b5596d22143-00058",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "but how would you have > 1 on RAM? via table doubling [Lecture 9]"
+    },
+    {
+      "id": "7b5596d22143-00059",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "⎫ (b) ≡ L = [ ] → θ(1) \" 'L = L1 + L2 v ⎪ ⎪ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00060",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "(θ(1+|L1|+|L2|) time) for x in L1: θ(|L1|) L.append(x) → θ(1)"
+    },
+    {
+      "id": "7b5596d22143-00061",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "for x in L2: θ(|L2|) L.append(x) → θ(1)"
+    },
+    {
+      "id": "7b5596d22143-00062",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "⎪ ⎪ ⎪ ⎪ ⎭"
+    },
+    {
+      "id": "7b5596d22143-00063",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "(c) L1.extend(L2) ≡ for x in L2:"
+    },
+    {
+      "id": "7b5596d22143-00064",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "θ(1 + |L2|) time"
+    },
+    {
+      "id": "7b5596d22143-00065",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "≡ L1+ = L2 L1.append(x) → θ(1)"
+    },
+    {
+      "id": "7b5596d22143-00066",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "(d) L2 = L1[i : j] ≡ L2 = []"
+    },
+    {
+      "id": "7b5596d22143-00067",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "θ(j − i + 1) = O(|L|)"
+    },
+    {
+      "id": "7b5596d22143-00068",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "for k in range(i, j):"
+    },
+    {
+      "id": "7b5596d22143-00069",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "L2.append(L1[i]) → θ(1)"
+    },
+    {
+      "id": "7b5596d22143-00070",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "θ(index of x) = θ(|L|)"
+    },
+    {
+      "id": "7b5596d22143-00071",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "θ(1)"
+    },
+    {
+      "id": "7b5596d22143-00072",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "⎫ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00073",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "⎫ ⎪ ⎪ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00074",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "⎪ ⎭"
+    },
+    {
+      "id": "7b5596d22143-00075",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "(e) b = x in L ≡ for y in L: & L.index(x) if x == y: & L.ﬁnd(x) b = T rue; break else"
+    },
+    {
+      "id": "7b5596d22143-00076",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "⎪ ⎪ ⎭"
+    },
+    {
+      "id": "7b5596d22143-00077",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "b = F alse"
+    },
+    {
+      "id": "7b5596d22143-00078",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "(f) len(L) → θ(1) time - list stores its length in a ﬁeld"
+    },
+    {
+      "id": "7b5596d22143-00079",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "(g) L.sort() → θ(|L| log |L|) - via comparison sort [Lecture 3, 4 & 7)]"
+    },
+    {
+      "id": "7b5596d22143-00080",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "2. tuple, str: similar, (think of as immutable lists)"
+    },
+    {
+      "id": "7b5596d22143-00081",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "3. dict: via hashing [Unit 3 = Lectures 8-10] D[key] = val θ(1) time w.h.p. key in D"
+    },
+    {
+      "id": "7b5596d22143-00082",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "4. set: similar (think of as dict without vals)"
+    },
+    {
+      "id": "7b5596d22143-00083",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "5. heapq: heappush & heappop - via heaps [Lecture 4] → θ(log(n)) time"
+    },
+    {
+      "id": "7b5596d22143-00084",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "6. long: via Karatsuba algorithm [Lecture 11] x + y → O(|x| + |y|) time where |y| reﬂects # words x ∗ y → O((|x| + |y|)log(3)) ≈ O((|x| + |y|)1.58) time"
+    },
+    {
+      "id": "7b5596d22143-00085",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "Document Distance Problem — compute d(D1, D2)"
+    },
+    {
+      "id": "7b5596d22143-00086",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "The document distance problem has applications in ﬁnding similar documents, detecting duplicates (Wikipedia mirrors and Google) and plagiarism, and also in web search (D2 = query). Some Deﬁnitions:"
+    },
+    {
+      "id": "7b5596d22143-00087",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "• Word = sequence of alphanumeric characters"
+    },
+    {
+      "id": "7b5596d22143-00088",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "• Document = sequence of words (ignore space, punctuation, etc.)"
+    },
+    {
+      "id": "7b5596d22143-00089",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "The idea is to deﬁne distance in terms of shared words. Think of document D as a vector: D[w] = # occurrences of word W . For example:"
+    },
+    {
+      "id": "7b5596d22143-00090",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "dog"
+    },
+    {
+      "id": "7b5596d22143-00091",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "the"
+    },
+    {
+      "id": "7b5596d22143-00092",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "cat"
+    },
+    {
+      "id": "7b5596d22143-00093",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "Figure 2: D1 = “the cat”, D2 = “the dog”"
+    },
+    {
+      "id": "7b5596d22143-00094",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "As a ﬁrst attempt, deﬁne document distance as"
+    },
+    {
+      "id": "7b5596d22143-00095",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "d/(D1, D2) = D1 · D2 = D1[W ] · D2[W ]"
+    },
+    {
+      "id": "7b5596d22143-00096",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "The problem is that this is not scale invariant. This means that long documents with 99% same words seem farther than short documents with 10% same words. This can be ﬁxed by normalizing by the number of words:"
+    },
+    {
+      "id": "7b5596d22143-00097",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "D1 · D2 d//(D1, D2) = |D1| · |D2|"
+    },
+    {
+      "id": "7b5596d22143-00098",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "where |Di| is the number of words in document i. The geometric (rescaling) interpretation of this would be that:"
+    },
+    {
+      "id": "7b5596d22143-00099",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "d(D1, D2) = arccos(d//(D1, D2))"
+    },
+    {
+      "id": "7b5596d22143-00100",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "or the document distance is the angle between the vectors. An angle of 0◦ means the two documents are identical whereas an angle of 90◦ means there are no common words. This approach was introduced by [Salton, Wong, Yang 1975]."
+    },
+    {
+      "id": "7b5596d22143-00101",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "Document Distance Algorithm"
+    },
+    {
+      "id": "7b5596d22143-00102",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "1. split each document into words"
+    },
+    {
+      "id": "7b5596d22143-00103",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "2. count word frequencies (document vectors)"
+    },
+    {
+      "id": "7b5596d22143-00104",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "3. compute dot product (& divide)"
+    },
+    {
+      "id": "7b5596d22143-00105",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "(1) re.ﬁndall (r“ w+”, doc) → what cost?"
+    },
+    {
+      "id": "7b5596d22143-00106",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "in general re can be exponential time"
+    },
+    {
+      "id": "7b5596d22143-00107",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "→ for char in doc:"
+    },
+    {
+      "id": "7b5596d22143-00108",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Θ(|doc|) if not alphanumeric"
+    },
+    {
+      "id": "7b5596d22143-00109",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎫ ⎪ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00110",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "add previous word"
+    },
+    {
+      "id": "7b5596d22143-00111",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎫ ⎪ ⎬ Θ(1) ⎪ ⎪ ⎭ ⎪ ⎭ (if any) to list start new word"
+    },
+    {
+      "id": "7b5596d22143-00112",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "← O(k log k · |word|) where k is #words"
+    },
+    {
+      "id": "7b5596d22143-00113",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "O( | | word ) for word in list: = O(|doc|)"
+    },
+    {
+      "id": "7b5596d22143-00114",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "if same as last word: ← O(|word|) increment counter"
+    },
+    {
+      "id": "7b5596d22143-00115",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "(2) sort word list ⎫ ⎪ ⎪ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00116",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Θ(1) else:"
+    },
+    {
+      "id": "7b5596d22143-00117",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎫ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00118",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "add last word and count to list reset counter to 0"
+    },
+    {
+      "id": "7b5596d22143-00119",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎪ ⎪ ⎪ ⎭ ⎪ ⎪ ⎭"
+    },
+    {
+      "id": "7b5596d22143-00120",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "O(k1 · k2)"
+    },
+    {
+      "id": "7b5596d22143-00121",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎫ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00122",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "(3) for word, count1 in doc1: ← Θ(k1) if word, count2 in doc2: ← Θ(k2) total += count1 * count2 Θ(1)"
+    },
+    {
+      "id": "7b5596d22143-00123",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎪ ⎭"
+    },
+    {
+      "id": "7b5596d22143-00124",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "(3)’ start at ﬁrst word of each list if words equal: ← O(|word|) total += count1 * count2 if word1 ≤ word2: ← O(|word|)"
+    },
+    {
+      "id": "7b5596d22143-00125",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "O( |word|) = O(|doc|) ⎪ ⎪ ⎪ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00126",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "advance list1 else:"
+    },
+    {
+      "id": "7b5596d22143-00127",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "advance list2 repeat either until list done"
+    },
+    {
+      "id": "7b5596d22143-00128",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎪ ⎪ ⎪ ⎪ ⎭"
+    },
+    {
+      "id": "7b5596d22143-00129",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Dictionary Approach"
+    },
+    {
+      "id": "7b5596d22143-00130",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "(2)’ count = {}"
+    },
+    {
+      "id": "7b5596d22143-00131",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "for word in doc:"
+    },
+    {
+      "id": "7b5596d22143-00132",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎫ ⎪ ⎪ ⎬ if word in count: ← Θ(|word|) + Θ(1) w.h.p"
+    },
+    {
+      "id": "7b5596d22143-00133",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "⎫ ⎪ ⎬"
+    },
+    {
+      "id": "7b5596d22143-00134",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Θ(1)"
+    },
+    {
+      "id": "7b5596d22143-00135",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "O(|doc|) w.h.p. ⎪ ⎪ ⎪ ⎭"
+    },
+    {
+      "id": "7b5596d22143-00136",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "count[word] += 1 else ⎪ ⎭ count[word] = 1"
+    },
+    {
+      "id": "7b5596d22143-00137",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "(3)’ as above → O(|doc1|) w.h.p."
+    },
+    {
+      "id": "7b5596d22143-00138",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "Code (lecture2 code.zip & data.zip on website)"
+    },
+    {
+      "id": "7b5596d22143-00139",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "t2.bobsey.txt 268,778 chars/49,785 words/3354 uniq t3.lewis.txt 1,031,470 chars/182,355 words/8534 uniq seconds on Pentium 4, 2.8 GHz, C-Python 2.62, Linux 2.6.26"
+    },
+    {
+      "id": "7b5596d22143-00140",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "• docdist1: 228.1 — (1), (2), (3) (with extra sorting) words = words + words on line"
+    },
+    {
+      "id": "7b5596d22143-00141",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "• docdist2: 164.7 — words += words on line"
+    },
+    {
+      "id": "7b5596d22143-00142",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "• docdist3: 123.1 — (3)’ . . . with insertion sort"
+    },
+    {
+      "id": "7b5596d22143-00143",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "• docdist4: 71.7 — (2)’ but still sort to use (3)’"
+    },
+    {
+      "id": "7b5596d22143-00144",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "• docdist5: 18.3 — split words via string.translate"
+    },
+    {
+      "id": "7b5596d22143-00145",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "• docdist6: 11.5 — merge sort (vs. insertion)"
+    },
+    {
+      "id": "7b5596d22143-00146",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "• docdist7: 1.8 — (3) (full dictionary)"
+    },
+    {
+      "id": "7b5596d22143-00147",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 7,
+      "section": null,
+      "text": "• docdist8: 0.2 — whole doc, not line by line"
+    },
+    {
+      "id": "7b5596d22143-00148",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 8,
+      "section": null,
+      "text": "MIT OpenCourseWare http://ocw.mit.edu"
+    },
+    {
+      "id": "7b5596d22143-00149",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 8,
+      "section": null,
+      "text": "6.006 Introduction to Algorithms"
+    },
+    {
+      "id": "7b5596d22143-00150",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 8,
+      "section": null,
+      "text": "Fall 2011"
+    },
+    {
+      "id": "7b5596d22143-00151",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 8,
+      "section": null,
+      "text": "For information about citing these materials or our Terms of Use, visit: http://ocw.mit.edu/terms."
+    }
+  ]
+}

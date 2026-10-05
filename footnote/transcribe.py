@@ -1,0 +1,91 @@
+"""Transcribe lecture videos into timestamped segments (JSON).
+
+Usage (from the Footnote folder):
+    python -m footnote.transcribe            # every lecture in data/raw/
+    python -m footnote.transcribe lec01      # just one
+"""
+import sys
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+
+from faster_whisper import WhisperModel
+
+from footnote.utils import already_done, sha256_file, write_json_atomic
+
+RAW_DIR = Path("data/raw")
+OUT_DIR = Path("data/processed")
+MODEL_SIZE = "small"
+
+
+def transcribe(media_path: Path, model_size: str) -> tuple[list[dict], float]:
+    """The ONLY function that knows about Whisper. Returns (segments, duration)."""
+    model = WhisperModel(model_size, device="cpu", compute_type="int8")
+    segments, info = model.transcribe(
+        str(media_path), language="en", beam_size=5, vad_filter=True
+    )
+    out = []
+    for seg in segments:
+        out.append({"start": seg.start, "end": seg.end, "text": seg.text.strip()})
+        print(f"\r  progress {seg.end / info.duration:6.1%}", end="", flush=True)
+    print()
+    return out, info.duration
+
+
+def process_lecture(lecture_dir: Path) -> None:
+    video = lecture_dir / "video.mp4"
+    if not video.exists():
+        print(f"skip {lecture_dir.name}: no video.mp4")
+        return
+
+    out_path = OUT_DIR / lecture_dir.name / "transcript.json"
+    source_hash = sha256_file(video)
+    if already_done(out_path, source_hash, model=MODEL_SIZE):
+        print(f"skip {lecture_dir.name}: already transcribed")
+        return
+
+    print(f"transcribing {lecture_dir.name} with {MODEL_SIZE} ...")
+    t0 = time.perf_counter()
+    raw_segments, duration = transcribe(video, MODEL_SIZE)
+    elapsed = time.perf_counter() - t0
+
+    doc_id = source_hash[:12]
+    segments = [
+        {
+            "id": f"{doc_id}-{i:05d}",
+            "kind": "text",
+            "start": s["start"],
+            "end": s["end"],
+            "page": None,
+            "section": None,
+            "text": s["text"],
+        }
+        for i, s in enumerate(raw_segments)
+    ]
+    write_json_atomic(out_path, {
+        "doc_id": doc_id,
+        "lecture": lecture_dir.name,
+        "source_type": "video",
+        "source_file": str(video),
+        "source_sha256": source_hash,
+        "model": MODEL_SIZE,
+        "duration": duration,
+        "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "segments": segments,
+    })
+    print(f"  {len(segments)} segments in {elapsed:.0f}s "
+          f"(RTF {elapsed / duration:.3f}) -> {out_path}")
+
+
+def main() -> None:
+    names = sys.argv[1:]
+    if names:
+        lecture_dirs = [RAW_DIR / n for n in names]
+    else:
+        lecture_dirs = sorted(p for p in RAW_DIR.iterdir() if p.is_dir())
+    for d in lecture_dirs:
+        process_lecture(d)
+
+
+if __name__ == "__main__":
+    main()
