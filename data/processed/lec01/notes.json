@@ -4,36 +4,36 @@
   "source_type": "notes",
   "source_file": "data/raw/lec01/notes.pdf",
   "source_sha256": "dc04facffd88355daf6e3e1620c4e253b84d31dc4bac7417500240f6baf16b66",
-  "parser_version": 2,
-  "created_at": "2026-10-06T03:50:09+00:00",
+  "parser_version": 3,
+  "created_at": "2026-10-07T22:32:33+00:00",
   "pages": [
     {
       "page": 1,
-      "chars": 883,
+      "chars": 886,
       "images": 0,
       "drawings": 1
     },
     {
       "page": 2,
-      "chars": 757,
+      "chars": 758,
       "images": 0,
       "drawings": 45
     },
     {
       "page": 3,
-      "chars": 926,
+      "chars": 928,
       "images": 0,
       "drawings": 34
     },
     {
       "page": 4,
-      "chars": 394,
+      "chars": 395,
       "images": 0,
       "drawings": 32
     },
     {
       "page": 5,
-      "chars": 938,
+      "chars": 941,
       "images": 0,
       "drawings": 26
     },
@@ -88,7 +88,7 @@
       "end": null,
       "page": 1,
       "section": null,
-      "text": "• “Peak ﬁnding” problem — 1D and 2D versions"
+      "text": "• “Peak finding” problem — 1D and 2D versions"
     },
     {
       "id": "dc04facffd88-00005",
@@ -115,7 +115,7 @@
       "end": null,
       "page": 1,
       "section": null,
-      "text": "• Eﬃcient procedures for solving problems on large inputs (Ex: U.S. Highway Map, Human Genome)"
+      "text": "• Efficient procedures for solving problems on large inputs (Ex: U.S. Highway Map, Human Genome)"
     },
     {
       "id": "dc04facffd88-00008",
@@ -331,7 +331,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "What if we start in the middle? For the conﬁguration below, we would look at n/2 elements. Would we have to ever look at more than n/2 elements if we start in the middle, and choose a direction based on which neighboring element is larger that the middle element?"
+      "text": "What if we start in the middle? For the configuration below, we would look at n/2 elements. Would we have to ever look at more than n/2 elements if we start in the middle, and choose a direction based on which neighboring element is larger that the middle element?"
     },
     {
       "id": "dc04facffd88-00032",
@@ -412,7 +412,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "In order to sum up the Θ(i)‘s as we do here, we need to ﬁnd a constant that works for all. If n = 1000000, Θ(n) algo needs 13 sec in python. If algo is Θ(log n) we only need 0.001 sec. Argue that the algorithm is correct."
+      "text": "In order to sum up the Θ(i)‘s as we do here, we need to find a constant that works for all. If n = 1000000, Θ(n) algo needs 13 sec in python. If algo is Θ(log n) we only need 0.001 sec. Argue that the algorithm is correct."
     },
     {
       "id": "dc04facffd88-00041",
@@ -457,7 +457,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "a is a 2D-peak iﬀ a ≥ b, a ≥ d, a ≥ c, a ≥ e"
+      "text": "a is a 2D-peak iff a ≥ b, a ≥ d, a ≥ c, a ≥ e"
     },
     {
       "id": "dc04facffd88-00046",
@@ -502,7 +502,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "• Use (i, j) as a start point on row i to ﬁnd 1D-peak on row i."
+      "text": "• Use (i, j) as a start point on row i to find 1D-peak on row i."
     },
     {
       "id": "dc04facffd88-00051",
@@ -610,7 +610,7 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "• When you have a single column, ﬁnd global maximum and you‘re done."
+      "text": "• When you have a single column, find global maximum and you‘re done."
     },
     {
       "id": "dc04facffd88-00063",
@@ -637,7 +637,7 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "pick this column 19 global max for this column"
+      "text": "find 21 21"
     },
     {
       "id": "dc04facffd88-00066",
@@ -646,7 +646,7 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "pick this column 17 global max for this column"
+      "text": "pick this column 19 global max for this column"
     },
     {
       "id": "dc04facffd88-00067",
@@ -655,7 +655,7 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "Complexity of Attempt #2"
+      "text": "pick this column 17 global max for this column"
     },
     {
       "id": "dc04facffd88-00068",
@@ -664,7 +664,7 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "If T (n, m) denotes work required to solve problem with n rows and m columns"
+      "text": "Complexity of Attempt #2"
     },
     {
       "id": "dc04facffd88-00069",
@@ -673,7 +673,7 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "T (n, m) = T (n, m/2) + Θ(n) (to ﬁnd global maximum on a column — (n rows))"
+      "text": "If T (n, m) denotes work required to solve problem with n rows and m columns"
     },
     {
       "id": "dc04facffd88-00070",
@@ -682,10 +682,19 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "T (n, m) = Θ(n) + . . . + Θ(n) ' -v \" log m = Θ(n log m) = Θ(n log n) if m = n"
+      "text": "T (n, m) = T (n, m/2) + Θ(n) (to find global maximum on a column — (n rows))"
     },
     {
       "id": "dc04facffd88-00071",
+      "kind": "text",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "T (n, m) = Θ(n) + . . . + Θ(n) ' -v \" log m = Θ(n log m) = Θ(n log n) if m = n"
+    },
+    {
+      "id": "dc04facffd88-00072",
       "kind": "text",
       "start": null,
       "end": null,

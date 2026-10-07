@@ -4,8 +4,8 @@
   "source_type": "notes",
   "source_file": "data/raw/lec03/notes.pdf",
   "source_sha256": "addb9ea7b4e1bdf9f341579650d605239ddce1ae9675517f76a831810554155c",
-  "parser_version": 2,
-  "created_at": "2026-10-06T03:50:09+00:00",
+  "parser_version": 3,
+  "created_at": "2026-10-07T22:32:33+00:00",
   "pages": [
     {
       "page": 1,
@@ -21,7 +21,7 @@
     },
     {
       "page": 3,
-      "chars": 198,
+      "chars": 204,
       "images": 0,
       "drawings": 0
     },
@@ -249,37 +249,37 @@
     },
     {
       "page": 41,
-      "chars": 112,
+      "chars": 115,
       "images": 0,
       "drawings": 29
     },
     {
       "page": 42,
-      "chars": 130,
+      "chars": 133,
       "images": 1,
       "drawings": 38
     },
     {
       "page": 43,
-      "chars": 137,
+      "chars": 140,
       "images": 1,
       "drawings": 38
     },
     {
       "page": 44,
-      "chars": 182,
+      "chars": 185,
       "images": 1,
       "drawings": 39
     },
     {
       "page": 45,
-      "chars": 202,
+      "chars": 211,
       "images": 1,
       "drawings": 38
     },
     {
       "page": 46,
-      "chars": 235,
+      "chars": 244,
       "images": 1,
       "drawings": 39
     },
@@ -370,7 +370,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "Input: array A[1…n] of numbers."
+      "text": "Input: array A[1...n] of numbers."
     },
     {
       "id": "addb9ea7b4e1-00009",
@@ -379,7 +379,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "Output: permutation B[1…n] of A such"
+      "text": "Output: permutation B[1...n] of A such"
     },
     {
       "id": "addb9ea7b4e1-00010",
@@ -388,7 +388,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "that B[1] ≤ B[2] ≤ … ≤ B[n] ."
+      "text": "that B[1] ≤ B[2] ≤ ... ≤ B[n] ."
     },
     {
       "id": "addb9ea7b4e1-00011",
@@ -856,7 +856,7 @@
       "end": null,
       "page": 45,
       "section": null,
-      "text": "Note that 1 + ½ + ¼ + … < 2 = Θ Total (n)"
+      "text": "Note that 1 + 1⁄2 + 1⁄4 + ... < 2 = Θ Total (n)"
     },
     {
       "id": "addb9ea7b4e1-00063",
@@ -910,7 +910,7 @@
       "end": null,
       "page": 46,
       "section": null,
-      "text": "Note that 1 + ½ + ¼ + … < 2 Total = Θ(n2)"
+      "text": "Note that 1 + 1⁄2 + 1⁄4 + ... < 2 Total = Θ(n2)"
     },
     {
       "id": "addb9ea7b4e1-00069",

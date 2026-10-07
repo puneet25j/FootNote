@@ -9,6 +9,7 @@ import sys
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+import unicodedata 
 
 import pymupdf
 
@@ -16,12 +17,14 @@ from footnote.utils import already_done, sha256_file, write_json_atomic
 
 RAW_DIR = Path("data/raw")
 OUT_DIR = Path("data/processed")
-PARSER_VERSION = 2
+PARSER_VERSION = 3
 
 BOILERPLATE_MARKER = "ocw.mit.edu/terms"
 HAS_WORD = re.compile(r"[A-Za-z]{3,}")
 
 def clean_block(text: str) -> str:
+    text = unicodedata.normalize("NFKC", text)  # "ﬁ" -> "fi", "…" -> "..."
+    text = text.replace("\u00ad", "")           # invisible "soft hyphen"
     text = re.sub(r"(\w)-\n(\w)", r"\1\2", text)  # "algo-\nrithm" -> "algorithm"
     text = text.replace("\n", " ")
     return re.sub(r"\s+", " ", text).strip()

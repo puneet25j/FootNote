@@ -4,42 +4,42 @@
   "source_type": "notes",
   "source_file": "data/raw/lec02/notes.pdf",
   "source_sha256": "7b5596d221433c276352775b0a41d9edef4c076af0bd0dcc0e46bfa921586a09",
-  "parser_version": 2,
-  "created_at": "2026-10-06T03:50:09+00:00",
+  "parser_version": 3,
+  "created_at": "2026-10-07T22:32:33+00:00",
   "pages": [
     {
       "page": 1,
-      "chars": 808,
+      "chars": 811,
       "images": 0,
       "drawings": 40
     },
     {
       "page": 2,
-      "chars": 655,
+      "chars": 658,
       "images": 0,
       "drawings": 15
     },
     {
       "page": 3,
-      "chars": 673,
+      "chars": 674,
       "images": 0,
       "drawings": 22
     },
     {
       "page": 4,
-      "chars": 1356,
+      "chars": 1362,
       "images": 0,
       "drawings": 9
     },
     {
       "page": 5,
-      "chars": 907,
+      "chars": 910,
       "images": 0,
       "drawings": 21
     },
     {
       "page": 6,
-      "chars": 1006,
+      "chars": 1008,
       "images": 0,
       "drawings": 1
     },
@@ -136,7 +136,7 @@
       "end": null,
       "page": 1,
       "section": null,
-      "text": "Al-Khw¯arizm¯ı “al-kha-raz-mi” (c. 780-850)"
+      "text": "Al-Khw ̄arizm ̄ı “al-kha-raz-mi” (c. 780-850)"
     },
     {
       "id": "7b5596d22143-00009",
@@ -145,7 +145,7 @@
       "end": null,
       "page": 1,
       "section": null,
-      "text": "• “father of algebra” with his book “The Compendious Book on Calculation by Com­ pletion & Balancing”"
+      "text": "• “father of algebra” with his book “The Compendious Book on Calculation by Com pletion & Balancing”"
     },
     {
       "id": "7b5596d22143-00010",
@@ -154,7 +154,7 @@
       "end": null,
       "page": 1,
       "section": null,
-      "text": "• linear & quadratic equation solving: some of the ﬁrst algorithms"
+      "text": "• linear & quadratic equation solving: some of the first algorithms"
     },
     {
       "id": "7b5596d22143-00011",
@@ -262,7 +262,7 @@
       "end": null,
       "page": 1,
       "section": null,
-      "text": "Model of computation speciﬁes"
+      "text": "Model of computation specifies"
     },
     {
       "id": "7b5596d22143-00023",
@@ -379,7 +379,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "– assume basic objects (e.g., int) ﬁt in word"
+      "text": "– assume basic objects (e.g., int) fit in word"
     },
     {
       "id": "7b5596d22143-00036",
@@ -424,7 +424,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "• object has O(1) ﬁelds"
+      "text": "• object has O(1) fields"
     },
     {
       "id": "7b5596d22143-00041",
@@ -433,7 +433,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "• ﬁeld = word (e.g., int) or pointer to object/null (a.k.a. reference)"
+      "text": "• field = word (e.g., int) or pointer to object/null (a.k.a. reference)"
     },
     {
       "id": "7b5596d22143-00042",
@@ -559,7 +559,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "obvious if you think of inﬁnite array"
+      "text": "obvious if you think of infinite array"
     },
     {
       "id": "7b5596d22143-00056",
@@ -649,7 +649,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "(e) b = x in L ≡ for y in L: & L.index(x) if x == y: & L.ﬁnd(x) b = T rue; break else"
+      "text": "(e) b = x in L ≡ for y in L: & L.index(x) if x == y: & L.find(x) b = T rue; break else"
     },
     {
       "id": "7b5596d22143-00066",
@@ -667,7 +667,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "(f) len(L) → θ(1) time - list stores its length in a ﬁeld"
+      "text": "(f) len(L) → θ(1) time - list stores its length in a field"
     },
     {
       "id": "7b5596d22143-00068",
@@ -721,7 +721,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "6. long: via Karatsuba algorithm [Lecture 11] x + y → O(|x| + |y|) time where |y| reﬂects # words x ∗ y → O((|x| + |y|)log(3)) ≈ O((|x| + |y|)1.58) time"
+      "text": "6. long: via Karatsuba algorithm [Lecture 11] x + y → O(|x| + |y|) time where |y| reflects # words x ∗ y → O((|x| + |y|)log(3)) ≈ O((|x| + |y|)1.58) time"
     },
     {
       "id": "7b5596d22143-00074",
@@ -739,7 +739,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "The document distance problem has applications in ﬁnding similar documents, detecting duplicates (Wikipedia mirrors and Google) and plagiarism, and also in web search (D2 = query). Some Deﬁnitions:"
+      "text": "The document distance problem has applications in finding similar documents, detecting duplicates (Wikipedia mirrors and Google) and plagiarism, and also in web search (D2 = query). Some Definitions:"
     },
     {
       "id": "7b5596d22143-00076",
@@ -766,7 +766,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "The idea is to deﬁne distance in terms of shared words. Think of document D as a vector: D[w] = # occurrences of word W . For example:"
+      "text": "The idea is to define distance in terms of shared words. Think of document D as a vector: D[w] = # occurrences of word W . For example:"
     },
     {
       "id": "7b5596d22143-00079",
@@ -811,7 +811,7 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "As a ﬁrst attempt, deﬁne document distance as"
+      "text": "As a first attempt, define document distance as"
     },
     {
       "id": "7b5596d22143-00084",
@@ -820,7 +820,7 @@
       "end": null,
       "page": 5,
       "section": null,
-      "text": "The problem is that this is not scale invariant. This means that long documents with 99% same words seem farther than short documents with 10% same words. This can be ﬁxed by normalizing by the number of words:"
+      "text": "The problem is that this is not scale invariant. This means that long documents with 99% same words seem farther than short documents with 10% same words. This can be fixed by normalizing by the number of words:"
     },
     {
       "id": "7b5596d22143-00085",
@@ -892,7 +892,7 @@
       "end": null,
       "page": 6,
       "section": null,
-      "text": "(1) re.ﬁndall (r“ w+”, doc) → what cost?"
+      "text": "(1) re.findall (r“ w+”, doc) → what cost?"
     },
     {
       "id": "7b5596d22143-00093",
@@ -1009,7 +1009,7 @@
       "end": null,
       "page": 6,
       "section": null,
-      "text": "(3)’ start at ﬁrst word of each list if words equal: ← O(|word|) total += count1 * count2 if word1 ≤ word2: ← O(|word|)"
+      "text": "(3)’ start at first word of each list if words equal: ← O(|word|) total += count1 * count2 if word1 ≤ word2: ← O(|word|)"
     },
     {
       "id": "7b5596d22143-00106",
