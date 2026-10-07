@@ -16,8 +16,10 @@ from footnote.utils import already_done, sha256_file, write_json_atomic
 
 RAW_DIR = Path("data/raw")
 OUT_DIR = Path("data/processed")
-PARSER_VERSION = 1  # bump this when you change the parsing rules
+PARSER_VERSION = 2
 
+BOILERPLATE_MARKER = "ocw.mit.edu/terms"
+HAS_WORD = re.compile(r"[A-Za-z]{3,}")
 
 def clean_block(text: str) -> str:
     text = re.sub(r"(\w)-\n(\w)", r"\1\2", text)  # "algo-\nrithm" -> "algorithm"
@@ -48,6 +50,21 @@ def extract(pdf_path: Path) -> tuple[list[dict], list[dict]]:
             })
     return blocks, pages
 
+def drop_noise(blocks: list[dict]) -> list[dict]:
+    """Remove text that would only add noise to search."""
+    license_pages = {b["page"] for b in blocks if BOILERPLATE_MARKER in b["text"]}
+    seen, kept = set(), []
+    for b in blocks:
+        if b["page"] in license_pages:      # the OCW license/citation page
+            continue
+        if not HAS_WORD.search(b["text"]):  # figure labels like "14 13 12", "⎫ ⎪ ⎬"
+            continue
+        if b["text"] in seen:               # slide decks repeat text on every animation step
+            continue
+        seen.add(b["text"])
+        kept.append(b)
+    return kept
+
 
 def drop_repeated(blocks: list[dict], n_pages: int) -> list[dict]:
     """Remove running headers/footers: text that appears on at least half the pages."""
@@ -72,6 +89,7 @@ def process_lecture(lecture_dir: Path) -> None:
 
     blocks, pages = extract(pdf)
     blocks = drop_repeated(blocks, len(pages))
+    blocks = drop_noise(blocks)
 
     doc_id = source_hash[:12]
     segments = [

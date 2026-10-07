@@ -4,8 +4,8 @@
   "source_type": "notes",
   "source_file": "data/raw/lec03/notes.pdf",
   "source_sha256": "addb9ea7b4e1bdf9f341579650d605239ddce1ae9675517f76a831810554155c",
-  "parser_version": 1,
-  "created_at": "2026-10-05T03:12:50+00:00",
+  "parser_version": 2,
+  "created_at": "2026-10-06T03:50:09+00:00",
   "pages": [
     {
       "page": 1,
@@ -361,7 +361,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "e.g. A = [7, 2, 5, 5, 9.6] → B = [2, 5, 5, 7, 9.6]"
+      "text": "The problem of sorting"
     },
     {
       "id": "addb9ea7b4e1-00008",
@@ -370,7 +370,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "The problem of sorting"
+      "text": "Input: array A[1…n] of numbers."
     },
     {
       "id": "addb9ea7b4e1-00009",
@@ -379,7 +379,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "Input: array A[1…n] of numbers."
+      "text": "Output: permutation B[1…n] of A such"
     },
     {
       "id": "addb9ea7b4e1-00010",
@@ -388,7 +388,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "Output: permutation B[1…n] of A such"
+      "text": "that B[1] ≤ B[2] ≤ … ≤ B[n] ."
     },
     {
       "id": "addb9ea7b4e1-00011",
@@ -397,19 +397,10 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "that B[1] ≤ B[2] ≤ … ≤ B[n] ."
-    },
-    {
-      "id": "addb9ea7b4e1-00012",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 3,
-      "section": null,
       "text": "How can we do it efficiently ?"
     },
     {
-      "id": "addb9ea7b4e1-00013",
+      "id": "addb9ea7b4e1-00012",
       "kind": "text",
       "start": null,
       "end": null,
@@ -418,7 +409,7 @@
       "text": "– Maintain a telephone directory"
     },
     {
-      "id": "addb9ea7b4e1-00014",
+      "id": "addb9ea7b4e1-00013",
       "kind": "text",
       "start": null,
       "end": null,
@@ -427,7 +418,7 @@
       "text": "– Find a median, or find closest pairs"
     },
     {
-      "id": "addb9ea7b4e1-00015",
+      "id": "addb9ea7b4e1-00014",
       "kind": "text",
       "start": null,
       "end": null,
@@ -436,7 +427,7 @@
       "text": "– Binary search, identify statistical outliers"
     },
     {
-      "id": "addb9ea7b4e1-00016",
+      "id": "addb9ea7b4e1-00015",
       "kind": "text",
       "start": null,
       "end": null,
@@ -445,7 +436,7 @@
       "text": "– Data compression: sorting finds duplicates"
     },
     {
-      "id": "addb9ea7b4e1-00017",
+      "id": "addb9ea7b4e1-00016",
       "kind": "text",
       "start": null,
       "end": null,
@@ -454,7 +445,7 @@
       "text": "– Computer graphics: rendering scenes front to back"
     },
     {
-      "id": "addb9ea7b4e1-00018",
+      "id": "addb9ea7b4e1-00017",
       "kind": "text",
       "start": null,
       "end": null,
@@ -463,7 +454,7 @@
       "text": "Why Sorting?"
     },
     {
-      "id": "addb9ea7b4e1-00019",
+      "id": "addb9ea7b4e1-00018",
       "kind": "text",
       "start": null,
       "end": null,
@@ -472,7 +463,7 @@
       "text": "• Obvious applications – Organize an MP3 library"
     },
     {
-      "id": "addb9ea7b4e1-00020",
+      "id": "addb9ea7b4e1-00019",
       "kind": "text",
       "start": null,
       "end": null,
@@ -481,7 +472,7 @@
       "text": "• Problems that become easy once items are in sorted order"
     },
     {
-      "id": "addb9ea7b4e1-00021",
+      "id": "addb9ea7b4e1-00020",
       "kind": "text",
       "start": null,
       "end": null,
@@ -490,7 +481,7 @@
       "text": "• Non-obvious applications"
     },
     {
-      "id": "addb9ea7b4e1-00022",
+      "id": "addb9ea7b4e1-00021",
       "kind": "text",
       "start": null,
       "end": null,
@@ -499,7 +490,7 @@
       "text": "new location of key"
     },
     {
-      "id": "addb9ea7b4e1-00023",
+      "id": "addb9ea7b4e1-00022",
       "kind": "text",
       "start": null,
       "end": null,
@@ -508,16 +499,7 @@
       "text": "key sorted"
     },
     {
-      "id": "addb9ea7b4e1-00024",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "1 i j n"
-    },
-    {
-      "id": "addb9ea7b4e1-00025",
+      "id": "addb9ea7b4e1-00023",
       "kind": "text",
       "start": null,
       "end": null,
@@ -526,7 +508,7 @@
       "text": "by pairwise key-swaps down to its right position"
     },
     {
-      "id": "addb9ea7b4e1-00026",
+      "id": "addb9ea7b4e1-00024",
       "kind": "text",
       "start": null,
       "end": null,
@@ -535,7 +517,7 @@
       "text": "insert key A[j] into the (already sorted) sub-array A[1 .. j-1]."
     },
     {
-      "id": "addb9ea7b4e1-00027",
+      "id": "addb9ea7b4e1-00025",
       "kind": "text",
       "start": null,
       "end": null,
@@ -544,7 +526,7 @@
       "text": "Insertion sort"
     },
     {
-      "id": "addb9ea7b4e1-00028",
+      "id": "addb9ea7b4e1-00026",
       "kind": "text",
       "start": null,
       "end": null,
@@ -553,7 +535,7 @@
       "text": "for j ← 2 to n"
     },
     {
-      "id": "addb9ea7b4e1-00029",
+      "id": "addb9ea7b4e1-00027",
       "kind": "text",
       "start": null,
       "end": null,
@@ -562,7 +544,7 @@
       "text": "INSERTION-SORT (A, n) [ A[1 . . n]"
     },
     {
-      "id": "addb9ea7b4e1-00030",
+      "id": "addb9ea7b4e1-00028",
       "kind": "text",
       "start": null,
       "end": null,
@@ -571,16 +553,7 @@
       "text": "Illustration of iteration j"
     },
     {
-      "id": "addb9ea7b4e1-00031",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 6,
-      "section": null,
-      "text": "8 2 4 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00032",
+      "id": "addb9ea7b4e1-00029",
       "kind": "text",
       "start": null,
       "end": null,
@@ -589,394 +562,7 @@
       "text": "Example of insertion sort"
     },
     {
-      "id": "addb9ea7b4e1-00033",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 7,
-      "section": null,
-      "text": "4 9 3 6 8 2"
-    },
-    {
-      "id": "addb9ea7b4e1-00034",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 7,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00035",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 8,
-      "section": null,
-      "text": "9 3 8 2 4"
-    },
-    {
-      "id": "addb9ea7b4e1-00036",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 8,
-      "section": null,
-      "text": "2 8 4 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00037",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 8,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00038",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 9,
-      "section": null,
-      "text": "9 3 8 2 4"
-    },
-    {
-      "id": "addb9ea7b4e1-00039",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 9,
-      "section": null,
-      "text": "2 8 4 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00040",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 9,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00041",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 10,
-      "section": null,
-      "text": "8 2 4 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00042",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 10,
-      "section": null,
-      "text": "2 8 4 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00043",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 10,
-      "section": null,
-      "text": "2 4 8 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00044",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 10,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00045",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 11,
-      "section": null,
-      "text": "8 2 4 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00046",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 11,
-      "section": null,
-      "text": "2 8 4 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00047",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 11,
-      "section": null,
-      "text": "2 4 8 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00048",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 11,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00049",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 12,
-      "section": null,
-      "text": "8 2 4 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00050",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 12,
-      "section": null,
-      "text": "2 8 4 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00051",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 12,
-      "section": null,
-      "text": "2 4 8 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00052",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 12,
-      "section": null,
-      "text": "2 4 8 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00053",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 12,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00054",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 13,
-      "section": null,
-      "text": "8 2 4 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00055",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 13,
-      "section": null,
-      "text": "2 8 4 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00056",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 13,
-      "section": null,
-      "text": "2 4 8 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00057",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 13,
-      "section": null,
-      "text": "2 4 8 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00058",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 13,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00059",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 14,
-      "section": null,
-      "text": "8 2 4 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00060",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 14,
-      "section": null,
-      "text": "2 8 4 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00061",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 14,
-      "section": null,
-      "text": "2 4 8 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00062",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 14,
-      "section": null,
-      "text": "2 4 8 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00063",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 14,
-      "section": null,
-      "text": "2 3 4 8 9 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00064",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 14,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00065",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 15,
-      "section": null,
-      "text": "8 2 4 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00066",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 15,
-      "section": null,
-      "text": "2 8 4 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00067",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 15,
-      "section": null,
-      "text": "2 4 8 9 3 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00068",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 15,
-      "section": null,
-      "text": "2 4 8 9 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00069",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 15,
-      "section": null,
-      "text": "2 3 4 8 9 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00070",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 15,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00071",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 16,
-      "section": null,
-      "text": "8 4 9 3 6 2"
-    },
-    {
-      "id": "addb9ea7b4e1-00072",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 16,
-      "section": null,
-      "text": "2 8 9 3 6 4"
-    },
-    {
-      "id": "addb9ea7b4e1-00073",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 16,
-      "section": null,
-      "text": "2 4 8 3 6 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00074",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 16,
-      "section": null,
-      "text": "2 4 8 9 6 3"
-    },
-    {
-      "id": "addb9ea7b4e1-00075",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 16,
-      "section": null,
-      "text": "2 3 4 8 9 6"
-    },
-    {
-      "id": "addb9ea7b4e1-00076",
+      "id": "addb9ea7b4e1-00030",
       "kind": "text",
       "start": null,
       "end": null,
@@ -985,7 +571,7 @@
       "text": "2 3 4 6 8 9 done"
     },
     {
-      "id": "addb9ea7b4e1-00077",
+      "id": "addb9ea7b4e1-00031",
       "kind": "text",
       "start": null,
       "end": null,
@@ -994,16 +580,7 @@
       "text": "e.g. when input is A = [n, n − 1, n − 2, . . . , 2, 1]"
     },
     {
-      "id": "addb9ea7b4e1-00078",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 16,
-      "section": null,
-      "text": "Example of insertion sort"
-    },
-    {
-      "id": "addb9ea7b4e1-00079",
+      "id": "addb9ea7b4e1-00032",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1012,7 +589,7 @@
       "text": "Running time? Θ(n2) because Θ(n2) compares and Θ(n2) swaps"
     },
     {
-      "id": "addb9ea7b4e1-00080",
+      "id": "addb9ea7b4e1-00033",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1021,16 +598,7 @@
       "text": "(n2) swaps"
     },
     {
-      "id": "addb9ea7b4e1-00081",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 17,
-      "section": null,
-      "text": "insert key A[j] into the (already sorted) sub-array A[1 .. j-1]."
-    },
-    {
-      "id": "addb9ea7b4e1-00082",
+      "id": "addb9ea7b4e1-00034",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1039,7 +607,7 @@
       "text": "Use binary search to find the right position"
     },
     {
-      "id": "addb9ea7b4e1-00083",
+      "id": "addb9ea7b4e1-00035",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1048,16 +616,7 @@
       "text": "Binary Insertion sort"
     },
     {
-      "id": "addb9ea7b4e1-00084",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 17,
-      "section": null,
-      "text": "for j ← 2 to n"
-    },
-    {
-      "id": "addb9ea7b4e1-00085",
+      "id": "addb9ea7b4e1-00036",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1066,7 +625,7 @@
       "text": "Binary search with take Θ(log n) time."
     },
     {
-      "id": "addb9ea7b4e1-00086",
+      "id": "addb9ea7b4e1-00037",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1075,7 +634,7 @@
       "text": "However, shifting the elements after insertion will"
     },
     {
-      "id": "addb9ea7b4e1-00087",
+      "id": "addb9ea7b4e1-00038",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1084,7 +643,7 @@
       "text": "still take Θ(n) time."
     },
     {
-      "id": "addb9ea7b4e1-00088",
+      "id": "addb9ea7b4e1-00039",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1093,7 +652,7 @@
       "text": "Complexity: Θ(n log n) comparisons"
     },
     {
-      "id": "addb9ea7b4e1-00089",
+      "id": "addb9ea7b4e1-00040",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1102,7 +661,7 @@
       "text": "BINARY-INSERTION-SORT (A, n) [ A[1 . . n]"
     },
     {
-      "id": "addb9ea7b4e1-00090",
+      "id": "addb9ea7b4e1-00041",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1111,7 +670,7 @@
       "text": "3. “Merge” the two sorted sub-arrays."
     },
     {
-      "id": "addb9ea7b4e1-00091",
+      "id": "addb9ea7b4e1-00042",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1120,7 +679,7 @@
       "text": "Key subroutine: MERGE"
     },
     {
-      "id": "addb9ea7b4e1-00092",
+      "id": "addb9ea7b4e1-00043",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1129,7 +688,7 @@
       "text": "MERGE-SORT A[1 . . n]"
     },
     {
-      "id": "addb9ea7b4e1-00093",
+      "id": "addb9ea7b4e1-00044",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1138,7 +697,7 @@
       "text": "Meet Merge Sort"
     },
     {
-      "id": "addb9ea7b4e1-00094",
+      "id": "addb9ea7b4e1-00045",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1147,7 +706,7 @@
       "text": "1. If n = 1, done (nothing to sort). divide and 2. Otherwise, recursively sort A[ 1 . . n/2 ] conquer and A[ n/2+1 . . n ] ."
     },
     {
-      "id": "addb9ea7b4e1-00095",
+      "id": "addb9ea7b4e1-00046",
       "kind": "text",
       "start": null,
       "end": null,
@@ -1156,1078 +715,7 @@
       "text": "Merging two sorted arrays"
     },
     {
-      "id": "addb9ea7b4e1-00096",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 19,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00097",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 19,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00098",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 19,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00099",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 19,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00100",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 20,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00101",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 20,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00102",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 20,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00103",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 20,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00104",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 20,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00105",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 21,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00106",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 21,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00107",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 21,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00108",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 21,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00109",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 21,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00110",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 21,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00111",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 21,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00112",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 21,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00113",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 22,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00114",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 22,
-      "section": null,
-      "text": "1 2"
-    },
-    {
-      "id": "addb9ea7b4e1-00115",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 22,
-      "section": null,
-      "text": "7 9 7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00116",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 22,
-      "section": null,
-      "text": "2 1 2"
-    },
-    {
-      "id": "addb9ea7b4e1-00117",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 22,
-      "section": null,
-      "text": "20 12 20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00118",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 22,
-      "section": null,
-      "text": "13 11 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00119",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00120",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00121",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00122",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00123",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "1 2"
-    },
-    {
-      "id": "addb9ea7b4e1-00124",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "7 9 7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00125",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "2 1 2"
-    },
-    {
-      "id": "addb9ea7b4e1-00126",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "20 12 20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00127",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 23,
-      "section": null,
-      "text": "13 11 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00128",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00129",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00130",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00131",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00132",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00133",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00134",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00135",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "1 2 7"
-    },
-    {
-      "id": "addb9ea7b4e1-00136",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00137",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00138",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00139",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 24,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00140",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00141",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "11 13"
-    },
-    {
-      "id": "addb9ea7b4e1-00142",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00143",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00144",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00145",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00146",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "1 2 7"
-    },
-    {
-      "id": "addb9ea7b4e1-00147",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "7 9 7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00148",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "2 1 2"
-    },
-    {
-      "id": "addb9ea7b4e1-00149",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "20 12 20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00150",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 25,
-      "section": null,
-      "text": "13 11 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00151",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "7 9 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00152",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "20 12 20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00153",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "13 11 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00154",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00155",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00156",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00157",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00158",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "1 2 7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00159",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00160",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00161",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00162",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 26,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00163",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "7 9 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00164",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "20 12 20 12 20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00165",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "13 11 13 11 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00166",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00167",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00168",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00169",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00170",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "1 2 7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00171",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00172",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00173",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00174",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 27,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00175",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00176",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "20 12 20 12 20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00177",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "13 11 13 11 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00178",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00179",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00180",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00181",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00182",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "1 2 7 9 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00183",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00184",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00185",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00186",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 28,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00187",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "7 9 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00188",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "20 12 20 12 20 12 20"
-    },
-    {
-      "id": "addb9ea7b4e1-00189",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "13 11 13 11 13 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00190",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00191",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00192",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00193",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00194",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "1 2 7 9 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00195",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00196",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00197",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00198",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 29,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00199",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "7 9 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00200",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "20 12 20 12 20 12 20"
-    },
-    {
-      "id": "addb9ea7b4e1-00201",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "13 11 13 11 13 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00202",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00203",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00204",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00205",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00206",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "1 2 7 9 11 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00207",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00208",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00209",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00210",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 30,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00211",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "7 9 11 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00212",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "7 9 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00213",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "20 12 20 12 20 12 20"
-    },
-    {
-      "id": "addb9ea7b4e1-00214",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "13 11 13 11 13 13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00215",
+      "id": "addb9ea7b4e1-00047",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2236,7 +724,7 @@
       "text": "of n elements (linear time)."
     },
     {
-      "id": "addb9ea7b4e1-00216",
+      "id": "addb9ea7b4e1-00048",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2245,133 +733,7 @@
       "text": "Time = Θ(n) to merge a total"
     },
     {
-      "id": "addb9ea7b4e1-00217",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00218",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00219",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00220",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "Merging two sorted arrays"
-    },
-    {
-      "id": "addb9ea7b4e1-00221",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "7 9"
-    },
-    {
-      "id": "addb9ea7b4e1-00222",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "2 1"
-    },
-    {
-      "id": "addb9ea7b4e1-00223",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "20 12"
-    },
-    {
-      "id": "addb9ea7b4e1-00224",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 31,
-      "section": null,
-      "text": "13 11"
-    },
-    {
-      "id": "addb9ea7b4e1-00225",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 32,
-      "section": null,
-      "text": "T(n)"
-    },
-    {
-      "id": "addb9ea7b4e1-00226",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 32,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00227",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 32,
-      "section": null,
-      "text": "2T(n/2)"
-    },
-    {
-      "id": "addb9ea7b4e1-00228",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 32,
-      "section": null,
-      "text": "Θ(n)"
-    },
-    {
-      "id": "addb9ea7b4e1-00229",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 32,
-      "section": null,
-      "text": "T(n) = ?"
-    },
-    {
-      "id": "addb9ea7b4e1-00230",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 32,
-      "section": null,
-      "text": "Θ(1) if n = 1; T(n) = 2T(n/2) + Θ(n) if n > 1."
-    },
-    {
-      "id": "addb9ea7b4e1-00231",
+      "id": "addb9ea7b4e1-00049",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2380,7 +742,7 @@
       "text": "3. “Merge” the two sorted lists"
     },
     {
-      "id": "addb9ea7b4e1-00232",
+      "id": "addb9ea7b4e1-00050",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2389,16 +751,7 @@
       "text": "1. If n = 1, done. 2. Recursively sort A[ 1 . . ⎡n/2⎤ ] and A[ ⎡n/2⎤+1 . . n ] ."
     },
     {
-      "id": "addb9ea7b4e1-00233",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 32,
-      "section": null,
-      "text": "MERGE-SORT A[1 . . n]"
-    },
-    {
-      "id": "addb9ea7b4e1-00234",
+      "id": "addb9ea7b4e1-00051",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2407,7 +760,7 @@
       "text": "Analyzing merge sort"
     },
     {
-      "id": "addb9ea7b4e1-00235",
+      "id": "addb9ea7b4e1-00052",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2416,7 +769,7 @@
       "text": "Recurrence solving"
     },
     {
-      "id": "addb9ea7b4e1-00236",
+      "id": "addb9ea7b4e1-00053",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2425,16 +778,7 @@
       "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
     },
     {
-      "id": "addb9ea7b4e1-00237",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 34,
-      "section": null,
-      "text": "T(n)"
-    },
-    {
-      "id": "addb9ea7b4e1-00238",
+      "id": "addb9ea7b4e1-00054",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2443,79 +787,7 @@
       "text": "Recursion tree"
     },
     {
-      "id": "addb9ea7b4e1-00239",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 34,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00240",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 35,
-      "section": null,
-      "text": "T(n/2) T(n/2)"
-    },
-    {
-      "id": "addb9ea7b4e1-00241",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 35,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00242",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 35,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00243",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 36,
-      "section": null,
-      "text": "cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00244",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 36,
-      "section": null,
-      "text": "cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00245",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 36,
-      "section": null,
-      "text": "T(n/4) T(n/4) T(n/4) T(n/4)"
-    },
-    {
-      "id": "addb9ea7b4e1-00246",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 36,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00247",
+      "id": "addb9ea7b4e1-00055",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2524,286 +796,7 @@
       "text": "olve T(n) = 2T(n/2) + cn, where c > 0 is constant. S"
     },
     {
-      "id": "addb9ea7b4e1-00248",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 37,
-      "section": null,
-      "text": "cn/2 cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00249",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 37,
-      "section": null,
-      "text": "cn/4 cn/4 cn/4 cn/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00250",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 37,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00251",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 37,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00252",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 37,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00253",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 38,
-      "section": null,
-      "text": "cn/2 cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00254",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 38,
-      "section": null,
-      "text": "cn/4 cn/4 cn/4 cn/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00255",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 38,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00256",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 38,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00257",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 38,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00258",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 38,
-      "section": null,
-      "text": "h = 1 + lg n"
-    },
-    {
-      "id": "addb9ea7b4e1-00259",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 39,
-      "section": null,
-      "text": "cn/2 cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00260",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 39,
-      "section": null,
-      "text": "cn/4 cn/4 cn/4 cn/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00261",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 39,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00262",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 39,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00263",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 39,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00264",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 39,
-      "section": null,
-      "text": "h = 1 + lg n"
-    },
-    {
-      "id": "addb9ea7b4e1-00265",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 40,
-      "section": null,
-      "text": "cn cn"
-    },
-    {
-      "id": "addb9ea7b4e1-00266",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 40,
-      "section": null,
-      "text": "cn/2 cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00267",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 40,
-      "section": null,
-      "text": "cn/4 cn/4 cn/4 cn/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00268",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 40,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00269",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 40,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00270",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 40,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00271",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 40,
-      "section": null,
-      "text": "cn h = 1 + lg n"
-    },
-    {
-      "id": "addb9ea7b4e1-00272",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 41,
-      "section": null,
-      "text": "cn/2 cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00273",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 41,
-      "section": null,
-      "text": "cn/4 cn/4 cn/4 cn/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00274",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 41,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00275",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 41,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00276",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 41,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00277",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 41,
-      "section": null,
-      "text": "cn h = 1 + lg n"
-    },
-    {
-      "id": "addb9ea7b4e1-00278",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 42,
-      "section": null,
-      "text": "cn cn"
-    },
-    {
-      "id": "addb9ea7b4e1-00279",
+      "id": "addb9ea7b4e1-00056",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2812,61 +805,7 @@
       "text": "#leaves = n Θ(n)"
     },
     {
-      "id": "addb9ea7b4e1-00280",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 42,
-      "section": null,
-      "text": "cn/2 cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00281",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 42,
-      "section": null,
-      "text": "cn/4 cn/4 cn/4 cn/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00282",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 42,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00283",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 42,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00284",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 42,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00285",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 42,
-      "section": null,
-      "text": "h = 1 + lg n"
-    },
-    {
-      "id": "addb9ea7b4e1-00286",
+      "id": "addb9ea7b4e1-00057",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2875,79 +814,7 @@
       "text": "Total ?"
     },
     {
-      "id": "addb9ea7b4e1-00287",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 43,
-      "section": null,
-      "text": "cn cn"
-    },
-    {
-      "id": "addb9ea7b4e1-00288",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 43,
-      "section": null,
-      "text": "#leaves = n Θ(n)"
-    },
-    {
-      "id": "addb9ea7b4e1-00289",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 43,
-      "section": null,
-      "text": "cn/2 cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00290",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 43,
-      "section": null,
-      "text": "cn/4 cn/4 cn/4 cn/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00291",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 43,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00292",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 43,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00293",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 43,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00294",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 43,
-      "section": null,
-      "text": "h = 1 + lg n"
-    },
-    {
-      "id": "addb9ea7b4e1-00295",
+      "id": "addb9ea7b4e1-00058",
       "kind": "text",
       "start": null,
       "end": null,
@@ -2956,52 +823,7 @@
       "text": "Total = Θ(n lg n)"
     },
     {
-      "id": "addb9ea7b4e1-00296",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 44,
-      "section": null,
-      "text": "#leaves = n Θ(n)"
-    },
-    {
-      "id": "addb9ea7b4e1-00297",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 44,
-      "section": null,
-      "text": "cn/2 cn/2"
-    },
-    {
-      "id": "addb9ea7b4e1-00298",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 44,
-      "section": null,
-      "text": "cn/4 cn/4 cn/4 cn/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00299",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 44,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00300",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 44,
-      "section": null,
-      "text": "Recursion tree"
-    },
-    {
-      "id": "addb9ea7b4e1-00301",
+      "id": "addb9ea7b4e1-00059",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3010,34 +832,7 @@
       "text": "Equal amount of work done at each level"
     },
     {
-      "id": "addb9ea7b4e1-00302",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 44,
-      "section": null,
-      "text": "Solve T(n) = 2T(n/2) + cn, where c > 0 is constant."
-    },
-    {
-      "id": "addb9ea7b4e1-00303",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 44,
-      "section": null,
-      "text": "= 1 + lg n cn"
-    },
-    {
-      "id": "addb9ea7b4e1-00304",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 45,
-      "section": null,
-      "text": "c c"
-    },
-    {
-      "id": "addb9ea7b4e1-00305",
+      "id": "addb9ea7b4e1-00060",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3046,34 +841,7 @@
       "text": "#leaves = n Θ(n) n/2 c"
     },
     {
-      "id": "addb9ea7b4e1-00306",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 45,
-      "section": null,
-      "text": "c c"
-    },
-    {
-      "id": "addb9ea7b4e1-00307",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 45,
-      "section": null,
-      "text": "c c c c"
-    },
-    {
-      "id": "addb9ea7b4e1-00308",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 45,
-      "section": null,
-      "text": "Θ(1)"
-    },
-    {
-      "id": "addb9ea7b4e1-00309",
+      "id": "addb9ea7b4e1-00061",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3082,7 +850,7 @@
       "text": "Tree for different recurrence"
     },
     {
-      "id": "addb9ea7b4e1-00310",
+      "id": "addb9ea7b4e1-00062",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3091,7 +859,7 @@
       "text": "Note that 1 + ½ + ¼ + … < 2 = Θ Total (n)"
     },
     {
-      "id": "addb9ea7b4e1-00311",
+      "id": "addb9ea7b4e1-00063",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3100,7 +868,7 @@
       "text": "All the work done at the leaves"
     },
     {
-      "id": "addb9ea7b4e1-00312",
+      "id": "addb9ea7b4e1-00064",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3109,61 +877,7 @@
       "text": "Solve T(n) = 2T(n/2) + c, where c > 0 is constant."
     },
     {
-      "id": "addb9ea7b4e1-00313",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 45,
-      "section": null,
-      "text": "h = 1 + lg n"
-    },
-    {
-      "id": "addb9ea7b4e1-00314",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 46,
-      "section": null,
-      "text": "Θ(n)"
-    },
-    {
-      "id": "addb9ea7b4e1-00315",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 46,
-      "section": null,
-      "text": "cn2/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00316",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 46,
-      "section": null,
-      "text": "cn2 cn2"
-    },
-    {
-      "id": "addb9ea7b4e1-00317",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 46,
-      "section": null,
-      "text": "cn2/4 cn2/4"
-    },
-    {
-      "id": "addb9ea7b4e1-00318",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 46,
-      "section": null,
-      "text": "cn2/16 cn2/16 cn2/16 cn2/16"
-    },
-    {
-      "id": "addb9ea7b4e1-00319",
+      "id": "addb9ea7b4e1-00065",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3172,7 +886,7 @@
       "text": "Θ(1) #leaves = n"
     },
     {
-      "id": "addb9ea7b4e1-00320",
+      "id": "addb9ea7b4e1-00066",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3181,7 +895,7 @@
       "text": "Tree for yet another recurrence"
     },
     {
-      "id": "addb9ea7b4e1-00321",
+      "id": "addb9ea7b4e1-00067",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3190,7 +904,7 @@
       "text": "Solve T(n) = 2T(n/2) + cn2, c > 0 is constant."
     },
     {
-      "id": "addb9ea7b4e1-00322",
+      "id": "addb9ea7b4e1-00068",
       "kind": "text",
       "start": null,
       "end": null,
@@ -3199,67 +913,13 @@
       "text": "Note that 1 + ½ + ¼ + … < 2 Total = Θ(n2)"
     },
     {
-      "id": "addb9ea7b4e1-00323",
+      "id": "addb9ea7b4e1-00069",
       "kind": "text",
       "start": null,
       "end": null,
       "page": 46,
       "section": null,
       "text": "All the work done at the root"
-    },
-    {
-      "id": "addb9ea7b4e1-00324",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 46,
-      "section": null,
-      "text": "cn2/2 h = 1 + lg n"
-    },
-    {
-      "id": "addb9ea7b4e1-00325",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 47,
-      "section": null,
-      "text": "MIT OpenCourseWare"
-    },
-    {
-      "id": "addb9ea7b4e1-00326",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 47,
-      "section": null,
-      "text": "http://ocw.mit.edu"
-    },
-    {
-      "id": "addb9ea7b4e1-00327",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 47,
-      "section": null,
-      "text": "Fall 2011"
-    },
-    {
-      "id": "addb9ea7b4e1-00328",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 47,
-      "section": null,
-      "text": "6.006 Introduction to Algorithms"
-    },
-    {
-      "id": "addb9ea7b4e1-00329",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 47,
-      "section": null,
-      "text": "For information about citing these materials or our Terms of Use, visit: http://ocw.mit.edu/terms."
     }
   ]
 }

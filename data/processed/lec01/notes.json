@@ -4,8 +4,8 @@
   "source_type": "notes",
   "source_file": "data/raw/lec01/notes.pdf",
   "source_sha256": "dc04facffd88355daf6e3e1620c4e253b84d31dc4bac7417500240f6baf16b66",
-  "parser_version": 1,
-  "created_at": "2026-10-05T03:12:49+00:00",
+  "parser_version": 2,
+  "created_at": "2026-10-06T03:50:09+00:00",
   "pages": [
     {
       "page": 1,
@@ -268,7 +268,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "1 2 3 4 5 6 7 8 9"
+      "text": "Figure 1: a-i are numbers"
     },
     {
       "id": "dc04facffd88-00025",
@@ -277,7 +277,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "g f i b a c d e h"
+      "text": "Problem: Find a peak if it exists (Does it always exist?)"
     },
     {
       "id": "dc04facffd88-00026",
@@ -286,7 +286,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "Figure 1: a-i are numbers"
+      "text": "Straightforward Algorithm"
     },
     {
       "id": "dc04facffd88-00027",
@@ -295,7 +295,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "Problem: Find a peak if it exists (Does it always exist?)"
+      "text": "Start from left"
     },
     {
       "id": "dc04facffd88-00028",
@@ -304,7 +304,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "Straightforward Algorithm"
+      "text": "might be peak"
     },
     {
       "id": "dc04facffd88-00029",
@@ -313,7 +313,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "4 1 7 4 3 2 5 6"
+      "text": "θ(n) complexity worst case"
     },
     {
       "id": "dc04facffd88-00030",
@@ -322,7 +322,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "Start from left"
+      "text": "Figure 2: Look at n/2 elements on average, could look at n elements in the worst case"
     },
     {
       "id": "dc04facffd88-00031",
@@ -331,64 +331,10 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": ". . ."
-    },
-    {
-      "id": "dc04facffd88-00032",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 2,
-      "section": null,
-      "text": "1 2 . . . n/2 n-1 n"
-    },
-    {
-      "id": "dc04facffd88-00033",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 2,
-      "section": null,
-      "text": "might be peak"
-    },
-    {
-      "id": "dc04facffd88-00034",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 2,
-      "section": null,
-      "text": "θ(n) complexity worst case"
-    },
-    {
-      "id": "dc04facffd88-00035",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 2,
-      "section": null,
-      "text": "Figure 2: Look at n/2 elements on average, could look at n elements in the worst case"
-    },
-    {
-      "id": "dc04facffd88-00036",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 2,
-      "section": null,
       "text": "What if we start in the middle? For the conﬁguration below, we would look at n/2 elements. Would we have to ever look at more than n/2 elements if we start in the middle, and choose a direction based on which neighboring element is larger that the middle element?"
     },
     {
-      "id": "dc04facffd88-00037",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 2,
-      "section": null,
-      "text": "n/2"
-    },
-    {
-      "id": "dc04facffd88-00038",
+      "id": "dc04facffd88-00032",
       "kind": "text",
       "start": null,
       "end": null,
@@ -397,25 +343,7 @@
       "text": "Can we do better?"
     },
     {
-      "id": "dc04facffd88-00039",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 3,
-      "section": null,
-      "text": ". . . n/2 -1 n/2 +1"
-    },
-    {
-      "id": "dc04facffd88-00040",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 3,
-      "section": null,
-      "text": "1 2 . . . n/2 n-1 n"
-    },
-    {
-      "id": "dc04facffd88-00041",
+      "id": "dc04facffd88-00033",
       "kind": "text",
       "start": null,
       "end": null,
@@ -424,7 +352,7 @@
       "text": "look at n/2 position"
     },
     {
-      "id": "dc04facffd88-00042",
+      "id": "dc04facffd88-00034",
       "kind": "text",
       "start": null,
       "end": null,
@@ -433,7 +361,7 @@
       "text": "Figure 3: Divide & Conquer"
     },
     {
-      "id": "dc04facffd88-00043",
+      "id": "dc04facffd88-00035",
       "kind": "text",
       "start": null,
       "end": null,
@@ -442,7 +370,7 @@
       "text": "• If a[n/2] < a[n/2 − 1] then only look at left half 1 . . . n/2 −−− 1 to look for peak"
     },
     {
-      "id": "dc04facffd88-00044",
+      "id": "dc04facffd88-00036",
       "kind": "text",
       "start": null,
       "end": null,
@@ -451,7 +379,7 @@
       "text": "• Else if a[n/2] < a[n/2 + 1] then only look at right half n/2 + 1 . . . n to look for peak"
     },
     {
-      "id": "dc04facffd88-00045",
+      "id": "dc04facffd88-00037",
       "kind": "text",
       "start": null,
       "end": null,
@@ -460,25 +388,7 @@
       "text": "• Else n/2 position is a peak: WHY?"
     },
     {
-      "id": "dc04facffd88-00046",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 3,
-      "section": null,
-      "text": "a[n/2] ≥ a[n/2 − 1]"
-    },
-    {
-      "id": "dc04facffd88-00047",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 3,
-      "section": null,
-      "text": "a[n/2] ≥ a[n/2 + 1]"
-    },
-    {
-      "id": "dc04facffd88-00048",
+      "id": "dc04facffd88-00038",
       "kind": "text",
       "start": null,
       "end": null,
@@ -487,7 +397,7 @@
       "text": "What is the complexity?"
     },
     {
-      "id": "dc04facffd88-00049",
+      "id": "dc04facffd88-00039",
       "kind": "text",
       "start": null,
       "end": null,
@@ -496,7 +406,7 @@
       "text": "T (n) = T (n/2) + Θ(1) = Θ(1) + . . . + Θ(1) (log2(n) times) = Θ(log2(n)) '-v \" to compare a[n/2] to neighbors"
     },
     {
-      "id": "dc04facffd88-00050",
+      "id": "dc04facffd88-00040",
       "kind": "text",
       "start": null,
       "end": null,
@@ -505,7 +415,7 @@
       "text": "In order to sum up the Θ(i)‘s as we do here, we need to ﬁnd a constant that works for all. If n = 1000000, Θ(n) algo needs 13 sec in python. If algo is Θ(log n) we only need 0.001 sec. Argue that the algorithm is correct."
     },
     {
-      "id": "dc04facffd88-00051",
+      "id": "dc04facffd88-00041",
       "kind": "text",
       "start": null,
       "end": null,
@@ -514,16 +424,7 @@
       "text": "Two-dimensional Version"
     },
     {
-      "id": "dc04facffd88-00052",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 3,
-      "section": null,
-      "text": "b a"
-    },
-    {
-      "id": "dc04facffd88-00053",
+      "id": "dc04facffd88-00042",
       "kind": "text",
       "start": null,
       "end": null,
@@ -532,7 +433,7 @@
       "text": "d n rows"
     },
     {
-      "id": "dc04facffd88-00054",
+      "id": "dc04facffd88-00043",
       "kind": "text",
       "start": null,
       "end": null,
@@ -541,7 +442,7 @@
       "text": "m columns"
     },
     {
-      "id": "dc04facffd88-00055",
+      "id": "dc04facffd88-00044",
       "kind": "text",
       "start": null,
       "end": null,
@@ -550,7 +451,7 @@
       "text": "Figure 4: Greedy Ascent Algorithm: Θ(nm) complexity, Θ(n 2) algorithm if m = n"
     },
     {
-      "id": "dc04facffd88-00056",
+      "id": "dc04facffd88-00045",
       "kind": "text",
       "start": null,
       "end": null,
@@ -559,34 +460,7 @@
       "text": "a is a 2D-peak iﬀ a ≥ b, a ≥ d, a ≥ c, a ≥ e"
     },
     {
-      "id": "dc04facffd88-00057",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 4,
-      "section": null,
-      "text": "14 13 12"
-    },
-    {
-      "id": "dc04facffd88-00058",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 4,
-      "section": null,
-      "text": "9 11 17"
-    },
-    {
-      "id": "dc04facffd88-00059",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 4,
-      "section": null,
-      "text": "17 19 20"
-    },
-    {
-      "id": "dc04facffd88-00060",
+      "id": "dc04facffd88-00046",
       "kind": "text",
       "start": null,
       "end": null,
@@ -595,7 +469,7 @@
       "text": "Figure 5: Circled value is peak."
     },
     {
-      "id": "dc04facffd88-00061",
+      "id": "dc04facffd88-00047",
       "kind": "text",
       "start": null,
       "end": null,
@@ -604,16 +478,7 @@
       "text": "Attempt # 1: Extend 1D Divide and Conquer to 2D"
     },
     {
-      "id": "dc04facffd88-00062",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 4,
-      "section": null,
-      "text": "j = m/2"
-    },
-    {
-      "id": "dc04facffd88-00063",
+      "id": "dc04facffd88-00048",
       "kind": "text",
       "start": null,
       "end": null,
@@ -622,7 +487,7 @@
       "text": "• Pick middle column j = m/2."
     },
     {
-      "id": "dc04facffd88-00064",
+      "id": "dc04facffd88-00049",
       "kind": "text",
       "start": null,
       "end": null,
@@ -631,7 +496,7 @@
       "text": "• Find a 1D-peak at i, j."
     },
     {
-      "id": "dc04facffd88-00065",
+      "id": "dc04facffd88-00050",
       "kind": "text",
       "start": null,
       "end": null,
@@ -640,7 +505,7 @@
       "text": "• Use (i, j) as a start point on row i to ﬁnd 1D-peak on row i."
     },
     {
-      "id": "dc04facffd88-00066",
+      "id": "dc04facffd88-00051",
       "kind": "text",
       "start": null,
       "end": null,
@@ -649,7 +514,7 @@
       "text": "Attempt #1 fails"
     },
     {
-      "id": "dc04facffd88-00067",
+      "id": "dc04facffd88-00052",
       "kind": "text",
       "start": null,
       "end": null,
@@ -658,34 +523,7 @@
       "text": "Problem: 2D-peak may not exist on row i"
     },
     {
-      "id": "dc04facffd88-00068",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 4,
-      "section": null,
-      "text": "14 13 12"
-    },
-    {
-      "id": "dc04facffd88-00069",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 4,
-      "section": null,
-      "text": "9 11"
-    },
-    {
-      "id": "dc04facffd88-00070",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 4,
-      "section": null,
-      "text": "17 19 20"
-    },
-    {
-      "id": "dc04facffd88-00071",
+      "id": "dc04facffd88-00053",
       "kind": "text",
       "start": null,
       "end": null,
@@ -694,7 +532,7 @@
       "text": "End up with 14 which is not a 2D-peak."
     },
     {
-      "id": "dc04facffd88-00072",
+      "id": "dc04facffd88-00054",
       "kind": "text",
       "start": null,
       "end": null,
@@ -703,7 +541,7 @@
       "text": "Attempt # 2"
     },
     {
-      "id": "dc04facffd88-00073",
+      "id": "dc04facffd88-00055",
       "kind": "text",
       "start": null,
       "end": null,
@@ -712,7 +550,7 @@
       "text": "• Pick middle column j = m/2"
     },
     {
-      "id": "dc04facffd88-00074",
+      "id": "dc04facffd88-00056",
       "kind": "text",
       "start": null,
       "end": null,
@@ -721,7 +559,7 @@
       "text": "• Find global maximum on column j at (i, j)"
     },
     {
-      "id": "dc04facffd88-00075",
+      "id": "dc04facffd88-00057",
       "kind": "text",
       "start": null,
       "end": null,
@@ -730,7 +568,7 @@
       "text": "• Compare (i, j − 1), (i, j), (i, j + 1)"
     },
     {
-      "id": "dc04facffd88-00076",
+      "id": "dc04facffd88-00058",
       "kind": "text",
       "start": null,
       "end": null,
@@ -739,7 +577,7 @@
       "text": "• Pick left columns of (i, j − 1) > (i, j)"
     },
     {
-      "id": "dc04facffd88-00077",
+      "id": "dc04facffd88-00059",
       "kind": "text",
       "start": null,
       "end": null,
@@ -748,7 +586,7 @@
       "text": "• Similarly for right"
     },
     {
-      "id": "dc04facffd88-00078",
+      "id": "dc04facffd88-00060",
       "kind": "text",
       "start": null,
       "end": null,
@@ -757,7 +595,7 @@
       "text": "• (i, j) is a 2D-peak if neither condition holds ← WHY?"
     },
     {
-      "id": "dc04facffd88-00079",
+      "id": "dc04facffd88-00061",
       "kind": "text",
       "start": null,
       "end": null,
@@ -766,7 +604,7 @@
       "text": "• Solve the new problem with half the number of columns."
     },
     {
-      "id": "dc04facffd88-00080",
+      "id": "dc04facffd88-00062",
       "kind": "text",
       "start": null,
       "end": null,
@@ -775,7 +613,7 @@
       "text": "• When you have a single column, ﬁnd global maximum and you‘re done."
     },
     {
-      "id": "dc04facffd88-00081",
+      "id": "dc04facffd88-00063",
       "kind": "text",
       "start": null,
       "end": null,
@@ -784,7 +622,7 @@
       "text": "Example of Attempt #2"
     },
     {
-      "id": "dc04facffd88-00082",
+      "id": "dc04facffd88-00064",
       "kind": "text",
       "start": null,
       "end": null,
@@ -793,79 +631,7 @@
       "text": "go with"
     },
     {
-      "id": "dc04facffd88-00083",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "10 10"
-    },
-    {
-      "id": "dc04facffd88-00084",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "10 10 10 8"
-    },
-    {
-      "id": "dc04facffd88-00085",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "14 13 12"
-    },
-    {
-      "id": "dc04facffd88-00086",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "11 21"
-    },
-    {
-      "id": "dc04facffd88-00087",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "9 11 21"
-    },
-    {
-      "id": "dc04facffd88-00088",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "ﬁnd 21 21"
-    },
-    {
-      "id": "dc04facffd88-00089",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "19 20"
-    },
-    {
-      "id": "dc04facffd88-00090",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 5,
-      "section": null,
-      "text": "17 19 20"
-    },
-    {
-      "id": "dc04facffd88-00091",
+      "id": "dc04facffd88-00065",
       "kind": "text",
       "start": null,
       "end": null,
@@ -874,7 +640,7 @@
       "text": "pick this column 19 global max for this column"
     },
     {
-      "id": "dc04facffd88-00092",
+      "id": "dc04facffd88-00066",
       "kind": "text",
       "start": null,
       "end": null,
@@ -883,7 +649,7 @@
       "text": "pick this column 17 global max for this column"
     },
     {
-      "id": "dc04facffd88-00093",
+      "id": "dc04facffd88-00067",
       "kind": "text",
       "start": null,
       "end": null,
@@ -892,7 +658,7 @@
       "text": "Complexity of Attempt #2"
     },
     {
-      "id": "dc04facffd88-00094",
+      "id": "dc04facffd88-00068",
       "kind": "text",
       "start": null,
       "end": null,
@@ -901,7 +667,7 @@
       "text": "If T (n, m) denotes work required to solve problem with n rows and m columns"
     },
     {
-      "id": "dc04facffd88-00095",
+      "id": "dc04facffd88-00069",
       "kind": "text",
       "start": null,
       "end": null,
@@ -910,7 +676,7 @@
       "text": "T (n, m) = T (n, m/2) + Θ(n) (to ﬁnd global maximum on a column — (n rows))"
     },
     {
-      "id": "dc04facffd88-00096",
+      "id": "dc04facffd88-00070",
       "kind": "text",
       "start": null,
       "end": null,
@@ -919,49 +685,13 @@
       "text": "T (n, m) = Θ(n) + . . . + Θ(n) ' -v \" log m = Θ(n log m) = Θ(n log n) if m = n"
     },
     {
-      "id": "dc04facffd88-00097",
+      "id": "dc04facffd88-00071",
       "kind": "text",
       "start": null,
       "end": null,
       "page": 5,
       "section": null,
       "text": "Question: What if we replaced global maximum with 1D-peak in Attempt #2? Would that work?"
-    },
-    {
-      "id": "dc04facffd88-00098",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 6,
-      "section": null,
-      "text": "MIT OpenCourseWare http://ocw.mit.edu"
-    },
-    {
-      "id": "dc04facffd88-00099",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 6,
-      "section": null,
-      "text": "6.006 Introduction to Algorithms"
-    },
-    {
-      "id": "dc04facffd88-00100",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 6,
-      "section": null,
-      "text": "Fall 2011"
-    },
-    {
-      "id": "dc04facffd88-00101",
-      "kind": "text",
-      "start": null,
-      "end": null,
-      "page": 6,
-      "section": null,
-      "text": "For information about citing these materials or our Terms of Use, visit: http://ocw.mit.edu/terms."
     }
   ]
 }
