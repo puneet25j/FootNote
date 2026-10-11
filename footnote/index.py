@@ -57,9 +57,9 @@ def build() -> None:
     print(f"indexed {len(chunks)} chunks in {time.perf_counter() - t0:.1f}s -> {INDEX_DIR}")
 
 
-def search(query: str, k: int = 5) -> list[dict]:
+def search(query: str, k: int = 5, where: dict | None = None) -> list[dict]:
     res = get_collection().query(
-        query_embeddings=embed([QUERY_PREFIX + query]), n_results=k
+        query_embeddings=embed([QUERY_PREFIX + query]), n_results=k, where=where
     )
     return [
         {"id": i, "text": t, "metadata": m, "score": 1 - d / 2}
