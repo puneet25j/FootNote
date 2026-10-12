@@ -1,8 +1,9 @@
 """Transcribe lecture videos into timestamped segments (JSON).
 
 Usage (from the Footnote folder):
-    python -m footnote.transcribe            # every lecture in data/raw/
-    python -m footnote.transcribe lec01      # just one
+    python -m footnote.transcribe                 # every course, every lecture
+    python -m footnote.transcribe 6.006           # one course
+    python -m footnote.transcribe 6.006 lec01     # one lecture
 """
 import sys
 import time
@@ -11,18 +12,17 @@ from pathlib import Path
 
 from faster_whisper import WhisperModel
 
-from footnote.utils import already_done, sha256_file, write_json_atomic
+from footnote.utils import (already_done, course_dirs, lecture_dirs, load_course,
+                            sha256_file, write_json_atomic)
 
-RAW_DIR = Path("data/raw")
-OUT_DIR = Path("data/processed")
 MODEL_SIZE = "small"
 
 
-def transcribe(media_path: Path, model_size: str) -> tuple[list[dict], float]:
+def transcribe(media_path: Path, model_size: str, language: str) -> tuple[list[dict], float]:
     """The ONLY function that knows about Whisper. Returns (segments, duration)."""
     model = WhisperModel(model_size, device="cpu", compute_type="int8")
     segments, info = model.transcribe(
-        str(media_path), language="en", beam_size=5, vad_filter=True
+        str(media_path), language=language, beam_size=5, vad_filter=True
     )
     out = []
     for seg in segments:
@@ -32,19 +32,20 @@ def transcribe(media_path: Path, model_size: str) -> tuple[list[dict], float]:
     return out, info.duration
 
 
-def process_lecture(lecture_dir: Path) -> None:
+def process_lecture(course_dir: Path, lecture_dir: Path, language: str) -> None:
+    label = f"{course_dir.name}/{lecture_dir.name}"
     video = lecture_dir / "video.mp4"
     if not video.exists():
         print(f"skip {lecture_dir.name}: no video.mp4")
         return
 
-    out_path = OUT_DIR / lecture_dir.name / "transcript.json"
+    out_path = course_dir / "processed" / lecture_dir.name / "transcript.json"
     source_hash = sha256_file(video)
     if already_done(out_path, source_hash, model=MODEL_SIZE):
-        print(f"skip {lecture_dir.name}: already transcribed")
+        print(f"skip {label}: already transcribed")
         return
 
-    print(f"transcribing {lecture_dir.name} with {MODEL_SIZE} ...")
+    print(f"transcribing {label} with {MODEL_SIZE} ({language}) ...")
     t0 = time.perf_counter()
     raw_segments, duration = transcribe(video, MODEL_SIZE)
     elapsed = time.perf_counter() - t0
@@ -69,6 +70,7 @@ def process_lecture(lecture_dir: Path) -> None:
         "source_file": str(video),
         "source_sha256": source_hash,
         "model": MODEL_SIZE,
+        "language": language,
         "duration": duration,
         "created_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "segments": segments,
@@ -78,13 +80,13 @@ def process_lecture(lecture_dir: Path) -> None:
 
 
 def main() -> None:
-    names = sys.argv[1:]
-    if names:
-        lecture_dirs = [RAW_DIR / n for n in names]
-    else:
-        lecture_dirs = sorted(p for p in RAW_DIR.iterdir() if p.is_dir())
-    for d in lecture_dirs:
-        process_lecture(d)
+    args = sys.argv[1:]                    # [course] [lecture ...]
+    course = args[0] if args else None
+    for course_dir in course_dirs(course):
+        language = load_course(course_dir)["language"]
+        for lecture_dir in lecture_dirs(course_dir, args[1:]):
+            process_lecture(course_dir, lecture_dir, language)
+
 
 
 if __name__ == "__main__":

@@ -1,8 +1,8 @@
 """Group small segments into retrieval-sized chunks."""
 import json
-from pathlib import Path
 
-PROCESSED_DIR = Path("data/processed")
+from footnote.utils import course_dirs
+
 TARGET_WORDS = 150  # about a minute of lecture speech
 OVERLAP_SEGMENTS = 2  # repeated at the start of the next chunk
 
@@ -23,11 +23,12 @@ def group(segments: list[dict], target_words: int = TARGET_WORDS, overlap: int =
         groups.append(current)
     return groups
 
-def chunks_for_doc(doc: dict) -> list[dict]:
+def chunks_for_doc(doc: dict, course: str) -> list[dict]:
     chunks = []
     for n, segs in enumerate(group(doc["segments"])):
         first, last = segs[0], segs[-1]
         meta = {
+            "course": course,
             "doc_id": doc["doc_id"],
             "lecture": doc["lecture"],
             "source_type": doc["source_type"],
@@ -45,7 +46,8 @@ def chunks_for_doc(doc: dict) -> list[dict]:
 
 def load_all_chunks() -> list[dict]:
     chunks = []
-    for path in sorted(PROCESSED_DIR.glob("*/*.json")):
-        chunks.extend(chunks_for_doc(json.loads(path.read_text())))
+    for course_dir in course_dirs():
+        for path in sorted((course_dir / "processed").glob("*/*.json")):
+            chunks.extend(chunks_for_doc(json.loads(path.read_text()), course_dir.name))
     return chunks
 

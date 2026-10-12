@@ -11,7 +11,7 @@ __pycache__/
 .env
 
 # Large media: anyone can download these from MIT OCW
-data/raw/
+data/courses/*/raw/
 data/clips/
 *.mp4
 *.wav

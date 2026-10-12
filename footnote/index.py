@@ -56,6 +56,18 @@ def build() -> None:
     )
     print(f"indexed {len(chunks)} chunks in {time.perf_counter() - t0:.1f}s -> {INDEX_DIR}")
 
+def make_where(**conditions) -> dict | None:
+    """Build a Chroma filter from keyword conditions; None values are skipped.
+
+    make_where(course="6.006", source_type="video")
+      -> {"$and": [{"course": "6.006"}, {"source_type": "video"}]}
+    """
+    parts = [{key: value} for key, value in conditions.items() if value is not None]
+    if not parts:
+        return None
+    if len(parts) == 1:
+        return parts[0]
+    return {"$and": parts}
 
 def search(query: str, k: int = 5, where: dict | None = None) -> list[dict]:
     res = get_collection().query(
@@ -75,11 +87,13 @@ def fmt_ts(seconds: float) -> str:
 
 def cite(meta: dict) -> str:
     """Build a human-readable citation from chunk metadata (never from the LLM)."""
+    course = meta.get("course")
+    prefix = f"{course} · {meta['lecture']}" if course else meta["lecture"]
     if meta["source_type"] == "video":
-        return f"{meta['lecture']} video {fmt_ts(meta['start'])}-{fmt_ts(meta['end'])}"
+        return f"{prefix} video {fmt_ts(meta['start'])}-{fmt_ts(meta['end'])}"
     if meta["page_start"] == meta["page_end"]:
-        return f"{meta['lecture']} notes p. {meta['page_start']}"
-    return f"{meta['lecture']} notes pp. {meta['page_start']}-{meta['page_end']}"
+        return f"{prefix} notes p. {meta['page_start']}"
+    return f"{prefix} notes pp. {meta['page_start']}-{meta['page_end']}"
 
 
 def main() -> None:

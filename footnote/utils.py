@@ -3,6 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 
+COURSES_DIR = Path("data/courses")
 
 def sha256_file(path: Path) -> str:
     """Fingerprint a file's bytes: same bytes -> same hash."""
@@ -29,3 +30,31 @@ def already_done(out_path: Path, source_hash: str, **settings) -> bool:
     if old.get("source_sha256") != source_hash:
         return False
     return all(old.get(key) == value for key, value in settings.items())
+
+
+def course_dirs(only: str | None=None) -> list[Path]:
+    """Every course folder, or just the one named."""
+    if only:
+        return [COURSES_DIR / only]
+    if not COURSES_DIR.exists():
+        return []
+    return sorted(p for p in COURSES_DIR.iterdir() if p.is_dir())
+
+def lecture_dirs(course_dir: Path, only: list[str] | None = None) -> list[Path]:
+    """Every lecture folder in a course's raw/ folder, or just the ones named."""
+    raw = course_dir / "raw"
+    if only:
+        return [raw / name for name in only]
+    if not raw.exists():  # e.g. a fresh clone: processed JSON but no media
+        return []
+    return sorted(p for p in raw.iterdir() if p.is_dir())
+
+def load_course(course_dir: Path) -> dict:
+    """A course's settings from course.json, with defaults for anything missing."""
+    path = course_dir / "course.json"
+    info = json.loads(path.read_text()) if path.exists() else {}
+    return {
+        "id": course_dir.name,
+        "name": info.get("name", course_dir.name),
+        "language": info.get("language", "en"),
+    }

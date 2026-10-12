@@ -1,22 +1,23 @@
 """Extract lecture-notes PDFs into page-numbered segments (JSON).
 
 Usage (from the Footnote folder):
-    python -m footnote.ingest_notes            # every lecture in data/raw/
-    python -m footnote.ingest_notes lec01      # just one
+    python -m footnote.ingest_notes                 # every course, every lecture
+    python -m footnote.ingest_notes 6.006           # one course
+    python -m footnote.ingest_notes 6.006 lec01     # one lecture
 """
 import re
 import sys
+import unicodedata 
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
-import unicodedata 
 
 import pymupdf
 
-from footnote.utils import already_done, sha256_file, write_json_atomic
+from footnote.utils import (already_done, course_dirs, lecture_dirs,
+                            sha256_file, write_json_atomic)
 
-RAW_DIR = Path("data/raw")
-OUT_DIR = Path("data/processed")
+
 PARSER_VERSION = 3
 
 BOILERPLATE_MARKER = "ocw.mit.edu/terms"
@@ -78,16 +79,17 @@ def drop_repeated(blocks: list[dict], n_pages: int) -> list[dict]:
     return [b for b in blocks if b["text"] not in repeated]
 
 
-def process_lecture(lecture_dir: Path) -> None:
+def process_lecture(course_dir: Path, lecture_dir: Path) -> None:
+    label = f"{course_dir.name}/{lecture_dir.name}"
     pdf = lecture_dir / "notes.pdf"
     if not pdf.exists():
         print(f"skip {lecture_dir.name}: no notes.pdf")
         return
 
-    out_path = OUT_DIR / lecture_dir.name / "notes.json"
+    out_path = course_dir / "processed" / lecture_dir.name / "notes.json"
     source_hash = sha256_file(pdf)
     if already_done(out_path, source_hash, parser_version=PARSER_VERSION):
-        print(f"skip {lecture_dir.name}: notes already extracted")
+        print(f"skip {label}: notes already extracted")
         return
 
     blocks, pages = extract(pdf)
@@ -119,20 +121,18 @@ def process_lecture(lecture_dir: Path) -> None:
         "segments": segments,
     })
 
-    print(f"{lecture_dir.name}: {len(pages)} pages, {len(segments)} segments -> {out_path}")
+    print(f"{label}: {len(pages)} pages, {len(segments)} segments -> {out_path}")
     for p in pages:
         print(f"    p{p['page']:>2}  chars={p['chars']:>5}  "
               f"images={p['images']}  drawings={p['drawings']}")
 
 
 def main() -> None:
-    names = sys.argv[1:]
-    if names:
-        lecture_dirs = [RAW_DIR / n for n in names]
-    else:
-        lecture_dirs = sorted(p for p in RAW_DIR.iterdir() if p.is_dir())
-    for d in lecture_dirs:
-        process_lecture(d)
+    args = sys.argv[1:]                      # [course] [lecture ...]
+    course = args[0] if args else None
+    for course_dir in course_dirs(course):
+        for lecture_dir in lecture_dirs(course_dir, args[1:]):
+            process_lecture(course_dir, lecture_dir)
 
 
 if __name__ == "__main__":
