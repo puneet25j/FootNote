@@ -9,7 +9,7 @@ Footnote is a retrieval-augmented generation (RAG) study assistant. It transcrib
 ```
 $ python -m footnote.qa --course 6.006 what is a peak in an array
 
-In a one-dimensional array, a peak is a local property: an element is a peak if itis greater than or equal to both its left and right neighboring elements [1]. For example, given an array of elements $a$ through $i$, position 2 (element $b$) is a peak if and only if $b \ge a$ and $b \ge c$ [1][5]. At the edges of an array, an element only compares to its single neighbor; for instance, the last position (position 9, element $i$) is a peak if $i \ge h$ [1][5].
+In a one-dimensional array, a peak is a local property: an element is a peak if it is greater than or equal to both its left and right neighboring elements [1]. For example, given an array of elements $a$ through $i$, position 2 (element $b$) is a peak if and only if $b \ge a$ and $b \ge c$ [1][5]. At the edges of an array, an element only compares to its single neighbor; for instance, the last position (position 9, element $i$) is a peak if $i \ge h$ [1][5].
 
 Sources:
   [1] 6.006 · lec01 video 16:24-17:38
@@ -41,7 +41,7 @@ flowchart LR
 
 1. **Transcribe**: faster-whisper (`small`, int8, CPU) turns each lecture video into timestamped segments.
 2. **Extract notes**: PyMuPDF pulls page-numbered text blocks from the notes PDFs, then a cleanup pass fixes Unicode ligatures (`ﬁ` → `fi`) and removes headers/footers, license pages, diagram labels and repeated slide text.
-3. **Chunk**: neighbouring segments are grouped into ~150-word chunks with overlap; each chunk keeps its course, lecture, time range or page range.
+3. **Chunk**: neighbouring segments are grouped into ~150-word chunks with overlap; each chunk keeps its course, lecture, and time range or page range.
 4. **Index**: chunks are embedded with `BAAI/bge-small-en-v1.5` (local) and stored in Chroma.
 5. **Answer**: the question retrieves the best video *and* notes chunks, which are sent to the LLM as numbered sources. The LLM cites numbers only; Footnote turns those into real timestamps and pages.
 
@@ -50,14 +50,30 @@ flowchart LR
 - **Citations come from metadata, not the model.** The LLM never sees timestamps, so it can't invent them; cited source numbers are checked and invalid ones are flagged.
 - **JSON is the source of truth; the vector index is derived.** Transcripts and notes are stored as JSON and committed; the index is rebuilt from them in seconds.
 - **Idempotent, cached ingestion.** Outputs record a SHA-256 of their input plus the settings used (Whisper model, parser version), so re-running skips finished work and changing the parser re-processes automatically.
-- **Per-source retrieval.** Video chunks outnumber notes chunks ~8 to 1 and were crowding notes out of results, so video and notes are retrieved separately and merged.
+- **Per-source retrieval.** Video chunks outnumber notes chunks about 8 to 1 and were crowding notes out of results, so video and notes are retrieved separately and merged.
 - **Grounded answers with an explicit refusal** when the sources don't cover the question.
-- **Provider-agnostic LLM layer.** Only `footnote/llm.py` talks to a provider (currently Gemini); the model name lives in `.env`.
+- **Provider-agnostic LLM layer.** Only `footnote/llm.py` talks to a provider; the model is set in `.env` (currently `gemma-4-31b-it` via the Gemini API). Errors fail loudly: rate limits are retried with exponential backoff, a used-up daily quota stops immediately, and an empty reply is an error, never an empty answer.
+- **Measured, not assumed.** A labelled evaluation set checks retrieval, answers, citations and refusals; every run is saved with the settings that produced it.
 - **Multi-course.** Each course lives in its own folder with a `course.json`; one shared index with course filters; `--course` limits search to one course.
 
-## Results so far
+## Results
 
-Speech-to-text, measured against the official MIT transcript (first 5 minutes of lecture 1, 623 words, MacBook Air CPU):
+Evaluated on a hand-labelled set of 24 questions about MIT 6.006 lectures 1–3: 19 answerable from the lectures or notes, 4 out-of-scope (topics never covered) and 1 answerable only from a slide diagram. Each answerable question records where the answer lives (video time range and/or notes page).
+
+| Metric | Result |
+|---|---|
+| Retrieval hit rate (right passage among the 6 retrieved) | 19/19 (100%) |
+| Mean reciprocal rank (MRR) | 0.835 |
+| Answer cites a correct source | 18/18 (100%) |
+| Answer contains the key facts (keyword check) | 17/18 (94%) |
+| Out-of-scope questions refused | 4/4 (100%) |
+| Answerable questions wrongly refused | 0/18 |
+| Citations to non-existent sources | 0/23 |
+| Diagram-only question | 0/1 (diagrams not yet supported) |
+
+Retrieval metrics cover all 19 answerable questions and use no LLM. Answer metrics come from the most complete run with `gemma-4-31b-it` (23 of 24 questions; one failed with a provider server error). A second run completed 11 questions before repeated provider errors; all 11 were correct and correctly cited, including the one that failed in the first run. The one keyword miss explains the merge step of merge sort with the correct citation but never says that it compares the two front elements.
+
+Speech-to-text, against the official MIT transcript (first 5 minutes of lecture 1, 623 words, MacBook Air CPU):
 
 | Whisper model | Word error rate | Speed |
 |---|---|---|
@@ -66,7 +82,14 @@ Speech-to-text, measured against the official MIT transcript (first 5 minutes of
 
 Corpus: 3 lectures (~2.6 hours of video, ~20,800 transcribed words) plus notes → 171 chunks.
 
-Early sanity checks: for each test question, the top search result came from the correct lecture, and an out-of-scope question was correctly refused. A larger evaluation set is in progress (see Roadmap).
+**Caveats:** the set is small (one question is about 5 points), it was written by the developer, and LLM answers vary between runs. The keyword check is strict and can miss correctly worded answers; an LLM-based grader is on the roadmap.
+
+**What error analysis found** (each was fixed before the numbers above):
+
+- A retry bug turned rate-limit errors into empty "answers" that were scored as wrong; errors now fail loudly.
+- Array notation like `a[0]` in answers was parsed as a citation.
+- LaTeX in answers (`\log n`) hid correct facts from the keyword check.
+- 2 of 19 gold labels pointed to the wrong place in the lecture and were corrected after checking the video.
 
 ## Setup
 
@@ -74,7 +97,7 @@ Early sanity checks: for each test question, the top search result came from the
 conda create -n footnote python=3.11
 conda activate footnote
 pip install -r requirements.txt
-cp .env.example .env        # add your Gemini API key and a Flash model name
+cp .env.example .env        # add your Gemini API key and a model name, e.g. gemma-4-31b-it
 ```
 
 Processed transcripts and notes for MIT 6.006 lectures 1–3 are included, so you can try it without downloading any video:
@@ -82,6 +105,13 @@ Processed transcripts and notes for MIT 6.006 lectures 1–3 are included, so yo
 ```bash
 python -m footnote.index build
 python -m footnote.qa --course 6.006 what is a peak in an array
+```
+
+Run the evaluation:
+
+```bash
+python -m footnote.evaluate retrieval   # search only: fast, no LLM calls
+python -m footnote.evaluate full        # full Q&A: one LLM call per question
 ```
 
 ### Adding a course
@@ -109,25 +139,31 @@ footnote/
   index.py          embeddings + Chroma; search and citations
   llm.py            the only module that talks to an LLM provider
   qa.py             retrieval + prompt + citation checking (CLI)
+  evaluate.py       evaluation: retrieval and end-to-end metrics
   utils.py          hashing, atomic writes, caching, course discovery
-scratch/            experiments (Whisper benchmark, WER measurement)
+eval/
+  questions.jsonl   labelled evaluation questions
+  results/          saved runs, each with the settings used
+scratch/            experiments (Whisper benchmark, WER measurement, labelling helper)
 data/courses/       one folder per course (raw media is git-ignored)
 ```
 
 ## Known limitations
 
-- Diagrams and figures in notes are not understood yet (text only).
+- Diagrams and figures in notes are not understood yet (text only); a diagram-only question gets a confident but wrong answer instead of a refusal.
 - Math in PDFs extracts imperfectly (e.g. Θ(n²) becomes "(n2)").
 - Video citations point to a ~1-minute range, not the exact sentence.
 - The embedding model is English-only.
-- On the Gemini free tier, Google may use inputs to improve its products; don't use it with private material.
+- Answers contain LaTeX (`$\Theta(n)$`), which renders in a web UI but shows as raw text in the terminal.
+- On the Gemini API free tier, requests are rate-limited, hosted models sometimes return server errors at busy times, and Google may use inputs to improve its products; don't use it with private material.
 
 ## Roadmap
 
-- **Evaluation**: a question set (including figure-only and out-of-scope questions) measuring retrieval hit rate, answer correctness, citation validity and refusal accuracy; use it to tune chunk size.
 - **Figures**: render diagram pages and describe them with a vision model.
-- **Local mode**: run fully offline with Gemma via Ollama.
-- **Web UI** with clickable timestamps.
+- **Better grading**: an LLM-based grader alongside the keyword check, and repeated runs at temperature 0.
+- **Tuning**: compare chunk sizes and try hybrid (keyword + embedding) search.
+- **Local mode**: run fully offline with Gemma via Ollama, and compare it with the hosted model.
+- **Web UI** with rendered math and clickable timestamps.
 - **Multi-user**: separate storage and index per user.
 
 ## Data and license

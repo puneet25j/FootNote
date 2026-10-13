@@ -1,0 +1,209 @@
+{
+  "mode": "full",
+  "settings": {
+    "llm_model": "gemma-4-31b-it",
+    "embed_model": "BAAI/bge-small-en-v1.5",
+    "target_words": 150,
+    "k_video": 4,
+    "k_notes": 2
+  },
+  "summary": {
+    "retrieval_hit_rate": "11/11 (100%)",
+    "mrr": 0.806,
+    "figure_retrieval_hit_rate": "n/a",
+    "answer_keywords_ok": "11/11 (100%)",
+    "cited_a_correct_source": "11/11 (100%)",
+    "wrongly_refused": "0/11 (0%)",
+    "correctly_refused_out_of_scope": "n/a",
+    "figure_answers_ok": "n/a",
+    "answers_with_invalid_citations": "0/11 (0%)"
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "answerable": true,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q02",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "In the case where the definition of a peak uses \"greater than or equal to,\" any array will always have a peak [1]. However, if the definition were changed to \"greater than,\" this argument cannot be made [1].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q03",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The straightforward peak finding algorithm starts from the left and walks across the array [2][3]. In the worst case, this algorithm requires a constant times $n$ [1], resulting in a linear asymptotic complexity of $\\theta(n)$ [1][6].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q04",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The divide and conquer algorithm finds a peak in a 1D array using the following process [5]:\n\n*   If $a[n/2] < a[n/2 - 1]$, the algorithm only looks at the left half (from $1 \\dots n/2 - 1$) to look for a peak [5].\n*   Else if $a[n/2] < a[n/2 + 1]$, the algorithm only looks at the right half (from $n/2 + 1 \\dots n$) to look for a peak [5].\n*   Otherwise, the $n/2$ position is a peak [5].\n\nThe complexity of this algorithm is $T(n) = T(n/2) + \\Theta(1) = \\Theta(\\log_2(n))$ [5].",
+      "rank": 5,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q05",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The time complexity of the 1D divide and conquer peak finder is $\\Theta(\\log_2(n))$ [1]. This is derived from the recurrence $T(n) = T(n/2) + \\Theta(1)$ [1].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q06",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "An element $a$ is a 2D-peak if and only if $a \\ge b, a \\ge d, a \\ge c, a \\ge e$ [6]. This means an element at position $(i, j)$ is a 2D peak if it is the maximum element in its column—having been compared to all adjacent elements looking up and down—and is also greater than or equal to the elements to its left $(i, j-1)$ and right $(i, j+1)$ [2].",
+      "rank": 3,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q07",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The greedy ascent algorithm for 2D peak finding has a complexity of $\\Theta(nm)$ [1][2][3]. In cases where $n = m$, the complexity is $\\Theta(n^2)$ [1][2][3].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q08",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "Finding a 1D peak in the middle column (as described in Attempt #1) does not guarantee a 2D peak because a 2D-peak may not exist on row $i$ [3][6].",
+      "rank": 3,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q09",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The running time for the algorithm that picks the middle column and finds its global maximum (referred to as Attempt #2) is $\\Theta(n \\log m)$, where $n$ is the number of rows and $m$ is the number of columns [3]. If $m = n$, the complexity is $\\Theta(n \\log n)$ [3]. This is derived from the recurrence relation $T(n, m) = T(n, m/2) + \\Theta(n)$, where $\\Theta(n)$ is the work required to find the global maximum on a column [3].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q10",
+      "answerable": true,
+      "error": "ServerError(\"503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}\")"
+    },
+    {
+      "id": "q11",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The random access machine (RAM) is a theoretical model of computation [5] and a mathematical analog of random access memory [1][4]. It is modeled as a big array [2][3] organized by machine words [4] with $\\Theta(1)$ registers, each consisting of one word [2][3].\n\nIn this model, any element in the array can be accessed in constant time if its location is known [4]. The following operations can be performed in $\\Theta(1)$ time [3]:\n* Loading a word at $r_i$ into register $r_j$ [3].\n* Storing register $r_j$ into memory at $r_i$ [3].\n* Computing operations on registers, specifically $+$, $-$, $*$, $/$, $\\&$, $|$, and $\\wedge$ [3].\n\nA word $w$ is defined as having $w \\ge \\lg(\\text{memory size})$ bits, and it is assumed that basic objects, such as integers, fit within a word [3]. The RAM is considered a powerful and realistic model [3][6].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q12",
+      "answerable": true,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q13",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "Appending an item to a Python list takes $\\theta(1)$ time [4]. While allocating a new array and copying all elements would take linear time, Python does not use that method [1]; instead, this is achieved via table doubling [4].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q14",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "Distance is defined in terms of shared words [2][3]. A document $D$ is treated as a vector where $D[w]$ represents the number of occurrences of a word $W$ in that document [2][3].\n\nAn initial attempt to define document distance is not scale invariant, which results in long documents with 99% of the same words appearing farther apart than short documents with 10% of the same words [1][3]. This is fixed by normalizing by the number of words $|D_i|$ in document $i$ [1][3]. Geometrically, this distance is interpreted as the angle between the vectors, $d(D_1, D_2) = \\arccos(d//(D_1, D_2))$ [1]. In this model, an angle of $0^\\circ$ means the documents are identical, while an angle of $90^\\circ$ means they share no common words [1][4].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q15",
+      "answerable": true,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q16",
+      "answerable": true,
+      "error": "ServerError(\"503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}\")"
+    },
+    {
+      "id": "q17",
+      "answerable": true,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q18",
+      "answerable": true,
+      "error": "ServerError(\"503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}\")"
+    },
+    {
+      "id": "q19",
+      "answerable": true,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q20",
+      "answerable": false,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q21",
+      "answerable": false,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q22",
+      "answerable": false,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q23",
+      "answerable": false,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    },
+    {
+      "id": "q24",
+      "answerable": true,
+      "error": "ServerError(\"500 INTERNAL. {'error': {'code': 500, 'message': 'Internal error encountered.', 'status': 'INTERNAL'}}\")"
+    }
+  ]
+}

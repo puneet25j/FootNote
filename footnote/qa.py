@@ -6,7 +6,7 @@ Usage (from the Footnote folder):
 """
 import argparse
 import re
-
+from pylatexenc.latex2text import LatexNodes2Text
 
 from footnote import llm
 from footnote.index import cite, make_where, search
@@ -14,23 +14,26 @@ from footnote.utils import COURSES_DIR, course_dirs, load_course
 
 K_VIDEO = 4
 K_NOTES = 2
-CITATION = re.compile(r"\[(\d+(?:\s*,\s*\d+)*)\]")  # matches [3] and [1, 4]
+CITATION = re.compile(r"(?<!\w)\[(\d+(?:\s*,\s*\d+)*)\]")  # [3], [1, 4], but not a[0]
+
+REFUSAL = "I couldn't find this in the lectures or notes."
 
 SYSTEM_TEMPLATE = """You are Footnote, a study assistant{scope}.
 Answer ONLY using the numbered sources provided; they come from the student's lecture recordings and notes.
 Each source is labelled with its course and lecture.
 Cite sources inline by number, like [1] or [2][4]. Every factual sentence needs a citation.
 If the sources do not contain the answer, reply exactly:
-"I couldn't find this in the lectures or notes."
+"{refusal}"
+Write math in LaTeX between single dollar signs, e.g. $\Theta(n \log n)$.
 Do not write timestamps or page numbers yourself; the source numbers are enough."""
 
 def system_prompt(course: str | None) -> str:
     if course:
         name = load_course(COURSES_DIR / course)["name"]
-        return SYSTEM_TEMPLATE.format(scope=f" for the course {name}")
+        return SYSTEM_TEMPLATE.format(scope=f" for the course {name}", refusal=REFUSAL)
     names = [load_course(d)["name"] for d in course_dirs()]
     scope = (" for the student's courses: " + "; ".join(names)) if names else ""
-    return SYSTEM_TEMPLATE.format(scope=scope)
+    return SYSTEM_TEMPLATE.format(scope=scope, refusal=REFUSAL)
 
 def retrieve(question: str, course: str | None = None) -> list[dict]:
     """Best video chunks + best notes chunks, merged and sorted by score."""
@@ -71,7 +74,7 @@ def main() -> None:
         parser.error(f"unknown course {args.course!r} (available: {available})")
 
     result = answer(" ".join(args.question), args.course)
-    print(result["answer"].strip())
+    print(LatexNodes2Text().latex_to_text(result["answer"]).strip())
     if result["sources"]:
         print("\nSources:")
         for n, citation in result["sources"]:
