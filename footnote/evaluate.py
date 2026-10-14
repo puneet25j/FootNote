@@ -146,7 +146,7 @@ def main() -> None:
                                       if r["refused"] != (not r["answerable"])] or "none")
         print("  errors (excluded):", [r["id"] for r in rows if "error" in r] or "none")
 
-    out = RESULTS_DIR / f"{datetime.now():%Y%m%d-%H%M}-{mode}.json"
+    out = RESULTS_DIR / f"{datetime.now():%Y%m%d-%H%M%S}-{mode}.json"
     write_json_atomic(out, {
         "mode": mode,
         "settings": {"llm_model": llm.MODEL if full else None, "embed_model": EMBED_MODEL,

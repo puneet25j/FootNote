@@ -91,6 +91,26 @@ Corpus: 3 lectures (~2.6 hours of video, ~20,800 transcribed words) plus notes â
 - LaTeX in answers (`\log n`) hid correct facts from the keyword check.
 - 2 of 19 gold labels pointed to the wrong place in the lecture and were corrected after checking the video.
 
+## Tuning: chunk size
+
+Chunk size was chosen with a controlled sweep: only the chunk size changes; the questions,
+embedding model, overlap and number of retrieved chunks (4 video + 2 notes) stay fixed.
+
+| Words per chunk | Chunks | Median video citation span | Hit rate | MRR |
+|---|---|---|---|---|
+| 75 | 375 | 33 s | 18/19 | 0.732 |
+| 100 | 268 | 44 s | 18/19 | 0.791 |
+| **150 (used)** | **171** | **65 s** | **19/19** | **0.835** |
+| 250 | 100 | 110 s | 18/19 | 0.705 |
+| 400 | 61 | 179 s | 19/19 | 0.802 |
+
+150 words gave the best ranking and full recall while keeping video citations to about a
+minute. Larger chunks match questions about as often, but each citation then covers several
+minutes and the prompt sent to the LLM grows about 2.7Ã—. With 19 questions, MRR differences
+under ~0.05 are within noise.
+
+Reproduce with `python -m scratch.chunk_sweep`.
+
 ## Setup
 
 ```bash

@@ -1,9 +1,10 @@
 """Group small segments into retrieval-sized chunks."""
+import os
 import json
 
 from footnote.utils import course_dirs
 
-TARGET_WORDS = 150  # about a minute of lecture speech
+TARGET_WORDS = int(os.getenv("FOOTNOTE_CHUNK_WORDS", "150"))  # about a minute of speech  
 OVERLAP_SEGMENTS = 2  # repeated at the start of the next chunk
 
 def n_words(segments: list[dict]) -> int:
