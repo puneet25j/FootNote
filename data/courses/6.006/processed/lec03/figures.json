@@ -1,0 +1,323 @@
+{
+  "doc_id": "addb9ea7b4e1-fig",
+  "lecture": "lec03",
+  "source_type": "notes",
+  "kind": "figure",
+  "source_file": "data/courses/6.006/raw/lec03/notes.pdf",
+  "source_sha256": "addb9ea7b4e1bdf9f341579650d605239ddce1ae9675517f76a831810554155c",
+  "model": "gemma-4-31b-it",
+  "prompt_version": 1,
+  "created_at": "2026-10-16T04:24:25+00:00",
+  "pages": [
+    {
+      "page": 1,
+      "status": "described",
+      "text": "An image of the cover of the textbook \"Introduction to Algorithms, Third Edition,\" which features an abstract illustration of red, leaf-like shapes connected by thin grey lines in a branching, tree-like structure."
+    },
+    {
+      "page": 2,
+      "status": "none"
+    },
+    {
+      "page": 3,
+      "status": "described",
+      "text": "The image contains the following mathematical formulas and a worked example:\n\n*   Input array notation: $A[1 \\dots n]$\n*   Output permutation notation: $B[1 \\dots n]$\n*   The condition for a sorted array: $B[1] \\le B[2] \\le \\dots \\le B[n]$\n*   A worked example illustrating the sorting process: $A = [7, 2, 5, 5, 9.6] \\to B = [2, 5, 5, 7, 9.6]$"
+    },
+    {
+      "page": 4,
+      "status": "none"
+    },
+    {
+      "page": 5,
+      "status": "described",
+      "text": "This page contains the following non-text elements:\n\n**Math Formulas**\n*   `INSERTION-SORT (A, n)`\n*   `A[1 .. n]`\n*   `j \\leftarrow 2` to `n`\n*   `A[j]`\n*   `A[1 .. j-1]`\n\n**Diagram**\nAn illustration of iteration $j$ of the insertion sort algorithm shows an array $A$ as a long horizontal rectangle indexed from $1$ to $n$.\n*   A red curly brace marks the beginning of the array from index $1$ up to just before index $i$ as \"sorted\".\n*   The element at index $j$ is highlighted in light purple and labeled as \"key\".\n*   The element at index $i$ is highlighted in orange and labeled as \"new location of key\" with a teal arrow.\n*   A black arrow points from the \"key\" at index $j$ to the \"new location of key\" at index $i$.\n*   A series of zig-zag arrows between indices $i$ and $j$ above the array represents the process of pairwise key-swaps."
+    },
+    {
+      "page": 6,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 7,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 8,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 9,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 10,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 11,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 12,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 13,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 14,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 15,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 16,
+      "status": "described",
+      "text": "The image contains a worked example of the insertion sort algorithm illustrated through a sequence of arrays:\n\n*   **Step 1:** Array $[8, 2, 4, 9, 3, 6]$. The value $2$ is highlighted with a yellow circle, and a curved arrow points from $2$ to the position of $8$, indicating it is being moved to the front.\n*   **Step 2:** Array $[2, 8, 4, 9, 3, 6]$. The value $4$ is highlighted with a yellow circle, and a curved arrow points from $4$ to the position of $8$.\n*   **Step 3:** Array $[2, 4, 8, 9, 3, 6]$. The value $9$ is highlighted with a yellow circle, and a small curved arrow points back to its own position, indicating it stays in place.\n*   **Step 4:** Array $[2, 4, 8, 9, 3, 6]$. The value $3$ is highlighted with a yellow circle, and a curved arrow points from $3$ to the position of $4$.\n*   **Step 5:** Array $[2, 3, 4, 8, 9, 6]$. The value $6$ is highlighted with a yellow circle, and a curved arrow points from $6$ to the position of $8$.\n*   **Step 6:** Array $[2, 3, 4, 6, 8, 9]$, which is the final sorted result.\n\nThe text also includes the following math formulas:\n*   $\\Theta(n^2)$\n*   $A = [n, n - 1, n - 2, \\dots, 2, 1]$"
+    },
+    {
+      "page": 17,
+      "status": "described",
+      "text": "The image contains the following mathematical formulas:\n\n*   Algorithm signature: $\\text{BINARY-INSERTION-SORT}(A, n)$ with output $A[1 \\dots n]$.\n*   Loop range: $j \\leftarrow 2$ to $n$.\n*   Array elements: $A[j]$ and sub-array $A[1 \\dots j-1]$.\n*   Time complexity for binary search: $\\Theta(\\log n)$.\n*   Time complexity for shifting elements: $\\Theta(n)$.\n*   Overall complexity: $\\Theta(n \\log n)$ comparisons and $(n^2)$ swaps."
+    },
+    {
+      "page": 18,
+      "status": "described",
+      "text": "This page contains the following non-textual elements:\n\n*   **Mathematical notation in the pseudocode:**\n    *   The input array is denoted as $A[1 \\dots n]$.\n    *   The base case condition is $n = 1$.\n    *   The two recursive calls sort sub-arrays $A[1 \\dots n/2]$ and $A[n/2+1 \\dots n]$.\n*   **Diagram:** A schematic illustration of the divide-and-conquer process. It shows a long rectangle divided into two equal halves. Each half contains a right-pointing arrow. Below these two halves is a single, longer right-pointing arrow that spans the entire width of the rectangle, representing the merge step.\n*   **Page number:** The number \"18\" is centered at the bottom of the page."
+    },
+    {
+      "page": 19,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 20,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 21,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 22,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 23,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 24,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 25,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 26,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 27,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 28,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 29,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 30,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 31,
+      "status": "described",
+      "text": "The image illustrates the process of merging two sorted arrays, represented as columns of numbers sorted in ascending order from bottom to top. The two arrays are:\n*   Left array: $[2, 7, 13, 20]$\n*   Right array: $[1, 9, 11, 12]$\n\nThe process is shown across six panels, where yellow highlighting indicates the current smallest available elements from each array, and a circle indicates the element selected to be placed next in the merged sequence. Arrows point from the selected element to its position in the resulting merged list at the bottom.\n\n*   **Panel 1:** The elements $2$ (left) and $1$ (right) are highlighted. The $1$ is circled, and an arrow points to the value $1$ below.\n*   **Panel 2:** The elements $2$ (left) and $9$ (right) are highlighted. The $2$ is circled, and an arrow points to the value $2$ below.\n*   **Panel 3:** The elements $7$ (left) and $9$ (right) are highlighted. The $7$ is circled, and an arrow points to the value $7$ below.\n*   **Panel 4:** The elements $13$ (left) and $9$ (right) are highlighted. The $9$ is circled, and an arrow points to the value $9$ below.\n*   **Panel 5:** The elements $13$ (left) and $11$ (right) are highlighted. The $11$ is circled, and an arrow points to the value $11$ below.\n*   **Panel 6:** The elements $13$ (left) and $12$ (right) are highlighted. The $12$ is circled, and an arrow points to the value $12$ below.\n\nAt the bottom, there is a math formula: $\\text{Time} = \\Theta(n)$ to merge a total of $n$ elements."
+    },
+    {
+      "page": 32,
+      "status": "described",
+      "text": "The image illustrates the time complexity analysis of the Merge Sort algorithm.\n\nA pseudocode for `MERGE-SORT A[1 .. n]` is presented with corresponding time complexities listed to the right, separated by two vertical red lines:\n* Step 1: `If n = 1, done.` corresponds to $\\Theta(1)$.\n* Step 2: `Recursively sort A[ 1 .. [n/2] ] and A[ [n/2]+1 .. n ] .` corresponds to $2T(n/2)$.\n* Step 3: `\"Merge\" the two sorted lists` corresponds to $\\Theta(n)$.\n\nThe overall time complexity is labeled as $T(n)$. Below the pseudocode, a recurrence relation is given:\n$T(n) = \\begin{cases} \\Theta(1) & \\text{if } n = 1; \\\\ 2T(n/2) + \\Theta(n) & \\text{if } n > 1. \\end{cases}$\n\nFinally, there is a question: $T(n) = ?$"
+    },
+    {
+      "page": 33,
+      "status": "described",
+      "text": "The image contains the following mathematical formulas:\n- $T(n) = 2T(n/2) + cn$\n- $c > 0$"
+    },
+    {
+      "page": 34,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 35,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 36,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 37,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 38,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 39,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 40,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 41,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 42,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 43,
+      "status": "skip: animation step (next page has the same title)"
+    },
+    {
+      "page": 44,
+      "status": "described",
+      "text": "This image illustrates the process of solving a recurrence relation using a recursion tree.\n\n**Math Formulas:**\n*   The recurrence relation to solve is $T(n) = 2T(n/2) + cn$, where $c > 0$ is constant.\n*   The final result is $\\text{Total} = \\Theta(n \\lg n)$.\n\n**Diagram (Recursion Tree):**\n*   A binary tree represents the recursive calls:\n    *   The root node is labeled $cn$.\n    *   The next level has two children, each labeled $cn/2$.\n    *   The following level has four children, each labeled $cn/4$.\n    *   Vertical dots indicate the tree continues down to the leaf level, where a node is labeled $\\Theta(1)$.\n*   A double-headed red arrow on the left side of the tree is labeled $h$, representing the height of the tree.\n*   A gray box at the bottom center states $\\#\\text{leaves} = n$.\n*   Dashed red lines connect each level of the tree to its total work on the right:\n    *   The root level $cn$ connects to $cn$.\n    *   The second level ($cn/2$ nodes) connects to $cn$.\n    *   The third level ($cn/4$ nodes) connects to $cn$.\n    *   The leaf level $\\Theta(1)$ connects to $\\Theta(n)$, which is underlined in red."
+    },
+    {
+      "page": 45,
+      "status": "described",
+      "text": "This image illustrates the solution to a recurrence relation using a recursion tree.\n\n*   **Recurrence Relation:** $T(n) = 2T(n/2) + c$, where $c > 0$ is constant.\n*   **Recursion Tree Diagram:**\n    *   The root node is labeled $c$.\n    *   The root has two children, each labeled $c$.\n    *   Each of those children has two children, each labeled $c$.\n    *   Vertical dots indicate the tree continues downward.\n    *   The leftmost leaf is labeled $\\Theta(1)$.\n    *   A red double-headed vertical arrow on the left spans the height of the tree, labeled $h = 1 + \\lg n$.\n*   **Work per Level:** To the right of the tree, red dashed lines connect each level to its total work:\n    *   Root level: $c$\n    *   Second level: $2c$\n    *   Third level: $4c$\n    *   ...\n    *   Level before the leaves: $n/2 c$\n    *   Leaf level: $\\Theta(n)$ (underlined in red).\n*   **Additional Annotations:**\n    *   A grey curved line connects the leaf label $\\Theta(1)$ to the total leaf work $\\Theta(n)$.\n    *   A mathematical note below the tree states: $1 + 1/2 + 1/4 + \\dots < 2$.\n    *   The final result is given as $\\text{Total} = \\Theta(n)$.\n    *   A red text note states: \"All the work done at the leaves\"."
+    },
+    {
+      "page": 46,
+      "status": "described",
+      "text": "This image illustrates the process of solving a recurrence relation using a recursion tree.\n\n*   **Recurrence Relation:** The problem is to solve $T(n) = 2T(n/2) + cn^2$, where $c > 0$ is a constant.\n*   **Recursion Tree Diagram:**\n    *   The root of the tree is labeled $cn^2$.\n    *   The root has two children, each labeled $cn^2/4$.\n    *   Each of those children has two children of its own, for a total of four nodes at the third level, each labeled $cn^2/16$.\n    *   Vertical ellipses indicate that the tree continues to deeper levels.\n    *   The leaf level is indicated by $\\Theta(1)$ on the far left.\n    *   A red double-headed vertical arrow on the left indicates the height of the tree is $h = 1 + \\lg n$.\n    *   To the right of the tree, dashed red lines connect each level to its total work:\n        *   The root level total is $cn^2$.\n        *   The second level total is $cn^2/2$.\n        *   The third level total is $cn^2/4$.\n        *   Vertical ellipses lead to the bottom level total, which is $\\Theta(n)$.\n    *   A grey curved line groups the leaf nodes and connects them to the $\\Theta(n)$ total.\n*   **Additional Mathematical Notes:**\n    *   A note states: $1 + 1/2 + 1/4 + \\dots < 2$.\n    *   The final result is given as $\\text{Total} = \\Theta(n^2)$."
+    },
+    {
+      "page": 47,
+      "status": "skip: license page"
+    }
+  ],
+  "segments": [
+    {
+      "id": "addb9ea7b4e1-fig-p001",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 1,
+      "section": null,
+      "text": "An image of the cover of the textbook \"Introduction to Algorithms, Third Edition,\" which features an abstract illustration of red, leaf-like shapes connected by thin grey lines in a branching, tree-like structure."
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p003",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "The image contains the following mathematical formulas and a worked example:\n\n*   Input array notation: $A[1 \\dots n]$\n*   Output permutation notation: $B[1 \\dots n]$\n*   The condition for a sorted array: $B[1] \\le B[2] \\le \\dots \\le B[n]$\n*   A worked example illustrating the sorting process: $A = [7, 2, 5, 5, 9.6] \\to B = [2, 5, 5, 7, 9.6]$"
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p005",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "This page contains the following non-text elements:\n\n**Math Formulas**\n*   `INSERTION-SORT (A, n)`\n*   `A[1 .. n]`\n*   `j \\leftarrow 2` to `n`\n*   `A[j]`\n*   `A[1 .. j-1]`\n\n**Diagram**\nAn illustration of iteration $j$ of the insertion sort algorithm shows an array $A$ as a long horizontal rectangle indexed from $1$ to $n$.\n*   A red curly brace marks the beginning of the array from index $1$ up to just before index $i$ as \"sorted\".\n*   The element at index $j$ is highlighted in light purple and labeled as \"key\".\n*   The element at index $i$ is highlighted in orange and labeled as \"new location of key\" with a teal arrow.\n*   A black arrow points from the \"key\" at index $j$ to the \"new location of key\" at index $i$.\n*   A series of zig-zag arrows between indices $i$ and $j$ above the array represents the process of pairwise key-swaps."
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p016",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 16,
+      "section": null,
+      "text": "The image contains a worked example of the insertion sort algorithm illustrated through a sequence of arrays:\n\n*   **Step 1:** Array $[8, 2, 4, 9, 3, 6]$. The value $2$ is highlighted with a yellow circle, and a curved arrow points from $2$ to the position of $8$, indicating it is being moved to the front.\n*   **Step 2:** Array $[2, 8, 4, 9, 3, 6]$. The value $4$ is highlighted with a yellow circle, and a curved arrow points from $4$ to the position of $8$.\n*   **Step 3:** Array $[2, 4, 8, 9, 3, 6]$. The value $9$ is highlighted with a yellow circle, and a small curved arrow points back to its own position, indicating it stays in place.\n*   **Step 4:** Array $[2, 4, 8, 9, 3, 6]$. The value $3$ is highlighted with a yellow circle, and a curved arrow points from $3$ to the position of $4$.\n*   **Step 5:** Array $[2, 3, 4, 8, 9, 6]$. The value $6$ is highlighted with a yellow circle, and a curved arrow points from $6$ to the position of $8$.\n*   **Step 6:** Array $[2, 3, 4, 6, 8, 9]$, which is the final sorted result.\n\nThe text also includes the following math formulas:\n*   $\\Theta(n^2)$\n*   $A = [n, n - 1, n - 2, \\dots, 2, 1]$"
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p017",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 17,
+      "section": null,
+      "text": "The image contains the following mathematical formulas:\n\n*   Algorithm signature: $\\text{BINARY-INSERTION-SORT}(A, n)$ with output $A[1 \\dots n]$.\n*   Loop range: $j \\leftarrow 2$ to $n$.\n*   Array elements: $A[j]$ and sub-array $A[1 \\dots j-1]$.\n*   Time complexity for binary search: $\\Theta(\\log n)$.\n*   Time complexity for shifting elements: $\\Theta(n)$.\n*   Overall complexity: $\\Theta(n \\log n)$ comparisons and $(n^2)$ swaps."
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p018",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 18,
+      "section": null,
+      "text": "This page contains the following non-textual elements:\n\n*   **Mathematical notation in the pseudocode:**\n    *   The input array is denoted as $A[1 \\dots n]$.\n    *   The base case condition is $n = 1$.\n    *   The two recursive calls sort sub-arrays $A[1 \\dots n/2]$ and $A[n/2+1 \\dots n]$.\n*   **Diagram:** A schematic illustration of the divide-and-conquer process. It shows a long rectangle divided into two equal halves. Each half contains a right-pointing arrow. Below these two halves is a single, longer right-pointing arrow that spans the entire width of the rectangle, representing the merge step.\n*   **Page number:** The number \"18\" is centered at the bottom of the page."
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p031",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 31,
+      "section": null,
+      "text": "The image illustrates the process of merging two sorted arrays, represented as columns of numbers sorted in ascending order from bottom to top. The two arrays are:\n*   Left array: $[2, 7, 13, 20]$\n*   Right array: $[1, 9, 11, 12]$\n\nThe process is shown across six panels, where yellow highlighting indicates the current smallest available elements from each array, and a circle indicates the element selected to be placed next in the merged sequence. Arrows point from the selected element to its position in the resulting merged list at the bottom.\n\n*   **Panel 1:** The elements $2$ (left) and $1$ (right) are highlighted. The $1$ is circled, and an arrow points to the value $1$ below.\n*   **Panel 2:** The elements $2$ (left) and $9$ (right) are highlighted. The $2$ is circled, and an arrow points to the value $2$ below.\n*   **Panel 3:** The elements $7$ (left) and $9$ (right) are highlighted. The $7$ is circled, and an arrow points to the value $7$ below.\n*   **Panel 4:** The elements $13$ (left) and $9$ (right) are highlighted. The $9$ is circled, and an arrow points to the value $9$ below.\n*   **Panel 5:** The elements $13$ (left) and $11$ (right) are highlighted. The $11$ is circled, and an arrow points to the value $11$ below.\n*   **Panel 6:** The elements $13$ (left) and $12$ (right) are highlighted. The $12$ is circled, and an arrow points to the value $12$ below.\n\nAt the bottom, there is a math formula: $\\text{Time} = \\Theta(n)$ to merge a total of $n$ elements."
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p032",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 32,
+      "section": null,
+      "text": "The image illustrates the time complexity analysis of the Merge Sort algorithm.\n\nA pseudocode for `MERGE-SORT A[1 .. n]` is presented with corresponding time complexities listed to the right, separated by two vertical red lines:\n* Step 1: `If n = 1, done.` corresponds to $\\Theta(1)$.\n* Step 2: `Recursively sort A[ 1 .. [n/2] ] and A[ [n/2]+1 .. n ] .` corresponds to $2T(n/2)$.\n* Step 3: `\"Merge\" the two sorted lists` corresponds to $\\Theta(n)$.\n\nThe overall time complexity is labeled as $T(n)$. Below the pseudocode, a recurrence relation is given:\n$T(n) = \\begin{cases} \\Theta(1) & \\text{if } n = 1; \\\\ 2T(n/2) + \\Theta(n) & \\text{if } n > 1. \\end{cases}$\n\nFinally, there is a question: $T(n) = ?$"
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p033",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 33,
+      "section": null,
+      "text": "The image contains the following mathematical formulas:\n- $T(n) = 2T(n/2) + cn$\n- $c > 0$"
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p044",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 44,
+      "section": null,
+      "text": "This image illustrates the process of solving a recurrence relation using a recursion tree.\n\n**Math Formulas:**\n*   The recurrence relation to solve is $T(n) = 2T(n/2) + cn$, where $c > 0$ is constant.\n*   The final result is $\\text{Total} = \\Theta(n \\lg n)$.\n\n**Diagram (Recursion Tree):**\n*   A binary tree represents the recursive calls:\n    *   The root node is labeled $cn$.\n    *   The next level has two children, each labeled $cn/2$.\n    *   The following level has four children, each labeled $cn/4$.\n    *   Vertical dots indicate the tree continues down to the leaf level, where a node is labeled $\\Theta(1)$.\n*   A double-headed red arrow on the left side of the tree is labeled $h$, representing the height of the tree.\n*   A gray box at the bottom center states $\\#\\text{leaves} = n$.\n*   Dashed red lines connect each level of the tree to its total work on the right:\n    *   The root level $cn$ connects to $cn$.\n    *   The second level ($cn/2$ nodes) connects to $cn$.\n    *   The third level ($cn/4$ nodes) connects to $cn$.\n    *   The leaf level $\\Theta(1)$ connects to $\\Theta(n)$, which is underlined in red."
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p045",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 45,
+      "section": null,
+      "text": "This image illustrates the solution to a recurrence relation using a recursion tree.\n\n*   **Recurrence Relation:** $T(n) = 2T(n/2) + c$, where $c > 0$ is constant.\n*   **Recursion Tree Diagram:**\n    *   The root node is labeled $c$.\n    *   The root has two children, each labeled $c$.\n    *   Each of those children has two children, each labeled $c$.\n    *   Vertical dots indicate the tree continues downward.\n    *   The leftmost leaf is labeled $\\Theta(1)$.\n    *   A red double-headed vertical arrow on the left spans the height of the tree, labeled $h = 1 + \\lg n$.\n*   **Work per Level:** To the right of the tree, red dashed lines connect each level to its total work:\n    *   Root level: $c$\n    *   Second level: $2c$\n    *   Third level: $4c$\n    *   ...\n    *   Level before the leaves: $n/2 c$\n    *   Leaf level: $\\Theta(n)$ (underlined in red).\n*   **Additional Annotations:**\n    *   A grey curved line connects the leaf label $\\Theta(1)$ to the total leaf work $\\Theta(n)$.\n    *   A mathematical note below the tree states: $1 + 1/2 + 1/4 + \\dots < 2$.\n    *   The final result is given as $\\text{Total} = \\Theta(n)$.\n    *   A red text note states: \"All the work done at the leaves\"."
+    },
+    {
+      "id": "addb9ea7b4e1-fig-p046",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 46,
+      "section": null,
+      "text": "This image illustrates the process of solving a recurrence relation using a recursion tree.\n\n*   **Recurrence Relation:** The problem is to solve $T(n) = 2T(n/2) + cn^2$, where $c > 0$ is a constant.\n*   **Recursion Tree Diagram:**\n    *   The root of the tree is labeled $cn^2$.\n    *   The root has two children, each labeled $cn^2/4$.\n    *   Each of those children has two children of its own, for a total of four nodes at the third level, each labeled $cn^2/16$.\n    *   Vertical ellipses indicate that the tree continues to deeper levels.\n    *   The leaf level is indicated by $\\Theta(1)$ on the far left.\n    *   A red double-headed vertical arrow on the left indicates the height of the tree is $h = 1 + \\lg n$.\n    *   To the right of the tree, dashed red lines connect each level to its total work:\n        *   The root level total is $cn^2$.\n        *   The second level total is $cn^2/2$.\n        *   The third level total is $cn^2/4$.\n        *   Vertical ellipses lead to the bottom level total, which is $\\Theta(n)$.\n    *   A grey curved line groups the leaf nodes and connects them to the $\\Theta(n)$ total.\n*   **Additional Mathematical Notes:**\n    *   A note states: $1 + 1/2 + 1/4 + \\dots < 2$.\n    *   The final result is given as $\\text{Total} = \\Theta(n^2)$."
+    }
+  ]
+}

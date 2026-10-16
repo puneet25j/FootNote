@@ -127,11 +127,14 @@ def summarize(rows: list[dict], full: bool) -> dict:
 
 def main() -> None:
     mode = sys.argv[1] if len(sys.argv) > 1 else ""
+    only = set(sys.argv[2:])  # optional: specific question ids, e.g. q24 q25
     if mode not in ("retrieval", "full"):
         print(__doc__)
         return
     full = mode == "full"
     questions = load_questions()
+    if only:
+        questions = [q for q in questions if q["id"] in only]
     rows = run_full(questions) if full else run_retrieval(questions)
     summary = summarize(rows, full)
 
@@ -146,7 +149,8 @@ def main() -> None:
                                       if r["refused"] != (not r["answerable"])] or "none")
         print("  errors (excluded):", [r["id"] for r in rows if "error" in r] or "none")
 
-    out = RESULTS_DIR / f"{datetime.now():%Y%m%d-%H%M%S}-{mode}.json"
+    suffix = "-subset" if only else ""
+    out = RESULTS_DIR / f"{datetime.now():%Y%m%d-%H%M%S}-{mode}{suffix}.json"
     write_json_atomic(out, {
         "mode": mode,
         "settings": {"llm_model": llm.MODEL if full else None, "embed_model": EMBED_MODEL,

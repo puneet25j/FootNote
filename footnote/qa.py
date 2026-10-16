@@ -15,15 +15,18 @@ from footnote.utils import COURSES_DIR, course_dirs, load_course
 K_VIDEO = 4
 K_NOTES = 2
 CITATION = re.compile(r"(?<!\w)\[(\d+(?:\s*,\s*\d+)*)\]")  # [3], [1, 4], but not a[0]
+MATH = re.compile(r"\$[^$]*\$")  # matches $...$ math blocks
 
 REFUSAL = "I couldn't find this in the lectures or notes."
 
-SYSTEM_TEMPLATE = """You are Footnote, a study assistant{scope}.
+SYSTEM_TEMPLATE = r"""You are Footnote, a study assistant{scope}.
 Answer ONLY using the numbered sources provided; they come from the student's lecture recordings and notes.
-Each source is labelled with its course and lecture.
+Each source is labelled with its course and lecture. Sources labelled "figure" are written
+descriptions of diagrams or slides; use them as evidence like any other source.
 Cite sources inline by number, like [1] or [2][4]. Every factual sentence needs a citation.
-If the sources do not contain the answer, reply exactly:
+If the sources contain nothing relevant to the question, reply exactly:
 "{refusal}"
+If they answer only part of the question, answer that part and briefly say what is missing.
 Write math in LaTeX between single dollar signs, e.g. $\Theta(n \log n)$.
 Do not write timestamps or page numbers yourself; the source numbers are enough."""
 
@@ -45,7 +48,8 @@ def build_prompt(question: str, hits: list[dict]) -> str:
     blocks = []
     for n, hit in enumerate(hits, 1):
         meta = hit["metadata"]
-        label = f"{meta.get('course', '?')}, {meta['lecture']}, {meta['source_type']}"
+        figure = " figure" if meta.get("kind") == "figure" else ""
+        label = f"{meta.get('course', '?')}, {meta['lecture']}, {meta['source_type']}{figure}"
         blocks.append(f"[{n}] ({label})\n{hit['text']}")
     return "Sources:\n\n" + "\n\n".join(blocks) + f"\n\nQuestion: {question}"
 
@@ -53,7 +57,8 @@ def answer(question: str, course: str | None = None) -> dict:
     hits = retrieve(question, course)
     reply = llm.generate(build_prompt(question, hits), system=system_prompt(course))
 
-    cited = {int(n) for group in CITATION.findall(reply) for n in group.split(",")}
+    prose = MATH.sub(" ", reply)   # copy of the reply with math blanked out
+    cited = {int(n) for group in CITATION.findall(prose) for n in group.split(",")}
     valid = sorted(n for n in cited if 1 <= n <= len(hits))
     invalid = sorted(n for n in cited if not 1 <= n <= len(hits))
     return {

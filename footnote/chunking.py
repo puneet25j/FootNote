@@ -25,14 +25,18 @@ def group(segments: list[dict], target_words: int = TARGET_WORDS, overlap: int =
     return groups
 
 def chunks_for_doc(doc: dict, course: str) -> list[dict]:
+    kind = doc.get("kind", "text")
+    # A figure description is self-contained: one page, one chunk. Everything else is grouped.
+    groups = [[s] for s in doc["segments"]] if kind == "figure" else group(doc["segments"])
     chunks = []
-    for n, segs in enumerate(group(doc["segments"])):
+    for n, segs in enumerate(groups):
         first, last = segs[0], segs[-1]
         meta = {
             "course": course,
             "doc_id": doc["doc_id"],
             "lecture": doc["lecture"],
             "source_type": doc["source_type"],
+            "kind": kind,
             "start": first["start"],        # video only
             "end": last["end"],             # video only
             "page_start": first["page"],    # notes only

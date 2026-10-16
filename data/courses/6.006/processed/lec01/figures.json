@@ -1,0 +1,79 @@
+{
+  "doc_id": "dc04facffd88-fig",
+  "lecture": "lec01",
+  "source_type": "notes",
+  "kind": "figure",
+  "source_file": "data/courses/6.006/raw/lec01/notes.pdf",
+  "source_sha256": "dc04facffd88355daf6e3e1620c4e253b84d31dc4bac7417500240f6baf16b66",
+  "model": "gemma-4-31b-it",
+  "prompt_version": 1,
+  "created_at": "2026-10-16T04:24:25+00:00",
+  "pages": [
+    {
+      "page": 1,
+      "status": "none"
+    },
+    {
+      "page": 2,
+      "status": "described",
+      "text": "- Math formulas: $b \\ge a$, $b \\ge c$, $i \\ge h$, $\\theta(n)$, $n/2$, $n$.\n- Figure 1: An array of 9 cells. The cells are indexed 1 through 9 above the array and contain the values a, b, c, d, e, f, g, h, i respectively.\n- Straightforward Algorithm diagram: An array of 8 cells containing the values [6, 7, 4, 3, 2, 1, 4, 5]. Red arrows point upwards to the second cell (value 7) and the eighth cell (value 5).\n- \"Start from left\" diagram: An array with indices 1, 2, ..., $n/2$, ..., $n-1$, $n$ labeled above. A red arrow points up to the cell at position $n/2$ with the text \"might be peak\" below it. Below the array is a drawing of a mountain-shaped peak, and below that is the text \"$\\theta(n)$ complexity worst case\".\n- Final diagram: A drawing of a V-shaped valley. A red label \"$n/2$\" is above the center, with a red arrow pointing down to the bottom vertex of the valley."
+    },
+    {
+      "page": 3,
+      "status": "described",
+      "text": "- **Figure 3: Divide & Conquer** illustrates a 1D array with indices $1, 2, \\dots, n/2-1, n/2, n/2+1, \\dots, n-1, n$ written in red above the cells. A red arrow points to the cell at position $n/2$ with the label \"look at n/2 position\" below it.\n\n- Math formulas in the \"Can we do better?\" section:\n    - $a[n/2] < a[n/2 - 1]$\n    - $a[n/2] < a[n/2 + 1]$\n    - $a[n/2] \\ge a[n/2 - 1]$\n    - $a[n/2] \\ge a[n/2 + 1]$\n    - $T(n) = T(n/2) + \\underbrace{\\Theta(1)}_{\\text{to compare a[n/2] to neighbors}} = \\Theta(1) + \\dots + \\Theta(1) (\\log_2(n) \\text{ times}) = \\Theta(\\log_2(n))$\n    - $n = 1000000$\n    - $\\Theta(n)$\n    - $\\Theta(\\log n)$\n\n- **Figure 4: Greedy Ascent Algorithm** shows a grid with $n$ rows and $m$ columns. A red double-headed vertical arrow on the left is labeled \"$n \\text{ rows}$\" and a red double-headed horizontal arrow at the bottom is labeled \"$m \\text{ columns}$\". Inside the grid, a central cell is labeled '$a$', with neighboring cells labeled '$c$' (above), '$e$' (below), '$b$' (left), and '$d$' (right). The caption states: \"Figure 4: Greedy Ascent Algorithm: $\\Theta(nm)$ complexity, $\\Theta(n^2)$ algorithm if $m = n$\".\n\n- Final math formula: $a$ is a 2D-peak iff $a \\ge b, a \\ge d, a \\ge c, a \\ge e$"
+    },
+    {
+      "page": 4,
+      "status": "described",
+      "text": "- **Figure 5**: A $4 \\times 4$ grid illustrating a path to a peak.\n    - Row 2 contains the values 14, 13, and 12 in the first three columns.\n    - Row 3 contains the values 15, 9, 11, and 17 in all four columns.\n    - Row 4 contains the values 16, 17, 19, and 20 in all four columns.\n    - A red path starts at 14, moves right to 13 and then to 12. Another branch of the red path moves down from 14 to 15, then down to 16, then right to 17, 19, and finally to 20.\n    - The value 20 is circled in red.\n\n- **Diagram for Attempt #1**: A $4 \\times 4$ grid divided into four quadrants by a central vertical line labeled $j = m/2$ and a central horizontal line labeled $i$.\n\n- **Failure Example Grid**: A $4 \\times 4$ grid showing a counterexample.\n    - Row 1: The value 10 is in the 3rd column.\n    - Row 2: The values 14, 13, and 12 are in the 1st, 2nd, and 3rd columns.\n    - Row 3: The values 15, 9, and 11 are in the 1st, 2nd, and 3rd columns.\n    - Row 4: The values 16, 17, 19, and 20 are in the 1st, 2nd, 3rd, and 4th columns.\n    - A black arrow points from 13 to 14 in the second row.\n\n- **Math Formulas**:\n    - $j = m/2$\n    - $i, j$\n    - $(i, j)$\n    - row $i$"
+    },
+    {
+      "page": 5,
+      "status": "described",
+      "text": "This page contains the following mathematical formulas and visual elements:\n\n**Mathematical Formulas**\n*   $j = m/2$\n*   $(i, j - 1), (i, j), (i, j + 1)$\n*   $(i, j - 1) > (i, j)$\n*   $(i, j)$\n*   $T(n, m)$\n*   $T(n, m) = T(n, m/2) + \\Theta(n)$\n*   $T(n, m) = \\underbrace{\\Theta(n) + \\dots + \\Theta(n)}_{\\log m} = \\Theta(n \\log m) = \\Theta(n \\log n)$ if $m = n$\n\n**Example of Attempt #2 Figure**\nThis figure illustrates a divide-and-conquer process for finding a 2D peak using a sequence of three grids:\n*   **First Grid:** A $4 \\times 4$ array of numbers:\n    *   Row 1: 10, 8, 10, 10\n    *   Row 2: 14, 13, 12, 11\n    *   Row 3: 15, 9, 11, 21\n    *   Row 4: 16, 17, 19, 20\n    *   An upward-pointing arrow indicates the second column, with the label \"pick this column 17 global max for this column\".\n*   **Second Grid:** A $4 \\times 2$ array containing the right half of the first grid:\n    *   Row 1: 10, 10\n    *   Row 2: 12, 11\n    *   Row 3: 11, 21\n    *   Row 4: 19, 20\n    *   The text \"go with\" is written above the grid.\n    *   An upward-pointing arrow indicates the first column of this subgrid, with the label \"pick this column 19 global max for this column\".\n*   **Third Grid:** A $4 \\times 1$ array containing the rightmost column of the previous grid:\n    *   Row 1: 10\n    *   Row 2: 11\n    *   Row 3: 21 (circled in red)\n    *   Row 4: 20\n    *   The text \"find 21\" is written to the right of the grid."
+    },
+    {
+      "page": 6,
+      "status": "skip: license page"
+    }
+  ],
+  "segments": [
+    {
+      "id": "dc04facffd88-fig-p002",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "- Math formulas: $b \\ge a$, $b \\ge c$, $i \\ge h$, $\\theta(n)$, $n/2$, $n$.\n- Figure 1: An array of 9 cells. The cells are indexed 1 through 9 above the array and contain the values a, b, c, d, e, f, g, h, i respectively.\n- Straightforward Algorithm diagram: An array of 8 cells containing the values [6, 7, 4, 3, 2, 1, 4, 5]. Red arrows point upwards to the second cell (value 7) and the eighth cell (value 5).\n- \"Start from left\" diagram: An array with indices 1, 2, ..., $n/2$, ..., $n-1$, $n$ labeled above. A red arrow points up to the cell at position $n/2$ with the text \"might be peak\" below it. Below the array is a drawing of a mountain-shaped peak, and below that is the text \"$\\theta(n)$ complexity worst case\".\n- Final diagram: A drawing of a V-shaped valley. A red label \"$n/2$\" is above the center, with a red arrow pointing down to the bottom vertex of the valley."
+    },
+    {
+      "id": "dc04facffd88-fig-p003",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "- **Figure 3: Divide & Conquer** illustrates a 1D array with indices $1, 2, \\dots, n/2-1, n/2, n/2+1, \\dots, n-1, n$ written in red above the cells. A red arrow points to the cell at position $n/2$ with the label \"look at n/2 position\" below it.\n\n- Math formulas in the \"Can we do better?\" section:\n    - $a[n/2] < a[n/2 - 1]$\n    - $a[n/2] < a[n/2 + 1]$\n    - $a[n/2] \\ge a[n/2 - 1]$\n    - $a[n/2] \\ge a[n/2 + 1]$\n    - $T(n) = T(n/2) + \\underbrace{\\Theta(1)}_{\\text{to compare a[n/2] to neighbors}} = \\Theta(1) + \\dots + \\Theta(1) (\\log_2(n) \\text{ times}) = \\Theta(\\log_2(n))$\n    - $n = 1000000$\n    - $\\Theta(n)$\n    - $\\Theta(\\log n)$\n\n- **Figure 4: Greedy Ascent Algorithm** shows a grid with $n$ rows and $m$ columns. A red double-headed vertical arrow on the left is labeled \"$n \\text{ rows}$\" and a red double-headed horizontal arrow at the bottom is labeled \"$m \\text{ columns}$\". Inside the grid, a central cell is labeled '$a$', with neighboring cells labeled '$c$' (above), '$e$' (below), '$b$' (left), and '$d$' (right). The caption states: \"Figure 4: Greedy Ascent Algorithm: $\\Theta(nm)$ complexity, $\\Theta(n^2)$ algorithm if $m = n$\".\n\n- Final math formula: $a$ is a 2D-peak iff $a \\ge b, a \\ge d, a \\ge c, a \\ge e$"
+    },
+    {
+      "id": "dc04facffd88-fig-p004",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "- **Figure 5**: A $4 \\times 4$ grid illustrating a path to a peak.\n    - Row 2 contains the values 14, 13, and 12 in the first three columns.\n    - Row 3 contains the values 15, 9, 11, and 17 in all four columns.\n    - Row 4 contains the values 16, 17, 19, and 20 in all four columns.\n    - A red path starts at 14, moves right to 13 and then to 12. Another branch of the red path moves down from 14 to 15, then down to 16, then right to 17, 19, and finally to 20.\n    - The value 20 is circled in red.\n\n- **Diagram for Attempt #1**: A $4 \\times 4$ grid divided into four quadrants by a central vertical line labeled $j = m/2$ and a central horizontal line labeled $i$.\n\n- **Failure Example Grid**: A $4 \\times 4$ grid showing a counterexample.\n    - Row 1: The value 10 is in the 3rd column.\n    - Row 2: The values 14, 13, and 12 are in the 1st, 2nd, and 3rd columns.\n    - Row 3: The values 15, 9, and 11 are in the 1st, 2nd, and 3rd columns.\n    - Row 4: The values 16, 17, 19, and 20 are in the 1st, 2nd, 3rd, and 4th columns.\n    - A black arrow points from 13 to 14 in the second row.\n\n- **Math Formulas**:\n    - $j = m/2$\n    - $i, j$\n    - $(i, j)$\n    - row $i$"
+    },
+    {
+      "id": "dc04facffd88-fig-p005",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "This page contains the following mathematical formulas and visual elements:\n\n**Mathematical Formulas**\n*   $j = m/2$\n*   $(i, j - 1), (i, j), (i, j + 1)$\n*   $(i, j - 1) > (i, j)$\n*   $(i, j)$\n*   $T(n, m)$\n*   $T(n, m) = T(n, m/2) + \\Theta(n)$\n*   $T(n, m) = \\underbrace{\\Theta(n) + \\dots + \\Theta(n)}_{\\log m} = \\Theta(n \\log m) = \\Theta(n \\log n)$ if $m = n$\n\n**Example of Attempt #2 Figure**\nThis figure illustrates a divide-and-conquer process for finding a 2D peak using a sequence of three grids:\n*   **First Grid:** A $4 \\times 4$ array of numbers:\n    *   Row 1: 10, 8, 10, 10\n    *   Row 2: 14, 13, 12, 11\n    *   Row 3: 15, 9, 11, 21\n    *   Row 4: 16, 17, 19, 20\n    *   An upward-pointing arrow indicates the second column, with the label \"pick this column 17 global max for this column\".\n*   **Second Grid:** A $4 \\times 2$ array containing the right half of the first grid:\n    *   Row 1: 10, 10\n    *   Row 2: 12, 11\n    *   Row 3: 11, 21\n    *   Row 4: 19, 20\n    *   The text \"go with\" is written above the grid.\n    *   An upward-pointing arrow indicates the first column of this subgrid, with the label \"pick this column 19 global max for this column\".\n*   **Third Grid:** A $4 \\times 1$ array containing the rightmost column of the previous grid:\n    *   Row 1: 10\n    *   Row 2: 11\n    *   Row 3: 21 (circled in red)\n    *   Row 4: 20\n    *   The text \"find 21\" is written to the right of the grid."
+    }
+  ]
+}
