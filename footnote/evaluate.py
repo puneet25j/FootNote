@@ -16,7 +16,7 @@ from pathlib import Path
 from footnote import llm
 from footnote.chunking import TARGET_WORDS
 from footnote.index import EMBED_MODEL
-from footnote.qa import K_NOTES, K_VIDEO, REFUSAL, answer, retrieve
+from footnote.qa import K_NOTES, K_VIDEO, K_FIGURES, REFUSAL, answer, retrieve
 from footnote.utils import write_json_atomic
 
 QUESTIONS = Path("eval/questions.jsonl")
@@ -46,6 +46,9 @@ def matches(meta: dict, gold: dict, course: str)-> bool:
     return meta["page_start"] <= gold["page"] <= meta["page_end"]
 
 def is_relevant(hit: dict, q:dict)-> bool:
+    # For figure questions the answer exists only in a drawing, so only a figure chunk counts
+    if q.get("needs_figures") and hit["metadata"].get("kind") != "figure":
+        return False
     return any(matches(hit["metadata"], g, q["course"]) for g in q["gold"])
 
 def first_relevant_rank(hits: list[dict], q: dict)-> int | None:
@@ -154,7 +157,7 @@ def main() -> None:
     write_json_atomic(out, {
         "mode": mode,
         "settings": {"llm_model": llm.MODEL if full else None, "embed_model": EMBED_MODEL,
-                     "target_words": TARGET_WORDS, "k_video": K_VIDEO, "k_notes": K_NOTES},
+                     "target_words": TARGET_WORDS, "k_video": K_VIDEO, "k_notes": K_NOTES, "k_figures": K_FIGURES},
         "summary": summary,
         "rows": rows,
     })

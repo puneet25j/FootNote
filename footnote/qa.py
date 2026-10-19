@@ -14,6 +14,7 @@ from footnote.utils import COURSES_DIR, course_dirs, load_course
 
 K_VIDEO = 4
 K_NOTES = 2
+K_FIGURES = 1
 CITATION = re.compile(r"(?<!\w)\[(\d+(?:\s*,\s*\d+)*)\]")  # [3], [1, 4], but not a[0]
 MATH = re.compile(r"\$[^$]*\$")  # matches $...$ math blocks
 
@@ -39,9 +40,10 @@ def system_prompt(course: str | None) -> str:
     return SYSTEM_TEMPLATE.format(scope=scope, refusal=REFUSAL)
 
 def retrieve(question: str, course: str | None = None) -> list[dict]:
-    """Best video chunks + best notes chunks, merged and sorted by score."""
+    """Best video chunks + best notes + figures chunks, merged and sorted by score."""
     hits = search(question, k=K_VIDEO, where=make_where(course=course, source_type="video"))
-    hits += search(question, k=K_NOTES, where=make_where(course=course, source_type="notes"))
+    hits += search(question, k=K_NOTES, where=make_where(course=course, source_type="notes", kind="text"))
+    hits += search(question, k=K_FIGURES, where=make_where(course=course, kind="figure"))
     return sorted(hits, key=lambda h: h["score"], reverse=True)
 
 def build_prompt(question: str, hits: list[dict]) -> str:

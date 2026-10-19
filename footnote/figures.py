@@ -7,6 +7,7 @@ Usage (from the Footnote folder):
     python -m footnote.figures 6.006           # one course
     python -m footnote.figures 6.006 lec03     # one lecture
 """
+import re
 import json
 import sys
 import time
@@ -18,10 +19,11 @@ import pymupdf
 from footnote import llm
 from footnote.utils import course_dirs, lecture_dirs, sha256_file, write_json_atomic
 
-PROMPT_VERSION = 1   
+PROMPT_VERSION = 2   
 RENDER_DPI = 150     # resolution of the page image sent to the model
 PAUSE_SECONDS = 4    # between calls, to go easy on free-tier limits
 BOILERPLATE_MARKER = "ocw.mit.edu/terms"
+SEPARATOR = re.compile(r"^\s*-{3,}\s*$", re.MULTILINE)  # a line that is only dashes
 
 
 PROMPT = """This image is one page of lecture notes or lecture slides.
@@ -30,7 +32,16 @@ examples drawn as pictures (arrays, trees, grids, arrows, highlighted or circled
 and math formulas. Include every number, label and value shown, and say what the figure
 illustrates. Write math in LaTeX between single dollar signs.
 Do not repeat ordinary paragraphs of text.
+
+Describe each figure separately, with a line containing only --- between figures.
+Start each one with a short heading naming the algorithm or idea it illustrates,
+so it makes sense when read on its own. Put formulas with the figure they belong to;
+formulas that belong to no figure go together in one final part.
 If the page has nothing like that, reply exactly: NONE"""
+
+def split_figures(text: str) -> list[str]:
+    """One page's reply -> one piece per figure."""
+    return [part.strip() for part in SEPARATOR.split(text) if part.strip()]
 
 def page_title(page) -> str:
     """Text in the page's largest font: the title on a slide, a heading or label in notes."""
@@ -57,11 +68,12 @@ def page_plan(doc) -> dict[int, str]:
     return plan
 
 
-def save(out_path: Path, info: dict, pages: list[dict]) -> None:
+def save(out_path: Path, info: dict, pages: list[dict]) -> int:
     segments = [
-        {"id": f"{info['doc_id']}-p{p['page']:03d}", "kind": "figure",
-         "start": None, "end": None, "page": p["page"], "section": None, "text": p["text"]}
+        {"id": f"{info['doc_id']}-p{p['page']:03d}-{n}", "kind": "figure",
+         "start": None, "end": None, "page": p["page"], "section": None, "text": part}
         for p in pages if p["status"] == "described"
+        for n, part in enumerate(split_figures(p["text"]))
     ]
     write_json_atomic(out_path, {
         **info,
@@ -69,6 +81,7 @@ def save(out_path: Path, info: dict, pages: list[dict]) -> None:
         "pages": pages,
         "segments": segments,
     })
+    return len(segments)
 
 def process_lecture(course_dir: Path, lecture_dir: Path)-> None:
     label = f"{course_dir.name}/{lecture_dir.name}"
@@ -121,9 +134,9 @@ def process_lecture(course_dir: Path, lecture_dir: Path)-> None:
                 save(out_path, info, pages)  # progress survives a crash
                 time.sleep(PAUSE_SECONDS) 
 
-    save(out_path, info, pages)
+    n_segments = save(out_path, info, pages)
     described = sum(p["status"] == "described" for p in pages)
-    print(f"  {described} figure segments -> {out_path}")
+    print(f"  {described} pages -> {n_segments} figure segments -> {out_path}")
 
 
 def main() -> None:
