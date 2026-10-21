@@ -5,5 +5,5 @@ chromadb==1.5.9
 sentence-transformers==6.1.0
 google-genai==2.29.0
 python-dotenv==1.2.4
-pylatexenc=2.11
-ollama=0.6.3
+pylatexenc==2.11
+ollama==0.6.3

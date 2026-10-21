@@ -9,6 +9,7 @@ import json
 import sys
 import re
 import time
+import statistics
 import unicodedata
 from datetime import datetime
 from pathlib import Path
@@ -76,8 +77,9 @@ def run_retrieval(questions: list[dict]) -> list[dict]:
 def run_full(questions: list[dict]) -> list[dict]:
     rows = []
     for i, q in enumerate(questions, 1):
-        if i>1:
+        if i>1 and llm.RATE_LIMITED:
             time.sleep(PAUSE_SECONDS)  # avoid exceeding free-tier per-minute limits
+        start = time.perf_counter()
         try:
             result = answer(q["question"], q["course"])
         except llm.QuotaExhaustedError as e:
@@ -93,7 +95,8 @@ def run_full(questions: list[dict]) -> list[dict]:
                "needs_figures": q.get("needs_figures", False),
                "refused": norm(REFUSAL) in norm(text),
                "invalid_citations": len(result["invalid"]),
-               "answer": text}
+               "answer": text,
+               "seconds": round(time.perf_counter() - start, 1)}
         if q["answerable"]:
             row["rank"] = first_relevant_rank(hits, q)
             row["keywords_ok"] = keywords_ok(text, q["keywords"])
@@ -125,6 +128,7 @@ def summarize(rows: list[dict], full: bool) -> dict:
             "correctly_refused_out_of_scope": pct([r["refused"] for r in out_of_scope]),
             "figure_answers_ok": pct([r["keywords_ok"] for r in figs]),
             "answers_with_invalid_citations": pct([r["invalid_citations"] > 0 for r in rows]),
+            "median_seconds_per_answer": statistics.median(r["seconds"] for r in rows) if rows else None,
         }
     return summary
 
@@ -156,7 +160,9 @@ def main() -> None:
     out = RESULTS_DIR / f"{datetime.now():%Y%m%d-%H%M%S}-{mode}{suffix}.json"
     write_json_atomic(out, {
         "mode": mode,
-        "settings": {"llm_model": llm.MODEL if full else None, "embed_model": EMBED_MODEL,
+        "settings": {"llm_model": llm.MODEL if full else None,
+                     "llm_provider": llm.PROVIDER if full else None,
+                      "embed_model": EMBED_MODEL,
                      "target_words": TARGET_WORDS, "k_video": K_VIDEO, "k_notes": K_NOTES, "k_figures": K_FIGURES},
         "summary": summary,
         "rows": rows,

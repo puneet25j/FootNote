@@ -137,7 +137,7 @@ def process_lecture(course_dir: Path, lecture_dir: Path)-> None:
                     pages.append({"page": num, "status": "described", "text": reply})
                 print(f"    p{num}:  {pages[-1]['status']}")
                 save(out_path, info, pages)  # progress survives a crash
-                time.sleep(PAUSE_SECONDS) 
+                if llm.RATE_LIMITED: time.sleep(PAUSE_SECONDS)
 
     n_segments = save(out_path, info, pages)
     described = sum(p["status"] == "described" for p in pages)
