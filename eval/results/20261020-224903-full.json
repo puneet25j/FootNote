@@ -1,0 +1,287 @@
+{
+  "mode": "full",
+  "settings": {
+    "llm_model": "gemma-4-31b-it",
+    "embed_model": "BAAI/bge-small-en-v1.5",
+    "target_words": 150,
+    "k_video": 4,
+    "k_notes": 2,
+    "k_figures": 3
+  },
+  "summary": {
+    "retrieval_hit_rate": "19/19 (100%)",
+    "mrr": 0.835,
+    "figure_retrieval_hit_rate": "2/2 (100%)",
+    "answer_keywords_ok": "19/19 (100%)",
+    "cited_a_correct_source": "19/19 (100%)",
+    "wrongly_refused": "0/19 (0%)",
+    "correctly_refused_out_of_scope": "4/4 (100%)",
+    "figure_answers_ok": "2/2 (100%)",
+    "answers_with_invalid_citations": "0/25 (0%)"
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "In a one-dimensional array, a peak is a local property [1]. A position is considered a peak if it is greater than or equal to the elements to its left and right [1]. For example, position 2 is a peak if and only if $b \\ge a$ and $b \\ge c$ [1][7]. For positions at the edges of the array, one only needs to look to one side [3]; for instance, position 9 is a peak if $i \\ge h$ [3][7].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q02",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "In the case where the definition of a peak uses \"greater than or equal to,\" any array will always have a peak [1]. However, if the definition were changed to \"greater than,\" this argument would not work [1].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q03",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The straightforward peak finding algorithm starts from the left and walks across the array [2][3]. In the worst case, this algorithm requires a constant times $n$, giving it a linear asymptotic complexity [1]. Specifically, its worst-case complexity is $\\theta(n)$ [6][7].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q04",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The divide and conquer algorithm finds a peak in a 1D array by following these steps:\n\n*   **Check the middle position:** The algorithm looks at the position $n/2$ [5][9].\n*   **Compare to neighbors:** It compares $a[n/2]$ to its neighbors [5][9].\n    *   If $a[n/2] < a[n/2 - 1]$, the algorithm only looks at the left half (indices $1 \\dots n/2 - 1$) to find a peak [5][9].\n    *   Otherwise, if $a[n/2] < a[n/2 + 1]$, it only looks at the right half (indices $n/2 + 1 \\dots n$) to find a peak [5][9].\n    *   If neither of these conditions is true (meaning $a[n/2] \\ge a[n/2 - 1]$ and $a[n/2] \\ge a[n/2 + 1]$), then the $n/2$ position is a peak [5][9].\n\nThe complexity of this algorithm is $T(n) = T(n/2) + \\Theta(1) = \\Theta(\\log_2(n))$ [5][9].",
+      "rank": 5,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q05",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The time complexity of the 1D divide and conquer peak finder is $\\Theta(\\log_2(n))$ [1]. This is based on the recurrence $T(n) = T(n/2) + \\Theta(1)$ [1].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q06",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "An element $a$ is a 2D-peak if and only if $a \\ge b, a \\ge d, a \\ge c, a \\ge e$ [8]. Additionally, an element at position $(i, j)$ is a 2D peak if it is greater than or equal to the elements at $(i, j - 1)$ and $(i, j + 1)$, provided that $(i, j)$ is also the maximum element in its column, meaning it has been compared to all adjacent elements looking up and down [2].",
+      "rank": 3,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q07",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The greedy ascent algorithm for 2D peak finding has a complexity of $\\Theta(nm)$ [1][2][3][9]. In cases where $m = n$, the complexity is $\\Theta(n^2)$ [1][2][3][9].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q08",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "Finding a 1D-peak in the middle column does not guarantee a 2D-peak because, as seen in \"Attempt #1\" of the 2D divide and conquer approach, a 2D-peak may not exist on the row $i$ where the 1D-peak was found [3]. This algorithm is incorrect [7], and an example of this failure is illustrated in a $4 \\times 4$ grid where a value (14) is a 1D-peak on a row but is not a 2D-peak [4].",
+      "rank": 3,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q09",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The running time for the 2D peak finding algorithm that picks the middle column and finds its global maximum (referred to as Attempt #2) is $\\Theta(n \\log m)$ [3][8]. If the number of rows and columns are equal ($m = n$), the complexity is $\\Theta(n \\log n)$ [3][8].\n\nThis complexity is derived from the following recurrence relation, where $T(n, m)$ is the work required for a problem with $n$ rows and $m$ columns:\n$T(n, m) = T(n, m/2) + \\Theta(n)$ [3][8].\n\nThe $\\Theta(n)$ term represents the work needed to find the global maximum on a column of $n$ rows [3][8]. Because the algorithm solves the problem with half the number of columns in each step [2][3], the total work is $\\Theta(n)$ repeated $\\log m$ times [3][8].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q10",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The word \"algorithm\" comes from Al-Kharazmi (also spelled Al-Khwārizmī), who is considered the \"father of algebra\" [3][4]. He wrote a book titled \"The Compendious Book on Calculation by Completion and Balancing\" [3][4]. His work regarding the solving of quadratic and linear equations constitutes some of the first algorithms [3][4].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q11",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The Random Access Machine (RAM) is a theoretical model of computation [2][5] that serves as a mathematical analog to Random Access Memory [1][4]. It is designed to be super simple so that it is clear that operations take constant time [5].\n\nThe RAM model has the following characteristics:\n*   **Structure**: It models memory as a big array [2][3][4] organized by machine words [4], consisting of $\\Theta(1)$ registers that are each 1 word [2][3].\n*   **Access**: If the location is known, any element in the array can be accessed in constant time [4].\n*   **Word Size**: A word $w$ is defined as $w \\geq \\lg(\\text{memory size})$ bits [3]. It is assumed that basic objects, such as integers, fit within a word [3].\n*   **Operations**: The following operations can be performed in $\\Theta(1)$ time [3]:\n    *   Loading a word at $r_i$ into register $r_j$ [3].\n    *   Storing register $r_j$ into memory at $r_i$ [3].\n    *   Computing $(+, -, *, /, \\&, |, \\wedge)$ on registers [3].\n\nThe RAM is considered a powerful and realistic model [3][6].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q12",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "A pointer machine is a model of computation that corresponds to a simple version of object-oriented programming [1]. Its key characteristics include:\n\n*   **Objects and Fields:** It uses dynamically allocated objects [1][5]. Each object has a constant number of fields ($O(1)$ fields) [1][2][5]. A field can be either a word—such as an integer, a counter, or a computed value—or a pointer [1][5].\n*   **Pointers:** A pointer, also known as a reference, points to another object or has a special null value (called nil or none in Python) [1][5]. In this model, pointers cannot be \"touched\"; for example, unlike in C, you cannot add one to a pointer to move to the next item [4].\n*   **Operations and Complexity:** Manipulating an object with a constant number of attributes takes constant time [2]. The model supports dynamic memory allocation, allowing nodes to be created or destroyed [4].\n*   **Examples:** A doubly linked list is a data structure in a pointer machine, where each node contains a value and pointers to the next and previous elements [3]. In Python, this could be implemented as an object with a few attributes or a named tuple [4][5].\n*   **Relationship to RAM:** The pointer machine is weaker than the Random Access Memory (RAM) model and can be implemented on a RAM machine by treating a pointer as an index into a giant table [4][5].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q13",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "Appending an item to a Python list takes $\\theta(1)$ time [4][6][9]. While allocating a new array and copying all elements would take linear time, Python does not do this [1]; instead, it achieves $\\theta(1)$ time via table doubling [4].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q14",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "To define the distance between two documents, a document is first treated as a vector where $D[w]$ represents the number of occurrences of word $W$ in document $D$ [2][3]. A word is defined as a sequence of alphanumeric characters, and a document is a sequence of words [3].\n\nThe distance between two documents is defined as the angle between their vectors [1][4]. This is calculated using the following formulas [7]:\n*   The dot product: $d'(D_1, D_2) = D_1 \\cdot D_2 = \\sum_{W} D_1[W] \\cdot D_2[W]$ [7].\n*   The normalized dot product: $d''(D_1, D_2) = \\frac{D_1 \\cdot D_2}{|D_1| \\cdot |D_2|}$, where $|D_i|$ is the number of words in document $i$ [1][7].\n*   The final distance: $d(D_1, D_2) = \\arccos(d''(D_1, D_2))$ [1][7].\n\nNormalizing by the number of words is necessary because without it, the measure is not scale invariant, which would cause long documents with 99% same words to seem farther apart than short documents with only 10% same words [1]. Under this definition, an angle of $0^\\circ$ means the documents are identical, while an angle of $90^\\circ$ means they share no common words [1][4].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q15",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "Insertion sort works by iterating through an array $A[1 \\dots n]$ from $j = 2$ to $n$ [4][7][8]. For each iteration, the algorithm takes the key $A[j]$ and inserts it into the already sorted sub-array $A[1 \\dots j-1]$ [4][7]. This insertion is performed using pairwise key-swaps until the key reaches its right position [1][4][7]. For example, if a key of 3 needs to be placed in a sorted sequence, it would be swapped with elements like 6, 5, and 4, stopping once it is greater than the next element, such as 2 [5].\n\nThe algorithm has the following characteristics:\n*   **Space Complexity**: It is an in-place sort requiring $\\Theta(1)$ constant auxiliary space, which is used for a temporary variable during swaps [2].\n*   **Time Complexity**: The running time is $\\Theta(n^2)$ because the process involves $\\Theta(n^2)$ swaps and $\\Theta(n^2)$ comparisons [8].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q16",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "Using binary search in insertion sort reduces the number of comparisons to $\\Theta(n \\log n)$ [1][2][3]. However, it does not make the overall running time $\\Theta(n \\log n)$ because the algorithm still uses an array data structure [2][3]. When inserting an element into the correct position within the sorted sub-array, elements must be shifted to the right [2][3]. This shifting process takes $\\Theta(n)$ time in the worst case [1][2], meaning the complexity for swaps remains $\\Theta(n^2)$ [2][5].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q17",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The merge step in merge sort uses a \"merge routine\" [2] or \"two-finger algorithm\" [7] to combine two sorted arrays into a single sorted array by interleaving or interspersing their elements [7]. This process involves using a couple of pointers to \"walk up\" the two arrays [4]. In each step, the smallest remaining element from the bottom of either array is selected and placed into the merged output sequence [1]. This continues until the elements are combined into a sorted sequence, such as 1, 2, 7, 9, 11, 12, 13, 20 [4].",
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q18",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "Merge sort requires $\\Theta(n)$ auxiliary space [2]. This extra memory is needed to perform the recursion and then take the results and put them into the sorted array $A$ [2].",
+      "rank": 2,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q19",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "The running time of merge sort is $\\Theta(n \\log n)$ [3][6].\n\nThis can be seen through the following analysis:\n*   **Algorithm Structure**: Merge sort is a divide and conquer algorithm [3][5]. It consists of three main steps:\n    1.  Checking if $n = 1$, which takes $\\Theta(1)$ time [2][6].\n    2.  Recursively sorting two halves of the array, which takes $2T(n/2)$ time [2][6].\n    3.  Merging the two sorted lists, which takes $\\Theta(n)$ time [2][6].\n*   **Recurrence Relation**: These steps result in the recurrence $T(n) = 2T(n/2) + cn$, where $c > 0$ is a constant [6].\n*   **Visualization**: The complexity can be understood via a \"proof by picture\" [3] or by using a recursion tree [6]. In the recursion tree, an equal amount of work is done at each level, leading to a total complexity of $\\Theta(n \\log n)$ [6].",
+      "rank": 2,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q20",
+      "answerable": false,
+      "needs_figures": false,
+      "refused": true,
+      "invalid_citations": 0,
+      "answer": "I couldn't find this in the lectures or notes."
+    },
+    {
+      "id": "q21",
+      "answerable": false,
+      "needs_figures": false,
+      "refused": true,
+      "invalid_citations": 0,
+      "answer": "I couldn't find this in the lectures or notes."
+    },
+    {
+      "id": "q22",
+      "answerable": false,
+      "needs_figures": false,
+      "refused": true,
+      "invalid_citations": 0,
+      "answer": "I couldn't find this in the lectures or notes."
+    },
+    {
+      "id": "q23",
+      "answerable": false,
+      "needs_figures": false,
+      "refused": true,
+      "invalid_citations": 0,
+      "answer": "I couldn't find this in the lectures or notes."
+    },
+    {
+      "id": "q24",
+      "answerable": true,
+      "needs_figures": true,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "In the insertion sort example, the array being sorted is $8, 2, 4, 9, 3, 6$ [4].",
+      "rank": 4,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q25",
+      "answerable": true,
+      "needs_figures": true,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "In the lecture 1 notes, the example array drawn for peak examples contains 8 cells with the numbers 6, 7, 4, 3, 2, 1, 4, 5 [7]. The peaks in this array are the values 7 and 5 [7].",
+      "rank": 7,
+      "keywords_ok": true,
+      "cited_gold": true
+    }
+  ]
+}
