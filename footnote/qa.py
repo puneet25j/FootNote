@@ -14,7 +14,7 @@ from footnote.utils import COURSES_DIR, course_dirs, load_course
 
 K_VIDEO = 4
 K_NOTES = 2
-K_FIGURES = 1
+K_FIGURES = 3
 CITATION = re.compile(r"(?<!\w)\[(\d+(?:\s*,\s*\d+)*)\]")  # [3], [1, 4], but not a[0]
 MATH = re.compile(r"\$[^$]*\$")  # matches $...$ math blocks
 

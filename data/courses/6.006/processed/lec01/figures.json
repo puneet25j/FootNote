@@ -7,7 +7,7 @@
   "source_sha256": "dc04facffd88355daf6e3e1620c4e253b84d31dc4bac7417500240f6baf16b66",
   "model": "gemma-4-31b-it",
   "prompt_version": 2,
-  "created_at": "2026-10-17T05:07:55+00:00",
+  "created_at": "2026-10-20T22:45:06+00:00",
   "pages": [
     {
       "page": 1,
@@ -16,17 +16,26 @@
     {
       "page": 2,
       "status": "described",
-      "text": "One-dimensional Array Representation\nA table with 9 columns. The top row contains indices $1, 2, 3, 4, 5, 6, 7, 8, 9$ and the bottom row contains values $a, b, c, d, e, f, g, h, i$. This figure illustrates a generic one-dimensional array of numbers.\n\n---\n\nPeak Examples in an Array\nAn array containing the values $[6, 7, 4, 3, 2, 1, 4, 5]$. Red arrows point upwards to the values $7$ and $5$. This illustrates examples of peaks within a specific sequence of numbers.\n\n---\n\nLinear Search for Peak\nAn array with indices labeled $1, 2, \\dots, n/2, \\dots, n-1, n$. A red arrow points to the cell at index $n/2$ with the text \"might be peak\" below it. Underneath the array is a line drawing of a peak (a triangle). Below the drawing is the text \"$\\theta(n)$ complexity worst case\". This figure illustrates the linear search approach and its worst-case time complexity.\n\n---\n\nMiddle-Start Search Strategy\nA line drawing of an inverted peak (a V-shape). A red label $n/2$ is positioned above the center with a red arrow pointing down to the lowest point. This illustrates the concept of starting a search from the middle of the array."
+      "text": "One-dimensional Array Representation\n- An array of 9 cells.\n- Indices 1, 2, 3, 4, 5, 6, 7, 8, 9 are written above the cells.\n- The cells contain the letters a, b, c, d, e, f, g, h, i.\n- This figure illustrates a general one-dimensional array of numbers.\n\n---\n\nPeak Examples\n- An array of 8 cells containing the numbers 6, 7, 4, 3, 2, 1, 4, 5.\n- Red arrows point upwards to the values 7 and 5.\n- This illustrates specific examples of peaks within a numeric array.\n\n---\n\nFigure 2: Linear Search Complexity\n- An array of cells with indices 1, 2, ..., $n/2$, ..., $n-1$, $n$ marked above.\n- A red arrow points up to the cell at index $n/2$ with the label \"might be peak\".\n- Below the array is a line drawing of a mountain-like peak.\n- The text \"$\\theta(n)$ complexity worst case\" is written below the drawing.\n- This figure illustrates the process and worst-case time complexity of a linear search for a peak.\n\n---\n\nMiddle-Start Search Idea\n- A line drawing of a V-shape.\n- A red arrow points down to the bottom vertex.\n- The label \"$n/2$\" is placed above the arrow.\n- This illustrates the idea of starting a search from the middle element of an array.\n\n---\n\nGeneral Formulas\n- $b \\ge a$\n- $b \\ge c$\n- $i \\ge h$"
     },
     {
       "page": 3,
       "status": "described",
-      "text": "Divide & Conquer (Figure 3)\n- A 1D array is illustrated as a row of boxes. Red labels above the boxes indicate indices: $1, 2, \\dots, n/2-1, n/2, n/2+1, \\dots, n-1, n$. A red arrow points upward to the box at index $n/2$, with the caption \"look at n/2 position\".\n- Associated formulas:\n  - $a[n/2] < a[n/2 - 1]$\n  - $a[n/2] < a[n/2 + 1]$\n  - $a[n/2] \\ge a[n/2 - 1]$\n  - $a[n/2] \\ge a[n/2 + 1]$\n  - $T(n) = T(n/2) + \\Theta(1) = \\Theta(1) + \\dots + \\Theta(1) (\\log_2(n) \\text{ times}) = \\Theta(\\log_2(n))$\n  - $\\Theta(i)$\n  - $n = 1000000$\n  - $\\Theta(n)$\n  - $\\Theta(\\log n)$\n\n---\n\nTwo-dimensional Version / Greedy Ascent Algorithm (Figure 4)\n- A 2D grid represents a matrix. A red double-headed vertical arrow to the left is labeled \"$n$ rows\", and a red double-headed horizontal arrow below the grid is labeled \"$m$ columns\". Inside the grid, a central cell contains the letter 'a', with its immediate neighbors labeled 'b' to the left, 'd' to the right, 'c' above, and 'e' below.\n- Associated formulas:\n  - $\\Theta(nm)$ complexity, $\\Theta(n^2)$ algorithm if $m = n$\n  - $a$ is a 2D-peak iff $a \\ge b, a \\ge d, a \\ge c, a \\ge e$"
+      "text": "Divide & Conquer (Figure 3)\n- A diagram of a 1D array consisting of a row of boxes. Red labels above the boxes indicate indices: $1, 2, \\dots, n/2-1, n/2, n/2+1, \\dots, n-1, n$. A red arrow points upward to the box at position $n/2$, with the text \"look at n/2 position\" below it.\n- Associated formulas:\n  - $a[n/2] < a[n/2 - 1]$\n  - $a[n/2] < a[n/2 + 1]$\n  - $a[n/2] \\ge a[n/2 - 1]$\n  - $a[n/2] \\ge a[n/2 + 1]$\n  - $T(n) = T(n/2) + \\Theta(1) = \\Theta(1) + \\dots + \\Theta(1) (\\log_2(n) \\text{ times}) = \\Theta(\\log_2(n))$, where the first $\\Theta(1)$ term is annotated with a brace as \"to compare a[n/2] to neighbors\".\n\n---\n\nTwo-dimensional Version (Figure 4)\n- A diagram of a 2D grid of boxes. A vertical red double-headed arrow to the left is labeled \"n rows\". A horizontal red double-headed arrow at the bottom is labeled \"m columns\". Inside the grid, a central cell is labeled 'a', with its immediate neighbors labeled 'b' (left), 'd' (right), 'c' (above), and 'e' (below).\n- Associated formulas:\n  - $\\Theta(nm)$ complexity, $\\Theta(n^2)$ algorithm if $m = n$\n  - $a$ is a 2D-peak iff $a \\ge b, a \\ge d, a \\ge c, a \\ge e$\n\n---\n\nOther Formulas\n- $n = 1000000$\n- $\\Theta(n)$\n- $\\Theta(\\log n)$"
     },
     {
       "page": 4,
       "status": "described",
-      "text": "2D Peak Finding Example\nA $4 \\times 4$ grid where some cells contain values:\n- Row 2: 14, (empty), 13, 12\n- Row 3: 15, 9, 11, 17\n- Row 4: 16, 17, 19, 20\nRed arrows indicate a path: from 13 to 12, from 13 down to 11, from 11 down to 19, and from 19 right to 20. The value 20 is circled in red. This figure illustrates a 2D peak.\n\n---\n\n2D Divide and Conquer Strategy\nA $4 \\times 4$ grid divided into four quadrants by a central vertical line and a central horizontal line. The vertical line is labeled $j = m/2$ below the grid, and the horizontal line is labeled $i$ to the left of the grid. This illustrates the strategy of picking a middle column and a row.\n\n---\n\nFailure of 2D Divide and Conquer Attempt\nA $4 \\times 4$ grid with the following values:\n- Row 1: (empty), (empty), 10, (empty)\n- Row 2: 14, 13, 12, (empty)\n- Row 3: 15, 9, 11, (empty)\n- Row 4: 16, 17, 19, 20\nA black arrow points from 13 to 14. This illustrates a scenario where the proposed algorithm fails to find a 2D peak, ending at the value 14.\n\n---\n\n$(i, j)$\n$i$"
+      "text": "Peak Finding Example\nA $4 \\times 4$ grid contains the following values:\n- Row 2: 14 in column 1, 13 in column 3, and 12 in column 4.\n- Row 3: 15 in column 1, 9 in column 2, 11 in column 3, and 17 in column 4.\n- Row 4: 16 in column 1, 17 in column 2, 19 in column 3, and 20 in column 4.\nRed arrows indicate paths between values:\n- From 14 to 13, then from 13 to 12.\n- From 13 down to 11, then from 11 down to 19, then from 19 to 20.\n- From 14 down to 15, then from 15 down to 16.\nThe value 20 in the bottom-right cell is circled in red.\nThe figure illustrates a 2D peak.\n\n---\n\n2D Divide and Conquer Strategy\nA $4 \\times 4$ grid is divided into four quadrants by a central vertical line and a central horizontal line.\n- The horizontal line is labeled with $i$ on the left.\n- The vertical line is labeled with $j = m/2$ below the grid.\nThe figure illustrates the process of picking a middle column and a row for a divide and conquer approach.\n\n---\n\nFailure of 2D Divide and Conquer Attempt\nA $4 \\times 4$ grid contains the following values:\n- Row 1: 10 in column 3.\n- Row 2: 14 in column 1, 13 in column 2, and 12 in column 3.\n- Row 3: 15 in column 1, 9 in column 2, and 11 in column 3.\n- Row 4: 16 in column 1, 17 in column 2, 19 in column 3, and 20 in column 4.\nBlack arrows on row 2 point from 12 to 13, and from 13 to 14.\nThe figure illustrates a case where a 1D-peak on a row (the value 14) is not a 2D-peak.\n\n---\n\n$(i, j)$"
+    },
+    {
+      "page": 5,
+      "status": "described",
+      "text": "Example of Attempt #2 (2D Peak Finding)\nThe figure illustrates a step-by-step process of finding a 2D peak in a matrix using a divide-and-conquer approach.\n- The first image is a $4 \\times 4$ grid with the following values:\n  - Row 1: 10, 8, 10, 10\n  - Row 2: 14, 13, 12, 11\n  - Row 3: 15, 9, 11, 21\n  - Row 4: 16, 17, 19, 20\n  An arrow points to the second column from the left, with the label \"pick this column 17 global max for this column\".\n- The second image is a $4 \\times 2$ grid containing the rightmost two columns of the first grid:\n  - Row 1: 10, 10\n  - Row 2: 12, 11\n  - Row 3: 11, 21\n  - Row 4: 19, 20\n  An arrow points to the first column of this grid, with the label \"pick this column 19 global max for this column\". Above the grid is the text \"go with\".\n- The third image is a $4 \\times 1$ grid containing the rightmost column of the previous grid:\n  - Row 1: 10\n  - Row 2: 11\n  - Row 3: 21 (circled in red)\n  - Row 4: 20\n  To the right of the grid is the text \"find 21\".\n\n---\n\nComplexity of Attempt #2\n- $T(n, m) = T(n, m/2) + \\Theta(n)$ (to find global maximum on a column — (n rows))\n- $T(n, m) = \\underbrace{\\Theta(n) + \\dots + \\Theta(n)}_{\\log m}$\n- $= \\Theta(n \\log m) = \\Theta(n \\log n)$ if $m = n$"
+    },
+    {
+      "page": 6,
+      "status": "skip: license page"
     }
   ],
   "segments": [
@@ -37,7 +46,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "One-dimensional Array Representation\nA table with 9 columns. The top row contains indices $1, 2, 3, 4, 5, 6, 7, 8, 9$ and the bottom row contains values $a, b, c, d, e, f, g, h, i$. This figure illustrates a generic one-dimensional array of numbers."
+      "text": "One-dimensional Array Representation\n- An array of 9 cells.\n- Indices 1, 2, 3, 4, 5, 6, 7, 8, 9 are written above the cells.\n- The cells contain the letters a, b, c, d, e, f, g, h, i.\n- This figure illustrates a general one-dimensional array of numbers."
     },
     {
       "id": "dc04facffd88-fig-p002-1",
@@ -46,7 +55,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "Peak Examples in an Array\nAn array containing the values $[6, 7, 4, 3, 2, 1, 4, 5]$. Red arrows point upwards to the values $7$ and $5$. This illustrates examples of peaks within a specific sequence of numbers."
+      "text": "Peak Examples\n- An array of 8 cells containing the numbers 6, 7, 4, 3, 2, 1, 4, 5.\n- Red arrows point upwards to the values 7 and 5.\n- This illustrates specific examples of peaks within a numeric array."
     },
     {
       "id": "dc04facffd88-fig-p002-2",
@@ -55,7 +64,7 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "Linear Search for Peak\nAn array with indices labeled $1, 2, \\dots, n/2, \\dots, n-1, n$. A red arrow points to the cell at index $n/2$ with the text \"might be peak\" below it. Underneath the array is a line drawing of a peak (a triangle). Below the drawing is the text \"$\\theta(n)$ complexity worst case\". This figure illustrates the linear search approach and its worst-case time complexity."
+      "text": "Figure 2: Linear Search Complexity\n- An array of cells with indices 1, 2, ..., $n/2$, ..., $n-1$, $n$ marked above.\n- A red arrow points up to the cell at index $n/2$ with the label \"might be peak\".\n- Below the array is a line drawing of a mountain-like peak.\n- The text \"$\\theta(n)$ complexity worst case\" is written below the drawing.\n- This figure illustrates the process and worst-case time complexity of a linear search for a peak."
     },
     {
       "id": "dc04facffd88-fig-p002-3",
@@ -64,7 +73,16 @@
       "end": null,
       "page": 2,
       "section": null,
-      "text": "Middle-Start Search Strategy\nA line drawing of an inverted peak (a V-shape). A red label $n/2$ is positioned above the center with a red arrow pointing down to the lowest point. This illustrates the concept of starting a search from the middle of the array."
+      "text": "Middle-Start Search Idea\n- A line drawing of a V-shape.\n- A red arrow points down to the bottom vertex.\n- The label \"$n/2$\" is placed above the arrow.\n- This illustrates the idea of starting a search from the middle element of an array."
+    },
+    {
+      "id": "dc04facffd88-fig-p002-4",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "General Formulas\n- $b \\ge a$\n- $b \\ge c$\n- $i \\ge h$"
     },
     {
       "id": "dc04facffd88-fig-p003-0",
@@ -73,7 +91,7 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "Divide & Conquer (Figure 3)\n- A 1D array is illustrated as a row of boxes. Red labels above the boxes indicate indices: $1, 2, \\dots, n/2-1, n/2, n/2+1, \\dots, n-1, n$. A red arrow points upward to the box at index $n/2$, with the caption \"look at n/2 position\".\n- Associated formulas:\n  - $a[n/2] < a[n/2 - 1]$\n  - $a[n/2] < a[n/2 + 1]$\n  - $a[n/2] \\ge a[n/2 - 1]$\n  - $a[n/2] \\ge a[n/2 + 1]$\n  - $T(n) = T(n/2) + \\Theta(1) = \\Theta(1) + \\dots + \\Theta(1) (\\log_2(n) \\text{ times}) = \\Theta(\\log_2(n))$\n  - $\\Theta(i)$\n  - $n = 1000000$\n  - $\\Theta(n)$\n  - $\\Theta(\\log n)$"
+      "text": "Divide & Conquer (Figure 3)\n- A diagram of a 1D array consisting of a row of boxes. Red labels above the boxes indicate indices: $1, 2, \\dots, n/2-1, n/2, n/2+1, \\dots, n-1, n$. A red arrow points upward to the box at position $n/2$, with the text \"look at n/2 position\" below it.\n- Associated formulas:\n  - $a[n/2] < a[n/2 - 1]$\n  - $a[n/2] < a[n/2 + 1]$\n  - $a[n/2] \\ge a[n/2 - 1]$\n  - $a[n/2] \\ge a[n/2 + 1]$\n  - $T(n) = T(n/2) + \\Theta(1) = \\Theta(1) + \\dots + \\Theta(1) (\\log_2(n) \\text{ times}) = \\Theta(\\log_2(n))$, where the first $\\Theta(1)$ term is annotated with a brace as \"to compare a[n/2] to neighbors\"."
     },
     {
       "id": "dc04facffd88-fig-p003-1",
@@ -82,7 +100,16 @@
       "end": null,
       "page": 3,
       "section": null,
-      "text": "Two-dimensional Version / Greedy Ascent Algorithm (Figure 4)\n- A 2D grid represents a matrix. A red double-headed vertical arrow to the left is labeled \"$n$ rows\", and a red double-headed horizontal arrow below the grid is labeled \"$m$ columns\". Inside the grid, a central cell contains the letter 'a', with its immediate neighbors labeled 'b' to the left, 'd' to the right, 'c' above, and 'e' below.\n- Associated formulas:\n  - $\\Theta(nm)$ complexity, $\\Theta(n^2)$ algorithm if $m = n$\n  - $a$ is a 2D-peak iff $a \\ge b, a \\ge d, a \\ge c, a \\ge e$"
+      "text": "Two-dimensional Version (Figure 4)\n- A diagram of a 2D grid of boxes. A vertical red double-headed arrow to the left is labeled \"n rows\". A horizontal red double-headed arrow at the bottom is labeled \"m columns\". Inside the grid, a central cell is labeled 'a', with its immediate neighbors labeled 'b' (left), 'd' (right), 'c' (above), and 'e' (below).\n- Associated formulas:\n  - $\\Theta(nm)$ complexity, $\\Theta(n^2)$ algorithm if $m = n$\n  - $a$ is a 2D-peak iff $a \\ge b, a \\ge d, a \\ge c, a \\ge e$"
+    },
+    {
+      "id": "dc04facffd88-fig-p003-2",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "Other Formulas\n- $n = 1000000$\n- $\\Theta(n)$\n- $\\Theta(\\log n)$"
     },
     {
       "id": "dc04facffd88-fig-p004-0",
@@ -91,7 +118,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "2D Peak Finding Example\nA $4 \\times 4$ grid where some cells contain values:\n- Row 2: 14, (empty), 13, 12\n- Row 3: 15, 9, 11, 17\n- Row 4: 16, 17, 19, 20\nRed arrows indicate a path: from 13 to 12, from 13 down to 11, from 11 down to 19, and from 19 right to 20. The value 20 is circled in red. This figure illustrates a 2D peak."
+      "text": "Peak Finding Example\nA $4 \\times 4$ grid contains the following values:\n- Row 2: 14 in column 1, 13 in column 3, and 12 in column 4.\n- Row 3: 15 in column 1, 9 in column 2, 11 in column 3, and 17 in column 4.\n- Row 4: 16 in column 1, 17 in column 2, 19 in column 3, and 20 in column 4.\nRed arrows indicate paths between values:\n- From 14 to 13, then from 13 to 12.\n- From 13 down to 11, then from 11 down to 19, then from 19 to 20.\n- From 14 down to 15, then from 15 down to 16.\nThe value 20 in the bottom-right cell is circled in red.\nThe figure illustrates a 2D peak."
     },
     {
       "id": "dc04facffd88-fig-p004-1",
@@ -100,7 +127,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "2D Divide and Conquer Strategy\nA $4 \\times 4$ grid divided into four quadrants by a central vertical line and a central horizontal line. The vertical line is labeled $j = m/2$ below the grid, and the horizontal line is labeled $i$ to the left of the grid. This illustrates the strategy of picking a middle column and a row."
+      "text": "2D Divide and Conquer Strategy\nA $4 \\times 4$ grid is divided into four quadrants by a central vertical line and a central horizontal line.\n- The horizontal line is labeled with $i$ on the left.\n- The vertical line is labeled with $j = m/2$ below the grid.\nThe figure illustrates the process of picking a middle column and a row for a divide and conquer approach."
     },
     {
       "id": "dc04facffd88-fig-p004-2",
@@ -109,7 +136,7 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "Failure of 2D Divide and Conquer Attempt\nA $4 \\times 4$ grid with the following values:\n- Row 1: (empty), (empty), 10, (empty)\n- Row 2: 14, 13, 12, (empty)\n- Row 3: 15, 9, 11, (empty)\n- Row 4: 16, 17, 19, 20\nA black arrow points from 13 to 14. This illustrates a scenario where the proposed algorithm fails to find a 2D peak, ending at the value 14."
+      "text": "Failure of 2D Divide and Conquer Attempt\nA $4 \\times 4$ grid contains the following values:\n- Row 1: 10 in column 3.\n- Row 2: 14 in column 1, 13 in column 2, and 12 in column 3.\n- Row 3: 15 in column 1, 9 in column 2, and 11 in column 3.\n- Row 4: 16 in column 1, 17 in column 2, 19 in column 3, and 20 in column 4.\nBlack arrows on row 2 point from 12 to 13, and from 13 to 14.\nThe figure illustrates a case where a 1D-peak on a row (the value 14) is not a 2D-peak."
     },
     {
       "id": "dc04facffd88-fig-p004-3",
@@ -118,7 +145,25 @@
       "end": null,
       "page": 4,
       "section": null,
-      "text": "$(i, j)$\n$i$"
+      "text": "$(i, j)$"
+    },
+    {
+      "id": "dc04facffd88-fig-p005-0",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "Example of Attempt #2 (2D Peak Finding)\nThe figure illustrates a step-by-step process of finding a 2D peak in a matrix using a divide-and-conquer approach.\n- The first image is a $4 \\times 4$ grid with the following values:\n  - Row 1: 10, 8, 10, 10\n  - Row 2: 14, 13, 12, 11\n  - Row 3: 15, 9, 11, 21\n  - Row 4: 16, 17, 19, 20\n  An arrow points to the second column from the left, with the label \"pick this column 17 global max for this column\".\n- The second image is a $4 \\times 2$ grid containing the rightmost two columns of the first grid:\n  - Row 1: 10, 10\n  - Row 2: 12, 11\n  - Row 3: 11, 21\n  - Row 4: 19, 20\n  An arrow points to the first column of this grid, with the label \"pick this column 19 global max for this column\". Above the grid is the text \"go with\".\n- The third image is a $4 \\times 1$ grid containing the rightmost column of the previous grid:\n  - Row 1: 10\n  - Row 2: 11\n  - Row 3: 21 (circled in red)\n  - Row 4: 20\n  To the right of the grid is the text \"find 21\"."
+    },
+    {
+      "id": "dc04facffd88-fig-p005-1",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 5,
+      "section": null,
+      "text": "Complexity of Attempt #2\n- $T(n, m) = T(n, m/2) + \\Theta(n)$ (to find global maximum on a column — (n rows))\n- $T(n, m) = \\underbrace{\\Theta(n) + \\dots + \\Theta(n)}_{\\log m}$\n- $= \\Theta(n \\log m) = \\Theta(n \\log n)$ if $m = n$"
     }
   ]
 }

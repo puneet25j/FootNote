@@ -9,6 +9,7 @@ load_dotenv()
 
 PROVIDER = os.getenv("LLM_PROVIDER", "gemini")
 MODEL = os.getenv("LLM_MODEL", "")
+THINK = False   
 TEMPERATURE = 0.2                    
 RATE_LIMITED = PROVIDER == "gemini"   # callers pause between calls only for the hosted API
 
@@ -20,6 +21,9 @@ MAX_ATTEMPTS = 5
 
 _client = None
 
+class LLMError(RuntimeError):
+    """A call failed in a way worth retrying later: server trouble, empty reply, local model problem."""
+
 class EmptyResponseError(RuntimeError):
     """The API call succeeded, but the model returned no text."""
 
@@ -28,6 +32,12 @@ class QuotaExhaustedError(RuntimeError):
 
 class LocalModelError(RuntimeError):
     """Ollama isn't running, the model isn't downloaded, or the prompt didn't fit."""
+
+class LLMUnavailableError(LLMError):
+    """The provider kept failing (500/503) after every retry."""
+
+class QuotaExhaustedError(RuntimeError):
+    """The daily quota is used up; retrying today won't help."""
 
 def _check_settings() -> None:
     if PROVIDER not in ("gemini", "ollama"):
@@ -73,8 +83,10 @@ def _gemini(contents, system: str | None = None) -> str:
                     f"Daily quota used up for {MODEL}. Wait for the reset, switch"
                     f"LLM_MODEL, or enable billing. Usage: https://ai.dev/rate-limit"
                 ) from e  
-            if e.code not in RETRY_CODES or attempt == MAX_ATTEMPTS:
+            if e.code not in RETRY_CODES:
                 raise
+            if attempt == MAX_ATTEMPTS:
+                 raise LLMUnavailableError(f"{MODEL} still failing after {MAX_ATTEMPTS} attempts ({e.code})") from e
             wait = min(60, 5 * 2 ** (attempt - 1)) + random.uniform(0, 2)
             print(f"  LLM error {e.code} (attempt {attempt}/{MAX_ATTEMPTS}): {str(e)[:160]}")
             print(f"  retrying in {wait:.0f}s ...")
@@ -95,7 +107,8 @@ def _ollama(message: dict, system: str | None = None) -> str:
     messages = [{"role": "system", "content": system}] if system else []
     messages.append(message)
     try:
-        response = ollama.chat(model=MODEL, messages=messages, 
+        response = ollama.chat(model=MODEL, messages=messages,
+                               think=THINK,
                                options={"temperature": TEMPERATURE, "num_ctx": NUM_CTX})
     except ConnectionError as e:
         raise LocalModelError("Can't reach Ollama. Open the Ollama app (or run `ollama serve`).") from e

@@ -6,38 +6,38 @@
   "source_file": "data/courses/6.006/raw/lec02/notes.pdf",
   "source_sha256": "7b5596d221433c276352775b0a41d9edef4c076af0bd0dcc0e46bfa921586a09",
   "model": "gemma-4-31b-it",
-  "prompt_version": 1,
-  "created_at": "2026-10-16T04:24:25+00:00",
+  "prompt_version": 2,
+  "created_at": "2026-10-20T22:50:15+00:00",
   "pages": [
     {
       "page": 1,
       "status": "described",
-      "text": "Figure 1: Algorithm consists of a diagram with two columns of boxes connected by arrows.\n\n*   The left column contains three boxes: \"program\", \"programming language\", and \"computer\".\n*   The right column contains three boxes: \"algorithm\", \"pseudocode\", and \"model of computation\".\n*   Red double-headed arrows connect the corresponding boxes in each column:\n    *   \"program\" $\\leftrightarrow$ \"algorithm\"\n    *   \"programming language\" $\\leftrightarrow$ \"pseudocode\"\n    *   \"computer\" $\\leftrightarrow$ \"model of computation\"\n*   The word \"analog\" in red is centered above these red arrows.\n*   On the left, blue curved arrows point upwards from \"computer\" to \"programming language\", and from \"programming language\" to \"program\".\n*   On the right, blue curved arrows point upwards from \"model of computation\" to \"pseudocode\", and from \"pseudocode\" to \"algorithm\".\n*   The text \"built on top of\" in blue is positioned next to the blue arrows on the right."
+      "text": "Algorithm\nFigure 1: Algorithm. A diagram illustrating the analogy between concrete implementation and abstract computational concepts. It consists of two columns of boxes connected by red double-headed arrows, with the word \"analog\" in red above the top arrow.\n- The left column contains the boxes: \"program\", \"programming language\", and \"computer\".\n- The right column contains the boxes: \"algorithm\", \"pseudocode\", and \"model of computation\".\n- Red double-headed arrows connect:\n    - \"program\" $\\leftrightarrow$ \"algorithm\"\n    - \"programming language\" $\\leftrightarrow$ \"pseudocode\"\n    - \"computer\" $\\leftrightarrow$ \"model of computation\"\n- Blue curved arrows point downwards on both sides:\n    - On the left, from \"program\" to \"programming language\", and from \"programming language\" to \"computer\".\n    - On the right, from \"algorithm\" to \"pseudocode\", and from \"pseudocode\" to \"model of computation\".\n- The text \"built on top of\" in blue is positioned next to the right-side curved arrows."
     },
     {
       "page": 2,
       "status": "described",
-      "text": "A diagram illustrates a Random Access Machine (RAM) modeled as a big array. It consists of a vertical stack of rectangular cells. The cells are indexed on the left starting from $0, 1, 2, 3, 4, 5$, followed by vertical dots indicating further cells. A horizontal brace at the bottom spans the width of the cells and is labeled \"word\". Inside the bottom-most cell, there are several small red dashes.\n\nThe following mathematical notations are used in the text:\n* $\\Theta(1)$\n* $r_i$\n* $r_j$\n* $(+, -, *, /, \\&, |, \\wedge)$\n* $w \\ge \\lg(\\text{memory size})$ bits\n* $O(1)$"
+      "text": "Random Access Machine (RAM)\nA diagram illustrating memory as a vertical stack of rectangular cells. The cells are indexed on the left from $0$ to $5$, followed by three sets of vertical dots. A curly brace at the bottom spans the width of the cells and is labeled \"word\". The bottom-most cell contains several small red horizontal dashes.\n\n---\n$\\Theta(1)$\n$r_i$\n$r_j$\n$(+, -, *, /, \\&, |, \\wedge)$\n$w \\geq \\lg(\\text{memory size})$\n$O(1)$"
     },
     {
       "page": 3,
       "status": "described",
-      "text": "This page contains the following non-textual elements:\n\n*   **Diagram:** An illustration of a doubly linked list consisting of two nodes.\n    *   The first node has three fields: `val` with a value of 5, `prev` with the value `null` (crossed out in red), and `next`. A blue arrow points from the `next` field of this node to the second node.\n    *   The second node has three fields: `val` with a value of -1, `prev`, and `next` with the value `null` (crossed out in red). A blue arrow points from the `prev` field of this node back to the first node.\n\n*   **Math Formulas:**\n    *   $L[i] = L[j] + 5 \\rightarrow \\Theta(1) \\text{ time}$\n    *   $x = x.next \\rightarrow \\Theta(1) \\text{ time}$\n    *   $L.append(x) \\rightarrow \\theta(1) \\text{ time}$\n    *   $L = L1 + L2 \\equiv L = [] \\rightarrow \\theta(1)$\n    *   $(\\theta(1+|L1|+|L2|) \\text{ time})$\n    *   A breakdown of the time complexity for list concatenation:\n        *   `for x in L1:` and `L.append(x) \\rightarrow \\theta(1)` are grouped by a curly brace with the total time $\\theta(|L_1|)$.\n        *   `for x in L2:` and `L.append(x) \\rightarrow \\theta(1)` are grouped by a curly brace with the total time $\\theta(|L_2|)$.\n        *   Both of these groups are enclosed within a larger curly brace."
+      "text": "Doubly Linked List\nA diagram illustrating a doubly linked list with two nodes. Each node is represented as a table with three rows: `val`, `prev`, and `next`.\n- The first node has `val` = 5, `prev` = `null` (crossed out in red), and an empty `next` cell.\n- The second node has `val` = -1, an empty `prev` cell, and `next` = `null` (crossed out in red).\n- A blue arrow points from the `next` cell of the first node to the `val` cell of the second node.\n- A blue arrow points from the `prev` cell of the second node to the `val` cell of the first node.\n\n---\n\nMath Formulas\n- $L[i] = L[j] + 5 \\rightarrow \\Theta(1) \\text{ time}$\n- $x = x.next \\rightarrow \\Theta(1) \\text{ time}$\n- $L.append(x) \\rightarrow \\theta(1) \\text{ time}$\n- $L = L1 + L2 \\equiv L = [] \\rightarrow \\theta(1)$\n- $(\\theta(1+|L1|+|L2|) \\text{ time})$\n- A worked example for list concatenation showing:\n  - `for x in L1:`\n    - `L.append(x) \\rightarrow \\theta(1)` $\\} \\theta(|L1|)$\n  - `for x in L2:`\n    - `L.append(x) \\rightarrow \\theta(1)` $\\} \\theta(|L2|)$\n  - A large curly brace groups these two operations together."
     },
     {
       "page": 4,
       "status": "described",
-      "text": "The page contains several sections analyzing the time complexity of Python operations, using braces to group operations and their corresponding costs, and various mathematical formulas.\n\n*   **Section (c)** illustrates the time complexity of extending a list. It shows the equivalence $L1.extend(L2) \\equiv \\text{for } x \\text{ in } L2: \\equiv L1 += L2$ and the operation $L1.append(x) \\rightarrow \\theta(1)$. These are grouped by a right brace indicating a total time of $\\theta(1 + |L_2|)$.\n*   **Section (d)** illustrates the time complexity of list slicing. It shows $L2 = L1[i : j] \\equiv L2 = []$ followed by a loop $\\text{for } k \\text{ in range}(i, j): L2.append(L1[i]) \\rightarrow \\theta(1)$. These are grouped by a right brace indicating a total time of $\\theta(j - i + 1) = O(|L|)$.\n*   **Section (e)** illustrates the time complexity of membership tests and finding indices. It shows $b = x \\text{ in } L \\equiv \\text{for } y \\text{ in } L: \\text{if } x == y: b = True; \\text{break else } b = False$, along with $\\& L.index(x)$ and $\\& L.find(x)$. A right brace groups the loop body as $\\theta(1)$, and a larger right brace groups the entire operation as $\\theta(\\text{index of } x) = \\theta(|L|)$.\n*   **Section (f)** contains the formula $\\text{len}(L) \\rightarrow \\theta(1) \\text{ time}$.\n*   **Section (g)** contains the formula $L.sort() \\rightarrow \\theta(|L| \\log |L|)$.\n*   **Section 3 (dict)** uses a right brace to group the operations $D[key] = val$ and $key \\text{ in } D$, indicating a time complexity of $\\theta(1) \\text{ time w.h.p.}$\n*   **Section 5 (heapq)** contains the formula $\\rightarrow \\theta(\\log(n)) \\text{ time}$.\n*   **Section 6 (long)** contains formulas for long integer addition and multiplication:\n    *   $x + y \\rightarrow O(|x| + |y|) \\text{ time}$\n    *   $x * y \\rightarrow O((|x| + |y|)^{\\log(3)}) \\approx O((|x| + |y|)^{1.58}) \\text{ time}$\n*   The **Document Distance Problem** header contains the formula $d(D_1, D_2)$.\n*   The text in this section contains the formulas $D_2 = \\text{query}$ and $D[w] = \\# \\text{ occurrences of word } W$."
+      "text": "List extend complexity\nAn illustration shows that the operation `L1.extend(L2)` is equivalent to the loop `for x in L2: L1.append(x)`. A curly brace groups the loop, mapping it to a time complexity of $\\theta(1 + |L_2|)$. The `L1.append(x)` operation inside the loop is labeled as $\\theta(1)$.\n\n---\n\nList slicing complexity\nAn illustration shows that the operation `L2 = L1[i : j]` is equivalent to initializing `L2 = []` and then executing a loop `for k in range(i, j): L2.append(L1[i])`. A curly brace groups these steps, mapping them to a time complexity of $\\theta(j - i + 1) = O(|L|)$. The `L2.append(L1[i])` operation inside the loop is labeled as $\\theta(1)$.\n\n---\n\nList membership check complexity\nAn illustration shows that the operation `b = x in L` is equivalent to a loop `for y in L:` with a conditional `if x == y: b = True; break else b = False`. A curly brace groups the loop body, mapping it to $\\theta(1)$. A larger curly brace groups the entire operation, mapping it to a time complexity of $\\theta(\\text{index of } x) = \\theta(|L|)$.\n\n---\n\nDictionary operation complexity\nA curly brace groups the operations `D[key] = val` and `key in D`, mapping them to a time complexity of $\\theta(1)$ time w.h.p.\n\n---\n\nMath formulas:\n- $\\text{len}(L) \\to \\theta(1)$\n- $\\text{L.sort}() \\to \\theta(|L| \\log |L|)$\n- $\\theta(\\log(n))$\n- $x + y \\to O(|x| + |y|)$\n- $x * y \\to O((|x| + |y|)^{\\log(3)}) \\approx O((|x| + |y|)^{1.58})$\n- $d(D_1, D_2)$\n- $D[w] = \\#$ occurrences of word $W$"
     },
     {
       "page": 5,
       "status": "described",
-      "text": "Figure 2: A 3D coordinate system illustrating document vectors. The axes are labeled \"dog\" (vertical), \"the\" (horizontal to the right), and \"cat\" (diagonal to the bottom-left). A blue vector labeled $D_1$ points into the plane formed by the \"the\" and \"cat\" axes. A red vector labeled $D_2$ points into the plane formed by the \"dog\" and \"the\" axes. Dashed lines indicate the projections of these vectors onto the axes. The caption reads: \"Figure 2: $D_1 = \\text{\"the cat\"}$, $D_2 = \\text{\"the dog\"}$\".\n\nMath formulas:\n- $d'(D_1, D_2) = D_1 \\cdot D_2 = \\sum_{W} D_1[W] \\cdot D_2[W]$\n- $d''(D_1, D_2) = \\frac{D_1 \\cdot D_2}{|D_1| \\cdot |D_2|}$\n- $|D_i|$\n- $d(D_1, D_2) = \\arccos(d''(D_1, D_2))$\n- $0^\\circ$\n- $90^\\circ$"
+      "text": "Document Vectors\nFigure 2 illustrates document vectors in a 3D coordinate system where the axes are labeled \"dog\" (vertical), \"the\" (horizontal to the right), and \"cat\" (diagonal down-left). A blue vector $D_1$ is shown with dashed blue projection lines to the \"the\" and \"cat\" axes. A red vector $D_2$ is shown with dashed red projection lines to the \"dog\" and \"the\" axes. The caption reads: \"Figure 2: $D_1 = \\text{\"the cat\"}$, $D_2 = \\text{\"the dog\"}$\".\n\nThe following formulas relate to this figure:\n$d'(D_1, D_2) = D_1 \\cdot D_2 = \\sum_{W} D_1[W] \\cdot D_2[W]$\n$d''(D_1, D_2) = \\frac{D_1 \\cdot D_2}{|D_1| \\cdot |D_2|}$\n$|D_i|$\n$d(D_1, D_2) = \\arccos(d''(D_1, D_2))$\n$0^\\circ$\n$90^\\circ$"
     },
     {
       "page": 6,
       "status": "described",
-      "text": "The page contains pseudocode for different algorithmic approaches, with time complexity analysis indicated by math formulas, arrows, and curly braces.\n\n**Math Formulas and Complexity Analysis:**\n*   **Section (1):**\n    *   $\\Theta(1)$ is associated with the inner `if` block via a curly brace.\n    *   $\\Theta(|doc|)$ is associated with the `for` loop via a larger curly brace.\n*   **Section (2):**\n    *   $O(k \\log k \\cdot |word|)$ is linked to `sort word list` by an arrow $\\leftarrow$.\n    *   $O(|word|)$ is linked to `if same as last word` by an arrow $\\leftarrow$.\n    *   $\\Theta(1)$ is associated with the `increment counter` and `else` block via a curly brace.\n    *   $O(\\sum |word|) = O(|doc|)$ is associated with the `for` loop via a larger curly brace.\n*   **Section (3):**\n    *   $\\Theta(k_1)$ is linked to the `for` loop by an arrow $\\leftarrow$.\n    *   $\\Theta(k_2)$ is linked to the `if` statement by an arrow $\\leftarrow$.\n    *   $\\Theta(1)$ is placed next to the line `total += count1 * count2`.\n    *   $O(k_1 \\cdot k_2)$ is associated with the entire `for` loop via a large curly brace.\n*   **Section (3)':**\n    *   $O(|word|)$ is linked to `if words equal` by an arrow $\\leftarrow$.\n    *   $O(|word|)$ is linked to `if word1 \\le word2` by an arrow $\\leftarrow$.\n    *   $O(\\sum |word|) = O(|doc|)$ is associated with the entire block via a large curly brace.\n*   **Dictionary Approach Section (2)':**\n    *   $\\Theta(|word|) + \\Theta(1) \\text{ w.h.p}$ is linked to `if word in count` by an arrow $\\leftarrow$.\n    *   $\\Theta(1)$ is associated with the `count[word] += 1` and `else` block via a curly brace.\n    *   $O(|doc|) \\text{ w.h.p.}$ is associated with the `for` loop via a larger curly brace.\n*   **Dictionary Approach Section (3)':**\n    *   $O(|doc_1|) \\text{ w.h.p.}$ is linked by an arrow $\\rightarrow$.\n\n**Visual Elements:**\n*   **Arrows:** $\\rightarrow$ and $\\leftarrow$ are used to map specific lines of code to their respective time complexities.\n*   **Curly Braces:** Right-facing curly braces are used to group blocks of code (e.g., `if` statements or `for` loops) and associate the entire group with a total time complexity."
+      "text": "Regular Expression Approach Complexity\n- A curly brace groups the operations inside the `for char in doc` loop, labeled $\\Theta(1)$.\n- A larger curly brace encompasses the entire `for` loop, labeled $\\Theta(|doc|)$.\n\n---\n\nSorting Approach Complexity\n- The `sort word list` operation is marked with an arrow $\\leftarrow O(k \\log k \\cdot |word|)$ where $k$ is #words.\n- Inside the `for word in list` loop:\n    - The line `if same as last word` is marked with an arrow $\\leftarrow O(|word|)$.\n    - A curly brace groups the `if/else` body, labeled $\\Theta(1)$.\n    - A larger curly brace encompasses the entire `for` loop, labeled $O(\\sum |word|) = O(|doc|)$.\n\n---\n\nNested Loop Approach Complexity\n- The outer loop `for word, count1 in doc1` is marked with an arrow $\\leftarrow \\Theta(k_1)$.\n- The inner loop `if word, count2 in doc2` is marked with an arrow $\\leftarrow \\Theta(k_2)$.\n- The operation `total += count1 * count2` is labeled $\\Theta(1)$.\n- A curly brace groups the inner loop, and a larger one groups the entire structure, labeled $O(k_1 \\cdot k_2)$.\n\n---\n\nTwo-Pointer Approach Complexity\n- The line `if words equal` is marked with an arrow $\\leftarrow O(|word|)$.\n- The line `if word1 \\le word2` is marked with an arrow $\\leftarrow O(|word|)$.\n- A large curly brace encompasses the entire loop structure, labeled $O(\\sum |word|) = O(|doc|)$.\n\n---\n\nDictionary Approach Complexity\n- The line `if word in count` is marked with an arrow $\\leftarrow \\Theta(|word|) + \\Theta(1)$ w.h.p.\n- A curly brace groups the `else` block, labeled $\\Theta(1)$.\n- A large curly brace encompasses the entire `for` loop, labeled $O(|doc|)$ w.h.p.\n\n---\n\nFinal formulas:\n- For step (3)' in the Dictionary Approach: $\\rightarrow O(|doc_1|)$ w.h.p."
     },
     {
       "page": 7,
@@ -50,58 +50,157 @@
   ],
   "segments": [
     {
-      "id": "7b5596d22143-fig-p001",
+      "id": "7b5596d22143-fig-p001-0",
       "kind": "figure",
       "start": null,
       "end": null,
       "page": 1,
       "section": null,
-      "text": "Figure 1: Algorithm consists of a diagram with two columns of boxes connected by arrows.\n\n*   The left column contains three boxes: \"program\", \"programming language\", and \"computer\".\n*   The right column contains three boxes: \"algorithm\", \"pseudocode\", and \"model of computation\".\n*   Red double-headed arrows connect the corresponding boxes in each column:\n    *   \"program\" $\\leftrightarrow$ \"algorithm\"\n    *   \"programming language\" $\\leftrightarrow$ \"pseudocode\"\n    *   \"computer\" $\\leftrightarrow$ \"model of computation\"\n*   The word \"analog\" in red is centered above these red arrows.\n*   On the left, blue curved arrows point upwards from \"computer\" to \"programming language\", and from \"programming language\" to \"program\".\n*   On the right, blue curved arrows point upwards from \"model of computation\" to \"pseudocode\", and from \"pseudocode\" to \"algorithm\".\n*   The text \"built on top of\" in blue is positioned next to the blue arrows on the right."
+      "text": "Algorithm\nFigure 1: Algorithm. A diagram illustrating the analogy between concrete implementation and abstract computational concepts. It consists of two columns of boxes connected by red double-headed arrows, with the word \"analog\" in red above the top arrow.\n- The left column contains the boxes: \"program\", \"programming language\", and \"computer\".\n- The right column contains the boxes: \"algorithm\", \"pseudocode\", and \"model of computation\".\n- Red double-headed arrows connect:\n    - \"program\" $\\leftrightarrow$ \"algorithm\"\n    - \"programming language\" $\\leftrightarrow$ \"pseudocode\"\n    - \"computer\" $\\leftrightarrow$ \"model of computation\"\n- Blue curved arrows point downwards on both sides:\n    - On the left, from \"program\" to \"programming language\", and from \"programming language\" to \"computer\".\n    - On the right, from \"algorithm\" to \"pseudocode\", and from \"pseudocode\" to \"model of computation\".\n- The text \"built on top of\" in blue is positioned next to the right-side curved arrows."
     },
     {
-      "id": "7b5596d22143-fig-p002",
+      "id": "7b5596d22143-fig-p002-0",
       "kind": "figure",
       "start": null,
       "end": null,
       "page": 2,
       "section": null,
-      "text": "A diagram illustrates a Random Access Machine (RAM) modeled as a big array. It consists of a vertical stack of rectangular cells. The cells are indexed on the left starting from $0, 1, 2, 3, 4, 5$, followed by vertical dots indicating further cells. A horizontal brace at the bottom spans the width of the cells and is labeled \"word\". Inside the bottom-most cell, there are several small red dashes.\n\nThe following mathematical notations are used in the text:\n* $\\Theta(1)$\n* $r_i$\n* $r_j$\n* $(+, -, *, /, \\&, |, \\wedge)$\n* $w \\ge \\lg(\\text{memory size})$ bits\n* $O(1)$"
+      "text": "Random Access Machine (RAM)\nA diagram illustrating memory as a vertical stack of rectangular cells. The cells are indexed on the left from $0$ to $5$, followed by three sets of vertical dots. A curly brace at the bottom spans the width of the cells and is labeled \"word\". The bottom-most cell contains several small red horizontal dashes."
     },
     {
-      "id": "7b5596d22143-fig-p003",
+      "id": "7b5596d22143-fig-p002-1",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 2,
+      "section": null,
+      "text": "$\\Theta(1)$\n$r_i$\n$r_j$\n$(+, -, *, /, \\&, |, \\wedge)$\n$w \\geq \\lg(\\text{memory size})$\n$O(1)$"
+    },
+    {
+      "id": "7b5596d22143-fig-p003-0",
       "kind": "figure",
       "start": null,
       "end": null,
       "page": 3,
       "section": null,
-      "text": "This page contains the following non-textual elements:\n\n*   **Diagram:** An illustration of a doubly linked list consisting of two nodes.\n    *   The first node has three fields: `val` with a value of 5, `prev` with the value `null` (crossed out in red), and `next`. A blue arrow points from the `next` field of this node to the second node.\n    *   The second node has three fields: `val` with a value of -1, `prev`, and `next` with the value `null` (crossed out in red). A blue arrow points from the `prev` field of this node back to the first node.\n\n*   **Math Formulas:**\n    *   $L[i] = L[j] + 5 \\rightarrow \\Theta(1) \\text{ time}$\n    *   $x = x.next \\rightarrow \\Theta(1) \\text{ time}$\n    *   $L.append(x) \\rightarrow \\theta(1) \\text{ time}$\n    *   $L = L1 + L2 \\equiv L = [] \\rightarrow \\theta(1)$\n    *   $(\\theta(1+|L1|+|L2|) \\text{ time})$\n    *   A breakdown of the time complexity for list concatenation:\n        *   `for x in L1:` and `L.append(x) \\rightarrow \\theta(1)` are grouped by a curly brace with the total time $\\theta(|L_1|)$.\n        *   `for x in L2:` and `L.append(x) \\rightarrow \\theta(1)` are grouped by a curly brace with the total time $\\theta(|L_2|)$.\n        *   Both of these groups are enclosed within a larger curly brace."
+      "text": "Doubly Linked List\nA diagram illustrating a doubly linked list with two nodes. Each node is represented as a table with three rows: `val`, `prev`, and `next`.\n- The first node has `val` = 5, `prev` = `null` (crossed out in red), and an empty `next` cell.\n- The second node has `val` = -1, an empty `prev` cell, and `next` = `null` (crossed out in red).\n- A blue arrow points from the `next` cell of the first node to the `val` cell of the second node.\n- A blue arrow points from the `prev` cell of the second node to the `val` cell of the first node."
     },
     {
-      "id": "7b5596d22143-fig-p004",
+      "id": "7b5596d22143-fig-p003-1",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 3,
+      "section": null,
+      "text": "Math Formulas\n- $L[i] = L[j] + 5 \\rightarrow \\Theta(1) \\text{ time}$\n- $x = x.next \\rightarrow \\Theta(1) \\text{ time}$\n- $L.append(x) \\rightarrow \\theta(1) \\text{ time}$\n- $L = L1 + L2 \\equiv L = [] \\rightarrow \\theta(1)$\n- $(\\theta(1+|L1|+|L2|) \\text{ time})$\n- A worked example for list concatenation showing:\n  - `for x in L1:`\n    - `L.append(x) \\rightarrow \\theta(1)` $\\} \\theta(|L1|)$\n  - `for x in L2:`\n    - `L.append(x) \\rightarrow \\theta(1)` $\\} \\theta(|L2|)$\n  - A large curly brace groups these two operations together."
+    },
+    {
+      "id": "7b5596d22143-fig-p004-0",
       "kind": "figure",
       "start": null,
       "end": null,
       "page": 4,
       "section": null,
-      "text": "The page contains several sections analyzing the time complexity of Python operations, using braces to group operations and their corresponding costs, and various mathematical formulas.\n\n*   **Section (c)** illustrates the time complexity of extending a list. It shows the equivalence $L1.extend(L2) \\equiv \\text{for } x \\text{ in } L2: \\equiv L1 += L2$ and the operation $L1.append(x) \\rightarrow \\theta(1)$. These are grouped by a right brace indicating a total time of $\\theta(1 + |L_2|)$.\n*   **Section (d)** illustrates the time complexity of list slicing. It shows $L2 = L1[i : j] \\equiv L2 = []$ followed by a loop $\\text{for } k \\text{ in range}(i, j): L2.append(L1[i]) \\rightarrow \\theta(1)$. These are grouped by a right brace indicating a total time of $\\theta(j - i + 1) = O(|L|)$.\n*   **Section (e)** illustrates the time complexity of membership tests and finding indices. It shows $b = x \\text{ in } L \\equiv \\text{for } y \\text{ in } L: \\text{if } x == y: b = True; \\text{break else } b = False$, along with $\\& L.index(x)$ and $\\& L.find(x)$. A right brace groups the loop body as $\\theta(1)$, and a larger right brace groups the entire operation as $\\theta(\\text{index of } x) = \\theta(|L|)$.\n*   **Section (f)** contains the formula $\\text{len}(L) \\rightarrow \\theta(1) \\text{ time}$.\n*   **Section (g)** contains the formula $L.sort() \\rightarrow \\theta(|L| \\log |L|)$.\n*   **Section 3 (dict)** uses a right brace to group the operations $D[key] = val$ and $key \\text{ in } D$, indicating a time complexity of $\\theta(1) \\text{ time w.h.p.}$\n*   **Section 5 (heapq)** contains the formula $\\rightarrow \\theta(\\log(n)) \\text{ time}$.\n*   **Section 6 (long)** contains formulas for long integer addition and multiplication:\n    *   $x + y \\rightarrow O(|x| + |y|) \\text{ time}$\n    *   $x * y \\rightarrow O((|x| + |y|)^{\\log(3)}) \\approx O((|x| + |y|)^{1.58}) \\text{ time}$\n*   The **Document Distance Problem** header contains the formula $d(D_1, D_2)$.\n*   The text in this section contains the formulas $D_2 = \\text{query}$ and $D[w] = \\# \\text{ occurrences of word } W$."
+      "text": "List extend complexity\nAn illustration shows that the operation `L1.extend(L2)` is equivalent to the loop `for x in L2: L1.append(x)`. A curly brace groups the loop, mapping it to a time complexity of $\\theta(1 + |L_2|)$. The `L1.append(x)` operation inside the loop is labeled as $\\theta(1)$."
     },
     {
-      "id": "7b5596d22143-fig-p005",
+      "id": "7b5596d22143-fig-p004-1",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "List slicing complexity\nAn illustration shows that the operation `L2 = L1[i : j]` is equivalent to initializing `L2 = []` and then executing a loop `for k in range(i, j): L2.append(L1[i])`. A curly brace groups these steps, mapping them to a time complexity of $\\theta(j - i + 1) = O(|L|)$. The `L2.append(L1[i])` operation inside the loop is labeled as $\\theta(1)$."
+    },
+    {
+      "id": "7b5596d22143-fig-p004-2",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "List membership check complexity\nAn illustration shows that the operation `b = x in L` is equivalent to a loop `for y in L:` with a conditional `if x == y: b = True; break else b = False`. A curly brace groups the loop body, mapping it to $\\theta(1)$. A larger curly brace groups the entire operation, mapping it to a time complexity of $\\theta(\\text{index of } x) = \\theta(|L|)$."
+    },
+    {
+      "id": "7b5596d22143-fig-p004-3",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "Dictionary operation complexity\nA curly brace groups the operations `D[key] = val` and `key in D`, mapping them to a time complexity of $\\theta(1)$ time w.h.p."
+    },
+    {
+      "id": "7b5596d22143-fig-p004-4",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 4,
+      "section": null,
+      "text": "Math formulas:\n- $\\text{len}(L) \\to \\theta(1)$\n- $\\text{L.sort}() \\to \\theta(|L| \\log |L|)$\n- $\\theta(\\log(n))$\n- $x + y \\to O(|x| + |y|)$\n- $x * y \\to O((|x| + |y|)^{\\log(3)}) \\approx O((|x| + |y|)^{1.58})$\n- $d(D_1, D_2)$\n- $D[w] = \\#$ occurrences of word $W$"
+    },
+    {
+      "id": "7b5596d22143-fig-p005-0",
       "kind": "figure",
       "start": null,
       "end": null,
       "page": 5,
       "section": null,
-      "text": "Figure 2: A 3D coordinate system illustrating document vectors. The axes are labeled \"dog\" (vertical), \"the\" (horizontal to the right), and \"cat\" (diagonal to the bottom-left). A blue vector labeled $D_1$ points into the plane formed by the \"the\" and \"cat\" axes. A red vector labeled $D_2$ points into the plane formed by the \"dog\" and \"the\" axes. Dashed lines indicate the projections of these vectors onto the axes. The caption reads: \"Figure 2: $D_1 = \\text{\"the cat\"}$, $D_2 = \\text{\"the dog\"}$\".\n\nMath formulas:\n- $d'(D_1, D_2) = D_1 \\cdot D_2 = \\sum_{W} D_1[W] \\cdot D_2[W]$\n- $d''(D_1, D_2) = \\frac{D_1 \\cdot D_2}{|D_1| \\cdot |D_2|}$\n- $|D_i|$\n- $d(D_1, D_2) = \\arccos(d''(D_1, D_2))$\n- $0^\\circ$\n- $90^\\circ$"
+      "text": "Document Vectors\nFigure 2 illustrates document vectors in a 3D coordinate system where the axes are labeled \"dog\" (vertical), \"the\" (horizontal to the right), and \"cat\" (diagonal down-left). A blue vector $D_1$ is shown with dashed blue projection lines to the \"the\" and \"cat\" axes. A red vector $D_2$ is shown with dashed red projection lines to the \"dog\" and \"the\" axes. The caption reads: \"Figure 2: $D_1 = \\text{\"the cat\"}$, $D_2 = \\text{\"the dog\"}$\".\n\nThe following formulas relate to this figure:\n$d'(D_1, D_2) = D_1 \\cdot D_2 = \\sum_{W} D_1[W] \\cdot D_2[W]$\n$d''(D_1, D_2) = \\frac{D_1 \\cdot D_2}{|D_1| \\cdot |D_2|}$\n$|D_i|$\n$d(D_1, D_2) = \\arccos(d''(D_1, D_2))$\n$0^\\circ$\n$90^\\circ$"
     },
     {
-      "id": "7b5596d22143-fig-p006",
+      "id": "7b5596d22143-fig-p006-0",
       "kind": "figure",
       "start": null,
       "end": null,
       "page": 6,
       "section": null,
-      "text": "The page contains pseudocode for different algorithmic approaches, with time complexity analysis indicated by math formulas, arrows, and curly braces.\n\n**Math Formulas and Complexity Analysis:**\n*   **Section (1):**\n    *   $\\Theta(1)$ is associated with the inner `if` block via a curly brace.\n    *   $\\Theta(|doc|)$ is associated with the `for` loop via a larger curly brace.\n*   **Section (2):**\n    *   $O(k \\log k \\cdot |word|)$ is linked to `sort word list` by an arrow $\\leftarrow$.\n    *   $O(|word|)$ is linked to `if same as last word` by an arrow $\\leftarrow$.\n    *   $\\Theta(1)$ is associated with the `increment counter` and `else` block via a curly brace.\n    *   $O(\\sum |word|) = O(|doc|)$ is associated with the `for` loop via a larger curly brace.\n*   **Section (3):**\n    *   $\\Theta(k_1)$ is linked to the `for` loop by an arrow $\\leftarrow$.\n    *   $\\Theta(k_2)$ is linked to the `if` statement by an arrow $\\leftarrow$.\n    *   $\\Theta(1)$ is placed next to the line `total += count1 * count2`.\n    *   $O(k_1 \\cdot k_2)$ is associated with the entire `for` loop via a large curly brace.\n*   **Section (3)':**\n    *   $O(|word|)$ is linked to `if words equal` by an arrow $\\leftarrow$.\n    *   $O(|word|)$ is linked to `if word1 \\le word2` by an arrow $\\leftarrow$.\n    *   $O(\\sum |word|) = O(|doc|)$ is associated with the entire block via a large curly brace.\n*   **Dictionary Approach Section (2)':**\n    *   $\\Theta(|word|) + \\Theta(1) \\text{ w.h.p}$ is linked to `if word in count` by an arrow $\\leftarrow$.\n    *   $\\Theta(1)$ is associated with the `count[word] += 1` and `else` block via a curly brace.\n    *   $O(|doc|) \\text{ w.h.p.}$ is associated with the `for` loop via a larger curly brace.\n*   **Dictionary Approach Section (3)':**\n    *   $O(|doc_1|) \\text{ w.h.p.}$ is linked by an arrow $\\rightarrow$.\n\n**Visual Elements:**\n*   **Arrows:** $\\rightarrow$ and $\\leftarrow$ are used to map specific lines of code to their respective time complexities.\n*   **Curly Braces:** Right-facing curly braces are used to group blocks of code (e.g., `if` statements or `for` loops) and associate the entire group with a total time complexity."
+      "text": "Regular Expression Approach Complexity\n- A curly brace groups the operations inside the `for char in doc` loop, labeled $\\Theta(1)$.\n- A larger curly brace encompasses the entire `for` loop, labeled $\\Theta(|doc|)$."
+    },
+    {
+      "id": "7b5596d22143-fig-p006-1",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Sorting Approach Complexity\n- The `sort word list` operation is marked with an arrow $\\leftarrow O(k \\log k \\cdot |word|)$ where $k$ is #words.\n- Inside the `for word in list` loop:\n    - The line `if same as last word` is marked with an arrow $\\leftarrow O(|word|)$.\n    - A curly brace groups the `if/else` body, labeled $\\Theta(1)$.\n    - A larger curly brace encompasses the entire `for` loop, labeled $O(\\sum |word|) = O(|doc|)$."
+    },
+    {
+      "id": "7b5596d22143-fig-p006-2",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Nested Loop Approach Complexity\n- The outer loop `for word, count1 in doc1` is marked with an arrow $\\leftarrow \\Theta(k_1)$.\n- The inner loop `if word, count2 in doc2` is marked with an arrow $\\leftarrow \\Theta(k_2)$.\n- The operation `total += count1 * count2` is labeled $\\Theta(1)$.\n- A curly brace groups the inner loop, and a larger one groups the entire structure, labeled $O(k_1 \\cdot k_2)$."
+    },
+    {
+      "id": "7b5596d22143-fig-p006-3",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Two-Pointer Approach Complexity\n- The line `if words equal` is marked with an arrow $\\leftarrow O(|word|)$.\n- The line `if word1 \\le word2` is marked with an arrow $\\leftarrow O(|word|)$.\n- A large curly brace encompasses the entire loop structure, labeled $O(\\sum |word|) = O(|doc|)$."
+    },
+    {
+      "id": "7b5596d22143-fig-p006-4",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Dictionary Approach Complexity\n- The line `if word in count` is marked with an arrow $\\leftarrow \\Theta(|word|) + \\Theta(1)$ w.h.p.\n- A curly brace groups the `else` block, labeled $\\Theta(1)$.\n- A large curly brace encompasses the entire `for` loop, labeled $O(|doc|)$ w.h.p."
+    },
+    {
+      "id": "7b5596d22143-fig-p006-5",
+      "kind": "figure",
+      "start": null,
+      "end": null,
+      "page": 6,
+      "section": null,
+      "text": "Final formulas:\n- For step (3)' in the Dictionary Approach: $\\rightarrow O(|doc_1|)$ w.h.p."
     }
   ]
 }

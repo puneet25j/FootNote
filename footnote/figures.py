@@ -125,7 +125,12 @@ def process_lecture(course_dir: Path, lecture_dir: Path)-> None:
                 pages.append(done[num])
             else:
                 png = page.get_pixmap(dpi=RENDER_DPI).tobytes("png")
-                reply = llm.describe_image(png, prompt=PROMPT).strip()
+                try:
+                    reply = llm.describe_image(png, prompt=PROMPT).strip()
+                except llm.LLMError as e:
+                    pages.append({"page": num, "status": "failed", "error": str(e)[:200]})
+                    print(f"    p{num}:  FAILED, will retry on the next run ({e})")
+                    continue
                 if reply.rstrip(".") == "NONE":
                     pages.append({"page": num, "status": "none"})
                 else:
@@ -136,7 +141,9 @@ def process_lecture(course_dir: Path, lecture_dir: Path)-> None:
 
     n_segments = save(out_path, info, pages)
     described = sum(p["status"] == "described" for p in pages)
-    print(f"  {described} pages -> {n_segments} figure segments -> {out_path}")
+    failed = sum(p["status"] == "failed" for p in pages)
+    print(f"  {described} pages -> {n_segments} figure segments -> {out_path}"
+          + (f"  ({failed} failed: run again to retry)" if failed else ""))
 
 
 def main() -> None:

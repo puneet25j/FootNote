@@ -1,0 +1,144 @@
+{
+  "mode": "retrieval",
+  "settings": {
+    "llm_model": null,
+    "embed_model": "BAAI/bge-small-en-v1.5",
+    "target_words": 150,
+    "k_video": 4,
+    "k_notes": 2,
+    "k_figures": 3
+  },
+  "summary": {
+    "retrieval_hit_rate": "19/19 (100%)",
+    "mrr": 0.835,
+    "figure_retrieval_hit_rate": "2/2 (100%)"
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q02",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q03",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q04",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 5
+    },
+    {
+      "id": "q05",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q06",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 3
+    },
+    {
+      "id": "q07",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q08",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 3
+    },
+    {
+      "id": "q09",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q10",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q11",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q12",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q13",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q14",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q15",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q16",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q17",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 1
+    },
+    {
+      "id": "q18",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 2
+    },
+    {
+      "id": "q19",
+      "answerable": true,
+      "needs_figures": false,
+      "rank": 2
+    },
+    {
+      "id": "q24",
+      "answerable": true,
+      "needs_figures": true,
+      "rank": 4
+    },
+    {
+      "id": "q25",
+      "answerable": true,
+      "needs_figures": true,
+      "rank": 7
+    }
+  ]
+}
