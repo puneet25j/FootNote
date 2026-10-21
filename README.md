@@ -82,7 +82,7 @@ Evaluated on a hand-labelled set of 25 questions about MIT 6.006 lectures 1–3:
 | Answerable questions wrongly refused | 0/19 |
 | Citations to non-existent sources | 0/25 |
 
-Retrieval metrics use no LLM. Answer metrics come from one complete run with `gemma-4-31b-it` (all 25 questions, `eval/results/20261020-224903-full.json`). An earlier run, before diagrams were supported, missed one keyword check: it explained the merge step of merge sort with the correct citation but never said that it compares the two front elements. LLM answers vary between runs.
+Retrieval metrics use no LLM. Answer metrics come from one complete run with `gemma-4-31b-it` (all 25 questions, `eval/results/20261020-224903-full.json`); a local Gemma 4 26B scored identically (see [Local vs hosted](#local-vs-hosted)). An earlier run, before diagrams were supported, missed one keyword check: it explained the merge step of merge sort with the correct citation but never said that it compares the two front elements. LLM answers vary between runs.
 
 Speech-to-text, against the official MIT transcript (first 5 minutes of lecture 1, 623 words, MacBook Air CPU):
 
@@ -93,7 +93,7 @@ Speech-to-text, against the official MIT transcript (first 5 minutes of lecture 
 
 Corpus: 3 lectures (~2.6 hours of video, ~20,800 transcribed words) plus notes → 171 text chunks and 50 diagram segments (221 indexed).
 
-**Caveats:** the set is small (one text question is about 5 points), it was written by the developer, and the diagram results rest on only 2 questions, so treat them as a sanity check rather than a measurement. The keyword check is strict and also has blind spots: for the peak-finding question it checks the array but not the peaks, so that answer was also checked by hand. An LLM-based grader is on the roadmap.
+**Caveats:** the set is small (one text question is about 5 points), it was written by the developer, and the diagram results rest on only 2 questions, so treat them as a sanity check rather than a measurement. Every metric is now at 100%, so the set no longer separates good systems from better ones; harder questions are needed. The keyword check is strict and also has blind spots: for the peak-finding question it checks the array but not the peaks, so that answer was also checked by hand. An LLM-based grader is on the roadmap.
 
 **What error analysis found** (each was fixed before the numbers above):
 
@@ -124,6 +124,27 @@ Getting diagram questions right took three measured steps (2 diagram questions; 
 Whole-page descriptions mixed 4–5 diagrams, so pages looked almost identical to the embedding model (similarity 0.707, 0.707 and 0.706 for three pages), and the page holding the answer lost what was effectively a coin flip. Splitting by diagram separated them: the right piece rose to 0.746 while the other diagrams on its page fell to 0.723 and 0.662. But 50 small pieces competing for one seat now lost near-ties (0.785 vs 0.787). Each piece is about a third of a page, so 3 seats cost roughly the prompt space one page did. The split rows use a second prompt that also asks for a heading per diagram, so those rows change two things at once.
 
 Descriptions come from the hosted `gemma-4-31b-it`. On one spot-checked page, a local Gemma 4 26B model misread which cells the arrows pointed to, so this one-time ingestion step stays on the hosted model.
+
+## Local vs hosted
+
+The same evaluation with only the answering model changed. Retrieval, prompts and the diagram descriptions are identical in both runs.
+
+| | Hosted: `gemma-4-31b-it` (Gemini API) | Local: `gemma4:26b` (Ollama, MacBook Air, 24 GB) |
+|---|---|---|
+| Answer contains the key facts | 19/19 text, 2/2 diagram | 19/19 text, 2/2 diagram |
+| Answer cites a correct source | 19/19 | 19/19 |
+| Out-of-scope questions refused | 4/4 | 4/4 |
+| Answerable questions wrongly refused | 0/19 | 0/19 |
+| Citations to non-existent sources | 0/25 | 0/25 |
+| Median time per answer | not measured¹ | **12.0 s** (7.8–20.2 s) |
+| Reliability | free tier often returns 500/503 errors (retried automatically) | no errors |
+| Cost and privacy | free tier, rate-limited; Google may use inputs | free; nothing leaves the machine |
+
+¹ The hosted run predates per-answer timing; on the free tier, latency is dominated by queueing and retries. The first local question took 38 s because it includes loading the model into memory.
+
+Both models scored 100% on every metric, so this set can't tell them apart (a ceiling effect). The result shows the local model is good enough for these questions, not that it is as good as the 31B model in general; separating them needs harder questions and an LLM-based grader (see Roadmap).
+
+The local model is a mixture-of-experts: all 26B parameters sit in memory (about 16 GB), but only about 4B of them are used for each token, so it generates around 38 tokens per second on a laptop. The dense 31B model doesn't fit comfortably in 24 GB. Settings for local runs: temperature 0.2, thinking disabled, 8,192-token context, replies capped at 2,048 tokens so a model stuck repeating itself fails fast instead of running forever.
 
 ## Tuning: chunk size
 
@@ -161,7 +182,7 @@ python -m footnote.index build
 python -m footnote.qa --course 6.006 what is a peak in an array
 ```
 
-**Run answers locally instead:** install [Ollama](https://ollama.com), run `ollama pull gemma4:26b` (about 16 GB; fits on a 24 GB Apple Silicon Mac), and set `LLM_PROVIDER=ollama` and `LLM_MODEL=gemma4:26b` in `.env`. Nothing leaves your machine.
+**Run answers locally instead:** install [Ollama](https://ollama.com), run `ollama pull gemma4:26b` (about 16 GB; fits on a 24 GB Apple Silicon Mac), and set `LLM_PROVIDER=ollama` and `LLM_MODEL=gemma4:26b` in `.env`. Nothing leaves your machine, and answers take about 12 s each.
 
 Run the evaluation:
 
@@ -219,10 +240,9 @@ data/courses/       one folder per course (raw media is git-ignored)
 
 ## Roadmap
 
-- **Local vs hosted comparison**: the same evaluation with local Gemma 4 (26B and E4B) for answering, with seconds per answer.
+- **Harder evaluation**: every metric is at 100%, so add harder questions, an LLM-based grader alongside the keyword check, repeated runs at temperature 0, and a smaller local model (Gemma 4 E4B) as a lower bound.
 - **More diagram questions**, written before testing, to turn the 2-question check into a measurement.
 - **Reranking**: a cross-encoder over the top ~20 candidates to settle near-ties, and hybrid (keyword + embedding) search.
-- **Better grading**: an LLM-based grader alongside the keyword check, and repeated runs at temperature 0.
 - **Web UI** with rendered math and clickable timestamps.
 - **Multi-user**: separate storage and index per user.
 
