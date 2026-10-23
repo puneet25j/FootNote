@@ -57,4 +57,5 @@ def load_course(course_dir: Path) -> dict:
         "id": course_dir.name,
         "name": info.get("name", course_dir.name),
         "language": info.get("language", "en"),
+        "lectures": info.get("lectures", {}),
     }

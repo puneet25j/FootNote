@@ -7,3 +7,4 @@ google-genai==2.29.0
 python-dotenv==1.2.4
 pylatexenc==2.11
 ollama==0.6.3
+streamlit==1.66.1

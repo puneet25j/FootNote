@@ -1,1 +1,5 @@
-{"name": "MIT 6.006 Introduction to Algorithms (Fall 2011)", "language": "en"}
+{"name": "MIT 6.006 Introduction to Algorithms (Fall 2011)", "language": "en",
+ "lectures": {
+   "lec01": {"title": "Algorithmic Thinking, Peak Finding", "video": "https://www.youtube.com/watch?v=HtSuA80QTyo"},
+   "lec02": {"title": "Models of Computation, Document Distance", "video": "https://www.youtube.com/watch?v=Zc54gFhdpLA"},
+   "lec03": {"title": "Insertion Sort, Merge Sort", "video": "https://www.youtube.com/watch?v=Kg4bqzAqRBM"}}}
