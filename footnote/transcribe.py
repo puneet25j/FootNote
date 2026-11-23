@@ -13,7 +13,7 @@ from pathlib import Path
 from faster_whisper import WhisperModel
 
 from footnote.utils import (already_done, course_dirs, lecture_dirs, load_course,
-                            sha256_file, write_json_atomic)
+                            sha256_file, write_json_atomic, find_media)
 
 MODEL_SIZE = "small"
 
@@ -34,20 +34,20 @@ def transcribe(media_path: Path, model_size: str, language: str) -> tuple[list[d
 
 def process_lecture(course_dir: Path, lecture_dir: Path, language: str) -> None:
     label = f"{course_dir.name}/{lecture_dir.name}"
-    video = lecture_dir / "video.mp4"
-    if not video.exists():
-        print(f"skip {lecture_dir.name}: no video.mp4")
+    media = find_media(lecture_dir)
+    if media is None:
+        print(f"skip {label}: no audio or video file")
         return
 
     out_path = course_dir / "processed" / lecture_dir.name / "transcript.json"
-    source_hash = sha256_file(video)
+    source_hash = sha256_file(media)
     if already_done(out_path, source_hash, model=MODEL_SIZE):
         print(f"skip {label}: already transcribed")
         return
 
     print(f"transcribing {label} with {MODEL_SIZE} ({language}) ...")
     t0 = time.perf_counter()
-    raw_segments, duration = transcribe(video, MODEL_SIZE)
+    raw_segments, duration = transcribe(media, MODEL_SIZE, language)
     elapsed = time.perf_counter() - t0
 
     doc_id = source_hash[:12]
@@ -67,7 +67,7 @@ def process_lecture(course_dir: Path, lecture_dir: Path, language: str) -> None:
         "doc_id": doc_id,
         "lecture": lecture_dir.name,
         "source_type": "video",
-        "source_file": str(video),
+        "source_file": str(media),
         "source_sha256": source_hash,
         "model": MODEL_SIZE,
         "language": language,

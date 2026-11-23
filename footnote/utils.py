@@ -5,6 +5,18 @@ from pathlib import Path
 
 COURSES_DIR = Path("data/courses")
 
+MEDIA_EXTENSIONS = {".mp4", ".mov", ".mkv", ".webm", ".m4v",        # video
+                    ".mp3", ".m4a", ".wav", ".aac", ".ogg", ".flac"}  # audio
+
+def find_media(lecture_dir: Path) -> Path | None:
+    """The lecture's recording (any common video or audio format), or None if there isn't one."""
+    found = sorted(p for p in lecture_dir.iterdir() if p.suffix.lower() in MEDIA_EXTENSIONS)
+    if len(found) > 1:
+        names = ", ".join(p.name for p in found)
+        raise ValueError(f"{lecture_dir} has more than one recording ({names}); keep one")
+    return found[0] if found else None
+
+
 def sha256_file(path: Path) -> str:
     """Fingerprint a file's bytes: same bytes -> same hash."""
     h = hashlib.sha256()
