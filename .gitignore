@@ -20,3 +20,6 @@ data/clips/
 # Derived: rebuilt from data/processed/ JSON
 data/index/
 scratch/out/
+
+# Course material that is not ours to publish
+scratch/*.pptx
