@@ -196,9 +196,9 @@ python -m footnote.evaluate full q24 q25   # only these questions
 
 ```
 data/courses/<course-id>/
-  course.json              {"name": "...", "language": "en"}
-  raw/lec01/video.mp4
-  raw/lec01/notes.pdf
+  course.json              name, language, lectures and their documents
+  raw/lec01/recording.mp4  any common audio or video format
+  raw/lec01/docs/d01.pdf   PDF, PPTX, DOCX or image (PPTX/DOCX need LibreOffice)
 ```
 
 ```bash

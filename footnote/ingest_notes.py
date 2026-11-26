@@ -1,4 +1,4 @@
-"""Extract lecture-notes PDFs into page-numbered segments (JSON).
+"""Extract the text of each lecture document into page-numbered segments (JSON).
 
 Usage (from the Footnote folder):
     python -m footnote.ingest_notes                 # every course, every lecture
@@ -14,8 +14,9 @@ from pathlib import Path
 
 import pymupdf
 
-from footnote.utils import (already_done, course_dirs, lecture_dirs,
-                            sha256_file, write_json_atomic)
+from footnote.convert import ConvertError, to_pdf
+from footnote.utils import (already_done, course_dirs, document_dir, lecture_dirs,
+                            lecture_documents, sha256_file, write_json_atomic)
 
 
 PARSER_VERSION = 3
@@ -79,14 +80,11 @@ def drop_repeated(blocks: list[dict], n_pages: int) -> list[dict]:
     return [b for b in blocks if b["text"] not in repeated]
 
 
-def process_lecture(course_dir: Path, lecture_dir: Path) -> None:
-    label = f"{course_dir.name}/{lecture_dir.name}"
-    pdf = lecture_dir / "notes.pdf"
-    if not pdf.exists():
-        print(f"skip {lecture_dir.name}: no notes.pdf")
-        return
-
-    out_path = course_dir / "processed" / lecture_dir.name / "notes.json"
+def process_document(course_dir: Path, lecture_id: str, doc_id: str, src: Path) -> None:
+    label = f"{course_dir.name}/{lecture_id}/{doc_id}"
+    out_dir = document_dir(course_dir, lecture_id, doc_id)
+    pdf = to_pdf(src, out_dir)
+    out_path = out_dir / "notes.json"
     source_hash = sha256_file(pdf)
     if already_done(out_path, source_hash, parser_version=PARSER_VERSION):
         print(f"skip {label}: notes already extracted")
@@ -96,10 +94,10 @@ def process_lecture(course_dir: Path, lecture_dir: Path) -> None:
     blocks = drop_repeated(blocks, len(pages))
     blocks = drop_noise(blocks)
 
-    doc_id = source_hash[:12]
+    hash_id = source_hash[:12]   # content-based: chunk ids are built from it
     segments = [
         {
-            "id": f"{doc_id}-{i:05d}",
+            "id": f"{hash_id}-{i:05d}",
             "kind": "text",
             "start": None,
             "end": None,
@@ -109,9 +107,10 @@ def process_lecture(course_dir: Path, lecture_dir: Path) -> None:
         }
         for i, b in enumerate(blocks)
     ]
+
     write_json_atomic(out_path, {
-        "doc_id": doc_id,
-        "lecture": lecture_dir.name,
+        "doc_id": hash_id,
+        "lecture": lecture_id,
         "source_type": "notes",
         "source_file": str(pdf),
         "source_sha256": source_hash,
@@ -120,12 +119,21 @@ def process_lecture(course_dir: Path, lecture_dir: Path) -> None:
         "pages": pages,
         "segments": segments,
     })
-
     print(f"{label}: {len(pages)} pages, {len(segments)} segments -> {out_path}")
-    for p in pages:
-        print(f"    p{p['page']:>2}  chars={p['chars']:>5}  "
-              f"images={p['images']}  drawings={p['drawings']}")
 
+def process_lecture(course_dir: Path, lecture_dir: Path) -> None:
+    docs = lecture_documents(course_dir, lecture_dir.name)
+    if not docs:
+        print(f"skip {course_dir.name}/{lecture_dir.name}: no documents")
+    for doc_id, src in docs:
+        label = f"{course_dir.name}/{lecture_dir.name}/{doc_id}"
+        if not src.exists():
+            print(f"skip {label}: {src} is missing")
+            continue
+        try:
+            process_document(course_dir, lecture_dir.name, doc_id, src)
+        except ConvertError as e:   # one bad document must not stop the others
+            print(f"FAILED {label}: {e}")
 
 def main() -> None:
     args = sys.argv[1:]                      # [course] [lecture ...]

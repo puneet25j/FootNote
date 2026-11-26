@@ -1,6 +1,6 @@
-"""Describe the visual content of lecture-notes pages with a vision model.
+"""Describe the visual content of each lecture document's pages with a vision model.
 
-Each described page becomes a "figure" segment in processed/lecXX/figures.json.
+Each described page becomes a "figure" segment in processed/lecNN/docs/dNN/figures.json.
 
 Usage (from the Footnote folder):
     python -m footnote.figures                 # every course, every lecture
@@ -17,7 +17,9 @@ from pathlib import Path
 import pymupdf
 
 from footnote import llm
-from footnote.utils import course_dirs, lecture_dirs, sha256_file, write_json_atomic
+from footnote.convert import ConvertError, to_pdf
+from footnote.utils import (course_dirs, document_dir, lecture_dirs, lecture_documents,
+                            sha256_file, write_json_atomic)
 
 PROMPT_VERSION = 2   
 RENDER_DPI = 150     # resolution of the page image sent to the model
@@ -83,37 +85,34 @@ def save(out_path: Path, info: dict, pages: list[dict]) -> int:
     })
     return len(segments)
 
-def process_lecture(course_dir: Path, lecture_dir: Path)-> None:
-    label = f"{course_dir.name}/{lecture_dir.name}"
-    pdf = lecture_dir/"notes.pdf"
-    if not pdf.exists():
-        print(f"skip {label}: no notes.pdf")
-        return
-
-    out_path = course_dir / "processed" / lecture_dir.name / "figures.json"
+def process_document(course_dir: Path, lecture_id: str, doc_id: str, src: Path)-> None:
+    label = f"{course_dir.name}/{lecture_id}/{doc_id}"
+    out_dir = document_dir(course_dir, lecture_id, doc_id)
+    pdf = to_pdf(src, out_dir)
+    out_path = out_dir / "figures.json"
     source_hash = sha256_file(pdf)
     info = {
         "doc_id": source_hash[:12] + "-fig",  # differs from notes.json, so chunk ids can't clash
-        "lecture": lecture_dir.name,
+        "lecture": lecture_id,
         "source_type": "notes",
         "kind": "figure",
         "source_file": str(pdf),
         "source_sha256": source_hash,
-        "model": llm.MODEL,
         "prompt_version": PROMPT_VERSION,
     }
 
-    # Reuse pages finished earlier with the same PDF, model and prompt (resume after a crash)
+    # Reuse pages described earlier from the same PDF with the same prompt, whichever model
+    # wrote them: changing models must not silently redo (and overwrite) expensive work.
     done = {}
     if out_path.exists():
         old = json.loads(out_path.read_text())
-        if all(old.get(k) == info[k] for k in ("source_sha256", "model", "prompt_version")):
-            done = {p["page"]: p for p in old["pages"] if p["status"] in ("described", "none")}
+        if all(old.get(k) == info[k] for k in ("source_sha256", "prompt_version")):
+            done = {p["page"]: {"model": old.get("model"), **p}  # older files kept "model" at the top
+                    for p in old["pages"] if p["status"] in ("described", "none")}
 
     with pymupdf.open(pdf) as doc:
         plan = page_plan(doc)
         todo = [num for num, status in plan.items() if status == "describe" and num not in done]
-        
         print(f"{label}: {len(todo)} pages to describe" if todo else f"{label}: nothing new to describe")
 
         pages = []
@@ -132,9 +131,10 @@ def process_lecture(course_dir: Path, lecture_dir: Path)-> None:
                     print(f"    p{num}:  FAILED, will retry on the next run ({e})")
                     continue
                 if reply.rstrip(".") == "NONE":
-                    pages.append({"page": num, "status": "none"})
+                    pages.append({"page": num, "status": "none", "model": llm.MODEL})
                 else:
-                    pages.append({"page": num, "status": "described", "text": reply})
+                    pages.append({"page": num, "status": "described", "model": llm.MODEL,
+                                  "text": reply})
                 print(f"    p{num}:  {pages[-1]['status']}")
                 save(out_path, info, pages)  # progress survives a crash
                 if llm.RATE_LIMITED: time.sleep(PAUSE_SECONDS)
@@ -145,6 +145,19 @@ def process_lecture(course_dir: Path, lecture_dir: Path)-> None:
     print(f"  {described} pages -> {n_segments} figure segments -> {out_path}"
           + (f"  ({failed} failed: run again to retry)" if failed else ""))
 
+def process_lecture(course_dir: Path, lecture_dir: Path) -> None:
+    docs = lecture_documents(course_dir, lecture_dir.name)
+    if not docs:
+        print(f"skip {course_dir.name}/{lecture_dir.name}: no documents")
+    for doc_id, src in docs:
+        label = f"{course_dir.name}/{lecture_dir.name}/{doc_id}"
+        if not src.exists():
+            print(f"skip {label}: {src} is missing")
+            continue
+        try:
+            process_document(course_dir, lecture_dir.name, doc_id, src)
+        except ConvertError as e:   # one bad document must not stop the others
+            print(f"FAILED {label}: {e}")
 
 def main() -> None:
     args = sys.argv[1:]  # [course] [lecture ...]

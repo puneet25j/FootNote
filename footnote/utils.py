@@ -71,3 +71,14 @@ def load_course(course_dir: Path) -> dict:
         "language": info.get("language", "en"),
         "lectures": info.get("lectures", {}),
     }
+
+def lecture_documents(course_dir: Path, lecture_id: str) -> list[tuple[str, Path]]:
+    """(document id, uploaded file) for each of a lecture's documents, as listed in course.json."""
+    lecture = load_course(course_dir)["lectures"].get(lecture_id, {})
+    raw_docs = course_dir / "raw" / lecture_id / "docs"
+    return [(doc_id, raw_docs / doc["file"])
+            for doc_id, doc in sorted(lecture.get("docs", {}).items())]
+
+def document_dir(course_dir: Path, lecture_id: str, doc_id: str) -> Path:
+    """Where everything built from one document goes."""
+    return course_dir / "processed" / lecture_id / "docs" / doc_id

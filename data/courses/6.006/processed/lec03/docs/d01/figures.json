@@ -3,31 +3,35 @@
   "lecture": "lec03",
   "source_type": "notes",
   "kind": "figure",
-  "source_file": "data/courses/6.006/raw/lec03/notes.pdf",
+  "source_file": "data/courses/6.006/raw/lec03/docs/d01.pdf",
   "source_sha256": "addb9ea7b4e1bdf9f341579650d605239ddce1ae9675517f76a831810554155c",
-  "model": "gemma-4-31b-it",
   "prompt_version": 2,
-  "created_at": "2026-10-20T23:06:36+00:00",
+  "created_at": "2026-11-26T22:05:32+00:00",
   "pages": [
     {
+      "model": "gemma-4-31b-it",
       "page": 1,
       "status": "described",
       "text": "Book Cover Illustration\nAn image of the cover of the textbook \"Introduction to Algorithms, Third Edition\". The cover features an abstract diagram consisting of a network of thin grey lines connecting several dark red, teardrop-shaped nodes of various sizes, suggesting a graph or tree structure."
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 2,
       "status": "none"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 3,
       "status": "described",
       "text": "Sorting Example\nA worked example illustrates the sorting process: an input array $A = [7, 2, 5, 5, 9.6]$ is transformed into a sorted output array $B = [2, 5, 5, 7, 9.6]$.\n\n---\n\nMath Formulas:\n$A[1 \\dots n]$\n$B[1 \\dots n]$\n$A$\n$B[1] \\le B[2] \\le \\dots \\le B[n]$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 4,
       "status": "none"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 5,
       "status": "described",
       "text": "Insertion sort pseudocode\nThe algorithm is defined as:\n$\\text{INSERTION-SORT}(A, n) \\quad \\triangleright A[1 \\dots n]$\n$\\text{for } j \\leftarrow 2 \\text{ to } n$\n$\\quad \\text{insert key } A[j] \\text{ into the (already sorted) sub-array } A[1 \\dots j-1]$\n$\\quad \\text{by pairwise key-swaps down to its right position}$\n\n---\n\nIllustration of iteration $j$\nA diagram shows a horizontal bar representing an array $A$ with indices $1$ and $n$ at the far left and right ends, respectively. \n- A light purple cell at index $j$ is pointed to by a blue arrow and labeled \"key\".\n- An orange cell at index $i$ is pointed to by a black arrow and labeled \"new location of key\".\n- A red curly brace spans the array from index $1$ up to index $j-1$, labeled \"sorted\".\n- A series of four zig-zag arrows above the array indicates movement from index $j$ back toward index $i$.\n- A straight arrow points from the \"key\" cell at index $j$ to the cell at index $i$."
@@ -73,16 +77,19 @@
       "status": "skip: animation step (next page has the same title)"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 16,
       "status": "described",
       "text": "Insertion Sort Example\nThe figure illustrates the step-by-step process of the insertion sort algorithm on an array of six numbers.\n- First row: $8, 2, 4, 9, 3, 6$. The number $2$ is highlighted in yellow, and an arrow points from it to the position before $8$.\n- Second row: $2, 8, 4, 9, 3, 6$. The number $4$ is highlighted in yellow, and an arrow points from it to the position before $8$.\n- Third row: $2, 4, 8, 9, 3, 6$. The number $9$ is highlighted in yellow, and a small arrow points from it back to its current position.\n- Fourth row: $2, 4, 8, 9, 3, 6$. The number $3$ is highlighted in yellow, and an arrow points from it to the position before $4$.\n- Fifth row: $2, 3, 4, 8, 9, 6$. The number $6$ is highlighted in yellow, and an arrow points from it to the position before $8$.\n- Sixth row: $2, 3, 4, 6, 8, 9$. The word \"done\" is written in red to the right of the array.\n\n---\n\n$\\Theta(n^2)$\n$A = [n, n - 1, n - 2, \\dots, 2, 1]$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 17,
       "status": "described",
       "text": "Math Formulas:\n- $\\text{BINARY-INSERTION-SORT}(A, n)$\n- $A[1 \\dots n]$\n- $j \\leftarrow 2$ to $n$\n- $A[j]$\n- $A[1 \\dots j-1]$\n- $\\Theta(\\log n)$\n- $\\Theta(n)$\n- $\\Theta(n \\log n)$\n- $n^2$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 18,
       "status": "described",
       "text": "Merge Sort Algorithm\nThe pseudocode contains the following mathematical expressions:\n- The input array is $A[1 \\dots n]$.\n- The base case condition is $n = 1$.\n- The recursive calls are performed on sub-arrays $A[1 \\dots n/2]$ and $A[n/2+1 \\dots n]$.\n\n---\n\nMerge Sort Process Diagram\nA diagram illustrates the divide and conquer process. It consists of a horizontal rectangular bar divided into two equal halves. Each half contains an arrow pointing to the right. Below the bar is a single, longer arrow that spans the entire width of the bar, also pointing to the right. This represents the splitting of an array into two halves and the subsequent merging of those halves."
@@ -136,16 +143,19 @@
       "status": "skip: animation step (next page has the same title)"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 31,
       "status": "described",
       "text": "Merging two sorted arrays\nA series of six panels illustrating the step-by-step process of merging two sorted arrays. Each panel shows two columns of numbers, separated by double vertical lines. The columns represent two arrays sorted in descending order from top to bottom: the left array contains $[20, 13, 7, 2]$ and the right array contains $[12, 11, 9, 1]$. In each step, the smallest remaining element from the bottom of either array is selected, highlighted in yellow, circled, and an arrow points to it being placed in the merged output sequence below.\n\n*   **Panel 1**: Left array has 2 highlighted; right array has 1 highlighted and circled. An arrow points from 1 to the output value 1.\n*   **Panel 2**: Left array has 2 highlighted and circled; right array has 9 highlighted. An arrow points from 2 to the output value 2.\n*   **Panel 3**: Left array has 7 highlighted and circled; right array has 9 highlighted. An arrow points from 7 to the output value 7.\n*   **Panel 4**: Left array has 13 highlighted; right array has 9 highlighted and circled. An arrow points from 9 to the output value 9.\n*   **Panel 5**: Left array has 13 highlighted; right array has 11 highlighted and circled. An arrow points from 11 to the output value 11.\n*   **Panel 6**: Left array has 13 highlighted; right array has 12 highlighted and circled. An arrow points from 12 to the output value 12.\n\n---\n\n$\\text{Time} = \\Theta(n)$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 32,
       "status": "described",
       "text": "Merge Sort Analysis\nA structured layout maps the steps of the `MERGE-SORT` algorithm for an array $A[1 .. n]$ to their respective time complexities, separated by two red vertical lines.\n- The overall time complexity is labeled as $T(n)$.\n- Step 1: \"If $n = 1$, done.\" is mapped to $\\Theta(1)$.\n- Step 2: \"Recursively sort $A[ 1 .. [n/2] ]$ and $A[ [n/2]+1 .. n ]$.\" is mapped to $2T(n/2)$.\n- Step 3: \"'Merge' the two sorted lists\" is mapped to $\\Theta(n)$.\n\n---\n\n$T(n) = \\begin{cases} \\Theta(1) \\text{ if } n = 1; \\\\ 2T(n/2) + \\Theta(n) \\text{ if } n > 1. \\end{cases}$\n$T(n) = ?$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 33,
       "status": "described",
       "text": "Math formulas:\n$T(n) = 2T(n/2) + cn$\n$c > 0$"
@@ -191,16 +201,19 @@
       "status": "skip: animation step (next page has the same title)"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 44,
       "status": "described",
       "text": "Recursion Tree for $T(n) = 2T(n/2) + cn$\n\nA recursion tree illustrates the work done at each level of a recursive process.\n* The root of the tree is labeled $cn$.\n* The root branches into two children, each labeled $cn/2$.\n* Each of these children branches into two more children, each labeled $cn/4$.\n* The tree continues downward, indicated by vertical dots, until it reaches the leaf level, where a leaf is labeled $\\Theta(1)$.\n* A vertical red double-headed arrow on the left side of the tree is labeled $h$, representing the height of the tree.\n* A grey box at the bottom center of the tree contains the text \"#leaves = $n$\".\n* To the right of the tree, dashed red lines connect each level to its total work:\n    * The root level connects to $cn$.\n    * The second level connects to $cn$.\n    * The third level connects to $cn$.\n    * The leaf level connects to $\\Theta(n)$.\n* Below these values, the total work is given as $\\text{Total} = \\Theta(n \\lg n)$.\n* A red caption at the bottom reads: \"Equal amount of work done at each level\".\n\n---\n\nThe recurrence relation being solved is $T(n) = 2T(n/2) + cn$, where $c > 0$ is constant."
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 45,
       "status": "described",
       "text": "Recursion Tree for $T(n) = 2T(n/2) + c$\n\nThis figure illustrates the process of solving the recurrence relation $T(n) = 2T(n/2) + c$, where $c > 0$ is constant.\n\n*   A binary recursion tree is shown. The root node is labeled $c$. The second level has two nodes, both labeled $c$. The third level has four nodes, all labeled $c$. The tree continues downward to the leaf level, where the nodes are labeled $\\Theta(1)$.\n*   To the left of the tree, a red double-headed vertical arrow indicates the height of the tree, labeled $h = 1 + \\lg n$.\n*   To the right of the tree, the total work per level is listed, with red dashed lines connecting the levels of the tree to these values:\n    *   Root level: $c$\n    *   Second level: $2c$\n    *   Third level: $4c$\n    *   $\\vdots$\n    *   Level before leaves: $n/2 c$\n    *   Leaf level: $\\Theta(n)$\n*   A red dashed line connects the leaf node $\\Theta(1)$ to the total leaf work $\\Theta(n)$.\n*   Below the tree, a mathematical note is provided: $1 + 1/2 + 1/4 + \\dots < 2$.\n*   At the bottom right, the final result is given as $\\text{Total} = \\Theta(n)$."
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 46,
       "status": "described",
       "text": "Recursion Tree for $T(n) = 2T(n/2) + cn^2$\n\nThis figure illustrates the work done at each level of a recursion tree to solve the recurrence relation $T(n) = 2T(n/2) + cn^2, c > 0$.\n\n*   **Tree Structure:**\n    *   The root node is labeled $cn^2$. A dotted red line connects it to $cn^2$ on the right, representing the total work at the root level.\n    *   The root has two children, each labeled $cn^2/4$. A dotted red line connects this level to a sum of $cn^2/2$ on the right.\n    *   The next level has four nodes, each labeled $cn^2/16$. A dotted red line connects this level to a sum of $cn^2/4$ on the right.\n    *   Vertical ellipses indicate continuing levels.\n    *   The bottom level shows a leaf node labeled $\\Theta(1)$ on the left and a total leaf work of $\\Theta(n)$ on the right, which is underlined in red.\n*   **Annotations:**\n    *   A red double-headed vertical arrow on the left side of the tree indicates the height, labeled $h = 1 + \\lg n$.\n    *   A bracket at the bottom connects the leaf level to the final total.\n    *   A red text label at the bottom states: \"All the work done at the root\".\n    *   The final result is given as $\\text{Total} = \\Theta(n^2)$.\n*   **Associated Formulas:**\n    *   Recurrence: $T(n) = 2T(n/2) + cn^2, c > 0$\n    *   Height: $h = 1 + \\lg n$\n    *   Geometric series note: $1 + 1/2 + 1/4 + \\dots < 2$\n    *   Final complexity: $\\Theta(n^2)$"

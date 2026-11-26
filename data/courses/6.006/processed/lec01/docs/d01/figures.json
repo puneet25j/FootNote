@@ -3,32 +3,36 @@
   "lecture": "lec01",
   "source_type": "notes",
   "kind": "figure",
-  "source_file": "data/courses/6.006/raw/lec01/notes.pdf",
+  "source_file": "data/courses/6.006/raw/lec01/docs/d01.pdf",
   "source_sha256": "dc04facffd88355daf6e3e1620c4e253b84d31dc4bac7417500240f6baf16b66",
-  "model": "gemma-4-31b-it",
   "prompt_version": 2,
-  "created_at": "2026-10-20T22:45:06+00:00",
+  "created_at": "2026-11-26T22:05:32+00:00",
   "pages": [
     {
+      "model": "gemma-4-31b-it",
       "page": 1,
       "status": "none"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 2,
       "status": "described",
       "text": "One-dimensional Array Representation\n- An array of 9 cells.\n- Indices 1, 2, 3, 4, 5, 6, 7, 8, 9 are written above the cells.\n- The cells contain the letters a, b, c, d, e, f, g, h, i.\n- This figure illustrates a general one-dimensional array of numbers.\n\n---\n\nPeak Examples\n- An array of 8 cells containing the numbers 6, 7, 4, 3, 2, 1, 4, 5.\n- Red arrows point upwards to the values 7 and 5.\n- This illustrates specific examples of peaks within a numeric array.\n\n---\n\nFigure 2: Linear Search Complexity\n- An array of cells with indices 1, 2, ..., $n/2$, ..., $n-1$, $n$ marked above.\n- A red arrow points up to the cell at index $n/2$ with the label \"might be peak\".\n- Below the array is a line drawing of a mountain-like peak.\n- The text \"$\\theta(n)$ complexity worst case\" is written below the drawing.\n- This figure illustrates the process and worst-case time complexity of a linear search for a peak.\n\n---\n\nMiddle-Start Search Idea\n- A line drawing of a V-shape.\n- A red arrow points down to the bottom vertex.\n- The label \"$n/2$\" is placed above the arrow.\n- This illustrates the idea of starting a search from the middle element of an array.\n\n---\n\nGeneral Formulas\n- $b \\ge a$\n- $b \\ge c$\n- $i \\ge h$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 3,
       "status": "described",
       "text": "Divide & Conquer (Figure 3)\n- A diagram of a 1D array consisting of a row of boxes. Red labels above the boxes indicate indices: $1, 2, \\dots, n/2-1, n/2, n/2+1, \\dots, n-1, n$. A red arrow points upward to the box at position $n/2$, with the text \"look at n/2 position\" below it.\n- Associated formulas:\n  - $a[n/2] < a[n/2 - 1]$\n  - $a[n/2] < a[n/2 + 1]$\n  - $a[n/2] \\ge a[n/2 - 1]$\n  - $a[n/2] \\ge a[n/2 + 1]$\n  - $T(n) = T(n/2) + \\Theta(1) = \\Theta(1) + \\dots + \\Theta(1) (\\log_2(n) \\text{ times}) = \\Theta(\\log_2(n))$, where the first $\\Theta(1)$ term is annotated with a brace as \"to compare a[n/2] to neighbors\".\n\n---\n\nTwo-dimensional Version (Figure 4)\n- A diagram of a 2D grid of boxes. A vertical red double-headed arrow to the left is labeled \"n rows\". A horizontal red double-headed arrow at the bottom is labeled \"m columns\". Inside the grid, a central cell is labeled 'a', with its immediate neighbors labeled 'b' (left), 'd' (right), 'c' (above), and 'e' (below).\n- Associated formulas:\n  - $\\Theta(nm)$ complexity, $\\Theta(n^2)$ algorithm if $m = n$\n  - $a$ is a 2D-peak iff $a \\ge b, a \\ge d, a \\ge c, a \\ge e$\n\n---\n\nOther Formulas\n- $n = 1000000$\n- $\\Theta(n)$\n- $\\Theta(\\log n)$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 4,
       "status": "described",
       "text": "Peak Finding Example\nA $4 \\times 4$ grid contains the following values:\n- Row 2: 14 in column 1, 13 in column 3, and 12 in column 4.\n- Row 3: 15 in column 1, 9 in column 2, 11 in column 3, and 17 in column 4.\n- Row 4: 16 in column 1, 17 in column 2, 19 in column 3, and 20 in column 4.\nRed arrows indicate paths between values:\n- From 14 to 13, then from 13 to 12.\n- From 13 down to 11, then from 11 down to 19, then from 19 to 20.\n- From 14 down to 15, then from 15 down to 16.\nThe value 20 in the bottom-right cell is circled in red.\nThe figure illustrates a 2D peak.\n\n---\n\n2D Divide and Conquer Strategy\nA $4 \\times 4$ grid is divided into four quadrants by a central vertical line and a central horizontal line.\n- The horizontal line is labeled with $i$ on the left.\n- The vertical line is labeled with $j = m/2$ below the grid.\nThe figure illustrates the process of picking a middle column and a row for a divide and conquer approach.\n\n---\n\nFailure of 2D Divide and Conquer Attempt\nA $4 \\times 4$ grid contains the following values:\n- Row 1: 10 in column 3.\n- Row 2: 14 in column 1, 13 in column 2, and 12 in column 3.\n- Row 3: 15 in column 1, 9 in column 2, and 11 in column 3.\n- Row 4: 16 in column 1, 17 in column 2, 19 in column 3, and 20 in column 4.\nBlack arrows on row 2 point from 12 to 13, and from 13 to 14.\nThe figure illustrates a case where a 1D-peak on a row (the value 14) is not a 2D-peak.\n\n---\n\n$(i, j)$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 5,
       "status": "described",
       "text": "Example of Attempt #2 (2D Peak Finding)\nThe figure illustrates a step-by-step process of finding a 2D peak in a matrix using a divide-and-conquer approach.\n- The first image is a $4 \\times 4$ grid with the following values:\n  - Row 1: 10, 8, 10, 10\n  - Row 2: 14, 13, 12, 11\n  - Row 3: 15, 9, 11, 21\n  - Row 4: 16, 17, 19, 20\n  An arrow points to the second column from the left, with the label \"pick this column 17 global max for this column\".\n- The second image is a $4 \\times 2$ grid containing the rightmost two columns of the first grid:\n  - Row 1: 10, 10\n  - Row 2: 12, 11\n  - Row 3: 11, 21\n  - Row 4: 19, 20\n  An arrow points to the first column of this grid, with the label \"pick this column 19 global max for this column\". Above the grid is the text \"go with\".\n- The third image is a $4 \\times 1$ grid containing the rightmost column of the previous grid:\n  - Row 1: 10\n  - Row 2: 11\n  - Row 3: 21 (circled in red)\n  - Row 4: 20\n  To the right of the grid is the text \"find 21\".\n\n---\n\nComplexity of Attempt #2\n- $T(n, m) = T(n, m/2) + \\Theta(n)$ (to find global maximum on a column — (n rows))\n- $T(n, m) = \\underbrace{\\Theta(n) + \\dots + \\Theta(n)}_{\\log m}$\n- $= \\Theta(n \\log m) = \\Theta(n \\log n)$ if $m = n$"

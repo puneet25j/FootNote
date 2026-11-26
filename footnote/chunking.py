@@ -1,6 +1,7 @@
 """Group small segments into retrieval-sized chunks."""
 import os
 import json
+from pathlib import Path
 
 from footnote.utils import course_dirs
 
@@ -49,10 +50,22 @@ def chunks_for_doc(doc: dict, course: str) -> list[dict]:
         })
     return chunks
 
+def processed_files(course_dir: Path) -> list[Path]:
+    """The JSON files that hold segments, listed by name (convert.json lives there too).
+
+    Sorted like the old processed/*/*.json listing, so the index is built in the same order.
+    """
+    processed = course_dir / "processed"
+    paths = [*processed.glob("*/transcript.json"),
+             *processed.glob("*/docs/*/notes.json"),
+             *processed.glob("*/docs/*/figures.json")]
+    return sorted(paths, key=lambda p: (p.relative_to(processed).parts[0], p.name, p.parent.name))
+
+
 def load_all_chunks() -> list[dict]:
     chunks = []
     for course_dir in course_dirs():
-        for path in sorted((course_dir / "processed").glob("*/*.json")):
+        for path in processed_files(course_dir):
             chunks.extend(chunks_for_doc(json.loads(path.read_text()), course_dir.name))
     return chunks
 

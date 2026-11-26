@@ -10,7 +10,8 @@ import unicodedata
 from pathlib import Path
 from typing import BinaryIO
 
-from footnote.utils import COURSES_DIR, MEDIA_EXTENSIONS,course_dirs, write_json_atomic
+from footnote.utils import (COURSES_DIR, MEDIA_EXTENSIONS, course_dirs, document_dir,
+                            write_json_atomic)
 
 DOC_EXTENSIONS = {".pdf", ".pptx", ".docx", ".png", ".jpg", ".jpeg", ".webp"}
 
@@ -181,7 +182,8 @@ def delete_document(course_id: str, lecture_id: str, doc_id: str) -> None:
     _write(course_id, info)                                    # 1. the record first
     course_dir = COURSES_DIR / course_id
     (course_dir / "raw" / lecture_id / "docs" / doc["file"]).unlink(missing_ok=True)
-    _remove_tree(course_dir / "processed" / lecture_id / "docs" / doc_id)   # 2. then files
+    _remove_tree(document_dir(course_dir, lecture_id, doc_id))   # 2. then files
+
 
 
 def delete_lecture(course_id: str, lecture_id: str) -> None:

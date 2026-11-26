@@ -3,43 +3,49 @@
   "lecture": "lec02",
   "source_type": "notes",
   "kind": "figure",
-  "source_file": "data/courses/6.006/raw/lec02/notes.pdf",
+  "source_file": "data/courses/6.006/raw/lec02/docs/d01.pdf",
   "source_sha256": "7b5596d221433c276352775b0a41d9edef4c076af0bd0dcc0e46bfa921586a09",
-  "model": "gemma-4-31b-it",
   "prompt_version": 2,
-  "created_at": "2026-10-20T22:50:15+00:00",
+  "created_at": "2026-11-26T22:05:32+00:00",
   "pages": [
     {
+      "model": "gemma-4-31b-it",
       "page": 1,
       "status": "described",
       "text": "Algorithm\nFigure 1: Algorithm. A diagram illustrating the analogy between concrete implementation and abstract computational concepts. It consists of two columns of boxes connected by red double-headed arrows, with the word \"analog\" in red above the top arrow.\n- The left column contains the boxes: \"program\", \"programming language\", and \"computer\".\n- The right column contains the boxes: \"algorithm\", \"pseudocode\", and \"model of computation\".\n- Red double-headed arrows connect:\n    - \"program\" $\\leftrightarrow$ \"algorithm\"\n    - \"programming language\" $\\leftrightarrow$ \"pseudocode\"\n    - \"computer\" $\\leftrightarrow$ \"model of computation\"\n- Blue curved arrows point downwards on both sides:\n    - On the left, from \"program\" to \"programming language\", and from \"programming language\" to \"computer\".\n    - On the right, from \"algorithm\" to \"pseudocode\", and from \"pseudocode\" to \"model of computation\".\n- The text \"built on top of\" in blue is positioned next to the right-side curved arrows."
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 2,
       "status": "described",
       "text": "Random Access Machine (RAM)\nA diagram illustrating memory as a vertical stack of rectangular cells. The cells are indexed on the left from $0$ to $5$, followed by three sets of vertical dots. A curly brace at the bottom spans the width of the cells and is labeled \"word\". The bottom-most cell contains several small red horizontal dashes.\n\n---\n$\\Theta(1)$\n$r_i$\n$r_j$\n$(+, -, *, /, \\&, |, \\wedge)$\n$w \\geq \\lg(\\text{memory size})$\n$O(1)$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 3,
       "status": "described",
       "text": "Doubly Linked List\nA diagram illustrating a doubly linked list with two nodes. Each node is represented as a table with three rows: `val`, `prev`, and `next`.\n- The first node has `val` = 5, `prev` = `null` (crossed out in red), and an empty `next` cell.\n- The second node has `val` = -1, an empty `prev` cell, and `next` = `null` (crossed out in red).\n- A blue arrow points from the `next` cell of the first node to the `val` cell of the second node.\n- A blue arrow points from the `prev` cell of the second node to the `val` cell of the first node.\n\n---\n\nMath Formulas\n- $L[i] = L[j] + 5 \\rightarrow \\Theta(1) \\text{ time}$\n- $x = x.next \\rightarrow \\Theta(1) \\text{ time}$\n- $L.append(x) \\rightarrow \\theta(1) \\text{ time}$\n- $L = L1 + L2 \\equiv L = [] \\rightarrow \\theta(1)$\n- $(\\theta(1+|L1|+|L2|) \\text{ time})$\n- A worked example for list concatenation showing:\n  - `for x in L1:`\n    - `L.append(x) \\rightarrow \\theta(1)` $\\} \\theta(|L1|)$\n  - `for x in L2:`\n    - `L.append(x) \\rightarrow \\theta(1)` $\\} \\theta(|L2|)$\n  - A large curly brace groups these two operations together."
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 4,
       "status": "described",
       "text": "List extend complexity\nAn illustration shows that the operation `L1.extend(L2)` is equivalent to the loop `for x in L2: L1.append(x)`. A curly brace groups the loop, mapping it to a time complexity of $\\theta(1 + |L_2|)$. The `L1.append(x)` operation inside the loop is labeled as $\\theta(1)$.\n\n---\n\nList slicing complexity\nAn illustration shows that the operation `L2 = L1[i : j]` is equivalent to initializing `L2 = []` and then executing a loop `for k in range(i, j): L2.append(L1[i])`. A curly brace groups these steps, mapping them to a time complexity of $\\theta(j - i + 1) = O(|L|)$. The `L2.append(L1[i])` operation inside the loop is labeled as $\\theta(1)$.\n\n---\n\nList membership check complexity\nAn illustration shows that the operation `b = x in L` is equivalent to a loop `for y in L:` with a conditional `if x == y: b = True; break else b = False`. A curly brace groups the loop body, mapping it to $\\theta(1)$. A larger curly brace groups the entire operation, mapping it to a time complexity of $\\theta(\\text{index of } x) = \\theta(|L|)$.\n\n---\n\nDictionary operation complexity\nA curly brace groups the operations `D[key] = val` and `key in D`, mapping them to a time complexity of $\\theta(1)$ time w.h.p.\n\n---\n\nMath formulas:\n- $\\text{len}(L) \\to \\theta(1)$\n- $\\text{L.sort}() \\to \\theta(|L| \\log |L|)$\n- $\\theta(\\log(n))$\n- $x + y \\to O(|x| + |y|)$\n- $x * y \\to O((|x| + |y|)^{\\log(3)}) \\approx O((|x| + |y|)^{1.58})$\n- $d(D_1, D_2)$\n- $D[w] = \\#$ occurrences of word $W$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 5,
       "status": "described",
       "text": "Document Vectors\nFigure 2 illustrates document vectors in a 3D coordinate system where the axes are labeled \"dog\" (vertical), \"the\" (horizontal to the right), and \"cat\" (diagonal down-left). A blue vector $D_1$ is shown with dashed blue projection lines to the \"the\" and \"cat\" axes. A red vector $D_2$ is shown with dashed red projection lines to the \"dog\" and \"the\" axes. The caption reads: \"Figure 2: $D_1 = \\text{\"the cat\"}$, $D_2 = \\text{\"the dog\"}$\".\n\nThe following formulas relate to this figure:\n$d'(D_1, D_2) = D_1 \\cdot D_2 = \\sum_{W} D_1[W] \\cdot D_2[W]$\n$d''(D_1, D_2) = \\frac{D_1 \\cdot D_2}{|D_1| \\cdot |D_2|}$\n$|D_i|$\n$d(D_1, D_2) = \\arccos(d''(D_1, D_2))$\n$0^\\circ$\n$90^\\circ$"
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 6,
       "status": "described",
       "text": "Regular Expression Approach Complexity\n- A curly brace groups the operations inside the `for char in doc` loop, labeled $\\Theta(1)$.\n- A larger curly brace encompasses the entire `for` loop, labeled $\\Theta(|doc|)$.\n\n---\n\nSorting Approach Complexity\n- The `sort word list` operation is marked with an arrow $\\leftarrow O(k \\log k \\cdot |word|)$ where $k$ is #words.\n- Inside the `for word in list` loop:\n    - The line `if same as last word` is marked with an arrow $\\leftarrow O(|word|)$.\n    - A curly brace groups the `if/else` body, labeled $\\Theta(1)$.\n    - A larger curly brace encompasses the entire `for` loop, labeled $O(\\sum |word|) = O(|doc|)$.\n\n---\n\nNested Loop Approach Complexity\n- The outer loop `for word, count1 in doc1` is marked with an arrow $\\leftarrow \\Theta(k_1)$.\n- The inner loop `if word, count2 in doc2` is marked with an arrow $\\leftarrow \\Theta(k_2)$.\n- The operation `total += count1 * count2` is labeled $\\Theta(1)$.\n- A curly brace groups the inner loop, and a larger one groups the entire structure, labeled $O(k_1 \\cdot k_2)$.\n\n---\n\nTwo-Pointer Approach Complexity\n- The line `if words equal` is marked with an arrow $\\leftarrow O(|word|)$.\n- The line `if word1 \\le word2` is marked with an arrow $\\leftarrow O(|word|)$.\n- A large curly brace encompasses the entire loop structure, labeled $O(\\sum |word|) = O(|doc|)$.\n\n---\n\nDictionary Approach Complexity\n- The line `if word in count` is marked with an arrow $\\leftarrow \\Theta(|word|) + \\Theta(1)$ w.h.p.\n- A curly brace groups the `else` block, labeled $\\Theta(1)$.\n- A large curly brace encompasses the entire `for` loop, labeled $O(|doc|)$ w.h.p.\n\n---\n\nFinal formulas:\n- For step (3)' in the Dictionary Approach: $\\rightarrow O(|doc_1|)$ w.h.p."
     },
     {
+      "model": "gemma-4-31b-it",
       "page": 7,
       "status": "none"
     },
