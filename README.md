@@ -12,8 +12,10 @@ $ python -m footnote.qa --course 6.006 what is a peak in an array
 In a one-dimensional array, a peak is a local property: an element is a peak if it is greater than or equal to both its left and right neighboring elements [1]. For example, given an array of elements $a$ through $i$, position 2 (element $b$) is a peak if and only if $b \ge a$ and $b \ge c$ [1][5]. At the edges of an array, an element only compares to its single neighbor; for instance, the last position (position 9, element $i$) is a peak if $i \ge h$ [1][5].
 
 Sources:
-  [1] 6.006 · lec01 video 16:24-17:38
-  [5] 6.006 · lec01 notes pp. 2-3
+  [1] 6.006 · lec01 · video 16:24-17:38
+  [5] 6.006 · lec01 · Lecture notes pp. 2-3
+  [7] 6.006 · lec01 · Lecture notes p. 2 (figure)
+  
 ```
 
 Diagrams count as sources too. The answer to this question exists only as a drawing in the lecture 1 notes (taken from the evaluation run):
@@ -108,7 +110,7 @@ Corpus: 3 lectures (~2.6 hours of video, ~20,800 transcribed words) plus notes �
 Lecture notes and slides carry information that text extraction misses: worked examples drawn as arrays, trees and grids, arrows marking answers, and formulas. Footnote renders those pages and asks a vision model to describe only what the text layer misses.
 
 - **Which pages:** every notes page is rendered at 150 dpi except license pages and animation steps (consecutive slides with the same title, where only the final frame is described).
-- **One segment per diagram:** the model separates diagrams with a `---` line and starts each with a heading; each piece becomes a segment with its page number and `kind: figure`, and is cited like any notes page (`lec01 notes p. 2 (figure)`).
+- **One segment per diagram:** the model separates diagrams with a `---` line and starts each with a heading; each piece becomes a segment with its page number and `kind: figure`, and is cited like any notes page (`lec01 · Lecture notes p. 2 (figure)`).
 - **Raw reply stored, split derived:** the model's full reply is saved, and splitting happens afterwards, so changing how pieces are cut needs no new model calls.
 - **Cached and fault-tolerant:** the cache key is the PDF hash plus the model and prompt version; a page that still fails after retries is recorded and retried on the next run instead of stopping the batch.
 

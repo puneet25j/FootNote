@@ -91,10 +91,13 @@ def cite(meta: dict) -> str:
     prefix = f"{course} · {meta['lecture']}" if course else meta["lecture"]
     if meta["source_type"] == "video":
         return f"{prefix} video {fmt_ts(meta['start'])}-{fmt_ts(meta['end'])}"
-    figure = " (figure)" if meta.get("kind") == "figure" else ""
+    title = meta.get("document_title", "notes")
     if meta["page_start"] == meta["page_end"]:
-        return f"{prefix} notes p. {meta['page_start']}{figure}"
-    return f"{prefix} notes pp. {meta['page_start']}-{meta['page_end']}{figure}"
+        pages = f"p. {meta['page_start']}"
+    else:
+        pages = f"pp. {meta['page_start']}-{meta['page_end']}"
+    figure = " (figure)" if meta.get("kind") == "figure" else ""
+    return f"{prefix} · {title} {pages}{figure}"
 
 
 def main() -> None:

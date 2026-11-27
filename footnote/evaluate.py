@@ -42,6 +42,8 @@ def matches(meta: dict, gold: dict, course: str)-> bool:
         return False
     if meta["source_type"] != gold["type"]:
         return False
+    if "doc" in gold and meta.get("document") != gold["doc"]:
+        return False
     if gold["type"] == "video":
         return meta["start"] < gold["end"] and meta["end"] > gold["start"]
     return meta["page_start"] <= gold["page"] <= meta["page_end"]

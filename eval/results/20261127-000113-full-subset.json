@@ -1,0 +1,50 @@
+{
+  "mode": "full",
+  "settings": {
+    "llm_model": "gemma4:26b",
+    "llm_provider": "ollama",
+    "embed_model": "BAAI/bge-small-en-v1.5",
+    "target_words": 150,
+    "k_video": 4,
+    "k_notes": 2,
+    "k_figures": 3
+  },
+  "summary": {
+    "retrieval_hit_rate": "1/1 (100%)",
+    "mrr": 1.0,
+    "figure_retrieval_hit_rate": "1/1 (100%)",
+    "answer_keywords_ok": "1/1 (100%)",
+    "cited_a_correct_source": "1/1 (100%)",
+    "wrongly_refused": "0/1 (0%)",
+    "correctly_refused_out_of_scope": "n/a",
+    "figure_answers_ok": "1/1 (100%)",
+    "answers_with_invalid_citations": "0/2 (0%)",
+    "median_seconds_per_answer": 11.8
+  },
+  "rows": [
+    {
+      "id": "q01",
+      "answerable": true,
+      "needs_figures": false,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "In a one-dimensional array, a peak is defined by a local property [1]. Specifically, a position is a peak if it is greater than or equal to its neighbors [1][7].\n\nFor example, in an array where positions are represented by letters $a$ through $i$, position $b$ is a peak if and only if $b \\geq a$ and $b \\geq c$ [1][7]. At the edges of the array, you only need to look to one side; for instance, if position $i$ is at the far right, it is a peak if $i \\geq h$ [3][7].",
+      "seconds": 15.1,
+      "rank": 1,
+      "keywords_ok": true,
+      "cited_gold": true
+    },
+    {
+      "id": "q24",
+      "answerable": true,
+      "needs_figures": true,
+      "refused": false,
+      "invalid_citations": 0,
+      "answer": "In the insertion sort example provided in the lecture 3 notes, the array being sorted is $A = [8, 2, 4, 9, 3, 6]$ [4].",
+      "seconds": 8.5,
+      "rank": 4,
+      "keywords_ok": true,
+      "cited_gold": true
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import os
 import json
 from pathlib import Path
 
-from footnote.utils import course_dirs
+from footnote.utils import course_dirs, load_course
 
 TARGET_WORDS = int(os.getenv("FOOTNOTE_CHUNK_WORDS", "150"))  # about a minute of speech  
 OVERLAP_SEGMENTS = 2  # repeated at the start of the next chunk
@@ -25,10 +25,15 @@ def group(segments: list[dict], target_words: int = TARGET_WORDS, overlap: int =
         groups.append(current)
     return groups
 
-def chunks_for_doc(doc: dict, course: str) -> list[dict]:
+def chunks_for_doc(doc: dict, course: str, document: str | None = None, 
+                   document_title: str | None = None) -> list[dict]:
+
     kind = doc.get("kind", "text")
     # A figure description is self-contained: one page, one chunk. Everything else is grouped.
     groups = [[s] for s in doc["segments"]] if kind == "figure" else group(doc["segments"])
+    # doc_id is a content hash, so the same file in two lectures would give the same ids:
+    # put where the chunk comes from in front of it.
+    prefix = "/".join(part for part in (course, doc["lecture"], document) if part)
     chunks = []
     for n, segs in enumerate(groups):
         first, last = segs[0], segs[-1]
@@ -36,6 +41,8 @@ def chunks_for_doc(doc: dict, course: str) -> list[dict]:
             "course": course,
             "doc_id": doc["doc_id"],
             "lecture": doc["lecture"],
+            "document": document,              # notes only: d01, d02, ...
+            "document_title": document_title,  # notes only: its title in course.json
             "source_type": doc["source_type"],
             "kind": kind,
             "start": first["start"],        # video only
@@ -44,7 +51,7 @@ def chunks_for_doc(doc: dict, course: str) -> list[dict]:
             "page_end": last["page"],       # notes only
         }
         chunks.append({
-            "id": f"{doc['doc_id']}-c{n:04d}",
+            "id": f"{prefix}/{doc['doc_id']}-c{n:04d}",
             "text": " ".join(s["text"] for s in segs),
             "metadata": {k: v for k, v in meta.items() if v is not None},
         })
@@ -65,7 +72,11 @@ def processed_files(course_dir: Path) -> list[Path]:
 def load_all_chunks() -> list[dict]:
     chunks = []
     for course_dir in course_dirs():
+        lectures = load_course(course_dir)["lectures"]
         for path in processed_files(course_dir):
-            chunks.extend(chunks_for_doc(json.loads(path.read_text()), course_dir.name))
+            doc = json.loads(path.read_text())
+            document = None if path.name == "transcript.json" else path.parent.name
+            title = lectures.get(doc["lecture"], {}).get("docs", {}).get(document, {}).get("title")
+            chunks.extend(chunks_for_doc(doc, course_dir.name, document, title))
     return chunks
 
